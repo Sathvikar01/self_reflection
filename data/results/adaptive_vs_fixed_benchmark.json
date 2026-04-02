@@ -1,0 +1,954 @@
+{
+  "timestamp": "2026-03-30T22:48:48.680414",
+  "num_problems": 30,
+  "baseline": {
+    "method": "baseline",
+    "num_problems": 30,
+    "correct": 13,
+    "accuracy": 0.43333333333333335,
+    "results": [
+      {
+        "problem_id": "strategic_007",
+        "problem": "You have 3 jugs: 8-liter, 5-liter, and 3-liter. The 8-liter jug is full. Can you measure exactly 4 liters using these jugs?",
+        "ground_truth": "yes",
+        "answer": "We have successfully measured exactly 4 liters using the 3 jugs: 8-liter, 5-liter, and 3-liter. The final answer is: Yes, it is possible to measure exactly 4 liters using these jugs.",
+        "correct": true,
+        "tokens": 1330
+      },
+      {
+        "problem_id": "strategyqa_005",
+        "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+        "ground_truth": "no",
+        "answer": "** No, a person born in 2000 would not be eligible to vote in the 2016 US election.",
+        "correct": true,
+        "tokens": 410
+      },
+      {
+        "problem_id": "expanded_063",
+        "problem": "Is sand made of fish poop?",
+        "ground_truth": "yes",
+        "answer": "No, sand is not made of fish poop.",
+        "correct": false,
+        "tokens": 596
+      },
+      {
+        "problem_id": "expanded_001",
+        "problem": "Do ostriches bury their heads in the sand?",
+        "ground_truth": "no",
+        "answer": "** No, ostriches do not bury their heads in the sand.",
+        "correct": true,
+        "tokens": 571
+      },
+      {
+        "problem_id": "strategic_012",
+        "problem": "You have 12 balls, one weighs differently. Can you find the odd ball using a balance scale only 3 times?",
+        "ground_truth": "yes",
+        "answer": "by following these steps, we can find the odd ball using the balance scale only three times.",
+        "correct": false,
+        "tokens": 719
+      },
+      {
+        "problem_id": "expanded_105",
+        "problem": "Is coconut a nut?",
+        "ground_truth": "no",
+        "answer": "Coconut is not a nut.",
+        "correct": true,
+        "tokens": 468
+      },
+      {
+        "problem_id": "strategyqa_021",
+        "problem": "Do trees sleep?",
+        "ground_truth": "no",
+        "answer": "** No, trees do not sleep in the same way that animals do. However, trees do experience changes in their physiological processes and responses to their environment that can be misinterpreted as a form of \"sleep.\"",
+        "correct": true,
+        "tokens": 551
+      },
+      {
+        "problem_id": "expanded_103",
+        "problem": "Do dolphins have names for each other?",
+        "ground_truth": "yes",
+        "answer": "Yes, dolphins do seem to have a system of identification that can be thought of as \"names\" for each other. However, it's essential to note that this system is based on vocalizations and is distinct from human language.",
+        "correct": true,
+        "tokens": 541
+      },
+      {
+        "problem_id": "strategyqa_016",
+        "problem": "Is lightning hotter than the sun?",
+        "ground_truth": "yes",
+        "answer": "Based on our analysis, lightning is hotter than the surface of the sun, but not as hot as the core of the sun.",
+        "correct": false,
+        "tokens": 488
+      },
+      {
+        "problem_id": "expanded_054",
+        "problem": "Do octopuses have three hearts?",
+        "ground_truth": "yes",
+        "answer": "** No, octopuses do not have three separate hearts. They have a single three-chambered heart.",
+        "correct": false,
+        "tokens": 543
+      },
+      {
+        "problem_id": "expanded_095",
+        "problem": "Can you be allergic to water?",
+        "ground_truth": "yes",
+        "answer": "Based on the analysis, it's not possible to be allergic to water in the classical sense. However, there may be rare conditions or defects in the immune system that can lead to an abnormal response to water.",
+        "correct": false,
+        "tokens": 588
+      },
+      {
+        "problem_id": "expanded_088",
+        "problem": "Do all mammals have hair?",
+        "ground_truth": "yes",
+        "answer": "No, not all mammals have hair.",
+        "correct": false,
+        "tokens": 518
+      },
+      {
+        "problem_id": "expanded_036",
+        "problem": "Can a person survive in space without protection?",
+        "ground_truth": "no",
+        "answer": "A person cannot survive in space without protection. The conditions in space are too hostile for the human body to survive without specialized equipment to provide a stable atmosphere, temperature, and radiation environment.",
+        "correct": true,
+        "tokens": 668
+      },
+      {
+        "problem_id": "strategyqa_014",
+        "problem": "Can humans see in complete darkness?",
+        "ground_truth": "no",
+        "answer": "no visual information can be transmitted to the brain.",
+        "correct": true,
+        "tokens": 497
+      },
+      {
+        "problem_id": "expanded_042",
+        "problem": "Is bamboo a type of grass?",
+        "ground_truth": "yes",
+        "answer": "while bamboo is often referred to as a type of grass due to its classification within the Poaceae family, it is more accurate to say that bamboo is a distinct group within the grass family.",
+        "correct": false,
+        "tokens": 576
+      },
+      {
+        "problem_id": "expanded_020",
+        "problem": "Do dolphins sleep?",
+        "ground_truth": "yes",
+        "answer": "** Yes, dolphins do sleep, but their sleep patterns are different from those of humans.",
+        "correct": true,
+        "tokens": 532
+      },
+      {
+        "problem_id": "strategyqa_006",
+        "problem": "Does hydrogen power work without oxygen?",
+        "ground_truth": "no",
+        "answer": "**",
+        "correct": false,
+        "tokens": 568
+      },
+      {
+        "problem_id": "expanded_104",
+        "problem": "Can you see the American flag on the Moon from Earth?",
+        "ground_truth": "no",
+        "answer": "** No, it is not possible to see the American flag on the Moon from Earth with the naked eye. The flag is too small to be resolved at a distance of 384,400 kilometers.",
+        "correct": true,
+        "tokens": 642
+      },
+      {
+        "problem_id": "expanded_090",
+        "problem": "Is there a permanent shadow on the Moon?",
+        "ground_truth": "yes",
+        "answer": "** No, there is no permanent shadow on the Moon.",
+        "correct": false,
+        "tokens": 597
+      },
+      {
+        "problem_id": "strategic_006",
+        "problem": "If a train leaves Station A at 9 AM traveling 60 mph toward Station B 180 miles away, and another train leaves Station B at 10 AM traveling 50 mph toward Station A, will they meet before 11 AM?",
+        "ground_truth": "no",
+        "answer": "** Yes, the two trains will meet before 11 AM.",
+        "correct": false,
+        "tokens": 626
+      },
+      {
+        "problem_id": "strategic_008",
+        "problem": "In rock-paper-scissors, if your opponent has played rock 3 times in a row, should you play paper next?",
+        "ground_truth": "yes",
+        "answer": "the best response to your opponent's three consecutive rocks is to play a random choice, such as scissors or paper.",
+        "correct": false,
+        "tokens": 622
+      },
+      {
+        "problem_id": "expanded_031",
+        "problem": "Is the Pacific Ocean shrinking?",
+        "ground_truth": "yes",
+        "answer": "** No, the Pacific Ocean is not shrinking.",
+        "correct": false,
+        "tokens": 659
+      },
+      {
+        "problem_id": "expanded_044",
+        "problem": "Do cats always land on their feet?",
+        "ground_truth": "no",
+        "answer": "Cats do not always land on their feet. The righting reflex is a remarkable ability, but it is not foolproof, and there are situations in which a cat may not be able to land on its feet.",
+        "correct": true,
+        "tokens": 606
+      },
+      {
+        "problem_id": "expanded_083",
+        "problem": "Can hot water freeze faster than cold water?",
+        "ground_truth": "yes",
+        "answer": "Hot water can freeze faster than cold water under specific conditions, such as when the hot water is supercooled. However, it's essential to note that this is not a universal rule and can depend on various factors, including the presence of nucleation sites and the temperature of the surroundings.",
+        "correct": false,
+        "tokens": 765
+      },
+      {
+        "problem_id": "expanded_038",
+        "problem": "Do elephants never forget?",
+        "ground_truth": "yes",
+        "answer": "** No, elephants do not never forget. While they have an exceptional ability to recall and recognize individuals, their memory is subject to limitations and can be impacted by various factors.",
+        "correct": false,
+        "tokens": 581
+      },
+      {
+        "problem_id": "strategyqa_030",
+        "problem": "Can you fold a piece of paper more than 7 times?",
+        "ground_truth": "yes",
+        "answer": "**",
+        "correct": false,
+        "tokens": 749
+      },
+      {
+        "problem_id": "expanded_059",
+        "problem": "Can humans grow new brain cells?",
+        "ground_truth": "yes",
+        "answer": "** Yes, humans can grow new brain cells, but the extent to which this occurs and its significance for overall brain function is still an area of ongoing research.",
+        "correct": true,
+        "tokens": 590
+      },
+      {
+        "problem_id": "expanded_051",
+        "problem": "Do komodo dragons have venom?",
+        "ground_truth": "yes",
+        "answer": "Komodo dragons do not have venom, but their saliva contains a unique mixture of enzymes and other compounds that contribute to their predatory abilities.",
+        "correct": false,
+        "tokens": 621
+      },
+      {
+        "problem_id": "expanded_057",
+        "problem": "Is the South Pole colder than the North Pole?",
+        "ground_truth": "yes",
+        "answer": "**The South Pole is colder than the North Pole.**",
+        "correct": false,
+        "tokens": 538
+      },
+      {
+        "problem_id": "expanded_089",
+        "problem": "Can a spider be as large as a human?",
+        "ground_truth": "no",
+        "answer": "No, a spider cannot be as large as a human.",
+        "correct": true,
+        "tokens": 703
+      }
+    ]
+  },
+  "fixed_reflection": {
+    "method": "fixed_reflection",
+    "num_problems": 30,
+    "correct": 23,
+    "accuracy": 0.7666666666666667,
+    "results": [
+      {
+        "problem_id": "strategic_007",
+        "problem": "You have 3 jugs: 8-liter, 5-liter, and 3-liter. The 8-liter jug is full. Can you measure exactly 4 liters using these jugs?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 6921,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "strategyqa_005",
+        "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+        "ground_truth": "no",
+        "answer": "yes",
+        "correct": false,
+        "tokens": 2904,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_063",
+        "problem": "Is sand made of fish poop?",
+        "ground_truth": "yes",
+        "answer": "no",
+        "correct": false,
+        "tokens": 5142,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_001",
+        "problem": "Do ostriches bury their heads in the sand?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 5438,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "strategic_012",
+        "problem": "You have 12 balls, one weighs differently. Can you find the odd ball using a balance scale only 3 times?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 4683,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_105",
+        "problem": "Is coconut a nut?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 3154,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "strategyqa_021",
+        "problem": "Do trees sleep?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 6893,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_103",
+        "problem": "Do dolphins have names for each other?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 5855,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "strategyqa_016",
+        "problem": "Is lightning hotter than the sun?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 2869,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_054",
+        "problem": "Do octopuses have three hearts?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 3106,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_095",
+        "problem": "Can you be allergic to water?",
+        "ground_truth": "yes",
+        "answer": "no",
+        "correct": false,
+        "tokens": 4589,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_088",
+        "problem": "Do all mammals have hair?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 5232,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_036",
+        "problem": "Can a person survive in space without protection?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 6836,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "strategyqa_014",
+        "problem": "Can humans see in complete darkness?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 4869,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_042",
+        "problem": "Is bamboo a type of grass?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 2685,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_020",
+        "problem": "Do dolphins sleep?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 7085,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "strategyqa_006",
+        "problem": "Does hydrogen power work without oxygen?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 2868,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_104",
+        "problem": "Can you see the American flag on the Moon from Earth?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 6030,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_090",
+        "problem": "Is there a permanent shadow on the Moon?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 5181,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "strategic_006",
+        "problem": "If a train leaves Station A at 9 AM traveling 60 mph toward Station B 180 miles away, and another train leaves Station B at 10 AM traveling 50 mph toward Station A, will they meet before 11 AM?",
+        "ground_truth": "no",
+        "answer": "The first train travels for 2 hours (from 9 AM to 11 AM) at 60 mph. In 2 hours, it will cover a distance of 60 * 2 = 120 miles.\n\nThe second train travels for",
+        "correct": false,
+        "tokens": 3230,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "strategic_008",
+        "problem": "In rock-paper-scissors, if your opponent has played rock 3 times in a row, should you play paper next?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 2920,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_031",
+        "problem": "Is the Pacific Ocean shrinking?",
+        "ground_truth": "yes",
+        "answer": "no",
+        "correct": false,
+        "tokens": 2829,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_044",
+        "problem": "Do cats always land on their feet?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 6151,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_083",
+        "problem": "Can hot water freeze faster than cold water?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 5713,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_038",
+        "problem": "Do elephants never forget?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 7221,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "strategyqa_030",
+        "problem": "Can you fold a piece of paper more than 7 times?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 5228,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_059",
+        "problem": "Can humans grow new brain cells?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 3112,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_051",
+        "problem": "Do komodo dragons have venom?",
+        "ground_truth": "yes",
+        "answer": "no",
+        "correct": false,
+        "tokens": 4818,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_057",
+        "problem": "Is the South Pole colder than the North Pole?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 6750,
+        "num_reflections": 2
+      },
+      {
+        "problem_id": "expanded_089",
+        "problem": "Can a spider be as large as a human?",
+        "ground_truth": "no",
+        "answer": "yes",
+        "correct": false,
+        "tokens": 7521,
+        "num_reflections": 2
+      }
+    ]
+  },
+  "adaptive_reflection": {
+    "method": "adaptive_reflection",
+    "num_problems": 30,
+    "correct": 21,
+    "accuracy": 0.7,
+    "avg_depth": 1.3666666666666667,
+    "rollback_count": 1,
+    "overfitting_count": 3,
+    "results": [
+      {
+        "problem_id": "strategic_007",
+        "problem": "You have 3 jugs: 8-liter, 5-liter, and 3-liter. The 8-liter jug is full. Can you measure exactly 4 liters using these jugs?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.32499999999999996,
+        "recommended_depth": 2,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "strategyqa_005",
+        "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.285,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_063",
+        "problem": "Is sand made of fish poop?",
+        "ground_truth": "yes",
+        "answer": "no",
+        "correct": false,
+        "tokens": 0,
+        "complexity": 0.205,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_001",
+        "problem": "Do ostriches bury their heads in the sand?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.215,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "strategic_012",
+        "problem": "You have 12 balls, one weighs differently. Can you find the odd ball using a balance scale only 3 times?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.33,
+        "recommended_depth": 2,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_105",
+        "problem": "Is coconut a nut?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.19499999999999998,
+        "recommended_depth": 1,
+        "actual_depth": 2,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "strategyqa_021",
+        "problem": "Do trees sleep?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.19,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_103",
+        "problem": "Do dolphins have names for each other?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.2475,
+        "recommended_depth": 1,
+        "actual_depth": 2,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "strategyqa_016",
+        "problem": "Is lightning hotter than the sun?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.205,
+        "recommended_depth": 1,
+        "actual_depth": 2,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_054",
+        "problem": "Do octopuses have three hearts?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.19999999999999998,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_095",
+        "problem": "Can you be allergic to water?",
+        "ground_truth": "yes",
+        "answer": "no",
+        "correct": false,
+        "tokens": 0,
+        "complexity": 0.205,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_088",
+        "problem": "Do all mammals have hair?",
+        "ground_truth": "yes",
+        "answer": "no",
+        "correct": false,
+        "tokens": 0,
+        "complexity": 0.19999999999999998,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_036",
+        "problem": "Can a person survive in space without protection?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.25,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "strategyqa_014",
+        "problem": "Can humans see in complete darkness?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.205,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_042",
+        "problem": "Is bamboo a type of grass?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.205,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_020",
+        "problem": "Do dolphins sleep?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.19,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": true
+      },
+      {
+        "problem_id": "strategyqa_006",
+        "problem": "Does hydrogen power work without oxygen?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.205,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_104",
+        "problem": "Can you see the American flag on the Moon from Earth?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.22999999999999998,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_090",
+        "problem": "Is there a permanent shadow on the Moon?",
+        "ground_truth": "yes",
+        "answer": "unknown",
+        "correct": false,
+        "tokens": 0,
+        "complexity": 0.215,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": true
+      },
+      {
+        "problem_id": "strategic_006",
+        "problem": "If a train leaves Station A at 9 AM traveling 60 mph toward Station B 180 miles away, and another train leaves Station B at 10 AM traveling 50 mph toward Station A, will they meet before 11 AM?",
+        "ground_truth": "no",
+        "answer": "yes",
+        "correct": false,
+        "tokens": 0,
+        "complexity": 0.43000000000000005,
+        "recommended_depth": 2,
+        "actual_depth": 2,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "strategic_008",
+        "problem": "In rock-paper-scissors, if your opponent has played rock 3 times in a row, should you play paper next?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.32,
+        "recommended_depth": 2,
+        "actual_depth": 2,
+        "rolled_back": true,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_031",
+        "problem": "Is the Pacific Ocean shrinking?",
+        "ground_truth": "yes",
+        "answer": "unknown",
+        "correct": false,
+        "tokens": 0,
+        "complexity": 0.235,
+        "recommended_depth": 1,
+        "actual_depth": 2,
+        "rolled_back": false,
+        "overfitting_detected": true
+      },
+      {
+        "problem_id": "expanded_044",
+        "problem": "Do cats always land on their feet?",
+        "ground_truth": "no",
+        "answer": "yes",
+        "correct": false,
+        "tokens": 0,
+        "complexity": 0.21,
+        "recommended_depth": 1,
+        "actual_depth": 2,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_083",
+        "problem": "Can hot water freeze faster than cold water?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.215,
+        "recommended_depth": 1,
+        "actual_depth": 2,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_038",
+        "problem": "Do elephants never forget?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.22499999999999998,
+        "recommended_depth": 1,
+        "actual_depth": 2,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "strategyqa_030",
+        "problem": "Can you fold a piece of paper more than 7 times?",
+        "ground_truth": "yes",
+        "answer": "no",
+        "correct": false,
+        "tokens": 0,
+        "complexity": 0.22999999999999998,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_059",
+        "problem": "Can humans grow new brain cells?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.205,
+        "recommended_depth": 1,
+        "actual_depth": 2,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_051",
+        "problem": "Do komodo dragons have venom?",
+        "ground_truth": "yes",
+        "answer": "no",
+        "correct": false,
+        "tokens": 0,
+        "complexity": 0.19999999999999998,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_057",
+        "problem": "Is the South Pole colder than the North Pole?",
+        "ground_truth": "yes",
+        "answer": "yes",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.255,
+        "recommended_depth": 1,
+        "actual_depth": 1,
+        "rolled_back": false,
+        "overfitting_detected": false
+      },
+      {
+        "problem_id": "expanded_089",
+        "problem": "Can a spider be as large as a human?",
+        "ground_truth": "no",
+        "answer": "no",
+        "correct": true,
+        "tokens": 0,
+        "complexity": 0.21999999999999997,
+        "recommended_depth": 1,
+        "actual_depth": 2,
+        "rolled_back": false,
+        "overfitting_detected": false
+      }
+    ]
+  },
+  "statistical_analysis": {
+    "baseline_accuracy": 0.43333333333333335,
+    "fixed_accuracy": 0.7666666666666667,
+    "adaptive_accuracy": 0.7,
+    "fixed_improvement": 0.33333333333333337,
+    "adaptive_improvement": 0.2666666666666666,
+    "adaptive_vs_fixed": -0.06666666666666676,
+    "mcnemar_fixed": {
+      "statistic": 5.785714285714286,
+      "p_value": 0.01615693126118134
+    },
+    "mcnemar_adaptive": {
+      "statistic": 4.9,
+      "p_value": 0.026856695507524453
+    },
+    "mcnemar_compare": {
+      "statistic": 0.16666666666666666,
+      "p_value": 0.6830913983096086
+    },
+    "avg_depth": 1.3666666666666667,
+    "rollback_count": 1,
+    "overfitting_count": 3
+  }
+}

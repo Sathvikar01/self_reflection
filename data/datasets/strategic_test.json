@@ -1,0 +1,85 @@
+[
+  {
+    "id": "strategic_011",
+    "question": "In a guessing game, you need to find a number between 1-100. Is binary search the optimal strategy to minimize guesses?",
+    "answer": "yes",
+    "facts": [
+      "Range is 1-100",
+      "Want to minimize guesses",
+      "Each guess should eliminate half the range"
+    ],
+    "decomposition": [
+      "Guess middle: 50",
+      "If too high, new range 1-49, guess 25",
+      "If too low, new range 51-100, guess 75",
+      "Continue halving",
+      "Maximum 7 guesses needed (log2(100) \u2248 7)"
+    ]
+  },
+  {
+    "id": "strategic_012",
+    "question": "You have 12 balls, one weighs differently. Can you find the odd ball using a balance scale only 3 times?",
+    "answer": "yes",
+    "facts": [
+      "12 balls, one weighs different",
+      "Balance scale only",
+      "Only 3 weighings allowed"
+    ],
+    "decomposition": [
+      "Divide into 3 groups of 4: A, B, C",
+      "Weigh A vs B",
+      "If equal, odd ball is in C",
+      "If not equal, odd ball is in heavier/lighter group",
+      "Take suspect group, continue weighing",
+      "Third weighing identifies the odd ball"
+    ]
+  },
+  {
+    "id": "strategic_013",
+    "question": "In chess, if you can take a queen with your knight but it would expose your king to check, should you take the queen?",
+    "answer": "no",
+    "facts": [
+      "Queen is worth 9 points",
+      "Knight is worth 3 points",
+      "King check can lead to checkmate"
+    ],
+    "decomposition": [
+      "Evaluate material gain: 9 points",
+      "Evaluate risk: king in check",
+      "Check can lead to checkmate",
+      "Losing king means losing game",
+      "Do not take queen"
+    ]
+  },
+  {
+    "id": "strategic_014",
+    "question": "You're in a card game. Should you discard a card that helps slightly now for a chance at a better card if the deck has mostly better cards?",
+    "answer": "yes",
+    "facts": [
+      "Current card: slight benefit",
+      "Deck has mostly better cards",
+      "Probability favors drawing better card"
+    ],
+    "decomposition": [
+      "Evaluate current card's value",
+      "Calculate probability of better card",
+      "If probability > 50%, discard and draw",
+      "Expected value favors drawing"
+    ]
+  },
+  {
+    "id": "strategic_015",
+    "question": "If you flip a coin 10 times and get heads all 10 times, is the probability of heads on the 11th flip still 50%?",
+    "answer": "yes",
+    "facts": [
+      "Coin flips are independent events",
+      "Previous results don't affect future",
+      "Fair coin has 50% heads probability"
+    ],
+    "decomposition": [
+      "Each flip is independent",
+      "Past 10 heads doesn't change next flip",
+      "Probability remains 50%"
+    ]
+  }
+]

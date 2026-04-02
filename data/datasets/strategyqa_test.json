@@ -1,0 +1,152 @@
+[
+  {
+    "id": "strategyqa_021",
+    "question": "Do trees sleep?",
+    "answer": "no",
+    "facts": [
+      "Sleep requires a brain",
+      "Trees have no brain or nervous system",
+      "Trees do have circadian rhythms though"
+    ],
+    "decomposition": [
+      "Sleep is a neurological process",
+      "Trees lack neurons",
+      "Therefore trees don't sleep"
+    ]
+  },
+  {
+    "id": "strategyqa_022",
+    "question": "Can you cry underwater?",
+    "answer": "yes",
+    "facts": [
+      "Tear ducts still function underwater",
+      "Tears mix with surrounding water",
+      "The physical act of crying is possible"
+    ],
+    "decomposition": [
+      "Crying is a physiological response",
+      "Eyes can produce tears underwater",
+      "You just can't see the tears"
+    ]
+  },
+  {
+    "id": "strategyqa_023",
+    "question": "Is a tomato a fruit?",
+    "answer": "yes",
+    "facts": [
+      "Botanically, fruits develop from flowers",
+      "Tomatoes develop from tomato flowers",
+      "They contain seeds"
+    ],
+    "decomposition": [
+      "Fruit is defined by botanical structure",
+      "Tomatoes meet this definition",
+      "Therefore tomatoes are fruits"
+    ]
+  },
+  {
+    "id": "strategyqa_024",
+    "question": "Can you light a diamond on fire?",
+    "answer": "yes",
+    "facts": [
+      "Diamonds are made of carbon",
+      "Carbon burns at high temperatures",
+      "Diamonds can burn at 850\u00b0C"
+    ],
+    "decomposition": [
+      "Diamond is crystalline carbon",
+      "Carbon reacts with oxygen at high heat",
+      "Diamonds can be burned"
+    ]
+  },
+  {
+    "id": "strategyqa_025",
+    "question": "Is hot water heavier than cold water?",
+    "answer": "no",
+    "facts": [
+      "Hot water expands and becomes less dense",
+      "The same volume of hot water has less mass",
+      "Density decreases with temperature"
+    ],
+    "decomposition": [
+      "Heating causes molecular expansion",
+      "Same mass spread over larger volume",
+      "Hot water is lighter per unit volume"
+    ]
+  },
+  {
+    "id": "strategyqa_026",
+    "question": "Do spiders have bones?",
+    "answer": "no",
+    "facts": [
+      "Spiders are arthropods",
+      "Arthropods have exoskeletons",
+      "No internal bones exist"
+    ],
+    "decomposition": [
+      "Spiders are invertebrates",
+      "They have hard external shells",
+      "No internal skeletal system"
+    ]
+  },
+  {
+    "id": "strategyqa_027",
+    "question": "Can you see the Great Wall of China from space?",
+    "answer": "it depends",
+    "facts": [
+      "The wall is very long but narrow",
+      "From low orbit, it might be visible",
+      "From the Moon, it's invisible"
+    ],
+    "decomposition": [
+      "Visibility depends on altitude",
+      "Low Earth orbit might allow visibility",
+      "Further distances make it impossible"
+    ]
+  },
+  {
+    "id": "strategyqa_028",
+    "question": "Is the Earth flat?",
+    "answer": "no",
+    "facts": [
+      "Satellite images show a sphere",
+      "Ships disappear hull-first over horizon",
+      "Gravity pulls matter into spheres"
+    ],
+    "decomposition": [
+      "Multiple evidence sources exist",
+      "Physical observations confirm roundness",
+      "The Earth is an oblate spheroid"
+    ]
+  },
+  {
+    "id": "strategyqa_029",
+    "question": "Do computers use binary because they can't count to 10?",
+    "answer": "no",
+    "facts": [
+      "Binary is efficient for electronic circuits",
+      "On/off states are reliable",
+      "It's a design choice, not a limitation"
+    ],
+    "decomposition": [
+      "Electronic switches have two states",
+      "Binary minimizes errors",
+      "It's optimal, not limiting"
+    ]
+  },
+  {
+    "id": "strategyqa_030",
+    "question": "Can you fold a piece of paper more than 7 times?",
+    "answer": "yes",
+    "facts": [
+      "The 7-fold limit is a common myth",
+      "Very thin or large paper can fold more",
+      "The record is 12 folds"
+    ],
+    "decomposition": [
+      "Folding difficulty increases exponentially",
+      "Standard paper hits physical limits",
+      "But with thin enough paper, more folds are possible"
+    ]
+  }
+]

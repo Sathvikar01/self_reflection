@@ -1,0 +1,310 @@
+[
+  {
+    "id": "strategyqa_001",
+    "question": "Do hamsters provide food for any animals?",
+    "answer": "yes",
+    "facts": [
+      "Hamsters are small rodents",
+      "Hamsters are prey animals",
+      "Owls hunt small rodents including hamsters"
+    ],
+    "decomposition": [
+      "Hamsters are small rodents",
+      "Small rodents are prey for predators like owls",
+      "Therefore, hamsters provide food for some animals"
+    ]
+  },
+  {
+    "id": "strategyqa_002",
+    "question": "Could a person survive falling from the Empire State Building?",
+    "answer": "no",
+    "facts": [
+      "The Empire State Building is 1,454 feet tall",
+      "Terminal velocity for a human is about 120 mph",
+      "Falling from that height would be fatal"
+    ],
+    "decomposition": [
+      "The Empire State Building is very tall",
+      "Falling from such heights causes fatal injuries",
+      "Therefore, survival is extremely unlikely"
+    ]
+  },
+  {
+    "id": "strategyqa_003",
+    "question": "Can a human eat a poisonous mushroom and live?",
+    "answer": "it depends",
+    "facts": [
+      "Some poisonous mushrooms cause severe illness but not death",
+      "Some are immediately fatal",
+      "Medical treatment can help in some cases"
+    ],
+    "decomposition": [
+      "Different mushrooms have different levels of toxicity",
+      "Some cause minor illness, others are fatal",
+      "Medical intervention may help",
+      "So survival depends on the specific mushroom and treatment"
+    ]
+  },
+  {
+    "id": "strategyqa_004",
+    "question": "Is the sun brighter than a light bulb?",
+    "answer": "yes",
+    "facts": [
+      "The sun has a luminosity of about 3.8 \u00d7 10^26 watts",
+      "A typical light bulb produces about 60-100 watts",
+      "The sun is immensely brighter"
+    ],
+    "decomposition": [
+      "The sun's luminosity is extremely high",
+      "A light bulb produces relatively little light",
+      "Therefore the sun is much brighter"
+    ]
+  },
+  {
+    "id": "strategyqa_005",
+    "question": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+    "answer": "no",
+    "facts": [
+      "US voting age is 18",
+      "Person born in 2000 would be 16 in 2016",
+      "They would not meet the age requirement"
+    ],
+    "decomposition": [
+      "Voting age in US is 18",
+      "Person born in 2000 would be 16 in 2016",
+      "16 is less than 18",
+      "Therefore they cannot vote"
+    ]
+  },
+  {
+    "id": "strategyqa_006",
+    "question": "Does hydrogen power work without oxygen?",
+    "answer": "no",
+    "facts": [
+      "Hydrogen fuel cells combine hydrogen and oxygen",
+      "This reaction produces electricity and water",
+      "Without oxygen, the reaction cannot occur"
+    ],
+    "decomposition": [
+      "Hydrogen fuel cells require oxygen for the reaction",
+      "The reaction produces energy",
+      "Without oxygen, no reaction occurs",
+      "Therefore hydrogen power needs oxygen"
+    ]
+  },
+  {
+    "id": "strategyqa_007",
+    "question": "Can penguins fly?",
+    "answer": "no",
+    "facts": [
+      "Penguins are flightless birds",
+      "Their wings have evolved into flippers",
+      "They use wings for swimming, not flying"
+    ],
+    "decomposition": [
+      "Penguins are birds",
+      "Penguins have wings that evolved for swimming",
+      "They cannot use wings for flight",
+      "Therefore penguins cannot fly"
+    ]
+  },
+  {
+    "id": "strategyqa_008",
+    "question": "Is Antarctica larger than Europe?",
+    "answer": "yes",
+    "facts": [
+      "Antarctica is about 14 million square kilometers",
+      "Europe is about 10 million square kilometers",
+      "Antarctica is larger"
+    ],
+    "decomposition": [
+      "Antarctica's area is approximately 14 million sq km",
+      "Europe's area is approximately 10 million sq km",
+      "14 million > 10 million",
+      "Therefore Antarctica is larger"
+    ]
+  },
+  {
+    "id": "strategyqa_009",
+    "question": "Can a person hold their breath for 30 minutes?",
+    "answer": "no",
+    "facts": [
+      "World record for breath holding is about 24 minutes",
+      "This is with extreme training and pure oxygen beforehand",
+      "Normal humans cannot hold breath that long"
+    ],
+    "decomposition": [
+      "Maximum breath holding time is about 24 minutes",
+      "This requires extreme training and preparation",
+      "30 minutes exceeds human capability",
+      "Therefore a normal person cannot do it"
+    ]
+  },
+  {
+    "id": "strategyqa_010",
+    "question": "Is the moon made of cheese?",
+    "answer": "no",
+    "facts": [
+      "The moon is made of rock and dust",
+      "This has been confirmed by lunar samples",
+      "Cheese is a dairy product made on Earth"
+    ],
+    "decomposition": [
+      "The moon's composition has been studied",
+      "Lunar samples show rock and regolith",
+      "Cheese requires milk and dairy processing",
+      "The moon has no dairy products",
+      "Therefore the moon is not made of cheese"
+    ]
+  },
+  {
+    "id": "strategyqa_011",
+    "question": "Do all birds lay eggs?",
+    "answer": "yes",
+    "facts": [
+      "All birds are oviparous",
+      "Oviparous animals lay eggs",
+      "No bird gives live birth"
+    ],
+    "decomposition": [
+      "Birds are a class of animals",
+      "All members of this class lay eggs",
+      "Therefore all birds lay eggs"
+    ]
+  },
+  {
+    "id": "strategyqa_012",
+    "question": "Can a fish drown?",
+    "answer": "yes",
+    "facts": [
+      "Fish need oxygen dissolved in water",
+      "If water lacks oxygen, fish can suffocate",
+      "This is called drowning in fish"
+    ],
+    "decomposition": [
+      "Fish extract oxygen from water through gills",
+      "Low oxygen levels prevent this",
+      "Fish can die from lack of oxygen"
+    ]
+  },
+  {
+    "id": "strategyqa_013",
+    "question": "Is water wet?",
+    "answer": "it depends",
+    "facts": [
+      "Wetness is defined by water adhering to a surface",
+      "Water molecules stick to each other",
+      "The definition is debated"
+    ],
+    "decomposition": [
+      "Wetness typically means water on a surface",
+      "Water on water is just more water",
+      "The answer depends on definition"
+    ]
+  },
+  {
+    "id": "strategyqa_014",
+    "question": "Can humans see in complete darkness?",
+    "answer": "no",
+    "facts": [
+      "Human eyes require light to see",
+      "Complete darkness has no light",
+      "Without light, vision is impossible"
+    ],
+    "decomposition": [
+      "Human vision requires photons hitting the retina",
+      "Complete darkness means zero photons",
+      "Therefore humans cannot see in complete darkness"
+    ]
+  },
+  {
+    "id": "strategyqa_015",
+    "question": "Do plants need oxygen?",
+    "answer": "yes",
+    "facts": [
+      "Plants perform cellular respiration",
+      "Cellular respiration requires oxygen",
+      "Plants use oxygen at night and day"
+    ],
+    "decomposition": [
+      "Plants are living organisms",
+      "Living organisms need energy",
+      "Cellular respiration uses oxygen to produce energy"
+    ]
+  },
+  {
+    "id": "strategyqa_016",
+    "question": "Is lightning hotter than the sun?",
+    "answer": "yes",
+    "facts": [
+      "Lightning can reach 30,000 Kelvin",
+      "The sun's surface is about 5,778 Kelvin",
+      "Lightning is much hotter"
+    ],
+    "decomposition": [
+      "Lightning creates intense heat briefly",
+      "30,000 K > 5,778 K",
+      "Therefore lightning is hotter"
+    ]
+  },
+  {
+    "id": "strategyqa_017",
+    "question": "Can you boil water in a paper cup?",
+    "answer": "yes",
+    "facts": [
+      "Water boils at 100\u00b0C",
+      "Paper burns above 230\u00b0C",
+      "Water absorbs heat and prevents paper from burning"
+    ],
+    "decomposition": [
+      "Heat transfers to the water",
+      "Water temperature stays at 100\u00b0C while boiling",
+      "Paper stays below its burning point"
+    ]
+  },
+  {
+    "id": "strategyqa_018",
+    "question": "Do astronauts need to wear sunscreen?",
+    "answer": "no",
+    "facts": [
+      "Astronauts wear spacesuits in space",
+      "Spacesuits block all UV radiation",
+      "No direct sun exposure occurs"
+    ],
+    "decomposition": [
+      "Space has intense UV radiation",
+      "Spacesuits provide complete protection",
+      "Sunscreen is unnecessary under the suit"
+    ]
+  },
+  {
+    "id": "strategyqa_019",
+    "question": "Can sound travel in space?",
+    "answer": "no",
+    "facts": [
+      "Sound requires a medium to travel",
+      "Space is a near-vacuum",
+      "No medium means no sound"
+    ],
+    "decomposition": [
+      "Sound is a pressure wave",
+      "Pressure waves need particles",
+      "Space lacks sufficient particles"
+    ]
+  },
+  {
+    "id": "strategyqa_020",
+    "question": "Is glass a solid?",
+    "answer": "it depends",
+    "facts": [
+      "Glass appears solid but has amorphous structure",
+      "It's sometimes called a super-cooled liquid",
+      "Scientific consensus varies"
+    ],
+    "decomposition": [
+      "Glass has properties of both solids and liquids",
+      "It doesn't flow at room temperature",
+      "The classification is debated"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "dataset": "strategy_qa",
+  "num_samples": 10,
+  "accuracy": 0.1,
+  "correct": 1,
+  "avg_tokens": 10208.5,
+  "avg_latency": 38.63888309001923,
+  "avg_expansions": 2.5,
+  "avg_backtracks": 1.2,
+  "max_iterations": 50,
+  "seed": 42
+}

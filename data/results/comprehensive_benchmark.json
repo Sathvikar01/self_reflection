@@ -1,0 +1,575 @@
+{
+  "timestamp": "2026-03-30T01:43:56.629366",
+  "num_problems": 30,
+  "baseline": {
+    "method": "baseline",
+    "num_problems": 30,
+    "correct": 13,
+    "accuracy": 0.43333333333333335,
+    "results": [
+      {
+        "problem_id": "strategyqa_029",
+        "problem": "Do computers use binary because they can't count to 10?",
+        "ground_truth": "no",
+        "baseline_answer": "** No, computers do not use binary because they can't count to 10. They use binary because of its simplicity and efficiency in arithmetic operations.",
+        "baseline_correct": true,
+        "baseline_tokens": 510
+      },
+      {
+        "problem_id": "strategyqa_022",
+        "problem": "Can you cry underwater?",
+        "ground_truth": "yes",
+        "baseline_answer": "**",
+        "baseline_correct": false,
+        "baseline_tokens": 727
+      },
+      {
+        "problem_id": "strategyqa_005",
+        "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+        "ground_truth": "no",
+        "baseline_answer": "** No, a person born in 2000 would not be eligible to vote in the 2016 US election.",
+        "baseline_correct": true,
+        "baseline_tokens": 504
+      },
+      {
+        "problem_id": "strategyqa_002",
+        "problem": "Could a person survive falling from the Empire State Building?",
+        "ground_truth": "no",
+        "baseline_answer": "It is unlikely that a person would survive falling from the Empire State Building, but there may be exceptional cases where survival is possible.",
+        "baseline_correct": false,
+        "baseline_tokens": 961
+      },
+      {
+        "problem_id": "strategic_008",
+        "problem": "In rock-paper-scissors, if your opponent has played rock 3 times in a row, should you play paper next?",
+        "ground_truth": "yes",
+        "baseline_answer": "we cannot make any assumptions about the opponent's next move.",
+        "baseline_correct": false,
+        "baseline_tokens": 644
+      },
+      {
+        "problem_id": "strategyqa_025",
+        "problem": "Is hot water heavier than cold water?",
+        "ground_truth": "no",
+        "baseline_answer": "**",
+        "baseline_correct": false,
+        "baseline_tokens": 463
+      },
+      {
+        "problem_id": "strategyqa_011",
+        "problem": "Do all birds lay eggs?",
+        "ground_truth": "yes",
+        "baseline_answer": "** Yes, all birds lay eggs. However, it's worth noting that there may be rare exceptions, but these are not representative of the majority of bird species.",
+        "baseline_correct": true,
+        "baseline_tokens": 562
+      },
+      {
+        "problem_id": "strategyqa_024",
+        "problem": "Can you light a diamond on fire?",
+        "ground_truth": "yes",
+        "baseline_answer": "it's not possible to light a diamond on fire in the classical sense. However, specialized techniques can cause a diamond to undergo a chemical reaction.",
+        "baseline_correct": false,
+        "baseline_tokens": 766
+      },
+      {
+        "problem_id": "strategyqa_009",
+        "problem": "Can a person hold their breath for 30 minutes?",
+        "ground_truth": "no",
+        "baseline_answer": "** No, a person cannot hold their breath for 30 minutes.",
+        "baseline_correct": true,
+        "baseline_tokens": 644
+      },
+      {
+        "problem_id": "strategyqa_017",
+        "problem": "Can you boil water in a paper cup?",
+        "ground_truth": "yes",
+        "baseline_answer": "**",
+        "baseline_correct": false,
+        "baseline_tokens": 571
+      },
+      {
+        "problem_id": "strategic_006",
+        "problem": "If a train leaves Station A at 9 AM traveling 60 mph toward Station B 180 miles away, and another train leaves Station B at 10 AM traveling 50 mph toward Station A, will they meet before 11 AM?",
+        "ground_truth": "no",
+        "baseline_answer": "** No, the trains will not meet before 11 AM.",
+        "baseline_correct": true,
+        "baseline_tokens": 619
+      },
+      {
+        "problem_id": "strategyqa_023",
+        "problem": "Is a tomato a fruit?",
+        "ground_truth": "yes",
+        "baseline_answer": "Yes, a tomato is a fruit.",
+        "baseline_correct": true,
+        "baseline_tokens": 447
+      },
+      {
+        "problem_id": "strategyqa_006",
+        "problem": "Does hydrogen power work without oxygen?",
+        "ground_truth": "no",
+        "baseline_answer": "Hydrogen power does not typically work without oxygen. The primary chemical reaction involved in hydrogen power requires oxygen to produce water and electricity. While there are some specialized systems that can generate power using hydrogen without oxygen, these are not typical examples of hydrogen power.",
+        "baseline_correct": true,
+        "baseline_tokens": 647
+      },
+      {
+        "problem_id": "strategic_015",
+        "problem": "If you flip a coin 10 times and get heads all 10 times, is the probability of heads on the 11th flip still 50%?",
+        "ground_truth": "yes",
+        "baseline_answer": "** The probability of getting heads on the 11th flip is still 50%.",
+        "baseline_correct": false,
+        "baseline_tokens": 677
+      },
+      {
+        "problem_id": "strategic_007",
+        "problem": "You have 3 jugs: 8-liter, 5-liter, and 3-liter. The 8-liter jug is full. Can you measure exactly 4 liters using these jugs?",
+        "ground_truth": "yes",
+        "baseline_answer": "Fill the 5-liter jug from the 8-liter jug",
+        "baseline_correct": false,
+        "baseline_tokens": 2204
+      },
+      {
+        "problem_id": "strategyqa_021",
+        "problem": "Do trees sleep?",
+        "ground_truth": "no",
+        "baseline_answer": "Trees do not sleep.",
+        "baseline_correct": true,
+        "baseline_tokens": 552
+      },
+      {
+        "problem_id": "strategyqa_014",
+        "problem": "Can humans see in complete darkness?",
+        "ground_truth": "no",
+        "baseline_answer": "**",
+        "baseline_correct": false,
+        "baseline_tokens": 459
+      },
+      {
+        "problem_id": "strategyqa_028",
+        "problem": "Is the Earth flat?",
+        "ground_truth": "no",
+        "baseline_answer": "The Earth is not flat.",
+        "baseline_correct": true,
+        "baseline_tokens": 705
+      },
+      {
+        "problem_id": "strategyqa_019",
+        "problem": "Can sound travel in space?",
+        "ground_truth": "no",
+        "baseline_answer": "No, sound cannot travel in space.",
+        "baseline_correct": true,
+        "baseline_tokens": 558
+      },
+      {
+        "problem_id": "strategyqa_007",
+        "problem": "Can penguins fly?",
+        "ground_truth": "no",
+        "baseline_answer": "penguins are not capable of flying in the classical sense, as defined in Step 1.",
+        "baseline_correct": true,
+        "baseline_tokens": 508
+      },
+      {
+        "problem_id": "strategyqa_030",
+        "problem": "Can you fold a piece of paper more than 7 times?",
+        "ground_truth": "yes",
+        "baseline_answer": "the answer to the problem is:",
+        "baseline_correct": false,
+        "baseline_tokens": 686
+      },
+      {
+        "problem_id": "strategyqa_016",
+        "problem": "Is lightning hotter than the sun?",
+        "ground_truth": "yes",
+        "baseline_answer": "the final answer is:",
+        "baseline_correct": false,
+        "baseline_tokens": 649
+      },
+      {
+        "problem_id": "strategic_013",
+        "problem": "In chess, if you can take a queen with your knight but it would expose your king to check, should you take the queen?",
+        "ground_truth": "no",
+        "baseline_answer": "**",
+        "baseline_correct": false,
+        "baseline_tokens": 606
+      },
+      {
+        "problem_id": "strategic_012",
+        "problem": "You have 12 balls, one weighs differently. Can you find the odd ball using a balance scale only 3 times?",
+        "ground_truth": "yes",
+        "baseline_answer": "**",
+        "baseline_correct": false,
+        "baseline_tokens": 707
+      },
+      {
+        "problem_id": "strategyqa_001",
+        "problem": "Do hamsters provide food for any animals?",
+        "ground_truth": "yes",
+        "baseline_answer": "the answer to the problem is:",
+        "baseline_correct": false,
+        "baseline_tokens": 520
+      },
+      {
+        "problem_id": "strategyqa_012",
+        "problem": "Can a fish drown?",
+        "ground_truth": "yes",
+        "baseline_answer": "**",
+        "baseline_correct": false,
+        "baseline_tokens": 661
+      },
+      {
+        "problem_id": "strategyqa_015",
+        "problem": "Do plants need oxygen?",
+        "ground_truth": "yes",
+        "baseline_answer": "** Yes, plants need oxygen.",
+        "baseline_correct": true,
+        "baseline_tokens": 486
+      },
+      {
+        "problem_id": "strategyqa_004",
+        "problem": "Is the sun brighter than a light bulb?",
+        "ground_truth": "yes",
+        "baseline_answer": "** Yes, the sun is much brighter than a light bulb.",
+        "baseline_correct": true,
+        "baseline_tokens": 733
+      },
+      {
+        "problem_id": "strategyqa_018",
+        "problem": "Do astronauts need to wear sunscreen?",
+        "ground_truth": "no",
+        "baseline_answer": "Astronauts need to wear specialized sunscreen or take other protective measures to safeguard against the risks of UV radiation in space.",
+        "baseline_correct": false,
+        "baseline_tokens": 651
+      },
+      {
+        "problem_id": "strategyqa_010",
+        "problem": "Is the moon made of cheese?",
+        "ground_truth": "no",
+        "baseline_answer": "Note: While this problem may seem like a joke, it is a useful exercise in critical thinking and scientific inquiry. By following a logical and methodical approach, we can determine the answer to even the most absurd-sounding questions.",
+        "baseline_correct": false,
+        "baseline_tokens": 544
+      }
+    ]
+  },
+  "self_reflection": {
+    "method": "self_reflection",
+    "num_problems": 30,
+    "correct": 19,
+    "accuracy": 0.6333333333333333,
+    "results": [
+      {
+        "problem_id": "strategyqa_029",
+        "problem": "Do computers use binary because they can't count to 10?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 6589,
+        "num_reflections": 2,
+        "num_corrections": 3
+      },
+      {
+        "problem_id": "strategyqa_022",
+        "problem": "Can you cry underwater?",
+        "ground_truth": "yes",
+        "reflection_answer": "no",
+        "reflection_correct": false,
+        "reflection_tokens": 3009,
+        "num_reflections": 1,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategyqa_005",
+        "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 6488,
+        "num_reflections": 2,
+        "num_corrections": 3
+      },
+      {
+        "problem_id": "strategyqa_002",
+        "problem": "Could a person survive falling from the Empire State Building?",
+        "ground_truth": "no",
+        "reflection_answer": "yes",
+        "reflection_correct": false,
+        "reflection_tokens": 5509,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategic_008",
+        "problem": "In rock-paper-scissors, if your opponent has played rock 3 times in a row, should you play paper next?",
+        "ground_truth": "yes",
+        "reflection_answer": "no",
+        "reflection_correct": false,
+        "reflection_tokens": 4705,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategyqa_025",
+        "problem": "Is hot water heavier than cold water?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 6203,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategyqa_011",
+        "problem": "Do all birds lay eggs?",
+        "ground_truth": "yes",
+        "reflection_answer": "no",
+        "reflection_correct": false,
+        "reflection_tokens": 6463,
+        "num_reflections": 2,
+        "num_corrections": 3
+      },
+      {
+        "problem_id": "strategyqa_024",
+        "problem": "Can you light a diamond on fire?",
+        "ground_truth": "yes",
+        "reflection_answer": "no",
+        "reflection_correct": false,
+        "reflection_tokens": 3192,
+        "num_reflections": 1,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategyqa_009",
+        "problem": "Can a person hold their breath for 30 minutes?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 6793,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategyqa_017",
+        "problem": "Can you boil water in a paper cup?",
+        "ground_truth": "yes",
+        "reflection_answer": "no",
+        "reflection_correct": false,
+        "reflection_tokens": 3021,
+        "num_reflections": 1,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategic_006",
+        "problem": "If a train leaves Station A at 9 AM traveling 60 mph toward Station B 180 miles away, and another train leaves Station B at 10 AM traveling 50 mph toward Station A, will they meet before 11 AM?",
+        "ground_truth": "no",
+        "reflection_answer": "yes",
+        "reflection_correct": false,
+        "reflection_tokens": 2900,
+        "num_reflections": 1,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategyqa_023",
+        "problem": "Is a tomato a fruit?",
+        "ground_truth": "yes",
+        "reflection_answer": "yes",
+        "reflection_correct": true,
+        "reflection_tokens": 3152,
+        "num_reflections": 1,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategyqa_006",
+        "problem": "Does hydrogen power work without oxygen?",
+        "ground_truth": "no",
+        "reflection_answer": "yes",
+        "reflection_correct": false,
+        "reflection_tokens": 5165,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategic_015",
+        "problem": "If you flip a coin 10 times and get heads all 10 times, is the probability of heads on the 11th flip still 50%?",
+        "ground_truth": "yes",
+        "reflection_answer": "yes",
+        "reflection_correct": true,
+        "reflection_tokens": 6963,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategic_007",
+        "problem": "You have 3 jugs: 8-liter, 5-liter, and 3-liter. The 8-liter jug is full. Can you measure exactly 4 liters using these jugs?",
+        "ground_truth": "yes",
+        "reflection_answer": "yes",
+        "reflection_correct": true,
+        "reflection_tokens": 5588,
+        "num_reflections": 2,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategyqa_021",
+        "problem": "Do trees sleep?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 5442,
+        "num_reflections": 2,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategyqa_014",
+        "problem": "Can humans see in complete darkness?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 2996,
+        "num_reflections": 1,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategyqa_028",
+        "problem": "Is the Earth flat?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 6836,
+        "num_reflections": 2,
+        "num_corrections": 3
+      },
+      {
+        "problem_id": "strategyqa_019",
+        "problem": "Can sound travel in space?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 5972,
+        "num_reflections": 2,
+        "num_corrections": 3
+      },
+      {
+        "problem_id": "strategyqa_007",
+        "problem": "Can penguins fly?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 5023,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategyqa_030",
+        "problem": "Can you fold a piece of paper more than 7 times?",
+        "ground_truth": "yes",
+        "reflection_answer": "no",
+        "reflection_correct": false,
+        "reflection_tokens": 7215,
+        "num_reflections": 2,
+        "num_corrections": 3
+      },
+      {
+        "problem_id": "strategyqa_016",
+        "problem": "Is lightning hotter than the sun?",
+        "ground_truth": "yes",
+        "reflection_answer": "yes",
+        "reflection_correct": true,
+        "reflection_tokens": 2859,
+        "num_reflections": 1,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategic_013",
+        "problem": "In chess, if you can take a queen with your knight but it would expose your king to check, should you take the queen?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 3310,
+        "num_reflections": 1,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategic_012",
+        "problem": "You have 12 balls, one weighs differently. Can you find the odd ball using a balance scale only 3 times?",
+        "ground_truth": "yes",
+        "reflection_answer": "yes",
+        "reflection_correct": true,
+        "reflection_tokens": 3070,
+        "num_reflections": 1,
+        "num_corrections": 1
+      },
+      {
+        "problem_id": "strategyqa_001",
+        "problem": "Do hamsters provide food for any animals?",
+        "ground_truth": "yes",
+        "reflection_answer": "yes",
+        "reflection_correct": true,
+        "reflection_tokens": 5220,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategyqa_012",
+        "problem": "Can a fish drown?",
+        "ground_truth": "yes",
+        "reflection_answer": "no",
+        "reflection_correct": false,
+        "reflection_tokens": 5612,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategyqa_015",
+        "problem": "Do plants need oxygen?",
+        "ground_truth": "yes",
+        "reflection_answer": "yes",
+        "reflection_correct": true,
+        "reflection_tokens": 5230,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategyqa_004",
+        "problem": "Is the sun brighter than a light bulb?",
+        "ground_truth": "yes",
+        "reflection_answer": "yes",
+        "reflection_correct": true,
+        "reflection_tokens": 5096,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategyqa_018",
+        "problem": "Do astronauts need to wear sunscreen?",
+        "ground_truth": "no",
+        "reflection_answer": "yes",
+        "reflection_correct": false,
+        "reflection_tokens": 6205,
+        "num_reflections": 2,
+        "num_corrections": 2
+      },
+      {
+        "problem_id": "strategyqa_010",
+        "problem": "Is the moon made of cheese?",
+        "ground_truth": "no",
+        "reflection_answer": "no",
+        "reflection_correct": true,
+        "reflection_tokens": 7062,
+        "num_reflections": 2,
+        "num_corrections": 2
+      }
+    ]
+  },
+  "statistical_analysis": {
+    "baseline_accuracy": 0.43333333333333335,
+    "reflection_accuracy": 0.6333333333333333,
+    "improvement_absolute": 0.19999999999999996,
+    "improvement_relative": 0.4615384615384614,
+    "both_correct": 10,
+    "both_wrong": 8,
+    "baseline_only_correct": 3,
+    "reflection_only_correct": 9,
+    "mcnemar_statistic": 2.0833333333333335,
+    "p_value": 0.14891467317876161,
+    "ci_95_lower": -0.04734800795041194,
+    "ci_95_upper": 0.44734800795041185,
+    "statistically_significant": false
+  }
+}

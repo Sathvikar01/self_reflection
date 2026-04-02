@@ -1,0 +1,2386 @@
+[
+  {
+    "id": "strategyqa_001",
+    "question": "Do hamsters provide food for any animals?",
+    "answer": "yes",
+    "facts": [
+      "Hamsters are small rodents",
+      "Hamsters are prey animals",
+      "Owls hunt small rodents including hamsters"
+    ],
+    "decomposition": [
+      "Hamsters are small rodents",
+      "Small rodents are prey for predators like owls",
+      "Therefore, hamsters provide food for some animals"
+    ]
+  },
+  {
+    "id": "strategyqa_002",
+    "question": "Could a person survive falling from the Empire State Building?",
+    "answer": "no",
+    "facts": [
+      "The Empire State Building is 1,454 feet tall",
+      "Terminal velocity for a human is about 120 mph",
+      "Falling from that height would be fatal"
+    ],
+    "decomposition": [
+      "The Empire State Building is very tall",
+      "Falling from such heights causes fatal injuries",
+      "Therefore, survival is extremely unlikely"
+    ]
+  },
+  {
+    "id": "strategyqa_003",
+    "question": "Can a human eat a poisonous mushroom and live?",
+    "answer": "it depends",
+    "facts": [
+      "Some poisonous mushrooms cause severe illness but not death",
+      "Some are immediately fatal",
+      "Medical treatment can help in some cases"
+    ],
+    "decomposition": [
+      "Different mushrooms have different levels of toxicity",
+      "Some cause minor illness, others are fatal",
+      "Medical intervention may help",
+      "So survival depends on the specific mushroom and treatment"
+    ]
+  },
+  {
+    "id": "strategyqa_004",
+    "question": "Is the sun brighter than a light bulb?",
+    "answer": "yes",
+    "facts": [
+      "The sun has a luminosity of about 3.8 × 10^26 watts",
+      "A typical light bulb produces about 60-100 watts",
+      "The sun is immensely brighter"
+    ],
+    "decomposition": [
+      "The sun's luminosity is extremely high",
+      "A light bulb produces relatively little light",
+      "Therefore the sun is much brighter"
+    ]
+  },
+  {
+    "id": "strategyqa_005",
+    "question": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+    "answer": "no",
+    "facts": [
+      "US voting age is 18",
+      "Person born in 2000 would be 16 in 2016",
+      "They would not meet the age requirement"
+    ],
+    "decomposition": [
+      "Voting age in US is 18",
+      "Person born in 2000 would be 16 in 2016",
+      "16 is less than 18",
+      "Therefore they cannot vote"
+    ]
+  },
+  {
+    "id": "strategyqa_006",
+    "question": "Does hydrogen power work without oxygen?",
+    "answer": "no",
+    "facts": [
+      "Hydrogen fuel cells combine hydrogen and oxygen",
+      "This reaction produces electricity and water",
+      "Without oxygen, the reaction cannot occur"
+    ],
+    "decomposition": [
+      "Hydrogen fuel cells require oxygen for the reaction",
+      "The reaction produces energy",
+      "Without oxygen, no reaction occurs",
+      "Therefore hydrogen power needs oxygen"
+    ]
+  },
+  {
+    "id": "strategyqa_007",
+    "question": "Can penguins fly?",
+    "answer": "no",
+    "facts": [
+      "Penguins are flightless birds",
+      "Their wings have evolved into flippers",
+      "They use wings for swimming, not flying"
+    ],
+    "decomposition": [
+      "Penguins are birds",
+      "Penguins have wings that evolved for swimming",
+      "They cannot use wings for flight",
+      "Therefore penguins cannot fly"
+    ]
+  },
+  {
+    "id": "strategyqa_008",
+    "question": "Is Antarctica larger than Europe?",
+    "answer": "yes",
+    "facts": [
+      "Antarctica is about 14 million square kilometers",
+      "Europe is about 10 million square kilometers",
+      "Antarctica is larger"
+    ],
+    "decomposition": [
+      "Antarctica's area is approximately 14 million sq km",
+      "Europe's area is approximately 10 million sq km",
+      "14 million > 10 million",
+      "Therefore Antarctica is larger"
+    ]
+  },
+  {
+    "id": "strategyqa_009",
+    "question": "Can a person hold their breath for 30 minutes?",
+    "answer": "no",
+    "facts": [
+      "World record for breath holding is about 24 minutes",
+      "This is with extreme training and pure oxygen beforehand",
+      "Normal humans cannot hold breath that long"
+    ],
+    "decomposition": [
+      "Maximum breath holding time is about 24 minutes",
+      "This requires extreme training and preparation",
+      "30 minutes exceeds human capability",
+      "Therefore a normal person cannot do it"
+    ]
+  },
+  {
+    "id": "strategyqa_010",
+    "question": "Is the moon made of cheese?",
+    "answer": "no",
+    "facts": [
+      "The moon is made of rock and dust",
+      "This has been confirmed by lunar samples",
+      "Cheese is a dairy product made on Earth"
+    ],
+    "decomposition": [
+      "The moon's composition has been studied",
+      "Lunar samples show rock and regolith",
+      "Cheese requires milk and dairy processing",
+      "The moon has no dairy products",
+      "Therefore the moon is not made of cheese"
+    ]
+  },
+  {
+    "id": "strategyqa_011",
+    "question": "Do all birds lay eggs?",
+    "answer": "yes",
+    "facts": [
+      "All birds are oviparous",
+      "Oviparous animals lay eggs",
+      "No bird gives live birth"
+    ],
+    "decomposition": [
+      "Birds are a class of animals",
+      "All members of this class lay eggs",
+      "Therefore all birds lay eggs"
+    ]
+  },
+  {
+    "id": "strategyqa_012",
+    "question": "Can a fish drown?",
+    "answer": "yes",
+    "facts": [
+      "Fish need oxygen dissolved in water",
+      "If water lacks oxygen, fish can suffocate",
+      "This is called drowning in fish"
+    ],
+    "decomposition": [
+      "Fish extract oxygen from water through gills",
+      "Low oxygen levels prevent this",
+      "Fish can die from lack of oxygen"
+    ]
+  },
+  {
+    "id": "strategyqa_013",
+    "question": "Is water wet?",
+    "answer": "it depends",
+    "facts": [
+      "Wetness is defined by water adhering to a surface",
+      "Water molecules stick to each other",
+      "The definition is debated"
+    ],
+    "decomposition": [
+      "Wetness typically means water on a surface",
+      "Water on water is just more water",
+      "The answer depends on definition"
+    ]
+  },
+  {
+    "id": "strategyqa_014",
+    "question": "Can humans see in complete darkness?",
+    "answer": "no",
+    "facts": [
+      "Human eyes require light to see",
+      "Complete darkness has no light",
+      "Without light, vision is impossible"
+    ],
+    "decomposition": [
+      "Human vision requires photons hitting the retina",
+      "Complete darkness means zero photons",
+      "Therefore humans cannot see in complete darkness"
+    ]
+  },
+  {
+    "id": "strategyqa_015",
+    "question": "Do plants need oxygen?",
+    "answer": "yes",
+    "facts": [
+      "Plants perform cellular respiration",
+      "Cellular respiration requires oxygen",
+      "Plants use oxygen at night and day"
+    ],
+    "decomposition": [
+      "Plants are living organisms",
+      "Living organisms need energy",
+      "Cellular respiration uses oxygen to produce energy"
+    ]
+  },
+  {
+    "id": "strategyqa_016",
+    "question": "Is lightning hotter than the sun?",
+    "answer": "yes",
+    "facts": [
+      "Lightning can reach 30,000 Kelvin",
+      "The sun's surface is about 5,778 Kelvin",
+      "Lightning is much hotter"
+    ],
+    "decomposition": [
+      "Lightning creates intense heat briefly",
+      "30,000 K > 5,778 K",
+      "Therefore lightning is hotter"
+    ]
+  },
+  {
+    "id": "strategyqa_017",
+    "question": "Can you boil water in a paper cup?",
+    "answer": "yes",
+    "facts": [
+      "Water boils at 100°C",
+      "Paper burns above 230°C",
+      "Water absorbs heat and prevents paper from burning"
+    ],
+    "decomposition": [
+      "Heat transfers to the water",
+      "Water temperature stays at 100°C while boiling",
+      "Paper stays below its burning point"
+    ]
+  },
+  {
+    "id": "strategyqa_018",
+    "question": "Do astronauts need to wear sunscreen?",
+    "answer": "no",
+    "facts": [
+      "Astronauts wear spacesuits in space",
+      "Spacesuits block all UV radiation",
+      "No direct sun exposure occurs"
+    ],
+    "decomposition": [
+      "Space has intense UV radiation",
+      "Spacesuits provide complete protection",
+      "Sunscreen is unnecessary under the suit"
+    ]
+  },
+  {
+    "id": "strategyqa_019",
+    "question": "Can sound travel in space?",
+    "answer": "no",
+    "facts": [
+      "Sound requires a medium to travel",
+      "Space is a near-vacuum",
+      "No medium means no sound"
+    ],
+    "decomposition": [
+      "Sound is a pressure wave",
+      "Pressure waves need particles",
+      "Space lacks sufficient particles"
+    ]
+  },
+  {
+    "id": "strategyqa_020",
+    "question": "Is glass a solid?",
+    "answer": "it depends",
+    "facts": [
+      "Glass appears solid but has amorphous structure",
+      "It's sometimes called a super-cooled liquid",
+      "Scientific consensus varies"
+    ],
+    "decomposition": [
+      "Glass has properties of both solids and liquids",
+      "It doesn't flow at room temperature",
+      "The classification is debated"
+    ]
+  },
+  {
+    "id": "strategyqa_021",
+    "question": "Do trees sleep?",
+    "answer": "no",
+    "facts": [
+      "Sleep requires a brain",
+      "Trees have no brain or nervous system",
+      "Trees do have circadian rhythms though"
+    ],
+    "decomposition": [
+      "Sleep is a neurological process",
+      "Trees lack neurons",
+      "Therefore trees don't sleep"
+    ]
+  },
+  {
+    "id": "strategyqa_022",
+    "question": "Can you cry underwater?",
+    "answer": "yes",
+    "facts": [
+      "Tear ducts still function underwater",
+      "Tears mix with surrounding water",
+      "The physical act of crying is possible"
+    ],
+    "decomposition": [
+      "Crying is a physiological response",
+      "Eyes can produce tears underwater",
+      "You just can't see the tears"
+    ]
+  },
+  {
+    "id": "strategyqa_023",
+    "question": "Is a tomato a fruit?",
+    "answer": "yes",
+    "facts": [
+      "Botanically, fruits develop from flowers",
+      "Tomatoes develop from tomato flowers",
+      "They contain seeds"
+    ],
+    "decomposition": [
+      "Fruit is defined by botanical structure",
+      "Tomatoes meet this definition",
+      "Therefore tomatoes are fruits"
+    ]
+  },
+  {
+    "id": "strategyqa_024",
+    "question": "Can you light a diamond on fire?",
+    "answer": "yes",
+    "facts": [
+      "Diamonds are made of carbon",
+      "Carbon burns at high temperatures",
+      "Diamonds can burn at 850°C"
+    ],
+    "decomposition": [
+      "Diamond is crystalline carbon",
+      "Carbon reacts with oxygen at high heat",
+      "Diamonds can be burned"
+    ]
+  },
+  {
+    "id": "strategyqa_025",
+    "question": "Is hot water heavier than cold water?",
+    "answer": "no",
+    "facts": [
+      "Hot water expands and becomes less dense",
+      "The same volume of hot water has less mass",
+      "Density decreases with temperature"
+    ],
+    "decomposition": [
+      "Heating causes molecular expansion",
+      "Same mass spread over larger volume",
+      "Hot water is lighter per unit volume"
+    ]
+  },
+  {
+    "id": "strategyqa_026",
+    "question": "Do spiders have bones?",
+    "answer": "no",
+    "facts": [
+      "Spiders are arthropods",
+      "Arthropods have exoskeletons",
+      "No internal bones exist"
+    ],
+    "decomposition": [
+      "Spiders are invertebrates",
+      "They have hard external shells",
+      "No internal skeletal system"
+    ]
+  },
+  {
+    "id": "strategyqa_027",
+    "question": "Can you see the Great Wall of China from space?",
+    "answer": "it depends",
+    "facts": [
+      "The wall is very long but narrow",
+      "From low orbit, it might be visible",
+      "From the Moon, it's invisible"
+    ],
+    "decomposition": [
+      "Visibility depends on altitude",
+      "Low Earth orbit might allow visibility",
+      "Further distances make it impossible"
+    ]
+  },
+  {
+    "id": "strategyqa_028",
+    "question": "Is the Earth flat?",
+    "answer": "no",
+    "facts": [
+      "Satellite images show a sphere",
+      "Ships disappear hull-first over horizon",
+      "Gravity pulls matter into spheres"
+    ],
+    "decomposition": [
+      "Multiple evidence sources exist",
+      "Physical observations confirm roundness",
+      "The Earth is an oblate spheroid"
+    ]
+  },
+  {
+    "id": "strategyqa_029",
+    "question": "Do computers use binary because they can't count to 10?",
+    "answer": "no",
+    "facts": [
+      "Binary is efficient for electronic circuits",
+      "On/off states are reliable",
+      "It's a design choice, not a limitation"
+    ],
+    "decomposition": [
+      "Electronic switches have two states",
+      "Binary minimizes errors",
+      "It's optimal, not limiting"
+    ]
+  },
+  {
+    "id": "strategyqa_030",
+    "question": "Can you fold a piece of paper more than 7 times?",
+    "answer": "yes",
+    "facts": [
+      "The 7-fold limit is a common myth",
+      "Very thin or large paper can fold more",
+      "The record is 12 folds"
+    ],
+    "decomposition": [
+      "Folding difficulty increases exponentially",
+      "Standard paper hits physical limits",
+      "But with thin enough paper, more folds are possible"
+    ]
+  },
+  {
+    "id": "strategic_001",
+    "question": "You have $100 and want to buy items costing $23, $18, and $45. Can you afford all three?",
+    "answer": "yes",
+    "facts": [
+      "Total cost is $23 + $18 + $45 = $86",
+      "$86 is less than $100",
+      "So you can afford all three"
+    ],
+    "decomposition": [
+      "Add the prices: $23 + $18 = $41",
+      "Add third item: $41 + $45 = $86",
+      "Compare: $86 < $100",
+      "Answer: yes, you can afford all"
+    ]
+  },
+  {
+    "id": "strategic_002",
+    "question": "If you need to wake up at 7 AM and it takes 30 minutes to get ready, and 45 minutes to commute, what time should you wake up to arrive by 9 AM?",
+    "answer": "7:45",
+    "facts": [
+      "Arrival time is 9:00 AM",
+      "Commute takes 45 minutes",
+      "Getting ready takes 30 minutes"
+    ],
+    "decomposition": [
+      "Subtract commute time: 9:00 - 0:45 = 8:15 AM",
+      "Subtract prep time: 8:15 - 0:30 = 7:45 AM",
+      "Wake up at 7:45 AM"
+    ]
+  },
+  {
+    "id": "strategic_003",
+    "question": "A recipe serves 4 people and requires 2 cups of flour. If you want to serve 10 people, how many cups of flour do you need?",
+    "answer": "5",
+    "facts": [
+      "Original recipe: 4 servings need 2 cups",
+      "Target: 10 servings",
+      "Scale factor is 10/4 = 2.5"
+    ],
+    "decomposition": [
+      "Calculate scale factor: 10/4 = 2.5",
+      "Multiply original amount: 2 * 2.5 = 5",
+      "Need 5 cups of flour"
+    ]
+  },
+  {
+    "id": "strategic_004",
+    "question": "You're packing a box that can hold 20 kg. You have items weighing 5 kg, 8 kg, 4 kg, and 6 kg. What's the maximum weight you can pack without exceeding the limit?",
+    "answer": "19",
+    "facts": [
+      "Box limit: 20 kg",
+      "Items: 5, 8, 4, 6 kg",
+      "Need to find best combination"
+    ],
+    "decomposition": [
+      "Try combinations: 5+8+4+6 = 23 (too heavy)",
+      "Try 5+8+6 = 19 (fits)",
+      "Try 8+4+6 = 18 (fits but less)",
+      "Maximum is 19 kg"
+    ]
+  },
+  {
+    "id": "strategic_005",
+    "question": "In tic-tac-toe, if you place your first X in the center, and your opponent puts O in the top-left corner, should you place your next X in a corner or edge?",
+    "answer": "corner",
+    "facts": [
+      "Center X gives maximum control",
+      "Corners create diagonal winning lines",
+      "Opposite corners create two threats"
+    ],
+    "decomposition": [
+      "Center is already controlled by X",
+      "O in corner means threat on diagonal",
+      "Place X in opposite corner",
+      "This creates two winning paths"
+    ]
+  },
+  {
+    "id": "strategic_006",
+    "question": "If a train leaves Station A at 9 AM traveling 60 mph toward Station B 180 miles away, and another train leaves Station B at 10 AM traveling 50 mph toward Station A, will they meet before 11 AM?",
+    "answer": "no",
+    "facts": [
+      "Train A starts at 9 AM going 60 mph",
+      "Train B starts at 10 AM going 50 mph",
+      "Distance is 180 miles"
+    ],
+    "decomposition": [
+      "By 10 AM, Train A has gone 60 miles (60 * 1 hour)",
+      "Remaining distance: 180 - 60 = 120 miles",
+      "Combined speed after 10 AM: 60 + 50 = 110 mph",
+      "Time to meet: 120/110 = 1.09 hours",
+      "Meeting time: 10:00 + 1:05 = 11:05 AM",
+      "So they meet after 11 AM, answer is no"
+    ]
+  },
+  {
+    "id": "strategic_007",
+    "question": "You have 3 jugs: 8-liter, 5-liter, and 3-liter. The 8-liter jug is full. Can you measure exactly 4 liters using these jugs?",
+    "answer": "yes",
+    "facts": [
+      "Start: 8L=8, 5L=0, 3L=0",
+      "Goal: measure 4 liters",
+      "Can pour between jugs"
+    ],
+    "decomposition": [
+      "Pour 8L to 5L: 8L=3, 5L=5, 3L=0",
+      "Pour 5L to 3L: 8L=3, 5L=2, 3L=3",
+      "Empty 3L: 8L=3, 5L=2, 3L=0",
+      "Pour 5L to 3L: 8L=3, 5L=0, 3L=2",
+      "Continue process to get 4L"
+    ]
+  },
+  {
+    "id": "strategic_008",
+    "question": "In rock-paper-scissors, if your opponent has played rock 3 times in a row, should you play paper next?",
+    "answer": "yes",
+    "facts": [
+      "Rock beats scissors",
+      "Paper beats rock",
+      "Scissors beats paper"
+    ],
+    "decomposition": [
+      "Opponent played rock 3 times",
+      "If pattern continues, next is rock",
+      "Paper beats rock",
+      "Play paper"
+    ]
+  },
+  {
+    "id": "strategic_009",
+    "question": "You need to cross a bridge with a flashlight. The bridge holds max 2 people. Four people take 1, 2, 5, and 10 minutes to cross. The flashlight must be carried back. What's the minimum time for all to cross?",
+    "answer": "17",
+    "facts": [
+      "People take: 1, 2, 5, 10 minutes",
+      "Max 2 on bridge at once",
+      "Flashlight needed to cross"
+    ],
+    "decomposition": [
+      "Send fastest pair first: 1+2 cross (2 min)",
+      "Fastest returns with light: 1 returns (1 min) = 3 total",
+      "Send slowest pair: 5+10 cross (10 min) = 13 total",
+      "Second fastest returns: 2 returns (2 min) = 15 total",
+      "Final pair: 1+2 cross (2 min) = 17 total"
+    ]
+  },
+  {
+    "id": "strategic_010",
+    "question": "A snail climbs 3 feet up a wall during the day but slides down 2 feet at night. The wall is 10 feet tall. How many days to reach the top?",
+    "answer": "8",
+    "facts": [
+      "Climbs 3 feet per day",
+      "Slides 2 feet per night",
+      "Net gain: 1 foot per 24 hours",
+      "Wall is 10 feet"
+    ],
+    "decomposition": [
+      "Day 1: climbs to 3, slides to 1",
+      "Day 2: climbs to 4, slides to 2",
+      "Day 7: climbs to 9, slides to 7",
+      "Day 8: climbs to 10 - reaches top!",
+      "Answer: 8 days"
+    ]
+  },
+  {
+    "id": "strategic_011",
+    "question": "In a guessing game, you need to find a number between 1-100. Is binary search the optimal strategy to minimize guesses?",
+    "answer": "yes",
+    "facts": [
+      "Range is 1-100",
+      "Want to minimize guesses",
+      "Each guess should eliminate half the range"
+    ],
+    "decomposition": [
+      "Guess middle: 50",
+      "If too high, new range 1-49, guess 25",
+      "If too low, new range 51-100, guess 75",
+      "Continue halving",
+      "Maximum 7 guesses needed (log2(100) ≈ 7)"
+    ]
+  },
+  {
+    "id": "strategic_012",
+    "question": "You have 12 balls, one weighs differently. Can you find the odd ball using a balance scale only 3 times?",
+    "answer": "yes",
+    "facts": [
+      "12 balls, one weighs different",
+      "Balance scale only",
+      "Only 3 weighings allowed"
+    ],
+    "decomposition": [
+      "Divide into 3 groups of 4: A, B, C",
+      "Weigh A vs B",
+      "If equal, odd ball is in C",
+      "If not equal, odd ball is in heavier/lighter group",
+      "Take suspect group, continue weighing",
+      "Third weighing identifies the odd ball"
+    ]
+  },
+  {
+    "id": "strategic_013",
+    "question": "In chess, if you can take a queen with your knight but it would expose your king to check, should you take the queen?",
+    "answer": "no",
+    "facts": [
+      "Queen is worth 9 points",
+      "Knight is worth 3 points",
+      "King check can lead to checkmate"
+    ],
+    "decomposition": [
+      "Evaluate material gain: 9 points",
+      "Evaluate risk: king in check",
+      "Check can lead to checkmate",
+      "Losing king means losing game",
+      "Do not take queen"
+    ]
+  },
+  {
+    "id": "strategic_014",
+    "question": "You're in a card game. Should you discard a card that helps slightly now for a chance at a better card if the deck has mostly better cards?",
+    "answer": "yes",
+    "facts": [
+      "Current card: slight benefit",
+      "Deck has mostly better cards",
+      "Probability favors drawing better card"
+    ],
+    "decomposition": [
+      "Evaluate current card's value",
+      "Calculate probability of better card",
+      "If probability > 50%, discard and draw",
+      "Expected value favors drawing"
+    ]
+  },
+  {
+    "id": "strategic_015",
+    "question": "If you flip a coin 10 times and get heads all 10 times, is the probability of heads on the 11th flip still 50%?",
+    "answer": "yes",
+    "facts": [
+      "Coin flips are independent events",
+      "Previous results don't affect future",
+      "Fair coin has 50% heads probability"
+    ],
+    "decomposition": [
+      "Each flip is independent",
+      "Past 10 heads doesn't change next flip",
+      "Probability remains 50%"
+    ]
+  },
+  {
+    "id": "expanded_001",
+    "question": "Do ostriches bury their heads in the sand?",
+    "answer": "no",
+    "facts": [
+      "Ostriches do not bury their heads",
+      "They lie low and press their necks to the ground when threatened",
+      "From a distance, this can look like head-burying"
+    ],
+    "decomposition": [
+      "Ostriches are flightless birds",
+      "When threatened, they press their necks flat",
+      "This gives the illusion of head-burying",
+      "They actually run or fight when threatened"
+    ]
+  },
+  {
+    "id": "expanded_002",
+    "question": "Can bulls see the color red?",
+    "answer": "no",
+    "facts": [
+      "Bulls are dichromats and cannot see red",
+      "They see blues and yellows",
+      "Bulls react to the movement of the cape, not its color"
+    ],
+    "decomposition": [
+      "Bulls have two types of color receptors",
+      "They cannot perceive the color red",
+      "The cape's motion provokes the bull",
+      "Color is irrelevant to their reaction"
+    ]
+  },
+  {
+    "id": "expanded_003",
+    "question": "Does shaving hair make it grow back thicker?",
+    "answer": "no",
+    "facts": [
+      "Shaving removes hair at the surface",
+      "Regrowth has a blunt tip that feels coarse",
+      "Hair thickness is genetically determined"
+    ],
+    "decomposition": [
+      "Shaving cuts hair at skin level",
+      "The blunt tip feels stubbly",
+      "Hair follicle is unaffected",
+      "Growth rate and thickness remain the same"
+    ]
+  },
+  {
+    "id": "expanded_004",
+    "question": "Do camels store water in their humps?",
+    "answer": "no",
+    "facts": [
+      "Camel humps store fat, not water",
+      "The fat can be metabolized for energy and water",
+      "Camels store water in their blood"
+    ],
+    "decomposition": [
+      "Humps are fatty tissue deposits",
+      "Fat metabolism produces some water",
+      "Actual water storage is in the bloodstream",
+      "The hump misconception comes from fat breakdown"
+    ]
+  },
+  {
+    "id": "expanded_005",
+    "question": "Can you touch your elbow with your tongue?",
+    "answer": "yes",
+    "facts": [
+      "Some people have long tongues",
+      "Some have shorter arm proportions",
+      "Approximately 1% of people can do this"
+    ],
+    "decomposition": [
+      "Tongue length varies by person",
+      "Arm length also varies",
+      "With enough flexibility and proportions",
+      "Some people can achieve this"
+    ]
+  },
+  {
+    "id": "expanded_006",
+    "question": "Does goldfish memory last only 3 seconds?",
+    "answer": "no",
+    "facts": [
+      "Goldfish can remember for months",
+      "They can be trained to respond to cues",
+      "The 3-second memory is a myth"
+    ],
+    "decomposition": [
+      "Scientific studies show goldfish memory spans months",
+      "They can learn mazes and recognize owners",
+      "The 3-second myth is scientifically disproven"
+    ]
+  },
+  {
+    "id": "expanded_007",
+    "question": "Is the Great Wall of China the only man-made object visible from the moon?",
+    "answer": "no",
+    "facts": [
+      "The Great Wall is not visible from the moon",
+      "Many man-made objects are visible from low orbit",
+      "From the moon, no man-made objects are visible"
+    ],
+    "decomposition": [
+      "The Wall is narrow and hard to distinguish",
+      "Astronauts cannot see it from the moon",
+      "Cities and large structures are visible from orbit",
+      "The moon is too far for any man-made visibility"
+    ]
+  },
+  {
+    "id": "expanded_008",
+    "question": "Do bats drink human blood?",
+    "answer": "no",
+    "facts": [
+      "Only vampire bats drink blood",
+      "Vampire bats prefer livestock, not humans",
+      "Most bats eat insects or fruit"
+    ],
+    "decomposition": [
+      "There are over 1,400 bat species",
+      "Only 3 species are vampire bats",
+      "Vampire bats target sleeping livestock",
+      "Human blood is not their preference"
+    ]
+  },
+  {
+    "id": "expanded_009",
+    "question": "Can owls turn their heads 360 degrees?",
+    "answer": "no",
+    "facts": [
+      "Owls can turn their heads about 270 degrees",
+      "They have extra neck vertebrae",
+      "A full 360 would twist off the head"
+    ],
+    "decomposition": [
+      "Owls have 14 neck vertebrae (humans have 7)",
+      "They can rotate 270 degrees either direction",
+      "A 360 degree turn would sever the spinal cord",
+      "Their range is impressive but not complete"
+    ]
+  },
+  {
+    "id": "expanded_010",
+    "question": "Is coffee made from beans?",
+    "answer": "no",
+    "facts": [
+      "Coffee 'beans' are actually seeds",
+      "They come from the coffee cherry fruit",
+      "They are pits, not legumes"
+    ],
+    "decomposition": [
+      "Coffee beans are seeds of the coffee plant",
+      "They grow inside coffee cherries",
+      "True beans are legumes",
+      "Coffee seeds are not legumes"
+    ]
+  },
+  {
+    "id": "expanded_011",
+    "question": "Do sharks get cancer?",
+    "answer": "yes",
+    "facts": [
+      "Sharks do get cancer",
+      "They can develop tumors",
+      "Shark cartilage cancer cure is a myth"
+    ],
+    "decomposition": [
+      "Scientific studies document shark tumors",
+      "Cartilage does not prevent cancer",
+      "Sharks are not immune to disease",
+      "The myth has been debunked"
+    ]
+  },
+  {
+    "id": "expanded_012",
+    "question": "Can you sneeze with your eyes open?",
+    "answer": "yes",
+    "facts": [
+      "It is possible to sneeze with eyes open",
+      "It requires conscious effort",
+      "The reflex to close eyes is automatic"
+    ],
+    "decomposition": [
+      "Sneezing triggers an automatic eye-closing reflex",
+      "With practice, some people can override it",
+      "Your eyes will not pop out if open",
+      "It's uncomfortable but possible"
+    ]
+  },
+  {
+    "id": "expanded_013",
+    "question": "Is penguin milk real?",
+    "answer": "yes",
+    "facts": [
+      "Penguins produce a secretion called crop milk",
+      "It's regurgitated to feed chicks",
+      "It's not true milk but serves similar purpose"
+    ],
+    "decomposition": [
+      "Penguins have a crop for food storage",
+      "The crop produces a milk-like substance",
+      "It's high in fat and protein",
+      "Both parents produce it for chicks"
+    ]
+  },
+  {
+    "id": "expanded_014",
+    "question": "Do black holes actually exist?",
+    "answer": "yes",
+    "facts": [
+      "Black holes have been directly observed",
+      "The first image was captured in 2019",
+      "Gravitational waves confirm their mergers"
+    ],
+    "decomposition": [
+      "Einstein predicted black holes in general relativity",
+      "The Event Horizon Telescope imaged one",
+      "LIGO detected gravitational waves from mergers",
+      "They are confirmed astronomical objects"
+    ]
+  },
+  {
+    "id": "expanded_015",
+    "question": "Can you stand on Saturn?",
+    "answer": "no",
+    "facts": [
+      "Saturn is a gas giant with no solid surface",
+      "Its atmosphere transitions to liquid hydrogen",
+      "There is nothing to stand on"
+    ],
+    "decomposition": [
+      "Saturn is mostly hydrogen and helium",
+      "The atmosphere gets denser with depth",
+      "Eventually it becomes a fluid state",
+      "No solid ground exists"
+    ]
+  },
+  {
+    "id": "expanded_016",
+    "question": "Do crocodiles cry?",
+    "answer": "yes",
+    "facts": [
+      "Crocodiles produce tears to lubricate eyes",
+      "It's not an emotional response",
+      "The phrase 'crocodile tears' comes from this"
+    ],
+    "decomposition": [
+      "Crocodiles have tear glands",
+      "Tears keep their eyes moist",
+      "They cry while eating due to jaw movement",
+      "It's physiological, not emotional"
+    ]
+  },
+  {
+    "id": "expanded_017",
+    "question": "Is the heart on the left side of the body?",
+    "answer": "no",
+    "facts": [
+      "The heart is more centered in the chest",
+      "It tilts slightly to the left",
+      "Most of it is in the middle"
+    ],
+    "decomposition": [
+      "The heart sits in the mediastinum",
+      "It's tilted with apex pointing left",
+      "About 2/3 is on the left side",
+      "But it's not exclusively on the left"
+    ]
+  },
+  {
+    "id": "expanded_018",
+    "question": "Can mosquitoes transmit HIV?",
+    "answer": "no",
+    "facts": [
+      "Mosquitoes cannot transmit HIV",
+      "The virus is digested in their gut",
+      "HIV cannot survive in mosquito saliva"
+    ],
+    "decomposition": [
+      "Mosquitoes have separate digestive and salivary systems",
+      "HIV is broken down during digestion",
+      "The virus cannot replicate in mosquitoes",
+      "Mosquito mouthparts don't carry enough virus"
+    ]
+  },
+  {
+    "id": "expanded_019",
+    "question": "Is Antarctica a desert?",
+    "answer": "yes",
+    "facts": [
+      "Antarctica receives very little precipitation",
+      "Deserts are defined by low rainfall",
+      "It's the largest desert on Earth"
+    ],
+    "decomposition": [
+      "Deserts receive less than 250mm precipitation annually",
+      "Antarctica receives about 50mm inland",
+      "Cold temperatures don't disqualify it",
+      "It meets the desert definition"
+    ]
+  },
+  {
+    "id": "expanded_020",
+    "question": "Do dolphins sleep?",
+    "answer": "yes",
+    "facts": [
+      "Dolphins sleep but only one brain hemisphere at a time",
+      "They must surface to breathe",
+      "This is called unihemispheric sleep"
+    ],
+    "decomposition": [
+      "Dolphins are conscious breathers",
+      "They need to surface for air",
+      "One half of brain sleeps while other stays alert",
+      "This allows rest without drowning"
+    ]
+  },
+  {
+    "id": "expanded_021",
+    "question": "Can lightning strike the same place twice?",
+    "answer": "yes",
+    "facts": [
+      "Lightning often strikes the same location multiple times",
+      "Tall structures attract repeated strikes",
+      "The Empire State Building is struck about 20 times per year"
+    ],
+    "decomposition": [
+      "Lightning seeks the path of least resistance",
+      "Tall objects are more likely struck",
+      "The same object is often struck repeatedly",
+      "The phrase is figurative, not literal"
+    ]
+  },
+  {
+    "id": "expanded_022",
+    "question": "Is salt the only rock humans eat?",
+    "answer": "no",
+    "facts": [
+      "Humans eat other mineral rocks",
+      "Sugar is crystallized but not a mineral",
+      "Some cultures eat clay and other minerals"
+    ],
+    "decomposition": [
+      "Salt is a mineral (halite)",
+      "Humans also consume calcium carbonate as antacid",
+      "Some cultures practice geophagia (eating earth)",
+      "Several minerals are consumed by humans"
+    ]
+  },
+  {
+    "id": "expanded_023",
+    "question": "Do dogs see in black and white?",
+    "answer": "no",
+    "facts": [
+      "Dogs see colors, just fewer than humans",
+      "They are dichromats (two color receptors)",
+      "They see blues and yellows best"
+    ],
+    "decomposition": [
+      "Humans have three types of color receptors",
+      "Dogs have only two types",
+      "They can distinguish blue from yellow",
+      "They cannot distinguish red from green"
+    ]
+  },
+  {
+    "id": "expanded_024",
+    "question": "Can a cockroach survive a nuclear explosion?",
+    "answer": "it depends",
+    "facts": [
+      "Cockroaches are more radiation resistant than humans",
+      "But they are not immune to nuclear blast",
+      "They would die from the explosion itself"
+    ],
+    "decomposition": [
+      "Cockroaches tolerate radiation better than humans",
+      "They can survive about 10x more radiation",
+      "But a nuclear blast includes heat and pressure",
+      "Direct blast would kill them"
+    ]
+  },
+  {
+    "id": "expanded_025",
+    "question": "Is Niagara Falls the largest waterfall in the world?",
+    "answer": "no",
+    "facts": [
+      "Niagara Falls is not the largest",
+      "Victoria Falls is the largest by sheet of falling water",
+      "Angel Falls is the tallest"
+    ],
+    "decomposition": [
+      "Largest can mean different things",
+      "By volume: Inga Falls is largest",
+      "By width: Khone Phapheng Falls",
+      "By height: Angel Falls at 979 meters"
+    ]
+  },
+  {
+    "id": "expanded_026",
+    "question": "Do we use only 10% of our brain?",
+    "answer": "no",
+    "facts": [
+      "Brain imaging shows all parts are active",
+      "Different areas handle different functions",
+      "We use essentially all of our brain"
+    ],
+    "decomposition": [
+      "Brain scans show activity throughout",
+      "Damage to any area causes deficits",
+      "The brain uses 20% of body's energy",
+      "Evolution wouldn't waste 90% of brain tissue"
+    ]
+  },
+  {
+    "id": "expanded_027",
+    "question": "Can ice be hot?",
+    "answer": "yes",
+    "facts": [
+      "Ice can be heated under pressure",
+      "Hot ice exists in certain conditions",
+      "Different forms of ice have different properties"
+    ],
+    "decomposition": [
+      "Ice has multiple crystalline phases",
+      "Under extreme pressure, ice can be hot",
+      "Ice VII can exist at hundreds of degrees",
+      "Pressure prevents it from melting"
+    ]
+  },
+  {
+    "id": "expanded_028",
+    "question": "Is honey bee vomit?",
+    "answer": "no",
+    "facts": [
+      "Honey is regurgitated nectar, not vomit",
+      "It's stored in the honey stomach, not true stomach",
+      "The crop is a separate storage organ"
+    ],
+    "decomposition": [
+      "Bees have a crop for nectar storage",
+      "The crop is not a digestive stomach",
+      "Nectar is stored, dehydrated, and regurgitated",
+      "This is not vomiting in the digestive sense"
+    ]
+  },
+  {
+    "id": "expanded_029",
+    "question": "Do polar bears eat penguins?",
+    "answer": "no",
+    "facts": [
+      "Polar bears live in the Arctic",
+      "Penguins live in the Southern Hemisphere",
+      "They never meet in the wild"
+    ],
+    "decomposition": [
+      "Polar bears are Arctic animals",
+      "Penguins are Antarctic and Southern Hemisphere birds",
+      "The two species are geographically separated",
+      "They cannot encounter each other naturally"
+    ]
+  },
+  {
+    "id": "expanded_030",
+    "question": "Can you drive from North America to South America?",
+    "answer": "no",
+    "facts": [
+      "The Darien Gap breaks the connection",
+      "It's a dense jungle between Panama and Colombia",
+      "No roads connect the two continents"
+    ],
+    "decomposition": [
+      "The Pan-American Highway stops in Panama",
+      "The Darien Gap is about 60 miles of jungle",
+      "No roads pass through this region",
+      "It's too dangerous and difficult to build"
+    ]
+  },
+  {
+    "id": "expanded_031",
+    "question": "Is the Pacific Ocean shrinking?",
+    "answer": "yes",
+    "facts": [
+      "The Pacific Plate is subducting under other plates",
+      "The Atlantic is expanding while Pacific shrinks",
+      "This happens at a rate of a few centimeters per year"
+    ],
+    "decomposition": [
+      "Tectonic plates are constantly moving",
+      "The Pacific Ocean sits on a shrinking plate",
+      "Subduction zones consume the plate edges",
+      "The ocean shrinks about 2-3 cm per year"
+    ]
+  },
+  {
+    "id": "expanded_032",
+    "question": "Do snakes blink?",
+    "answer": "no",
+    "facts": [
+      "Snakes don't have eyelids",
+      "They have a clear scale called a spectacle",
+      "This protects their eyes"
+    ],
+    "decomposition": [
+      "Snakes lack movable eyelids",
+      "A transparent scale covers the eye",
+      "They cannot close their eyes",
+      "The spectacle is shed during molting"
+    ]
+  },
+  {
+    "id": "expanded_033",
+    "question": "Can wood conduct electricity?",
+    "answer": "yes",
+    "facts": [
+      "Wood can conduct electricity when wet",
+      "Dry wood is a poor conductor",
+      "Water in wood makes it conductive"
+    ],
+    "decomposition": [
+      "Dry wood has high electrical resistance",
+      "Wet wood contains ions that conduct",
+      "Lightning can strike trees",
+      "Moisture determines conductivity"
+    ]
+  },
+  {
+    "id": "expanded_034",
+    "question": "Is Alaska the easternmost US state?",
+    "answer": "yes",
+    "facts": [
+      "Alaska's Aleutian Islands cross the 180th meridian",
+      "Some islands are in the Eastern Hemisphere",
+      "Alaska is both easternmost and westernmost"
+    ],
+    "decomposition": [
+      "The Aleutian chain extends past 180° longitude",
+      "Islands like Semisopochnoi are in the Eastern Hemisphere",
+      "Maine is easternmost in the contiguous US",
+      "Alaska holds the overall easternmost point"
+    ]
+  },
+  {
+    "id": "expanded_035",
+    "question": "Do sloths really move slowly?",
+    "answer": "yes",
+    "facts": [
+      "Sloths have the slowest metabolism of any mammal",
+      "They move about 40 yards per day",
+      "Their slowness is an energy-saving adaptation"
+    ],
+    "decomposition": [
+      "Sloths have extremely slow metabolism",
+      "They digest food very slowly",
+      "Moving fast would use too much energy",
+      "Their slowness is an evolutionary advantage"
+    ]
+  },
+  {
+    "id": "expanded_036",
+    "question": "Can a person survive in space without protection?",
+    "answer": "no",
+    "facts": [
+      "Space has no air pressure",
+      "You would suffocate within minutes",
+      "Your body would experience ebullism"
+    ],
+    "decomposition": [
+      "Space is a vacuum with no oxygen",
+      "Without pressure, body fluids would boil",
+      "The vacuum causes rapid decompression",
+      "Survival is possible for only about 15 seconds of consciousness"
+    ]
+  },
+  {
+    "id": "expanded_037",
+    "question": "Is rhubarb a fruit?",
+    "answer": "no",
+    "facts": [
+      "Rhubarb is a vegetable",
+      "Only the stalks are eaten",
+      "The leaves are toxic"
+    ],
+    "decomposition": [
+      "Botanically, rhubarb is a vegetable",
+      "Legally in the US, it's treated as a fruit for tariffs",
+      "It's used like a fruit in cooking",
+      "But biologically it's a vegetable"
+    ]
+  },
+  {
+    "id": "expanded_038",
+    "question": "Do elephants never forget?",
+    "answer": "yes",
+    "facts": [
+      "Elephants have excellent memory",
+      "They remember locations and individuals for decades",
+      "Their memory is crucial for survival"
+    ],
+    "decomposition": [
+      "Elephants have large temporal lobes",
+      "They recognize individual elephants after years apart",
+      "They remember water sources during drought",
+      "Their memory is scientifically documented"
+    ]
+  },
+  {
+    "id": "expanded_039",
+    "question": "Is blood blue inside the body?",
+    "answer": "no",
+    "facts": [
+      "Blood is always red inside the body",
+      "Veins look blue due to light scattering",
+      "Deoxygenated blood is dark red"
+    ],
+    "decomposition": [
+      "Blood contains hemoglobin which is red",
+      "Oxygenated blood is bright red",
+      "Deoxygenated blood is dark red",
+      "Blue appearance is an optical illusion"
+    ]
+  },
+  {
+    "id": "expanded_040",
+    "question": "Can volcanoes erupt in winter?",
+    "answer": "yes",
+    "facts": [
+      "Volcanic eruptions are not affected by seasons",
+      "Internal heat drives eruptions",
+      "Winter doesn't cool magma"
+    ],
+    "decomposition": [
+      "Volcanoes are powered by Earth's internal heat",
+      "Surface weather doesn't affect magma chambers",
+      "Eruptions occur year-round",
+      "Winter has no effect on volcanic activity"
+    ]
+  },
+  {
+    "id": "expanded_041",
+    "question": "Do babies have more bones than adults?",
+    "answer": "yes",
+    "facts": [
+      "Babies are born with about 300 bones",
+      "Adults have 206 bones",
+      "Many bones fuse during growth"
+    ],
+    "decomposition": [
+      "Infant bones are not fully fused",
+      "The skull has separate plates that fuse",
+      "Many bones fuse during childhood",
+      "Adult count is 206 bones"
+    ]
+  },
+  {
+    "id": "expanded_042",
+    "question": "Is bamboo a type of grass?",
+    "answer": "yes",
+    "facts": [
+      "Bamboo belongs to the grass family Poaceae",
+      "It's the largest member of the grass family",
+      "Some bamboo can grow 35 inches per day"
+    ],
+    "decomposition": [
+      "Bamboo is classified in Poaceae",
+      "It shares characteristics with grasses",
+      "It has hollow stems and nodes",
+      "It's technically a woody grass"
+    ]
+  },
+  {
+    "id": "expanded_043",
+    "question": "Can flamingos be blue?",
+    "answer": "no",
+    "facts": [
+      "Flamingos are naturally gray or white",
+      "They turn pink from diet",
+      "Blue flamingos don't exist naturally"
+    ],
+    "decomposition": [
+      "Baby flamingos are gray",
+      "Adults get pink from carotenoid pigments",
+      "The pigments come from algae and crustaceans",
+      "No natural blue pigment exists in flamingos"
+    ]
+  },
+  {
+    "id": "expanded_044",
+    "question": "Do cats always land on their feet?",
+    "answer": "no",
+    "facts": [
+      "Cats have a righting reflex but it's not perfect",
+      "They need enough height to rotate",
+      "Cats can still be injured in falls"
+    ],
+    "decomposition": [
+      "Cats have a flexible spine and inner ear balance",
+      "They can rotate in mid-air given time",
+      "Very short falls don't allow full rotation",
+      "Very high falls can still cause injury"
+    ]
+  },
+  {
+    "id": "expanded_045",
+    "question": "Is the Amazon River longer than the Nile?",
+    "answer": "it depends",
+    "facts": [
+      "Measurements vary by method",
+      "The Amazon may be longer by some measures",
+      "The debate is ongoing among geographers"
+    ],
+    "decomposition": [
+      "The Nile is traditionally considered longest at 6,650 km",
+      "Some studies show Amazon at 6,992 km",
+      "River length depends on source identification",
+      "Scientific consensus is still debated"
+    ]
+  },
+  {
+    "id": "expanded_046",
+    "question": "Can a banana be radioactive?",
+    "answer": "yes",
+    "facts": [
+      "Bananas contain potassium-40",
+      "Potassium-40 is a radioactive isotope",
+      "The amount is safe and natural"
+    ],
+    "decomposition": [
+      "Bananas are rich in potassium",
+      "A small fraction is radioactive K-40",
+      "The dose is about 0.1 microsievert",
+      "It's harmless in normal quantities"
+    ]
+  },
+  {
+    "id": "expanded_047",
+    "question": "Do earthworms have hearts?",
+    "answer": "yes",
+    "facts": [
+      "Earthworms have 5 aortic arches",
+      "These function like hearts",
+      "They pump blood through the body"
+    ],
+    "decomposition": [
+      "Earthworms have a closed circulatory system",
+      "Five pairs of aortic arches pump blood",
+      "They are not hearts in the vertebrate sense",
+      "But they serve the same function"
+    ]
+  },
+  {
+    "id": "expanded_048",
+    "question": "Is there gravity on the International Space Station?",
+    "answer": "yes",
+    "facts": [
+      "The ISS experiences about 90% of Earth's gravity",
+      "Astronauts float due to continuous free fall",
+      "The station orbits Earth, not escaping gravity"
+    ],
+    "decomposition": [
+      "Gravity extends far into space",
+      "At ISS altitude, gravity is still strong",
+      "The station falls around Earth continuously",
+      "Weightlessness is from orbital motion, not zero gravity"
+    ]
+  },
+  {
+    "id": "expanded_049",
+    "question": "Can crows recognize human faces?",
+    "answer": "yes",
+    "facts": [
+      "Crows can distinguish between human faces",
+      "They remember faces for years",
+      "They can communicate threats to other crows"
+    ],
+    "decomposition": [
+      "Crows have excellent facial recognition",
+      "They remember humans who threatened them",
+      "They share this information with their flock",
+      "This ability has been scientifically proven"
+    ]
+  },
+  {
+    "id": "expanded_050",
+    "question": "Is silk made by worms?",
+    "answer": "no",
+    "facts": [
+      "Silk is made by silkworms, which are moth larvae",
+      "They are caterpillars, not true worms",
+      "The silk comes from their cocoons"
+    ],
+    "decomposition": [
+      "Silkworms are the larvae of silk moths",
+      "They spin silk to make cocoons",
+      "True worms are annelids",
+      "Silkworms are insects, not worms"
+    ]
+  },
+  {
+    "id": "expanded_051",
+    "question": "Do komodo dragons have venom?",
+    "answer": "yes",
+    "facts": [
+      "Komodo dragons have venom glands",
+      "Their bite delivers anticoagulant venom",
+      "This was confirmed in 2009"
+    ],
+    "decomposition": [
+      "Komodo dragons were thought to have toxic bacteria",
+      "Research revealed actual venom glands",
+      "The venom prevents blood clotting",
+      "This causes prey to weaken and bleed"
+    ]
+  },
+  {
+    "id": "expanded_052",
+    "question": "Can you hear a meteor?",
+    "answer": "no",
+    "facts": [
+      "Meteors are too far away to hear directly",
+      "Sound travels much slower than light",
+      "Any sound would arrive minutes later"
+    ],
+    "decomposition": [
+      "Meteors burn up high in the atmosphere",
+      "The distance is too great for direct sound",
+      "Light reaches you instantly",
+      "Sound, if any, arrives much later"
+    ]
+  },
+  {
+    "id": "expanded_053",
+    "question": "Is Mount Everest the tallest mountain in the solar system?",
+    "answer": "no",
+    "facts": [
+      "Olympus Mons on Mars is taller",
+      "Olympus Mons is about 22 km high",
+      "Everest is 8.85 km high"
+    ],
+    "decomposition": [
+      "Tallest is measured from base to peak",
+      "Olympus Mons rises 22 km from its base",
+      "Everest rises 8.85 km from sea level",
+      "Mars has the tallest mountain"
+    ]
+  },
+  {
+    "id": "expanded_054",
+    "question": "Do octopuses have three hearts?",
+    "answer": "yes",
+    "facts": [
+      "Octopuses have one systemic heart",
+      "They have two branchial hearts for gills",
+      "Total of three hearts"
+    ],
+    "decomposition": [
+      "Octopuses are cephalopods",
+      "One main heart circulates blood",
+      "Two hearts pump blood through gills",
+      "Three hearts total"
+    ]
+  },
+  {
+    "id": "expanded_055",
+    "question": "Is peanut a nut?",
+    "answer": "no",
+    "facts": [
+      "Peanuts are legumes, not nuts",
+      "They grow underground like beans",
+      "True nuts grow on trees"
+    ],
+    "decomposition": [
+      "Peanuts belong to the legume family",
+      "They are related to beans and peas",
+      "Tree nuts like almonds are true nuts",
+      "Peanuts are technically legumes"
+    ]
+  },
+  {
+    "id": "expanded_056",
+    "question": "Can a hedgehog swim?",
+    "answer": "yes",
+    "facts": [
+      "Hedgehogs can swim when necessary",
+      "They are not aquatic animals",
+      "They can tire and drown easily"
+    ],
+    "decomposition": [
+      "Hedgehogs can paddle in water",
+      "Their spines don't prevent swimming",
+      "They swim to escape or find food",
+      "But they tire quickly in water"
+    ]
+  },
+  {
+    "id": "expanded_057",
+    "question": "Is the South Pole colder than the North Pole?",
+    "answer": "yes",
+    "facts": [
+      "The South Pole is on land (Antarctica)",
+      "The North Pole is on sea ice",
+      "Land heats and cools more than water"
+    ],
+    "decomposition": [
+      "South Pole sits on a continental ice sheet",
+      "North Pole is on frozen ocean",
+      "Land has less thermal moderation",
+      "Antarctica reaches colder extremes"
+    ]
+  },
+  {
+    "id": "expanded_058",
+    "question": "Do whales have hair?",
+    "answer": "yes",
+    "facts": [
+      "Some whales have hair follicles",
+      "Humpback whales have bumps with hair",
+      "It's vestigial from land ancestors"
+    ],
+    "decomposition": [
+      "Whales evolved from land mammals",
+      "Some species retain hair follicles",
+      "Humpbacks have sensory hairs on their head",
+      "This is evidence of their evolutionary history"
+    ]
+  },
+  {
+    "id": "expanded_059",
+    "question": "Can humans grow new brain cells?",
+    "answer": "yes",
+    "facts": [
+      "Neurogenesis occurs in adults",
+      "It happens in the hippocampus",
+      "New neurons are created throughout life"
+    ],
+    "decomposition": [
+      "Adult neurogenesis is scientifically proven",
+      "New neurons form in the hippocampus",
+      "Exercise and learning promote neurogenesis",
+      "The brain can repair some damage"
+    ]
+  },
+  {
+    "id": "expanded_060",
+    "question": "Is the Sphinx older than the pyramids?",
+    "answer": "it depends",
+    "facts": [
+      "Mainstream archaeology dates Sphinx to same era as pyramids",
+      "Some researchers argue for older dates",
+      "There is ongoing debate"
+    ],
+    "decomposition": [
+      "Traditional dating places Sphinx at about 2500 BCE",
+      "Geological evidence suggests possible older date",
+      "Water erosion patterns are debated",
+      "The question remains controversial"
+    ]
+  },
+  {
+    "id": "expanded_061",
+    "question": "Do fireflies glow in all seasons?",
+    "answer": "no",
+    "facts": [
+      "Fireflies glow primarily during mating season",
+      "Different species have different seasons",
+      "They don't glow year-round"
+    ],
+    "decomposition": [
+      "Firefly bioluminescence is for mating",
+      "Each species has a specific mating season",
+      "Most glow in summer months",
+      "They don't glow outside mating periods"
+    ]
+  },
+  {
+    "id": "expanded_062",
+    "question": "Can a jellyfish kill a human?",
+    "answer": "yes",
+    "facts": [
+      "Box jellyfish venom can kill humans",
+      "Deaths occur within minutes",
+      "Some species are extremely dangerous"
+    ],
+    "decomposition": [
+      "Box jellyfish have powerful toxins",
+      "The venom attacks the heart and nervous system",
+      "Without treatment, death can occur",
+      "Several deaths are recorded annually"
+    ]
+  },
+  {
+    "id": "expanded_063",
+    "question": "Is sand made of fish poop?",
+    "answer": "yes",
+    "facts": [
+      "Parrotfish eat coral and excrete sand",
+      "One parrotfish produces tons of sand yearly",
+      "Much tropical sand is parrotfish waste"
+    ],
+    "decomposition": [
+      "Parrotfish bite coral to eat algae",
+      "They digest the algae and excrete coral",
+      "The excrement becomes white sand",
+      "Major beaches are made of this"
+    ]
+  },
+  {
+    "id": "expanded_064",
+    "question": "Do reindeer have red noses?",
+    "answer": "no",
+    "facts": [
+      "Reindeer noses are not naturally red",
+      "They have fur-covered noses",
+      "The red nose is fictional"
+    ],
+    "decomposition": [
+      "Reindeer are real Arctic animals",
+      "Their noses are adapted for cold",
+      "Dense fur covers their nose",
+      "Rudolph's red nose is folklore"
+    ]
+  },
+  {
+    "id": "expanded_065",
+    "question": "Can a human outrun a horse?",
+    "answer": "it depends",
+    "facts": [
+      "Horses are faster in sprints",
+      "Humans excel at long-distance running",
+      "Humans can win ultra-marathons against horses"
+    ],
+    "decomposition": [
+      "Horses can run 55 mph in short bursts",
+      "Humans can run for hours at moderate pace",
+      "In extreme endurance races, humans sometimes win",
+      "Distance and conditions matter"
+    ]
+  },
+  {
+    "id": "expanded_066",
+    "question": "Is the Mona Lisa the most valuable painting?",
+    "answer": "it depends",
+    "facts": [
+      "The Mona Lisa has the highest insurance value",
+      "But it's never been sold",
+      "Market value is theoretical"
+    ],
+    "decomposition": [
+      "The Mona Lisa is insured at $100 million",
+      "Adjusted for inflation, this is $870 million",
+      "Some paintings sold for more at auction",
+      "True value is unknown since it won't be sold"
+    ]
+  },
+  {
+    "id": "expanded_067",
+    "question": "Do platypuses lay eggs?",
+    "answer": "yes",
+    "facts": [
+      "Platypuses are monotremes",
+      "Monotremes are egg-laying mammals",
+      "Only five monotreme species exist"
+    ],
+    "decomposition": [
+      "Platypuses are mammals that lay eggs",
+      "They are one of only two egg-laying mammal groups",
+      "The other is echidnas",
+      "This makes them unique among mammals"
+    ]
+  },
+  {
+    "id": "expanded_068",
+    "question": "Can a cockroach live without its head?",
+    "answer": "yes",
+    "facts": [
+      "Cockroaches can survive weeks without a head",
+      "They breathe through spiracles on their body",
+      "They eventually die from dehydration"
+    ],
+    "decomposition": [
+      "Cockroaches have decentralized nervous systems",
+      "They don't need their brain to breathe",
+      "Without a head, they cannot eat or drink",
+      "They survive about a week before dehydration"
+    ]
+  },
+  {
+    "id": "expanded_069",
+    "question": "Is tapioca a type of rice?",
+    "answer": "no",
+    "facts": [
+      "Tapioca comes from cassava root",
+      "Cassava is a tuber, not a grain",
+      "Rice is a completely different plant"
+    ],
+    "decomposition": [
+      "Tapioca is extracted from cassava",
+      "Cassava is a root vegetable",
+      "Rice is a cereal grain",
+      "They are unrelated food sources"
+    ]
+  },
+  {
+    "id": "expanded_070",
+    "question": "Do alligators live in sewers?",
+    "answer": "no",
+    "facts": [
+      "The sewer alligator myth is urban legend",
+      "Alligators cannot survive in sewers long-term",
+      "Sewers are too cold and dark"
+    ],
+    "decomposition": [
+      "Alligators need sunlight for body temperature",
+      "Sewer temperatures are too cold",
+      "There's no food source for them",
+      "The myth started from a few isolated incidents"
+    ]
+  },
+  {
+    "id": "expanded_071",
+    "question": "Can a bullet fired vertically kill someone?",
+    "answer": "yes",
+    "facts": [
+      "Bullets fired up come down with lethal velocity",
+      "Celebratory gunfire causes deaths yearly",
+      "The bullet can reach 200-300 feet per second on descent"
+    ],
+    "decomposition": [
+      "A bullet fired straight up will slow to zero",
+      "It then accelerates downward due to gravity",
+      "Terminal velocity is still dangerous",
+      "Many deaths result from celebratory gunfire"
+    ]
+  },
+  {
+    "id": "expanded_072",
+    "question": "Is vanilla derived from orchids?",
+    "answer": "yes",
+    "facts": [
+      "Vanilla comes from vanilla orchids",
+      "It's the only orchid grown for food",
+      "The pods contain the flavor compound"
+    ],
+    "decomposition": [
+      "Vanilla planifolia is an orchid species",
+      "The vanilla bean is its fruit pod",
+      "Vanillin is extracted from the pod",
+      "It's the second most expensive spice"
+    ]
+  },
+  {
+    "id": "expanded_073",
+    "question": "Do rabbits eat carrots naturally?",
+    "answer": "no",
+    "facts": [
+      "Wild rabbits eat grass and leafy plants",
+      "Carrots are too high in sugar for regular diet",
+      "The carrot-eating rabbit is a cartoon myth"
+    ],
+    "decomposition": [
+      "Rabbits are herbivores that eat grass",
+      "Carrots are root vegetables with high sugar",
+      "Domestic rabbits can eat carrots as treats",
+      "Wild rabbits rarely encounter carrots"
+    ]
+  },
+  {
+    "id": "expanded_074",
+    "question": "Can chameleons change to any color?",
+    "answer": "no",
+    "facts": [
+      "Chameleons have limited color ranges",
+      "Each species has specific possible colors",
+      "They change for mood, not camouflage"
+    ],
+    "decomposition": [
+      "Chameleon color change is for communication",
+      "They have specialized pigment cells",
+      "Their range is limited by species",
+      "They cannot match every background"
+    ]
+  },
+  {
+    "id": "expanded_075",
+    "question": "Is the Sahara the largest desert?",
+    "answer": "no",
+    "facts": [
+      "Antarctica is the largest desert",
+      "The Sahara is the largest hot desert",
+      "Deserts are defined by precipitation, not temperature"
+    ],
+    "decomposition": [
+      "Deserts receive minimal precipitation",
+      "Antarctica receives less than Sahara",
+      "Antarctica is 14 million sq km",
+      "Sahara is 9 million sq km"
+    ]
+  },
+  {
+    "id": "expanded_076",
+    "question": "Do all snakes lay eggs?",
+    "answer": "no",
+    "facts": [
+      "About 70% of snakes lay eggs",
+      "Some give live birth",
+      "Boas and rattlesnakes bear live young"
+    ],
+    "decomposition": [
+      "Snake reproduction varies by species",
+      "Oviparous snakes lay eggs",
+      "Viviparous snakes give live birth",
+      "Not all snakes are egg-layers"
+    ]
+  },
+  {
+    "id": "expanded_077",
+    "question": "Can you see stars during the day?",
+    "answer": "yes",
+    "facts": [
+      "Stars are visible with a telescope during day",
+      "Venus is sometimes visible without aid",
+      "The sun's brightness normally hides them"
+    ],
+    "decomposition": [
+      "Stars are always in the sky",
+      "The sun's scattered light overpowers them",
+      "A telescope can isolate starlight",
+      "Some bright planets are visible at dusk"
+    ]
+  },
+  {
+    "id": "expanded_078",
+    "question": "Is spinach a good source of iron?",
+    "answer": "it depends",
+    "facts": [
+      "Spinach contains iron but not easily absorbed",
+      "Oxalates in spinach block iron absorption",
+      "The iron content was exaggerated by a decimal error"
+    ],
+    "decomposition": [
+      "Spinach has 2.7 mg iron per 100g",
+      "Only about 1-2% is absorbed by the body",
+      "Oxalates bind to iron and prevent absorption",
+      "It's not the best iron source despite the myth"
+    ]
+  },
+  {
+    "id": "expanded_079",
+    "question": "Do horseshoe crabs have blue blood?",
+    "answer": "yes",
+    "facts": [
+      "Horseshoe crabs have copper-based blood",
+      "Copper turns blue when oxidized",
+      "Their blood is used in medicine"
+    ],
+    "decomposition": [
+      "Most animals use iron in blood (red)",
+      "Horseshoe crabs use hemocyanin (copper)",
+      "Copper-based blood is blue",
+      "They are harvested for medical testing"
+    ]
+  },
+  {
+    "id": "expanded_080",
+    "question": "Can paper be made waterproof?",
+    "answer": "yes",
+    "facts": [
+      "Paper can be coated with wax or plastic",
+      "Some papers are chemically treated",
+      "Waterproof paper exists for outdoor use"
+    ],
+    "decomposition": [
+      "Paper is naturally absorbent",
+      "Wax coating repels water",
+      "Synthetic paper is waterproof",
+      "Many methods exist to waterproof paper"
+    ]
+  },
+  {
+    "id": "expanded_081",
+    "question": "Is a jiffy a real unit of time?",
+    "answer": "yes",
+    "facts": [
+      "A jiffy is used in physics and computing",
+      "In physics, it's about 3 × 10^-24 seconds",
+      "In computing, it varies by system"
+    ],
+    "decomposition": [
+      "Jiffy has different definitions by field",
+      "In physics: time for light to cross a nucleon",
+      "In computing: typically 1/100 or 1/60 second",
+      "It's a real technical term"
+    ]
+  },
+  {
+    "id": "expanded_082",
+    "question": "Do lobsters feel pain?",
+    "answer": "it depends",
+    "facts": [
+      "Lobsters have a decentralized nervous system",
+      "They respond to negative stimuli",
+      "Scientific consensus is still debated"
+    ],
+    "decomposition": [
+      "Lobsters lack a central brain",
+      "They have ganglia throughout their body",
+      "They avoid painful stimuli",
+      "Whether this is 'pain' in the human sense is debated"
+    ]
+  },
+  {
+    "id": "expanded_083",
+    "question": "Can hot water freeze faster than cold water?",
+    "answer": "yes",
+    "facts": [
+      "This is called the Mpemba effect",
+      "It occurs under certain conditions",
+      "The mechanism is still studied"
+    ],
+    "decomposition": [
+      "Hot water has less dissolved gas",
+      "Evaporation reduces volume",
+      "Convection currents affect cooling",
+      "Under some conditions, hot freezes faster"
+    ]
+  },
+  {
+    "id": "expanded_084",
+    "question": "Is a peanut butter and jelly sandwich a complete meal?",
+    "answer": "no",
+    "facts": [
+      "PB&J lacks adequate vegetables",
+      "It's missing some essential nutrients",
+      "It's unbalanced as a sole diet"
+    ],
+    "decomposition": [
+      "A complete meal needs multiple food groups",
+      "PB&J provides protein, fat, and carbs",
+      "It lacks adequate vitamins and minerals",
+      "A complete diet requires variety"
+    ]
+  },
+  {
+    "id": "expanded_085",
+    "question": "Do kangaroos have pouches for carrying babies?",
+    "answer": "yes",
+    "facts": [
+      "Female kangaroos have pouches called marsupium",
+      "Joeys develop inside the pouch",
+      "The pouch provides warmth and milk access"
+    ],
+    "decomposition": [
+      "Kangaroos are marsupials",
+      "The pouch is where joeys complete development",
+      "Newborn joeys crawl to the pouch",
+      "They stay there for about 6 months"
+    ]
+  },
+  {
+    "id": "expanded_086",
+    "question": "Can you microwave water past boiling?",
+    "answer": "yes",
+    "facts": [
+      "Water can superheat in a microwave",
+      "Without nucleation sites, it exceeds 100°C",
+      "It can explosively boil when disturbed"
+    ],
+    "decomposition": [
+      "Microwaves heat water unevenly",
+      "Smooth containers lack nucleation points",
+      "Water can reach 110°C without boiling",
+      "Adding a spoon or disturbing causes sudden boiling"
+    ]
+  },
+  {
+    "id": "expanded_087",
+    "question": "Is acupuncture scientifically proven?",
+    "answer": "it depends",
+    "facts": [
+      "Some benefits are supported by studies",
+      "The mechanism is not fully understood",
+      "It may work through placebo effect"
+    ],
+    "decomposition": [
+      "Acupuncture has shown some pain relief benefits",
+      "Scientific studies have mixed results",
+      "Traditional explanations lack evidence",
+      "The practice has limited but real effects"
+    ]
+  },
+  {
+    "id": "expanded_088",
+    "question": "Do all mammals have hair?",
+    "answer": "yes",
+    "facts": [
+      "Hair is a defining characteristic of mammals",
+      "Even whales and dolphins have hair at some stage",
+      "Hair follicles are present in all mammals"
+    ],
+    "decomposition": [
+      "Mammals are defined by several traits",
+      "Hair is one defining feature",
+      "Some mammals have minimal hair",
+      "All have hair follicles at least embryonically"
+    ]
+  },
+  {
+    "id": "expanded_089",
+    "question": "Can a spider be as large as a human?",
+    "answer": "no",
+    "facts": [
+      "Spiders are limited by their respiratory system",
+      "Their exoskeleton cannot support human size",
+      "Oxygen diffusion limits their size"
+    ],
+    "decomposition": [
+      "Spiders breathe through book lungs or tracheae",
+      "This limits oxygen intake",
+      "Large size would cause suffocation",
+      "Exoskeleton would collapse under gravity"
+    ]
+  },
+  {
+    "id": "expanded_090",
+    "question": "Is there a permanent shadow on the Moon?",
+    "answer": "yes",
+    "facts": [
+      "Some lunar craters are permanently shadowed",
+      "The Moon's axis is nearly perpendicular to the Sun",
+      "These craters may contain ice"
+    ],
+    "decomposition": [
+      "Deep craters at lunar poles get no sunlight",
+      "The Sun is always at the horizon there",
+      "Crater walls block all direct light",
+      "NASA has confirmed ice in these regions"
+    ]
+  },
+  {
+    "id": "expanded_091",
+    "question": "Do zebras have black or white stripes?",
+    "answer": "it depends",
+    "facts": [
+      "Zebras have black skin under white stripes",
+      "The stripes are both colors",
+      "Genetically, they are black with white patterning"
+    ],
+    "decomposition": [
+      "Melanocytes produce black pigment",
+      "White stripes lack this pigment",
+      "The skin underneath is black",
+      "Both colors are present"
+    ]
+  },
+  {
+    "id": "expanded_092",
+    "question": "Can a person survive without a stomach?",
+    "answer": "yes",
+    "facts": [
+      "Gastrectomy is a real surgery",
+      "The small intestine can adapt",
+      "Dietary changes are required"
+    ],
+    "decomposition": [
+      "Total gastrectomy removes the stomach",
+      "The esophagus connects to the small intestine",
+      "Patients must eat smaller, frequent meals",
+      "Vitamin supplements are needed"
+    ]
+  },
+  {
+    "id": "expanded_093",
+    "question": "Is Dubai a country?",
+    "answer": "no",
+    "facts": [
+      "Dubai is an emirate, not a country",
+      "It's part of the United Arab Emirates",
+      "The UAE is the country"
+    ],
+    "decomposition": [
+      "Dubai is one of seven emirates",
+      "The emirates form the UAE",
+      "Dubai is a city and emirate",
+      "It's not an independent country"
+    ]
+  },
+  {
+    "id": "expanded_094",
+    "question": "Do pandas hibernate?",
+    "answer": "no",
+    "facts": [
+      "Giant pandas do not hibernate",
+      "They eat bamboo year-round",
+      "Their diet doesn't allow fat storage for hibernation"
+    ],
+    "decomposition": [
+      "Hibernation requires fat reserves",
+      "Bamboo is low in nutrients",
+      "Pandas cannot build enough fat",
+      "They stay active all winter"
+    ]
+  },
+  {
+    "id": "expanded_095",
+    "question": "Can you be allergic to water?",
+    "answer": "yes",
+    "facts": [
+      "Aquagenic urticaria is a rare condition",
+      "Contact with water causes hives",
+      "Only about 100 cases are known"
+    ],
+    "decomposition": [
+      "The condition is extremely rare",
+      "Water triggers an immune response",
+      "Hives develop after water contact",
+      "It's a real medical condition"
+    ]
+  },
+  {
+    "id": "expanded_096",
+    "question": "Is the tongue a muscle?",
+    "answer": "yes",
+    "facts": [
+      "The tongue is made of eight muscles",
+      "It's the strongest muscle for its size",
+      "It's the only muscle not attached to bone at both ends"
+    ],
+    "decomposition": [
+      "The tongue contains multiple muscle fibers",
+      "Intrinsic muscles control shape",
+      "Extrinsic muscles control position",
+      "It's classified as a muscular organ"
+    ]
+  },
+  {
+    "id": "expanded_097",
+    "question": "Do all bees make honey?",
+    "answer": "no",
+    "facts": [
+      "Only honey bees make significant honey",
+      "Most bee species are solitary",
+      "Over 20,000 bee species exist"
+    ],
+    "decomposition": [
+      "Only about 7 species are honey bees",
+      "Bumblebees make small amounts",
+      "Most bees don't store honey",
+      "The majority are solitary pollinators"
+    ]
+  },
+  {
+    "id": "expanded_098",
+    "question": "Can trees communicate with each other?",
+    "answer": "yes",
+    "facts": [
+      "Trees share nutrients through fungal networks",
+      "They can send warning signals",
+      "This is called the wood wide web"
+    ],
+    "decomposition": [
+      "Mycorrhizal fungi connect tree roots",
+      "Trees exchange carbon and nutrients",
+      "Distressed trees send chemical signals",
+      "This network aids forest survival"
+    ]
+  },
+  {
+    "id": "expanded_099",
+    "question": "Is Pluto a planet?",
+    "answer": "no",
+    "facts": [
+      "Pluto was reclassified in 2006",
+      "It's now a dwarf planet",
+      "It hasn't cleared its orbit of debris"
+    ],
+    "decomposition": [
+      "Planets must meet three criteria",
+      "Pluto fails the orbit-clearing requirement",
+      "It's in the Kuiper Belt with other objects",
+      "The IAU officially demoted it"
+    ]
+  },
+  {
+    "id": "expanded_100",
+    "question": "Do carrots improve your vision?",
+    "answer": "it depends",
+    "facts": [
+      "Carrots contain vitamin A for eye health",
+      "They cannot improve existing vision",
+      "The WWII myth exaggerated their effect"
+    ],
+    "decomposition": [
+      "Vitamin A is needed for night vision",
+      "Deficiency causes vision problems",
+      "Extra carrots won't improve normal vision",
+      "The myth was British wartime propaganda"
+    ]
+  },
+  {
+    "id": "expanded_101",
+    "question": "Can a human survive on just potatoes?",
+    "answer": "it depends",
+    "facts": [
+      "Potatoes provide many nutrients",
+      "They lack some essential vitamins",
+      "Supplementation would be needed"
+    ],
+    "decomposition": [
+      "Potatoes have vitamin C, potassium, and protein",
+      "They lack adequate calcium and vitamins A, B12",
+      "A person could survive months",
+      "Long-term survival requires supplementation"
+    ]
+  },
+  {
+    "id": "expanded_102",
+    "question": "Is pink a real color?",
+    "answer": "it depends",
+    "facts": [
+      "Pink is not in the rainbow spectrum",
+      "It's a mixture of red and violet light",
+      "Our brain perceives it as a distinct color"
+    ],
+    "decomposition": [
+      "The visible spectrum has no pink wavelength",
+      "Pink requires mixing opposite spectrum ends",
+      "It's a psychological perception",
+      "The debate is about what defines 'real'"
+    ]
+  },
+  {
+    "id": "expanded_103",
+    "question": "Do dolphins have names for each other?",
+    "answer": "yes",
+    "facts": [
+      "Dolphins have unique signature whistles",
+      "They use these to identify individuals",
+      "Dolphins can remember names for decades"
+    ],
+    "decomposition": [
+      "Each dolphin develops a unique whistle",
+      "Other dolphins learn and use it",
+      "They respond to their own signature",
+      "This functions as a name"
+    ]
+  },
+  {
+    "id": "expanded_104",
+    "question": "Can you see the American flag on the Moon from Earth?",
+    "answer": "no",
+    "facts": [
+      "The flag is too small to see from Earth",
+      "Even powerful telescopes cannot resolve it",
+      "Only lunar orbiters have imaged the landing sites"
+    ],
+    "decomposition": [
+      "The flag is about 4 feet long",
+      "At 238,000 miles, it's microscopic",
+      "The Hubble can't resolve objects that small",
+      "Only LRO has captured the sites"
+    ]
+  },
+  {
+    "id": "expanded_105",
+    "question": "Is coconut a nut?",
+    "answer": "no",
+    "facts": [
+      "Coconut is a drupe, a type of fruit",
+      "It's a fibrous one-seeded fruit",
+      "True nuts have a harder shell and don't open"
+    ],
+    "decomposition": [
+      "Botanically, coconuts are fibrous drupes",
+      "They have three layers like peaches",
+      "True nuts don't open to release seeds",
+      "Coconuts are more like stone fruits"
+    ]
+  }
+]

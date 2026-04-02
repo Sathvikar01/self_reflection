@@ -1,0 +1,21 @@
+{
+  "seed": 42,
+  "num_samples": 10,
+  "ablations": [
+    {
+      "name": "no_reflect",
+      "accuracy": 0.3,
+      "avg_tokens": 8206.8
+    },
+    {
+      "name": "no_backtrack",
+      "accuracy": 0.3,
+      "avg_tokens": 7185.4
+    },
+    {
+      "name": "random_policy",
+      "accuracy": 0.3,
+      "avg_tokens": 8150.1
+    }
+  ]
+}

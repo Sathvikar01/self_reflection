@@ -1,0 +1,118 @@
+# Configuration for RL-Guided Self-Reflection System
+
+# NVIDIA NIM API Configuration
+api:
+  nvidia:
+    base_url: "https://integrate.api.nvidia.com/v1"
+    api_key: "${NVIDIA_API_KEY}"
+    timeout: 60
+    max_retries: 3
+    retry_delay: 1.0
+  rate_limit:
+    requests_per_minute: 40
+    tokens_per_minute: 40000
+
+# Generator (Base LLM) Configuration
+generator:
+  model: "meta/llama-3.1-8b-instruct"
+  temperature: 0.7
+  max_tokens: 512
+  top_p: 0.95
+  stop_sequences: ["\n\n\n", "Question:", "Problem:"]
+
+# Evaluator (PRM) Configuration
+evaluator:
+  model: "meta/llama-3.3-70b-instruct"
+  temperature: 0.1
+  max_tokens: 64
+  score_range:
+    min: -1.0
+    max: 1.0
+  prompt_style: "single_step"
+
+# MCTS Configuration
+mcts:
+  exploration_constant: 1.414
+  max_tree_depth: 20
+  max_rollout_depth: 5
+  expansion_budget: 50
+  simulation_budget: 100
+  temperature: 0.7
+  
+  # Action selection thresholds
+  backtrack_threshold: 0.3
+  conclude_threshold: 0.85
+  
+  # Discount factor for future rewards
+  gamma: 0.95
+
+# Action Configuration
+actions:
+  expand:
+    weight: 0.4
+    max_steps_per_expand: 1
+  reflect:
+    weight: 0.25
+    force_after_low_score: true
+    low_score_threshold: 0.2
+  backtrack:
+    weight: 0.2
+    min_depth: 1
+  conclude:
+    weight: 0.15
+    min_steps: 3
+
+# Value Network Configuration (optional)
+value_network:
+  enabled: false
+  hidden_dim: 256
+  num_layers: 2
+  learning_rate: 0.001
+  batch_size: 32
+
+# Dataset Configuration
+dataset:
+  name: "strategy_qa"
+  train_split: 0.1
+  test_split: 0.9
+  max_samples:
+    train: 100
+    test: 500
+  shuffle_seed: 42
+
+# Experiment Configuration
+experiment:
+  name: "rl_reflection_baseline"
+  seed: 42
+  num_runs: 3
+  
+  baseline:
+    enabled: true
+    max_tokens: 2048
+    temperature: 0.7
+    
+  rl_guided:
+    enabled: true
+    
+  ablations:
+    - name: "no_reflect"
+      disabled_actions: ["reflect"]
+    - name: "random_policy"
+      random_action_selection: true
+    - name: "no_backtrack"
+      disabled_actions: ["backtrack"]
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  log_dir: "logs"
+  log_api_calls: true
+  log_tree_states: true
+  checkpoint_interval: 10
+
+# Output Configuration
+output:
+  results_dir: "data/results"
+  figures_dir: "paper/figures"
+  save_intermediate: true
+  save_tree_visualizations: true

@@ -1,0 +1,166 @@
+[
+  {
+    "id": "strategic_001",
+    "question": "You have $100 and want to buy items costing $23, $18, and $45. Can you afford all three?",
+    "answer": "yes",
+    "facts": [
+      "Total cost is $23 + $18 + $45 = $86",
+      "$86 is less than $100",
+      "So you can afford all three"
+    ],
+    "decomposition": [
+      "Add the prices: $23 + $18 = $41",
+      "Add third item: $41 + $45 = $86",
+      "Compare: $86 < $100",
+      "Answer: yes, you can afford all"
+    ]
+  },
+  {
+    "id": "strategic_002",
+    "question": "If you need to wake up at 7 AM and it takes 30 minutes to get ready, and 45 minutes to commute, what time should you wake up to arrive by 9 AM?",
+    "answer": "7:45",
+    "facts": [
+      "Arrival time is 9:00 AM",
+      "Commute takes 45 minutes",
+      "Getting ready takes 30 minutes"
+    ],
+    "decomposition": [
+      "Subtract commute time: 9:00 - 0:45 = 8:15 AM",
+      "Subtract prep time: 8:15 - 0:30 = 7:45 AM",
+      "Wake up at 7:45 AM"
+    ]
+  },
+  {
+    "id": "strategic_003",
+    "question": "A recipe serves 4 people and requires 2 cups of flour. If you want to serve 10 people, how many cups of flour do you need?",
+    "answer": "5",
+    "facts": [
+      "Original recipe: 4 servings need 2 cups",
+      "Target: 10 servings",
+      "Scale factor is 10/4 = 2.5"
+    ],
+    "decomposition": [
+      "Calculate scale factor: 10/4 = 2.5",
+      "Multiply original amount: 2 * 2.5 = 5",
+      "Need 5 cups of flour"
+    ]
+  },
+  {
+    "id": "strategic_004",
+    "question": "You're packing a box that can hold 20 kg. You have items weighing 5 kg, 8 kg, 4 kg, and 6 kg. What's the maximum weight you can pack without exceeding the limit?",
+    "answer": "19",
+    "facts": [
+      "Box limit: 20 kg",
+      "Items: 5, 8, 4, 6 kg",
+      "Need to find best combination"
+    ],
+    "decomposition": [
+      "Try combinations: 5+8+4+6 = 23 (too heavy)",
+      "Try 5+8+6 = 19 (fits)",
+      "Try 8+4+6 = 18 (fits but less)",
+      "Maximum is 19 kg"
+    ]
+  },
+  {
+    "id": "strategic_005",
+    "question": "In tic-tac-toe, if you place your first X in the center, and your opponent puts O in the top-left corner, should you place your next X in a corner or edge?",
+    "answer": "corner",
+    "facts": [
+      "Center X gives maximum control",
+      "Corners create diagonal winning lines",
+      "Opposite corners create two threats"
+    ],
+    "decomposition": [
+      "Center is already controlled by X",
+      "O in corner means threat on diagonal",
+      "Place X in opposite corner",
+      "This creates two winning paths"
+    ]
+  },
+  {
+    "id": "strategic_006",
+    "question": "If a train leaves Station A at 9 AM traveling 60 mph toward Station B 180 miles away, and another train leaves Station B at 10 AM traveling 50 mph toward Station A, will they meet before 11 AM?",
+    "answer": "no",
+    "facts": [
+      "Train A starts at 9 AM going 60 mph",
+      "Train B starts at 10 AM going 50 mph",
+      "Distance is 180 miles"
+    ],
+    "decomposition": [
+      "By 10 AM, Train A has gone 60 miles (60 * 1 hour)",
+      "Remaining distance: 180 - 60 = 120 miles",
+      "Combined speed after 10 AM: 60 + 50 = 110 mph",
+      "Time to meet: 120/110 = 1.09 hours",
+      "Meeting time: 10:00 + 1:05 = 11:05 AM",
+      "So they meet after 11 AM, answer is no"
+    ]
+  },
+  {
+    "id": "strategic_007",
+    "question": "You have 3 jugs: 8-liter, 5-liter, and 3-liter. The 8-liter jug is full. Can you measure exactly 4 liters using these jugs?",
+    "answer": "yes",
+    "facts": [
+      "Start: 8L=8, 5L=0, 3L=0",
+      "Goal: measure 4 liters",
+      "Can pour between jugs"
+    ],
+    "decomposition": [
+      "Pour 8L to 5L: 8L=3, 5L=5, 3L=0",
+      "Pour 5L to 3L: 8L=3, 5L=2, 3L=3",
+      "Empty 3L: 8L=3, 5L=2, 3L=0",
+      "Pour 5L to 3L: 8L=3, 5L=0, 3L=2",
+      "Continue process to get 4L"
+    ]
+  },
+  {
+    "id": "strategic_008",
+    "question": "In rock-paper-scissors, if your opponent has played rock 3 times in a row, should you play paper next?",
+    "answer": "yes",
+    "facts": [
+      "Rock beats scissors",
+      "Paper beats rock",
+      "Scissors beats paper"
+    ],
+    "decomposition": [
+      "Opponent played rock 3 times",
+      "If pattern continues, next is rock",
+      "Paper beats rock",
+      "Play paper"
+    ]
+  },
+  {
+    "id": "strategic_009",
+    "question": "You need to cross a bridge with a flashlight. The bridge holds max 2 people. Four people take 1, 2, 5, and 10 minutes to cross. The flashlight must be carried back. What's the minimum time for all to cross?",
+    "answer": "17",
+    "facts": [
+      "People take: 1, 2, 5, 10 minutes",
+      "Max 2 on bridge at once",
+      "Flashlight needed to cross"
+    ],
+    "decomposition": [
+      "Send fastest pair first: 1+2 cross (2 min)",
+      "Fastest returns with light: 1 returns (1 min) = 3 total",
+      "Send slowest pair: 5+10 cross (10 min) = 13 total",
+      "Second fastest returns: 2 returns (2 min) = 15 total",
+      "Final pair: 1+2 cross (2 min) = 17 total"
+    ]
+  },
+  {
+    "id": "strategic_010",
+    "question": "A snail climbs 3 feet up a wall during the day but slides down 2 feet at night. The wall is 10 feet tall. How many days to reach the top?",
+    "answer": "8",
+    "facts": [
+      "Climbs 3 feet per day",
+      "Slides 2 feet per night",
+      "Net gain: 1 foot per 24 hours",
+      "Wall is 10 feet"
+    ],
+    "decomposition": [
+      "Day 1: climbs to 3, slides to 1",
+      "Day 2: climbs to 4, slides to 2",
+      "Day 7: climbs to 9, slides to 7",
+      "Day 8: climbs to 10 - reaches top!",
+      "Answer: 8 days"
+    ]
+  }
+]
