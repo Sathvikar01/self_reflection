@@ -9,6 +9,11 @@ from dataclasses import dataclass, field
 import requests
 from tenacity import retry, stop_after_attempt, wait_exponential
 from loguru import logger
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from exceptions import ConfigurationError, APIError
 
 
 @dataclass
@@ -47,7 +52,7 @@ class NVIDIANIMClient:
     ):
         self.api_key = api_key or os.getenv("NVIDIA_API_KEY")
         if not self.api_key:
-            raise ValueError("NVIDIA API key not provided. Set NVIDIA_API_KEY environment variable or pass api_key parameter.")
+            raise ConfigurationError("NVIDIA API key not provided. Set NVIDIA_API_KEY environment variable or pass api_key parameter.")
         
         self.base_url = base_url
         self.timeout = timeout
@@ -90,28 +95,31 @@ class NVIDIANIMClient:
             retry_after = int(response.headers.get("Retry-After", 60))
             logger.warning(f"Rate limited. Waiting {retry_after} seconds...")
             time.sleep(retry_after)
-            raise Exception("Rate limited")
+            raise APIError(
+                f"Rate limited. Retry after {retry_after} seconds",
+                status_code=429,
+                api_response={"retry_after": retry_after}
+            )
         
         response.raise_for_status()
         return response.json()
     
     def generate(
-        self,
-        messages: List[Dict[str, str]],
-        config: Optional[GenerationConfig] = None,
+        self, messages: List[Dict[str, str]], config: Optional[GenerationConfig] = None
     ) -> GenerationResponse:
         """Generate text completion using chat API.
-        
+
         Args:
             messages: List of message dicts with 'role' and 'content' keys
             config: Generation configuration
-        
+
         Returns:
             GenerationResponse with generated text and metadata
         """
         if config is None:
             config = GenerationConfig()
-        
+
+        cache_key = None
         if self.cache_enabled:
             cache_key = self._get_cache_key(messages, config)
             if cache_key in self._cache:
@@ -159,7 +167,7 @@ class NVIDIANIMClient:
             cached=False,
         )
         
-        if self.cache_enabled:
+        if self.cache_enabled and cache_key:
             self._cache[cache_key] = result
             result.cached = True
         
