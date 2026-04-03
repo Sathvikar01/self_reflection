@@ -63,7 +63,7 @@ class ValueNetworkEvaluator:
         Args:
             model_path: Path to model checkpoint
         """
-        checkpoint = torch.load(model_path, map_location=self.device)
+        checkpoint = torch.load(model_path, map_location=self.device, weights_only=True)
         self.model.load_state_dict(checkpoint["model_state_dict"])
         logger.info(f"Loaded model from {model_path}")
 

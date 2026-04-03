@@ -213,7 +213,7 @@ class ValueNetworkTrainer:
     
     def load(self, path: str):
         """Load model checkpoint."""
-        checkpoint = torch.load(path)
+        checkpoint = torch.load(path, weights_only=True)
         self.model.load_state_dict(checkpoint["model_state_dict"])
         self.optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
         self._training_steps = checkpoint.get("training_steps", 0)

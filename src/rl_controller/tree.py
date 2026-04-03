@@ -88,18 +88,37 @@ class TreeNode:
         self.children.append(child)
         return child
     
-    def get_best_child(self, criterion: str = "score") -> Optional['TreeNode']:
-        """Get best child based on criterion."""
+    def get_best_child(self, criterion: str = "score", exploration_constant: float = 1.414) -> Optional['TreeNode']:
+        """Get best child based on criterion.
+        
+        Args:
+            criterion: Selection criterion ("score", "visit", "ucb")
+            exploration_constant: UCB exploration parameter (default: sqrt(2))
+        """
         if not self.children:
             return None
-        
+
         if criterion == "score":
             return max(self.children, key=lambda n: n.score)
         elif criterion == "visit":
             return max(self.children, key=lambda n: n.visit_count)
         elif criterion == "ucb":
-            return self.children[0]
-        
+            # Proper UCB1 formula: Q(s,a) + c * sqrt(ln(N(s)) / N(s,a))
+            import math
+            total_visits = sum(c.visit_count for c in self.children)
+            
+            def ucb_value(node: 'TreeNode') -> float:
+                if node.visit_count == 0:
+                    return float('inf')  # Prioritize unexplored nodes
+                
+                exploitation = node.score
+                exploration = exploration_constant * math.sqrt(
+                    math.log(total_visits) / node.visit_count
+                )
+                return exploitation + exploration
+            
+            return max(self.children, key=ucb_value)
+
         return max(self.children, key=lambda n: n.score)
     
     def get_siblings(self) -> List['TreeNode']:

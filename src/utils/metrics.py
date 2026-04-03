@@ -87,7 +87,7 @@ class MetricsCollector:
         correct_count = sum(1 for m in self._problem_metrics if m.correct)
         
         total_expansions = sum(m.num_expansions for m in self._problem_metrics)
-        total_reflections = sum(m.num_reflectionss for m in self._problem_metrics)
+        total_reflections = sum(m.num_reflections for m in self._problem_metrics)
         total_backtracks = sum(m.num_backtracks for m in self._problem_metrics)
         
         total_path_length = sum(m.path_length for m in self._problem_metrics)

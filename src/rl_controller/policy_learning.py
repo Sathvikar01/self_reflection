@@ -215,7 +215,7 @@ class PolicyLearner:
         Args:
             path: Load path
         """
-        checkpoint = torch.load(path)
+        checkpoint = torch.load(path, weights_only=True)
         self.policy.load_state_dict(checkpoint["policy_state_dict"])
         self.optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
         logger.info(f"Policy loaded from {path}")
