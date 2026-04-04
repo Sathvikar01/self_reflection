@@ -377,7 +377,13 @@ Provide ONLY the final answer, concise and clear."""
 
     def _check_answer(self, answer: str, ground_truth: str) -> bool:
         """Check if answer matches ground truth."""
-        return self._check_answer(answer, ground_truth)
+        answer_lower = answer.lower().strip()
+        truth_lower = ground_truth.lower().strip()
+        
+        if truth_lower in ["yes", "no"]:
+            return truth_lower in answer_lower
+        
+        return truth_lower in answer_lower or answer_lower == truth_lower
 
     def save_results(self, filename: str = "self_reflection_results.json"):
         """Save all results."""
