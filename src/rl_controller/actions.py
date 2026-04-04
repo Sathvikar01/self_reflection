@@ -6,14 +6,11 @@ from enum import Enum
 import time
 from loguru import logger
 
-import sys
-import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from generator.nim_client import NVIDIANIMClient, GenerationConfig
-from generator.prompts import PromptBuilder, ReasoningContext
-from evaluator.prm_client import PRMEvaluator
-from evaluator.improved_prm import ImprovedPRM
+from ..generator.nim_client import NVIDIANIMClient, GenerationConfig
+from ..generator.prompts import PromptBuilder, ReasoningContext
+from ..evaluator.prm_client import PRMEvaluator
+from ..evaluator.improved_prm import ImprovedPRM
+from ..utils.lru_cache import CachedPRMEvaluator
 from .tree import TreeNode, NodeType
 
 
@@ -64,10 +61,17 @@ class ActionExecutor:
         generator: NVIDIANIMClient,
         evaluator: Any = None,
         config: Optional[ActionConfig] = None,
+        use_cache: bool = True,
+        use_persistent_cache: bool = False,
     ):
         self.generator = generator
-        self.evaluator = evaluator
         self.config = config or ActionConfig()
+        
+        if use_cache and evaluator is not None:
+            self.evaluator = CachedPRMEvaluator(evaluator, use_persistent=use_persistent_cache)
+            logger.info("CachedPRMEvaluator enabled for action execution")
+        else:
+            self.evaluator = evaluator
 
         self._action_counts = {a: 0 for a in ActionType}
         self._total_tokens = {"input": 0, "output": 0}
@@ -354,13 +358,18 @@ class ActionExecutor:
     
     def get_stats(self) -> Dict:
         """Get action execution statistics."""
-        return {
+        stats = {
             "action_counts": self._action_counts.copy(),
             "total_input_tokens": self._total_tokens["input"],
             "total_output_tokens": self._total_tokens["output"],
             "total_tokens": sum(self._total_tokens.values()),
         }
-    
+        
+        if hasattr(self.evaluator, 'get_cache_stats'):
+            stats["cache_stats"] = self.evaluator.get_cache_stats()
+        
+        return stats
+
     def reset_stats(self):
         """Reset statistics."""
         self._action_counts = {a: 0 for a in ActionType}

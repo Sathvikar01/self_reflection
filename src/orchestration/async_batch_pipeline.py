@@ -5,40 +5,31 @@ import json
 import time
 import asyncio
 from typing import List, Dict, Optional, Any, Callable
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
 from pathlib import Path
 from datetime import datetime
 from loguru import logger
-import sys
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from generator.async_nim_client import AsyncNVIDIANIMClient, GenerationConfig
-from orchestration.self_reflection_pipeline import (
-    SelfReflectionConfig,
-    SelfReflectionResult
-)
-from data.datasets.loader import Problem
+from .base import BasePipelineConfig
+from ..generator.async_nim_client import AsyncNVIDIANIMClient, GenerationConfig
 
 
 @dataclass
-class BatchConfig:
+class BatchConfig(BasePipelineConfig):
     """Configuration for batch processing."""
     max_concurrent: int = 10
-    checkpoint_interval: int = 10
-    save_intermediate: bool = True
-    error_handling: str = "continue"  # "continue", "stop", "raise"
+    error_handling: str = "continue"
     retry_failed: bool = True
     max_retries: int = 2
 
 
-@dataclass
+@dataclass  
 class BatchResult:
     """Result from batch processing."""
     total_problems: int
     successful: int
     failed: int
-    results: List[SelfReflectionResult]
+    results: List[Any]
     errors: List[Dict[str, Any]]
     total_tokens: int
     total_latency_seconds: float
@@ -51,11 +42,13 @@ class AsyncBatchPipeline:
 
     def __init__(
         self,
-        pipeline_config: Optional[SelfReflectionConfig] = None,
+        pipeline_config: Optional[Any] = None,
         batch_config: Optional[BatchConfig] = None,
         results_dir: str = "data/results",
         api_key: Optional[str] = None
     ):
+        from orchestration.self_reflection_pipeline import SelfReflectionConfig
+        
         self.pipeline_config = pipeline_config or SelfReflectionConfig()
         self.batch_config = batch_config or BatchConfig()
         self.results_dir = Path(results_dir)
@@ -71,7 +64,7 @@ class AsyncBatchPipeline:
 
     async def solve_batch(
         self,
-        problems: List[Problem],
+        problems: List[Any],
         checkpoint_callback: Optional[Callable] = None
     ) -> BatchResult:
         """Solve a batch of problems concurrently.
@@ -91,7 +84,7 @@ class AsyncBatchPipeline:
 
         semaphore = asyncio.Semaphore(self.batch_config.max_concurrent)
 
-        async def solve_with_semaphore(problem: Problem, index: int):
+        async def solve_with_semaphore(problem: Any, index: int):
             """Solve single problem with semaphore."""
             async with semaphore:
                 try:
@@ -101,13 +94,11 @@ class AsyncBatchPipeline:
                     logger.error(f"Problem {problem.id} failed: {e}")
                     return (index, None, {"problem_id": problem.id, "error": str(e)})
 
-        # Process all problems
         tasks = [
             solve_with_semaphore(problem, i)
             for i, problem in enumerate(problems)
         ]
 
-        # Track progress
         completed = 0
 
         for coro in asyncio.as_completed(tasks):
@@ -122,25 +113,23 @@ class AsyncBatchPipeline:
                     results.append((index, result))
                     successful += 1
 
-                # Checkpoint
                 if self.batch_config.save_intermediate and completed % self.batch_config.checkpoint_interval == 0:
                     await self._save_checkpoint(results, errors, completed, len(problems))
                     if checkpoint_callback:
                         await checkpoint_callback(completed, len(problems))
 
-                    logger.info(f"Progress: {completed}/{len(problems)} problems processed")
+                logger.info(f"Progress: {completed}/{len(problems)} problems processed")
 
             except Exception as e:
                 logger.error(f"Unexpected error: {e}")
                 errors.append({"error": str(e)})
                 failed += 1
 
-        # Sort results by index to maintain order
         results.sort(key=lambda x: x[0])
         final_results = [r[1] for r in results]
 
         total_latency = time.time() - start_time
-        total_tokens = sum(r.total_tokens for r in final_results)
+        total_tokens = sum(getattr(r, 'total_tokens', 0) for r in final_results)
 
         batch_result = BatchResult(
             total_problems=len(problems),
@@ -153,7 +142,6 @@ class AsyncBatchPipeline:
             avg_latency_per_problem=total_latency / len(problems) if problems else 0
         )
 
-        # Save final results
         await self._save_final_results(batch_result)
 
         logger.info(
@@ -163,18 +151,15 @@ class AsyncBatchPipeline:
 
         return batch_result
 
-    async def _solve_single(self, problem: Problem) -> SelfReflectionResult:
+    async def _solve_single(self, problem: Any) -> Any:
         """Solve a single problem (simplified async version)."""
         from orchestration.self_reflection_pipeline import SelfReflectionPipeline
 
-        # Use async client in pipeline
         pipeline = SelfReflectionPipeline(
             config=self.pipeline_config,
             api_key=self.api_key
         )
 
-        # For now, run in executor to avoid blocking
-        # TODO: Make pipeline fully async
         loop = asyncio.get_event_loop()
         result = await loop.run_in_executor(
             None,
@@ -195,11 +180,13 @@ class AsyncBatchPipeline:
         total: int
     ):
         """Save checkpoint of current progress."""
+        from dataclasses import asdict
+        
         checkpoint = {
             "timestamp": datetime.now().isoformat(),
             "completed": completed,
             "total": total,
-            "results": [asdict(r[1]) if r[1] else None for r in results],
+            "results": [asdict(r[1]) if r[1] and hasattr(r[1], '__dataclass_fields__') else str(r[1]) for r in results],
             "errors": errors
         }
 
@@ -211,10 +198,11 @@ class AsyncBatchPipeline:
 
     async def _save_final_results(self, batch_result: BatchResult):
         """Save final batch results."""
+        from dataclasses import asdict
+        
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         results_file = self.results_dir / f"batch_results_{timestamp}.json"
 
-        # Convert to dict for JSON serialization
         result_dict = {
             "total_problems": batch_result.total_problems,
             "successful": batch_result.successful,
@@ -223,7 +211,7 @@ class AsyncBatchPipeline:
             "total_latency_seconds": batch_result.total_latency_seconds,
             "avg_latency_per_problem": batch_result.avg_latency_per_problem,
             "timestamp": batch_result.timestamp,
-            "results": [asdict(r) for r in batch_result.results],
+            "results": [asdict(r) if hasattr(r, '__dataclass_fields__') else str(r) for r in batch_result.results],
             "errors": batch_result.errors
         }
 
@@ -246,8 +234,8 @@ class AsyncBatchPipeline:
 
 
 async def run_batch_async(
-    problems: List[Problem],
-    pipeline_config: Optional[SelfReflectionConfig] = None,
+    problems: List[Any],
+    pipeline_config: Optional[Any] = None,
     batch_config: Optional[BatchConfig] = None,
     results_dir: str = "data/results"
 ) -> BatchResult:

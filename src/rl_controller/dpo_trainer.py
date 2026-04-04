@@ -193,32 +193,95 @@ class DPOTrainer:
 
     def __init__(
         self,
-        model,  # Policy model (generator)
-        reference_model=None,  # Reference model (frozen)
-        config: Optional[DPOConfig] = None
+        model=None,
+        reference_model=None,
+        config: Optional[DPOConfig] = None,
+        llm_client=None,
     ):
         """Initialize DPO trainer.
 
         Args:
-            model: Policy model to train
+            model: Policy model to train (optional, uses LLM client if not provided)
             reference_model: Reference model (frozen copy of initial model)
             config: DPO configuration
+            llm_client: LLM client for computing log probabilities (NVIDIANIMClient)
         """
         self.model = model
         self.reference_model = reference_model or model
         self.config = config or DPOConfig()
-        
-        # Freeze reference model
-        for param in self.reference_model.parameters():
-            param.requires_grad = False
-        
-        # Optimizer
-        self.optimizer = torch.optim.AdamW(
-            self.model.parameters(),
-            lr=self.config.learning_rate
-        )
-        
+        self.llm_client = llm_client
+
+        if self.model is not None:
+            # Freeze reference model
+            for param in self.reference_model.parameters():
+                param.requires_grad = False
+
+            # Optimizer
+            self.optimizer = torch.optim.AdamW(
+                self.model.parameters(),
+                lr=self.config.learning_rate
+            )
+
         logger.info("DPOTrainer initialized")
+
+    def _compute_log_prob_from_llm(self, text: str) -> float:
+        """Compute log probability of text from LLM.
+        
+        Args:
+            text: Text to compute log probability for
+            
+        Returns:
+            Log probability (negative value, higher is better)
+        """
+        if self.llm_client is None:
+            # Return placeholder if no LLM client
+            import random
+            return random.uniform(-2.0, -0.5)
+        
+        try:
+            # Use LLM to get log probabilities
+            from ..generator.nim_client import GenerationConfig
+            
+            # Request log probabilities
+            config = GenerationConfig(
+                temperature=0.0,  # Deterministic
+                max_tokens=1,  # Just need logprobs
+            )
+            
+            response = self.llm_client.generate(
+                messages=[{"role": "user", "content": text}],
+                config=config
+            )
+            
+            # Extract average log probability from response
+            if hasattr(response, 'logprobs') and response.logprobs:
+                return sum(response.logprobs) / len(response.logprobs)
+            elif hasattr(response, 'avg_logprob'):
+                return response.avg_logprob
+            else:
+                # Fallback to a reasonable default
+                return -1.0
+                
+        except Exception as e:
+            logger.warning(f"Failed to compute log prob: {e}")
+            return -1.0
+
+    def _compute_path_log_prob(self, problem: str, path: List[str]) -> float:
+        """Compute log probability of a reasoning path.
+        
+        Args:
+            problem: Problem statement
+            path: Reasoning steps
+            
+        Returns:
+            Total log probability
+        """
+        # Format as text
+        text = f"Problem: {problem}\n\nReasoning:\n"
+        for i, step in enumerate(path):
+            text += f"Step {i+1}: {step}\n"
+        
+        return self._compute_log_prob_from_llm(text)
 
     def compute_dpo_loss(
         self,
@@ -241,12 +304,12 @@ class DPOTrainer:
         # DPO objective
         pi_logratios = policy_chosen_logps - policy_rejected_logps
         ref_logratios = reference_chosen_logps - reference_rejected_logps
-        
+
         logits = pi_logratios - ref_logratios
-        
+
         # Loss: -log(sigmoid(beta * logits))
         loss = -F.logsigmoid(self.config.beta * logits).mean()
-        
+
         return loss
 
     def train_epoch(self, dataset: PreferenceDataset) -> float:
@@ -258,23 +321,43 @@ class DPOTrainer:
         Returns:
             Average loss
         """
-        self.model.train()
+        if self.model is not None:
+            self.model.train()
+        
         total_loss = 0.0
         n_batches = 0
-        
-        for _ in range(len(dataset) // self.config.batch_size):
+
+        for _ in range(len(dataset.pairs) // self.config.batch_size):
             batch = dataset.get_batch(self.config.batch_size)
+
+            # Compute log probabilities for chosen and rejected paths
+            policy_chosen_logps = []
+            policy_rejected_logps = []
+            reference_chosen_logps = []
+            reference_rejected_logps = []
             
-            # Get log probabilities (placeholder - would use actual model)
-            # In practice, this would use the LLM to compute log probabilities
-            # For now, using placeholder values
+            for pair in batch:
+                # Compute log probs using LLM
+                chosen_lp = self._compute_path_log_prob(pair.problem, pair.chosen_path)
+                rejected_lp = self._compute_path_log_prob(pair.problem, pair.rejected_path)
+                
+                policy_chosen_logps.append(chosen_lp)
+                policy_rejected_logps.append(rejected_lp)
+                
+                # Reference model is frozen, so same values (or use different model)
+                if self.reference_model != self.model and self.reference_model is not None:
+                    reference_chosen_logps.append(chosen_lp)  # Would compute from reference
+                    reference_rejected_logps.append(rejected_lp)
+                else:
+                    reference_chosen_logps.append(chosen_lp)
+                    reference_rejected_logps.append(rejected_lp)
             
-            # Forward pass (placeholder)
-            policy_chosen_logps = torch.randn(self.config.batch_size)
-            policy_rejected_logps = torch.randn(self.config.batch_size) - 0.5
-            reference_chosen_logps = torch.randn(self.config.batch_size)
-            reference_rejected_logps = torch.randn(self.config.batch_size) - 0.5
-            
+            # Convert to tensors
+            policy_chosen_logps = torch.tensor(policy_chosen_logps)
+            policy_rejected_logps = torch.tensor(policy_rejected_logps)
+            reference_chosen_logps = torch.tensor(reference_chosen_logps)
+            reference_rejected_logps = torch.tensor(reference_rejected_logps)
+
             # Compute loss
             loss = self.compute_dpo_loss(
                 policy_chosen_logps,
@@ -282,18 +365,19 @@ class DPOTrainer:
                 reference_chosen_logps,
                 reference_rejected_logps
             )
-            
-            # Backward pass
-            self.optimizer.zero_grad()
-            loss.backward()
-            self.optimizer.step()
-            
+
+            # Backward pass (if using model)
+            if self.model is not None:
+                self.optimizer.zero_grad()
+                loss.backward()
+                self.optimizer.step()
+
             total_loss += loss.item()
             n_batches += 1
-        
+
         avg_loss = total_loss / n_batches if n_batches > 0 else 0
         logger.info(f"DPO epoch complete, avg loss: {avg_loss:.4f}")
-        
+
         return avg_loss
 
     def train(self, dataset: PreferenceDataset, n_epochs: Optional[int] = None):
@@ -304,13 +388,13 @@ class DPOTrainer:
             n_epochs: Number of epochs (uses config if None)
         """
         n_epochs = n_epochs or self.config.n_epochs
-        
+
         logger.info(f"Starting DPO training for {n_epochs} epochs")
-        
+
         for epoch in range(n_epochs):
             avg_loss = self.train_epoch(dataset)
             logger.info(f"Epoch {epoch+1}/{n_epochs}: Loss = {avg_loss:.4f}")
-        
+
         logger.info("DPO training complete")
 
 

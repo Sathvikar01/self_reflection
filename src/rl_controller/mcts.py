@@ -2,14 +2,10 @@
 
 import math
 import random
-from typing import List, Dict, Optional, Tuple, Callable
+from typing import List, Dict, Optional, Tuple, Callable, Any
 from dataclasses import dataclass, field
 from enum import Enum
 from loguru import logger
-
-import sys
-import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from .tree import StateTree, TreeNode, NodeType
 from .actions import ActionExecutor, ActionType, ActionConfig, ActionResult
@@ -27,7 +23,7 @@ class MCTSConfig:
     backtrack_threshold: float = 0.3
     conclude_threshold: float = 0.85
     gamma: float = 0.95
-    
+
     use_value_network: bool = False
     progressive_widening: bool = True
     pw_factor: float = 0.5
@@ -49,17 +45,31 @@ class MCTSStats:
 
 class MCTSController:
     """Monte Carlo Tree Search controller for reasoning."""
-    
+
     def __init__(
         self,
         action_executor: ActionExecutor,
         config: Optional[MCTSConfig] = None,
+        value_network: Optional[Any] = None,
     ):
         self.action_executor = action_executor
         self.config = config or MCTSConfig()
         self._stats = MCTSStats()
         self._value_network = None
-    
+        
+        if value_network is not None:
+            self.set_value_network(value_network)
+
+    def set_value_network(self, value_network: Any):
+        """Set the value network for leaf evaluation.
+        
+        Args:
+            value_network: Value network instance (ValueNetworkEvaluator or ValueEstimator)
+        """
+        self._value_network = value_network
+        self.config.use_value_network = True
+        logger.info("Value network connected to MCTS")
+
     def search(
         self,
         problem: str,
@@ -67,30 +77,30 @@ class MCTSController:
         early_stop_threshold: float = 0.9,
     ) -> Tuple[str, float, List[str]]:
         """Run MCTS to find best solution path.
-        
+
         Args:
             problem: The problem to solve
             max_iterations: Maximum iterations (default: expansion_budget)
             early_stop_threshold: Stop if best score exceeds this
-        
+
         Returns:
             Tuple of (final_answer, score, reasoning_path)
         """
         max_iter = max_iterations or self.config.expansion_budget
         self._stats = MCTSStats()
-        
+
         tree = StateTree(problem, self.config.max_tree_depth)
         current_node = tree.root
-        
-        logger.info(f"Starting MCTS with {max_iter} iterations")
-        
+
+        logger.info(f"Starting MCTS with {max_iter} iterations (value_network={self.config.use_value_network})")
+
         for iteration in range(max_iter):
             if self._should_stop(current_node, early_stop_threshold):
                 logger.info(f"Early stopping at iteration {iteration}")
                 break
-            
+
             action = self._select_action(current_node, iteration)
-            
+
             result = self.action_executor.execute(
                 action=action,
                 problem=problem,
@@ -296,39 +306,72 @@ class MCTSController:
         """Run MCTS with certain actions disabled for ablation studies."""
         tree = StateTree(problem, self.config.max_tree_depth)
         current_node = tree.root
-        
+
         for _ in range(max_iterations):
             weights = self.action_executor.get_action_weights(current_node)
-            
+
             for action in disabled_actions:
                 weights[action] = 0.0
-            
+
             total = sum(weights.values())
             if total > 0:
                 weights = {k: v / total for k, v in weights.items()}
             else:
                 weights = {ActionType.EXPAND: 1.0}
-            
+
             action = self._sample_action(weights)
-            
+
             result = self.action_executor.execute(
                 action=action,
                 problem=problem,
                 current_node=current_node,
             )
-            
+
             if result.success:
                 if action == ActionType.BACKTRACK and result.backtracked_to:
                     current_node = result.backtracked_to
                 elif result.new_node:
                     current_node = result.new_node
-                    
-                    if action == ActionType.CONCLUDE:
-                        return result.content, result.score, current_node.path_content[1:]
-            
+
+                if action == ActionType.CONCLUDE:
+                    return result.content, result.score, current_node.path_content[1:]
+
             if current_node.is_terminal:
                 break
-        
+
         best_path = tree.get_best_path()
         best_node = best_path[-1]
         return best_node.content, best_node.score, [n.content for n in best_path[1:]]
+    
+    def _evaluate_with_value_network(self, problem: str, reasoning_path: List[str]) -> Optional[float]:
+        """Evaluate reasoning path using the value network.
+        
+        Args:
+            problem: Problem statement
+            reasoning_path: List of reasoning steps
+            
+        Returns:
+            Value estimate (0-1) or None if value network not available
+        """
+        if not self.config.use_value_network or self._value_network is None:
+            return None
+        
+        try:
+            if hasattr(self._value_network, 'evaluate'):
+                return self._value_network.evaluate(problem, reasoning_path)
+            elif hasattr(self._value_network, 'predict'):
+                return self._value_network.predict(problem, reasoning_path)
+            else:
+                logger.warning("Value network has no 'evaluate' or 'predict' method")
+                return None
+        except Exception as e:
+            logger.error(f"Value network evaluation failed: {e}")
+            return None
+    
+    def get_value_network_stats(self) -> Dict[str, Any]:
+        """Get statistics about value network usage."""
+        return {
+            "use_value_network": self.config.use_value_network,
+            "value_network_set": self._value_network is not None,
+            "value_network_type": type(self._value_network).__name__ if self._value_network else None,
+        }

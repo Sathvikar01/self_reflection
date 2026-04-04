@@ -4,9 +4,10 @@ from setuptools import setup, find_packages
 
 setup(
     name="rl_self_reflection",
-    version="0.1.0",
+    version="1.0.0",
     description="RL-Guided Self-Reflection for LLM Reasoning",
-    packages=find_packages(),
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     python_requires=">=3.9",
     install_requires=[
         "requests>=2.31.0",
@@ -26,11 +27,16 @@ setup(
         "rich>=13.7.0",
         "ratelimit>=2.2.3",
         "tenacity>=8.2.0",
+        "sentence-transformers>=2.2.0",
+        "optuna>=3.3.0",
     ],
     extras_require={
         "dev": [
             "pytest>=7.4.0",
             "pytest-asyncio>=0.21.0",
+            "pytest-cov>=4.1.0",
+            "black>=23.0.0",
+            "ruff>=0.1.0",
         ],
     },
     entry_points={

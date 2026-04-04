@@ -88,7 +88,7 @@ class LRUCache:
             
             self.cache[key] = (value, time.time())
 
-    def get_or_compute(self, key: str, compute_fn: callable) -> Any:
+    def get_or_compute(self, key: str, compute_fn) -> Any:
         """Get from cache or compute if missing.
 
         Args:
@@ -306,7 +306,8 @@ class CachedPRMEvaluator:
             use_persistent: Use persistent cache instead of in-memory
         """
         self.prm_evaluator = prm_evaluator
-        
+        self._use_persistent = use_persistent
+
         if use_persistent:
             self.cache = PersistentCache()
         else:
@@ -314,45 +315,64 @@ class CachedPRMEvaluator:
 
         logger.info("CachedPRMEvaluator initialized")
 
+    def _hash_key(self, problem: str, previous_steps: tuple, current_step: str, depth: int = 0) -> str:
+        """Generate cache key."""
+        key_data = {
+            "problem": problem,
+            "previous_steps": previous_steps,
+            "current_step": current_step,
+            "depth": depth
+        }
+        key_str = json.dumps(key_data, sort_keys=True)
+        return hashlib.sha256(key_str.encode()).hexdigest()
+
     def evaluate_step(
         self,
         problem: str,
         previous_steps: list,
-        current_step: str
-    ) -> float:
+        current_step: str,
+        depth: int = 0
+    ):
         """Evaluate step with caching.
 
         Args:
             problem: Problem statement
             previous_steps: Previous reasoning steps
             current_step: Current step to evaluate
+            depth: Optional depth parameter for ImprovedPRM
 
         Returns:
-            PRM score
+            Evaluation result (same as underlying evaluator)
         """
-        # Generate cache key
-        cache_key = self.cache._hash_key(
-            problem=problem,
-            previous_steps=tuple(previous_steps),
-            current_step=current_step
-        )
-        
-        # Try cache
+        cache_key = self._hash_key(problem, tuple(previous_steps), current_step, depth)
+
         def compute():
+            if hasattr(self.prm_evaluator, 'evaluate_step'):
+                sig = self.prm_evaluator.evaluate_step.__code__.co_varnames
+                if 'depth' in sig:
+                    return self.prm_evaluator.evaluate_step(problem, previous_steps, current_step, depth)
+                return self.prm_evaluator.evaluate_step(problem, previous_steps, current_step)
             return self.prm_evaluator.evaluate_step(problem, previous_steps, current_step)
-        
-        # Use cache if available
+
         if isinstance(self.cache, LRUCache):
             return self.cache.get_or_compute(cache_key, compute)
         else:
             cached = self.cache.get(cache_key)
             if cached is not None:
+                if isinstance(cached, dict) and hasattr(self.prm_evaluator, 'evaluate_step'):
+                    from types import SimpleNamespace
+                    return SimpleNamespace(**cached)
                 return cached
-            
+
             value = compute()
-            self.cache.put(cache_key, value)
+            if hasattr(value, '__dict__'):
+                self.cache.put(cache_key, value.__dict__)
+            else:
+                self.cache.put(cache_key, value)
             return value
 
     def get_cache_stats(self) -> Dict[str, Any]:
+        """Get cache statistics."""
+        return self.cache.get_stats()
         """Get cache statistics."""
         return self.cache.get_stats()
