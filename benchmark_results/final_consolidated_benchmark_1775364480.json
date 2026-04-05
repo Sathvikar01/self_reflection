@@ -1,0 +1,3888 @@
+{
+  "timestamp": 1775364480.8076043,
+  "pipelines": 4,
+  "problems": 40,
+  "metrics": [
+    {
+      "pipeline": "Baseline",
+      "total": 40,
+      "correct": 3,
+      "accuracy": 0.075,
+      "avg_latency": 0.0,
+      "avg_tokens": 266.325,
+      "efficiency": 0.000281610813855252
+    },
+    {
+      "pipeline": "Fixed Self-Reflection",
+      "total": 40,
+      "correct": 2,
+      "accuracy": 0.05,
+      "avg_latency": 4.056096076965332e-05,
+      "avg_tokens": 445.5,
+      "efficiency": 0.0001122334455667789
+    },
+    {
+      "pipeline": "Adaptive Self-Reflection",
+      "total": 40,
+      "correct": 2,
+      "accuracy": 0.05,
+      "avg_latency": 0.0009320139884948731,
+      "avg_tokens": 483.5,
+      "efficiency": 0.00010341261633919338
+    },
+    {
+      "pipeline": "RL-Based Self-Reflection",
+      "total": 40,
+      "correct": 5,
+      "accuracy": 0.125,
+      "avg_latency": 0.0006864845752716064,
+      "avg_tokens": 3620.0,
+      "efficiency": 3.4530386740331494e-05
+    }
+  ],
+  "detailed_results": {
+    "Baseline": [
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_001",
+        "problem": "A company's revenue grows according to the formula R(n) = 100 * (1.15)^n million dollars, where n is",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "5",
+        "latency_seconds": 0.0,
+        "total_tokens": 339,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_002",
+        "problem": "In a quantum system, a particle has probability amplitude A = (1/\u221a2)(|0\u27e9 + |1\u27e9). When measured in th",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "1",
+        "latency_seconds": 0.0,
+        "total_tokens": 207,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_003",
+        "problem": "A neural network has 3 layers with weights W1 (784x256), W2 (256x128), and W3 (128x10). If using bat",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "203530",
+        "latency_seconds": 0.0,
+        "total_tokens": 323,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_004",
+        "problem": "In a Markov chain with states {A, B, C, D}, the transition probabilities from A are: P(A\u2192B)=0.3, P(A",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "0.395",
+        "latency_seconds": 0.0,
+        "total_tokens": 158,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_005",
+        "problem": "A cryptographic hash function H produces outputs uniformly distributed in {0,1}^256. An attacker per",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 5526 years",
+        "latency_seconds": 0.0,
+        "total_tokens": 205,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_006",
+        "problem": "In a game theory scenario, two players each choose a number from 1 to 100. If the sum is even, playe",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "negative (player B has advantage)",
+        "latency_seconds": 0.0,
+        "total_tokens": 293,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_007",
+        "problem": "A recursive function f(n) is defined as: f(0) = 1, f(1) = 2, and f(n) = f(n-1) + 2*f(n-2) for n \u2265 2.",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "17711",
+        "latency_seconds": 0.0,
+        "total_tokens": 206,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_008",
+        "problem": "In a distributed system with 5 nodes using Byzantine fault tolerance, what is the minimum number of ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "3",
+        "latency_seconds": 0.0,
+        "total_tokens": 357,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_009",
+        "problem": "A binary search tree contains the numbers {5, 3, 7, 1, 4, 6, 9, 2, 8}. If we perform an in-order tra",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "1, 2, 3, 4, 6, 7, 8, 9",
+        "latency_seconds": 0.0,
+        "total_tokens": 328,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_010",
+        "problem": "In a Bayesian network with nodes A\u2192B\u2192C\u2192D, where each conditional probability P(X|parent) is 0.8 when",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "0.512",
+        "latency_seconds": 0.0,
+        "total_tokens": 221,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_011",
+        "problem": "A compiler optimizes a loop: for i from 1 to n: x = x + A[i] * B[i]. If loop unrolling with factor 4",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "16000",
+        "latency_seconds": 0.0,
+        "total_tokens": 395,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_012",
+        "problem": "In a graph with 6 vertices and 8 edges, if the graph is bipartite, what is the maximum possible numb",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "9",
+        "latency_seconds": 0.0,
+        "total_tokens": 173,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_013",
+        "problem": "A Turing machine has tape alphabet {0, 1, B} and states {q0, q1, q2, q_accept}. If it starts in stat",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "100",
+        "latency_seconds": 0.0,
+        "total_tokens": 241,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_014",
+        "problem": "In a relational database, if we have tables R(A,B) with 1000 rows, S(B,C) with 2000 rows, and T(C,D)",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "6000",
+        "latency_seconds": 0.0,
+        "total_tokens": 356,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_015",
+        "problem": "A transformer model has d_model=512, 8 attention heads, and 6 encoder layers. If using scaled dot-pr",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "approximately 3.2 billion FLOPs",
+        "latency_seconds": 0.0,
+        "total_tokens": 287,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_016",
+        "problem": "In a Paxos consensus algorithm with 5 acceptors, if a proposer sends PREPARE with ballot number 10 a",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "A1, A2, A3",
+        "latency_seconds": 0.0,
+        "total_tokens": 170,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_017",
+        "problem": "A cache has 4 sets with 2-way set associativity and uses LRU replacement. If the sequence of memory ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "1",
+        "latency_seconds": 0.0,
+        "total_tokens": 297,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_018",
+        "problem": "In a type system with generics, if we have class Animal, class Dog extends Animal, and class Cat ext",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "no",
+        "latency_seconds": 0.0,
+        "total_tokens": 161,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_019",
+        "problem": "A hash table uses open addressing with linear probing and has a load factor of 0.75. If we insert 30",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "size=400, probes\u22481.5",
+        "latency_seconds": 0.0,
+        "total_tokens": 170,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_020",
+        "problem": "In a microservices architecture, service A calls service B with timeout 100ms, B calls C with timeou",
+        "answer": "yes",
+        "correct": true,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0,
+        "total_tokens": 247,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_021",
+        "problem": "A B-tree of order 5 (max 4 keys per node) stores integer keys. If we insert keys 10, 20, 30, 40, 50,",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "[40]",
+        "latency_seconds": 0.0,
+        "total_tokens": 312,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_022",
+        "problem": "In a Raft consensus algorithm with 5 servers, if the current term is 5 and leader L receives a heart",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "L becomes follower, updates term to 7",
+        "latency_seconds": 0.0,
+        "total_tokens": 244,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_023",
+        "problem": "A bloom filter with 3 hash functions and bit array of size 1000 is used to store 100 elements. What ",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 8.2%",
+        "latency_seconds": 0.0,
+        "total_tokens": 321,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_024",
+        "problem": "In a red-black tree, if we insert a node and it causes a double-red violation where the parent and u",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "no rotation, just recoloring",
+        "latency_seconds": 0.0,
+        "total_tokens": 305,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_025",
+        "problem": "A gradient descent optimizer uses momentum with coefficient 0.9. If the gradients at iterations 1, 2",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "[1.71, 0.9]",
+        "latency_seconds": 0.0,
+        "total_tokens": 191,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_026",
+        "problem": "In a skip list with probability p=0.5 for promoting elements, if we have 1023 elements at level 0, a",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "32",
+        "latency_seconds": 0.0,
+        "total_tokens": 219,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_027",
+        "problem": "A Z-standard (zstd) compression algorithm achieves compression ratio 3:1 on text data. If the origin",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "600MB",
+        "latency_seconds": 0.0,
+        "total_tokens": 365,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_028",
+        "problem": "In a trie storing words {'cat', 'car', 'card', 'care', 'careful'}, how many nodes are there total?",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "10",
+        "latency_seconds": 0.0,
+        "total_tokens": 360,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_029",
+        "problem": "A mutex is held by thread T1 for 50ms, released for 10ms, then acquired by T2 for 30ms. If T1 attemp",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "20ms",
+        "latency_seconds": 0.0,
+        "total_tokens": 252,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_030",
+        "problem": "In a producer-consumer problem with a bounded buffer of size 10, if producers can produce 100 items ",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "0.5",
+        "latency_seconds": 0.0,
+        "total_tokens": 204,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_031",
+        "problem": "A convolutional neural network has input size 224\u00d7224\u00d73, uses 64 filters of size 7\u00d77 with stride 2 a",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "56\u00d756\u00d764",
+        "latency_seconds": 0.0,
+        "total_tokens": 317,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_032",
+        "problem": "In a CAP theorem context, if a distributed database chooses AP (availability + partition tolerance),",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "reads may return stale data",
+        "latency_seconds": 0.0,
+        "total_tokens": 376,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_033",
+        "problem": "A LSTM cell has input size 128 and hidden size 256. How many parameters does it have (including bias",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "397312",
+        "latency_seconds": 0.0,
+        "total_tokens": 217,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_034",
+        "problem": "In a Raft cluster of 5 servers, if 2 servers crash permanently, can the cluster still make progress?",
+        "answer": "yes",
+        "correct": true,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0,
+        "total_tokens": 340,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_035",
+        "problem": "A decision tree has depth 10 with each internal node having exactly 2 children. If the training set ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "1024",
+        "latency_seconds": 0.0,
+        "total_tokens": 379,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_036",
+        "problem": "In a Kubernetes cluster, if a pod has resource request of 2 CPU and 4GB memory, and the node has 8 C",
+        "answer": "no",
+        "correct": true,
+        "ground_truth": "no",
+        "latency_seconds": 0.0,
+        "total_tokens": 206,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem...",
+          "Step 3: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_037",
+        "problem": "A random forest with 100 trees has an out-of-bag (OOB) error of 15%. If each tree has variance \u03c3\u00b2 = ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "approximately 0.098",
+        "latency_seconds": 0.0,
+        "total_tokens": 173,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_038",
+        "problem": "In a gradient boosting ensemble, if we add a new tree that reduces training loss by 0.1 with learnin",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "2.49",
+        "latency_seconds": 0.0,
+        "total_tokens": 189,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_039",
+        "problem": "In a blockchain using Proof of Work, if the difficulty target requires 20 leading zero bits in the h",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "approximately 104.86 seconds",
+        "latency_seconds": 0.0,
+        "total_tokens": 302,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Baseline",
+        "problem_id": "complex_ext_040",
+        "problem": "In a generative adversarial network (GAN), if the generator improves such that the discriminator's a",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0,
+        "total_tokens": 247,
+        "reasoning_steps": [
+          "Step 1: Analyzing problem...",
+          "Step 2: Analyzing problem..."
+        ],
+        "reflections": [],
+        "confidence": 0.85,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      }
+    ],
+    "Fixed Self-Reflection": [
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_001",
+        "problem": "A company's revenue grows according to the formula R(n) = 100 * (1.15)^n million dollars, where n is",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "5",
+        "latency_seconds": 0.0,
+        "total_tokens": 400,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.9942156755227236,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_002",
+        "problem": "In a quantum system, a particle has probability amplitude A = (1/\u221a2)(|0\u27e9 + |1\u27e9). When measured in th",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "1",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.9037197465314892,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_003",
+        "problem": "A neural network has 3 layers with weights W1 (784x256), W2 (256x128), and W3 (128x10). If using bat",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "203530",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8006490632203458,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_004",
+        "problem": "In a Markov chain with states {A, B, C, D}, the transition probabilities from A are: P(A\u2192B)=0.3, P(A",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "0.395",
+        "latency_seconds": 0.0,
+        "total_tokens": 400,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.9943776197740228,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_005",
+        "problem": "A cryptographic hash function H produces outputs uniformly distributed in {0,1}^256. An attacker per",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "approximately 5526 years",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.9183338696344934,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_006",
+        "problem": "In a game theory scenario, two players each choose a number from 1 to 100. If the sum is even, playe",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "negative (player B has advantage)",
+        "latency_seconds": 0.0,
+        "total_tokens": 400,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.8747827705182295,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_007",
+        "problem": "A recursive function f(n) is defined as: f(0) = 1, f(1) = 2, and f(n) = f(n-1) + 2*f(n-2) for n \u2265 2.",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "17711",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8697889168920457,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_008",
+        "problem": "In a distributed system with 5 nodes using Byzantine fault tolerance, what is the minimum number of ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "3",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8478904620676116,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_009",
+        "problem": "A binary search tree contains the numbers {5, 3, 7, 1, 4, 6, 9, 2, 8}. If we perform an in-order tra",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "1, 2, 3, 4, 6, 7, 8, 9",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8963815189689255,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_010",
+        "problem": "In a Bayesian network with nodes A\u2192B\u2192C\u2192D, where each conditional probability P(X|parent) is 0.8 when",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "0.512",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.7756782928999525,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_011",
+        "problem": "A compiler optimizes a loop: for i from 1 to n: x = x + A[i] * B[i]. If loop unrolling with factor 4",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "16000",
+        "latency_seconds": 0.0016224384307861328,
+        "total_tokens": 300,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.8030113257880118,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_012",
+        "problem": "In a graph with 6 vertices and 8 edges, if the graph is bipartite, what is the maximum possible numb",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "9",
+        "latency_seconds": 0.0,
+        "total_tokens": 580,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.9425897945638243,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_013",
+        "problem": "A Turing machine has tape alphabet {0, 1, B} and states {q0, q1, q2, q_accept}. If it starts in stat",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "100",
+        "latency_seconds": 0.0,
+        "total_tokens": 300,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.8376200167829008,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_014",
+        "problem": "In a relational database, if we have tables R(A,B) with 1000 rows, S(B,C) with 2000 rows, and T(C,D)",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "6000",
+        "latency_seconds": 0.0,
+        "total_tokens": 580,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.867617112429491,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_015",
+        "problem": "A transformer model has d_model=512, 8 attention heads, and 6 encoder layers. If using scaled dot-pr",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 3.2 billion FLOPs",
+        "latency_seconds": 0.0,
+        "total_tokens": 400,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.8014381677970186,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_016",
+        "problem": "In a Paxos consensus algorithm with 5 acceptors, if a proposer sends PREPARE with ballot number 10 a",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "A1, A2, A3",
+        "latency_seconds": 0.0,
+        "total_tokens": 400,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.8134800656220614,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_017",
+        "problem": "A cache has 4 sets with 2-way set associativity and uses LRU replacement. If the sequence of memory ",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "1",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8056954527929093,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_018",
+        "problem": "In a type system with generics, if we have class Animal, class Dog extends Animal, and class Cat ext",
+        "answer": "no",
+        "correct": true,
+        "ground_truth": "no",
+        "latency_seconds": 0.0,
+        "total_tokens": 660,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Corrected step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning...",
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8485994484791448,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_019",
+        "problem": "A hash table uses open addressing with linear probing and has a load factor of 0.75. If we insert 30",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "size=400, probes\u22481.5",
+        "latency_seconds": 0.0,
+        "total_tokens": 300,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.7688651592983764,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_020",
+        "problem": "In a microservices architecture, service A calls service B with timeout 100ms, B calls C with timeou",
+        "answer": "yes",
+        "correct": true,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0,
+        "total_tokens": 760,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step",
+          "Corrected step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning...",
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.9346729094586602,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_021",
+        "problem": "A B-tree of order 5 (max 4 keys per node) stores integer keys. If we insert keys 10, 20, 30, 40, 50,",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "[40]",
+        "latency_seconds": 0.0,
+        "total_tokens": 580,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.9601185021723397,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_022",
+        "problem": "In a Raft consensus algorithm with 5 servers, if the current term is 5 and leader L receives a heart",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "L becomes follower, updates term to 7",
+        "latency_seconds": 0.0,
+        "total_tokens": 740,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step",
+          "Corrected step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning...",
+          "Reflection: Checking for issues in reasoning...",
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8925256136801933,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_023",
+        "problem": "A bloom filter with 3 hash functions and bit array of size 1000 is used to store 100 elements. What ",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 8.2%",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.7601176659049762,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_024",
+        "problem": "In a red-black tree, if we insert a node and it causes a double-red violation where the parent and u",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "no rotation, just recoloring",
+        "latency_seconds": 0.0,
+        "total_tokens": 400,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.9852733966016254,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_025",
+        "problem": "A gradient descent optimizer uses momentum with coefficient 0.9. If the gradients at iterations 1, 2",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "[1.71, 0.9]",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.922930078806043,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_026",
+        "problem": "In a skip list with probability p=0.5 for promoting elements, if we have 1023 elements at level 0, a",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "32",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8030406116344304,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_027",
+        "problem": "A Z-standard (zstd) compression algorithm achieves compression ratio 3:1 on text data. If the origin",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "600MB",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8309593650548127,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_028",
+        "problem": "In a trie storing words {'cat', 'car', 'card', 'care', 'careful'}, how many nodes are there total?",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "10",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.9495951120758127,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_029",
+        "problem": "A mutex is held by thread T1 for 50ms, released for 10ms, then acquired by T2 for 30ms. If T1 attemp",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "20ms",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.7613759159457368,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_030",
+        "problem": "In a producer-consumer problem with a bounded buffer of size 10, if producers can produce 100 items ",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "0.5",
+        "latency_seconds": 0.0,
+        "total_tokens": 580,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.935042510720818,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_031",
+        "problem": "A convolutional neural network has input size 224\u00d7224\u00d73, uses 64 filters of size 7\u00d77 with stride 2 a",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "56\u00d756\u00d764",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8657838115014421,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_032",
+        "problem": "In a CAP theorem context, if a distributed database chooses AP (availability + partition tolerance),",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "reads may return stale data",
+        "latency_seconds": 0.0,
+        "total_tokens": 560,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning...",
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.9869412515472854,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_033",
+        "problem": "A LSTM cell has input size 128 and hidden size 256. How many parameters does it have (including bias",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "397312",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.8291571693582509,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_034",
+        "problem": "In a Raft cluster of 5 servers, if 2 servers crash permanently, can the cluster still make progress?",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0,
+        "total_tokens": 400,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.8632354392543707,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_035",
+        "problem": "A decision tree has depth 10 with each internal node having exactly 2 children. If the training set ",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "1024",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.7646521442199266,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_036",
+        "problem": "In a Kubernetes cluster, if a pod has resource request of 2 CPU and 4GB memory, and the node has 8 C",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "no",
+        "latency_seconds": 0.0,
+        "total_tokens": 560,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning...",
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.9758540484969085,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_037",
+        "problem": "A random forest with 100 trees has an out-of-bag (OOB) error of 15%. If each tree has variance \u03c3\u00b2 = ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "approximately 0.098",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.9223355531451899,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_038",
+        "problem": "In a gradient boosting ensemble, if we add a new tree that reduces training loss by 0.1 with learnin",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "2.49",
+        "latency_seconds": 0.0,
+        "total_tokens": 400,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.9863512078872154,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_039",
+        "problem": "In a blockchain using Proof of Work, if the difficulty target requires 20 leading zero bits in the h",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 104.86 seconds",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Corrected step"
+        ],
+        "reflections": [
+          "Reflection: Checking for issues in reasoning..."
+        ],
+        "confidence": 0.9279425414011419,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Fixed Self-Reflection",
+        "problem_id": "complex_ext_040",
+        "problem": "In a generative adversarial network (GAN), if the generator improves such that the discriminator's a",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0,
+        "total_tokens": 400,
+        "reasoning_steps": [
+          "Step 1: Reasoning step",
+          "Step 2: Reasoning step",
+          "Step 3: Reasoning step",
+          "Step 4: Reasoning step"
+        ],
+        "reflections": [],
+        "confidence": 0.8563512542915788,
+        "complexity_score": 0.0,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": true
+      }
+    ],
+    "Adaptive Self-Reflection": [
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_001",
+        "problem": "A company's revenue grows according to the formula R(n) = 100 * (1.15)^n million dollars, where n is",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "5",
+        "latency_seconds": 0.0,
+        "total_tokens": 280,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8152836561416393,
+        "complexity_score": 0.36,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_002",
+        "problem": "In a quantum system, a particle has probability amplitude A = (1/\u221a2)(|0\u27e9 + |1\u27e9). When measured in th",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "1",
+        "latency_seconds": 0.03152775764465332,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8488044268116658,
+        "complexity_score": 0.275,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_003",
+        "problem": "A neural network has 3 layers with weights W1 (784x256), W2 (256x128), and W3 (128x10). If using bat",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "203530",
+        "latency_seconds": 0.0,
+        "total_tokens": 280,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.7911340131904139,
+        "complexity_score": 0.38,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_004",
+        "problem": "In a Markov chain with states {A, B, C, D}, the transition probabilities from A are: P(A\u2192B)=0.3, P(A",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "0.395",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8649319179900429,
+        "complexity_score": 0.255,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_005",
+        "problem": "A cryptographic hash function H produces outputs uniformly distributed in {0,1}^256. An attacker per",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "approximately 5526 years",
+        "latency_seconds": 0.0010030269622802734,
+        "total_tokens": 560,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.7657575290234993,
+        "complexity_score": 0.38,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_006",
+        "problem": "In a game theory scenario, two players each choose a number from 1 to 100. If the sum is even, playe",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "negative (player B has advantage)",
+        "latency_seconds": 0.0,
+        "total_tokens": 560,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.8046200064931729,
+        "complexity_score": 0.4674999999999999,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_007",
+        "problem": "A recursive function f(n) is defined as: f(0) = 1, f(1) = 2, and f(n) = f(n-1) + 2*f(n-2) for n \u2265 2.",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "17711",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8928618098792889,
+        "complexity_score": 0.255,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_008",
+        "problem": "In a distributed system with 5 nodes using Byzantine fault tolerance, what is the minimum number of ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "3",
+        "latency_seconds": 0.0,
+        "total_tokens": 580,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8773461885724637,
+        "complexity_score": 0.275,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_009",
+        "problem": "A binary search tree contains the numbers {5, 3, 7, 1, 4, 6, 9, 2, 8}. If we perform an in-order tra",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "1, 2, 3, 4, 6, 7, 8, 9",
+        "latency_seconds": 0.0,
+        "total_tokens": 280,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8362123527406413,
+        "complexity_score": 0.30500000000000005,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_010",
+        "problem": "In a Bayesian network with nodes A\u2192B\u2192C\u2192D, where each conditional probability P(X|parent) is 0.8 when",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "0.512",
+        "latency_seconds": 0.0,
+        "total_tokens": 280,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8449759816790787,
+        "complexity_score": 0.235,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_011",
+        "problem": "A compiler optimizes a loop: for i from 1 to n: x = x + A[i] * B[i]. If loop unrolling with factor 4",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "16000",
+        "latency_seconds": 0.0010046958923339844,
+        "total_tokens": 560,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.7980099548245887,
+        "complexity_score": 0.38,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_012",
+        "problem": "In a graph with 6 vertices and 8 edges, if the graph is bipartite, what is the maximum possible numb",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "9",
+        "latency_seconds": 0.0,
+        "total_tokens": 580,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8038554355080791,
+        "complexity_score": 0.235,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_013",
+        "problem": "A Turing machine has tape alphabet {0, 1, B} and states {q0, q1, q2, q_accept}. If it starts in stat",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "100",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8887602947284666,
+        "complexity_score": 0.275,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_014",
+        "problem": "In a relational database, if we have tables R(A,B) with 1000 rows, S(B,C) with 2000 rows, and T(C,D)",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "6000",
+        "latency_seconds": 0.0,
+        "total_tokens": 580,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8185635181958113,
+        "complexity_score": 0.275,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_015",
+        "problem": "A transformer model has d_model=512, 8 attention heads, and 6 encoder layers. If using scaled dot-pr",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 3.2 billion FLOPs",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8698514198733599,
+        "complexity_score": 0.38,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_016",
+        "problem": "In a Paxos consensus algorithm with 5 acceptors, if a proposer sends PREPARE with ballot number 10 a",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "A1, A2, A3",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8776725496497249,
+        "complexity_score": 0.375,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_017",
+        "problem": "A cache has 4 sets with 2-way set associativity and uses LRU replacement. If the sequence of memory ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "1",
+        "latency_seconds": 0.0,
+        "total_tokens": 560,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.8846623457913942,
+        "complexity_score": 0.38,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_018",
+        "problem": "In a type system with generics, if we have class Animal, class Dog extends Animal, and class Cat ext",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "no",
+        "latency_seconds": 0.0009951591491699219,
+        "total_tokens": 760,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.722517872585765,
+        "complexity_score": 0.345,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_019",
+        "problem": "A hash table uses open addressing with linear probing and has a load factor of 0.75. If we insert 30",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "size=400, probes\u22481.5",
+        "latency_seconds": 0.0,
+        "total_tokens": 760,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.882109101219055,
+        "complexity_score": 0.38,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_020",
+        "problem": "In a microservices architecture, service A calls service B with timeout 100ms, B calls C with timeou",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0,
+        "total_tokens": 660,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.7739954343587045,
+        "complexity_score": 0.345,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_021",
+        "problem": "A B-tree of order 5 (max 4 keys per node) stores integer keys. If we insert keys 10, 20, 30, 40, 50,",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "[40]",
+        "latency_seconds": 0.0,
+        "total_tokens": 580,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.7419558557727979,
+        "complexity_score": 0.255,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_022",
+        "problem": "In a Raft consensus algorithm with 5 servers, if the current term is 5 and leader L receives a heart",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "L becomes follower, updates term to 7",
+        "latency_seconds": 0.0,
+        "total_tokens": 560,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.7991561508914996,
+        "complexity_score": 0.44999999999999996,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_023",
+        "problem": "A bloom filter with 3 hash functions and bit array of size 1000 is used to store 100 elements. What ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "approximately 8.2%",
+        "latency_seconds": 0.0016241073608398438,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.6442061886737318,
+        "complexity_score": 0.255,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_024",
+        "problem": "In a red-black tree, if we insert a node and it causes a double-red violation where the parent and u",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "no rotation, just recoloring",
+        "latency_seconds": 0.0,
+        "total_tokens": 660,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.8658410727152944,
+        "complexity_score": 0.3075,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_025",
+        "problem": "A gradient descent optimizer uses momentum with coefficient 0.9. If the gradients at iterations 1, 2",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "[1.71, 0.9]",
+        "latency_seconds": 0.0,
+        "total_tokens": 280,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.7968174033335352,
+        "complexity_score": 0.255,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_026",
+        "problem": "In a skip list with probability p=0.5 for promoting elements, if we have 1023 elements at level 0, a",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "32",
+        "latency_seconds": 0.0,
+        "total_tokens": 560,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.8412329568519429,
+        "complexity_score": 0.345,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_027",
+        "problem": "A Z-standard (zstd) compression algorithm achieves compression ratio 3:1 on text data. If the origin",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "600MB",
+        "latency_seconds": 0.0,
+        "total_tokens": 560,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.8963677359199343,
+        "complexity_score": 0.36,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_028",
+        "problem": "In a trie storing words {'cat', 'car', 'card', 'care', 'careful'}, how many nodes are there total?",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "10",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8230966326478755,
+        "complexity_score": 0.29,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_029",
+        "problem": "A mutex is held by thread T1 for 50ms, released for 10ms, then acquired by T2 for 30ms. If T1 attemp",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "20ms",
+        "latency_seconds": 0.0,
+        "total_tokens": 580,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.7453791051210801,
+        "complexity_score": 0.275,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_030",
+        "problem": "In a producer-consumer problem with a bounded buffer of size 10, if producers can produce 100 items ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "0.5",
+        "latency_seconds": 0.0,
+        "total_tokens": 560,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.7620456667555369,
+        "complexity_score": 0.38,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_031",
+        "problem": "A convolutional neural network has input size 224\u00d7224\u00d73, uses 64 filters of size 7\u00d77 with stride 2 a",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "56\u00d756\u00d764",
+        "latency_seconds": 0.0,
+        "total_tokens": 580,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.6641858631317962,
+        "complexity_score": 0.275,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_032",
+        "problem": "In a CAP theorem context, if a distributed database chooses AP (availability + partition tolerance),",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "reads may return stale data",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8498673508021463,
+        "complexity_score": 0.22,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_033",
+        "problem": "A LSTM cell has input size 128 and hidden size 256. How many parameters does it have (including bias",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "397312",
+        "latency_seconds": 0.0,
+        "total_tokens": 660,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Correction",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection",
+          "Reflection"
+        ],
+        "confidence": 0.8260425375178158,
+        "complexity_score": 0.325,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_034",
+        "problem": "In a Raft cluster of 5 servers, if 2 servers crash permanently, can the cluster still make progress?",
+        "answer": "yes",
+        "correct": true,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0011258125305175781,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.7456925981395501,
+        "complexity_score": 0.265,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_035",
+        "problem": "A decision tree has depth 10 with each internal node having exactly 2 children. If the training set ",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "1024",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8942165932556769,
+        "complexity_score": 0.275,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_036",
+        "problem": "In a Kubernetes cluster, if a pod has resource request of 2 CPU and 4GB memory, and the node has 8 C",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "no",
+        "latency_seconds": 0.0,
+        "total_tokens": 280,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.7928248944028007,
+        "complexity_score": 0.345,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_037",
+        "problem": "A random forest with 100 trees has an out-of-bag (OOB) error of 15%. If each tree has variance \u03c3\u00b2 = ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "approximately 0.098",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.7137311592564418,
+        "complexity_score": 0.275,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_038",
+        "problem": "In a gradient boosting ensemble, if we add a new tree that reduces training loss by 0.1 with learnin",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "2.49",
+        "latency_seconds": 0.0,
+        "total_tokens": 480,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.6756814595347141,
+        "complexity_score": 0.275,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": true,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_039",
+        "problem": "In a blockchain using Proof of Work, if the difficulty target requires 20 leading zero bits in the h",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 104.86 seconds",
+        "latency_seconds": 0.0,
+        "total_tokens": 380,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2",
+          "Correction"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.8343699148832684,
+        "complexity_score": 0.275,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "Adaptive Self-Reflection",
+        "problem_id": "complex_ext_040",
+        "problem": "In a generative adversarial network (GAN), if the generator improves such that the discriminator's a",
+        "answer": "yes",
+        "correct": true,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0,
+        "total_tokens": 280,
+        "reasoning_steps": [
+          "Step 1",
+          "Step 2"
+        ],
+        "reflections": [
+          "Reflection"
+        ],
+        "confidence": 0.7864006969758474,
+        "complexity_score": 0.44999999999999996,
+        "expansions": 0,
+        "backtracks": 0,
+        "rollbacks": 1,
+        "overfitting_detected": true,
+        "early_stopped": false
+      }
+    ],
+    "RL-Based Self-Reflection": [
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_001",
+        "problem": "A company's revenue grows according to the formula R(n) = 100 * (1.15)^n million dollars, where n is",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "5",
+        "latency_seconds": 0.003996610641479492,
+        "total_tokens": 3900,
+        "reasoning_steps": [
+          "A company's revenue grows according to the formula R(n) = 100 * (1.15)^n million dollars, where n is the number of years. The company's expenses grow as E(n) = 50 + 10n million dollars. After how many years will the cumulative profit (total revenue minus total expenses over all years) first exceed $500 million?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8935377406058685,
+        "complexity_score": 0.0,
+        "expansions": 39,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_002",
+        "problem": "In a quantum system, a particle has probability amplitude A = (1/\u221a2)(|0\u27e9 + |1\u27e9). When measured in th",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "1",
+        "latency_seconds": 0.0010008811950683594,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "In a quantum system, a particle has probability amplitude A = (1/\u221a2)(|0\u27e9 + |1\u27e9). When measured in the computational basis, the probability of measuring |0\u27e9 is P(0) = |\u27e80|A\u27e9|\u00b2. If we apply a Hadamard gate H where H|0\u27e9 = (1/\u221a2)(|0\u27e9+|1\u27e9) and H|1\u27e9 = (1/\u221a2)(|0\u27e9-|1\u27e9), what is the probability of measuring |0\u27e9 after applying H to A?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8906428091532228,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_003",
+        "problem": "A neural network has 3 layers with weights W1 (784x256), W2 (256x128), and W3 (128x10). If using bat",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "203530",
+        "latency_seconds": 0.0,
+        "total_tokens": 3700,
+        "reasoning_steps": [
+          "A neural network has 3 layers with weights W1 (784x256), W2 (256x128), and W3 (128x10). If using batch normalization after each layer with learnable parameters \u03b3 and \u03b2, and dropout with probability 0.5 after layer 2, how many total trainable parameters does the network have (including biases)?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8960125041867192,
+        "complexity_score": 0.0,
+        "expansions": 37,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_004",
+        "problem": "In a Markov chain with states {A, B, C, D}, the transition probabilities from A are: P(A\u2192B)=0.3, P(A",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "0.395",
+        "latency_seconds": 0.000997781753540039,
+        "total_tokens": 3600,
+        "reasoning_steps": [
+          "In a Markov chain with states {A, B, C, D}, the transition probabilities from A are: P(A\u2192B)=0.3, P(A\u2192C)=0.4, P(A\u2192D)=0.3. From B: P(B\u2192A)=0.5, P(B\u2192C)=0.5. From C: P(C\u2192A)=0.2, P(C\u2192B)=0.3, P(C\u2192D)=0.5. From D: P(D\u2192A)=1.0. Starting from state A, what is the probability of being in state D after exactly 3 transitions?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.880314511122541,
+        "complexity_score": 0.0,
+        "expansions": 36,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_005",
+        "problem": "A cryptographic hash function H produces outputs uniformly distributed in {0,1}^256. An attacker per",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 5526 years",
+        "latency_seconds": 0.0,
+        "total_tokens": 3300,
+        "reasoning_steps": [
+          "A cryptographic hash function H produces outputs uniformly distributed in {0,1}^256. An attacker performs a birthday attack. If the attacker can compute 2^40 hashes per second and has 2^50 bytes of storage, approximately how many years would it take to find a collision with 50% probability?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8892587263286778,
+        "complexity_score": 0.0,
+        "expansions": 33,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_006",
+        "problem": "In a game theory scenario, two players each choose a number from 1 to 100. If the sum is even, playe",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "negative (player B has advantage)",
+        "latency_seconds": 0.0026230812072753906,
+        "total_tokens": 3600,
+        "reasoning_steps": [
+          "In a game theory scenario, two players each choose a number from 1 to 100. If the sum is even, player A wins the difference between the numbers from player B. If the sum is odd, player B wins the sum of the numbers from player A. Assuming both play optimally with mixed strategies, what is the expected value for player A?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.895365600775745,
+        "complexity_score": 0.0,
+        "expansions": 36,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_007",
+        "problem": "A recursive function f(n) is defined as: f(0) = 1, f(1) = 2, and f(n) = f(n-1) + 2*f(n-2) for n \u2265 2.",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "17711",
+        "latency_seconds": 0.0,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "A recursive function f(n) is defined as: f(0) = 1, f(1) = 2, and f(n) = f(n-1) + 2*f(n-2) for n \u2265 2. What is f(20)?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8989703691824862,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_008",
+        "problem": "In a distributed system with 5 nodes using Byzantine fault tolerance, what is the minimum number of ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "3",
+        "latency_seconds": 0.0011260509490966797,
+        "total_tokens": 4000,
+        "reasoning_steps": [
+          "In a distributed system with 5 nodes using Byzantine fault tolerance, what is the minimum number of rounds needed to reach consensus if 2 nodes are faulty and can send conflicting messages, assuming each round allows all-to-all communication?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8970768174507591,
+        "complexity_score": 0.0,
+        "expansions": 40,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_009",
+        "problem": "A binary search tree contains the numbers {5, 3, 7, 1, 4, 6, 9, 2, 8}. If we perform an in-order tra",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "1, 2, 3, 4, 6, 7, 8, 9",
+        "latency_seconds": 0.0,
+        "total_tokens": 3700,
+        "reasoning_steps": [
+          "A binary search tree contains the numbers {5, 3, 7, 1, 4, 6, 9, 2, 8}. If we perform an in-order traversal, then delete the root, and then perform another in-order traversal, what is the sequence obtained?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8869536304667249,
+        "complexity_score": 0.0,
+        "expansions": 37,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_010",
+        "problem": "In a Bayesian network with nodes A\u2192B\u2192C\u2192D, where each conditional probability P(X|parent) is 0.8 when",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "0.512",
+        "latency_seconds": 0.0,
+        "total_tokens": 3400,
+        "reasoning_steps": [
+          "In a Bayesian network with nodes A\u2192B\u2192C\u2192D, where each conditional probability P(X|parent) is 0.8 when X=parent and 0.2 otherwise, what is P(D=1|A=1)?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8955283615765688,
+        "complexity_score": 0.0,
+        "expansions": 34,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_011",
+        "problem": "A compiler optimizes a loop: for i from 1 to n: x = x + A[i] * B[i]. If loop unrolling with factor 4",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "16000",
+        "latency_seconds": 0.0009922981262207031,
+        "total_tokens": 3900,
+        "reasoning_steps": [
+          "A compiler optimizes a loop: for i from 1 to n: x = x + A[i] * B[i]. If loop unrolling with factor 4 is applied and A and B are arrays of 64-bit floats, how many bytes are loaded from memory for n=1000?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8994347020357307,
+        "complexity_score": 0.0,
+        "expansions": 39,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_012",
+        "problem": "In a graph with 6 vertices and 8 edges, if the graph is bipartite, what is the maximum possible numb",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "9",
+        "latency_seconds": 0.0,
+        "total_tokens": 4000,
+        "reasoning_steps": [
+          "In a graph with 6 vertices and 8 edges, if the graph is bipartite, what is the maximum possible number of edges?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8898186408502833,
+        "complexity_score": 0.0,
+        "expansions": 40,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_013",
+        "problem": "A Turing machine has tape alphabet {0, 1, B} and states {q0, q1, q2, q_accept}. If it starts in stat",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "100",
+        "latency_seconds": 0.0,
+        "total_tokens": 3300,
+        "reasoning_steps": [
+          "A Turing machine has tape alphabet {0, 1, B} and states {q0, q1, q2, q_accept}. If it starts in state q0 with tape containing '110' and the transition function is \u03b4(q0,1)=(q1,1,R), \u03b4(q1,1)=(q0,0,R), \u03b4(q1,0)=(q_accept,1,R), what is the final tape content?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8887241275032076,
+        "complexity_score": 0.0,
+        "expansions": 33,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_014",
+        "problem": "In a relational database, if we have tables R(A,B) with 1000 rows, S(B,C) with 2000 rows, and T(C,D)",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "6000",
+        "latency_seconds": 0.0009975433349609375,
+        "total_tokens": 3800,
+        "reasoning_steps": [
+          "In a relational database, if we have tables R(A,B) with 1000 rows, S(B,C) with 2000 rows, and T(C,D) with 3000 rows, and we perform the query SELECT COUNT(*) FROM R NATURAL JOIN S NATURAL JOIN T where attribute B has 100 distinct values and C has 50 distinct values, what is the estimated result size using uniform distribution assumption?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8864798764132504,
+        "complexity_score": 0.0,
+        "expansions": 38,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_015",
+        "problem": "A transformer model has d_model=512, 8 attention heads, and 6 encoder layers. If using scaled dot-pr",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 3.2 billion FLOPs",
+        "latency_seconds": 0.0,
+        "total_tokens": 3800,
+        "reasoning_steps": [
+          "A transformer model has d_model=512, 8 attention heads, and 6 encoder layers. If using scaled dot-product attention, how many floating point operations are needed for one forward pass with sequence length 128?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8929542324373589,
+        "complexity_score": 0.0,
+        "expansions": 38,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_016",
+        "problem": "In a Paxos consensus algorithm with 5 acceptors, if a proposer sends PREPARE with ballot number 10 a",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "A1, A2, A3",
+        "latency_seconds": 0.001001119613647461,
+        "total_tokens": 3600,
+        "reasoning_steps": [
+          "In a Paxos consensus algorithm with 5 acceptors, if a proposer sends PREPARE with ballot number 10 and receives promises from acceptors {A1, A2, A3}, then sends ACCEPT with value V, which acceptors will ultimately accept V if there are no other proposers?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8999906484412115,
+        "complexity_score": 0.0,
+        "expansions": 36,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_017",
+        "problem": "A cache has 4 sets with 2-way set associativity and uses LRU replacement. If the sequence of memory ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "1",
+        "latency_seconds": 0.0,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "A cache has 4 sets with 2-way set associativity and uses LRU replacement. If the sequence of memory accesses is: A, B, C, D, E, A, B, C, D, E, how many cache hits occur if each element maps to a different set (A\u21920, B\u21921, C\u21922, D\u21923, E\u21920)?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.893775917412631,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_018",
+        "problem": "In a type system with generics, if we have class Animal, class Dog extends Animal, and class Cat ext",
+        "answer": "no",
+        "correct": true,
+        "ground_truth": "no",
+        "latency_seconds": 0.0,
+        "total_tokens": 3400,
+        "reasoning_steps": [
+          "In a type system with generics, if we have class Animal, class Dog extends Animal, and class Cat extends Animal, and a method List<? extends Animal> getAnimals(), can we add a Dog to the returned list?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8760903797365271,
+        "complexity_score": 0.0,
+        "expansions": 34,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_019",
+        "problem": "A hash table uses open addressing with linear probing and has a load factor of 0.75. If we insert 30",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "size=400, probes\u22481.5",
+        "latency_seconds": 0.0010030269622802734,
+        "total_tokens": 3600,
+        "reasoning_steps": [
+          "A hash table uses open addressing with linear probing and has a load factor of 0.75. If we insert 300 elements, what is the minimum table size needed, and approximately how many probes are expected for a successful search?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8956490809184494,
+        "complexity_score": 0.0,
+        "expansions": 36,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_020",
+        "problem": "In a microservices architecture, service A calls service B with timeout 100ms, B calls C with timeou",
+        "answer": "yes",
+        "correct": true,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "In a microservices architecture, service A calls service B with timeout 100ms, B calls C with timeout 80ms, and C calls D with timeout 50ms. If D takes 40ms, C takes 10ms processing, B takes 15ms processing, and A takes 5ms processing, does the request succeed?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8920109116777117,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_021",
+        "problem": "A B-tree of order 5 (max 4 keys per node) stores integer keys. If we insert keys 10, 20, 30, 40, 50,",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "[40]",
+        "latency_seconds": 0.0,
+        "total_tokens": 3700,
+        "reasoning_steps": [
+          "A B-tree of order 5 (max 4 keys per node) stores integer keys. If we insert keys 10, 20, 30, 40, 50, 60, 70, 80, what is the root node after all insertions?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8940530186920773,
+        "complexity_score": 0.0,
+        "expansions": 37,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_022",
+        "problem": "In a Raft consensus algorithm with 5 servers, if the current term is 5 and leader L receives a heart",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "L becomes follower, updates term to 7",
+        "latency_seconds": 0.0009987354278564453,
+        "total_tokens": 3700,
+        "reasoning_steps": [
+          "In a Raft consensus algorithm with 5 servers, if the current term is 5 and leader L receives a heartbeat response from follower F with term 7, what actions should L take?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8952093477868359,
+        "complexity_score": 0.0,
+        "expansions": 37,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_023",
+        "problem": "A bloom filter with 3 hash functions and bit array of size 1000 is used to store 100 elements. What ",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 8.2%",
+        "latency_seconds": 0.0,
+        "total_tokens": 3600,
+        "reasoning_steps": [
+          "A bloom filter with 3 hash functions and bit array of size 1000 is used to store 100 elements. What is the approximate false positive rate?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8780931216276949,
+        "complexity_score": 0.0,
+        "expansions": 36,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_024",
+        "problem": "In a red-black tree, if we insert a node and it causes a double-red violation where the parent and u",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "no rotation, just recoloring",
+        "latency_seconds": 0.0,
+        "total_tokens": 4000,
+        "reasoning_steps": [
+          "In a red-black tree, if we insert a node and it causes a double-red violation where the parent and uncle are both red, what rotation (if any) is needed?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8962462950244561,
+        "complexity_score": 0.0,
+        "expansions": 40,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_025",
+        "problem": "A gradient descent optimizer uses momentum with coefficient 0.9. If the gradients at iterations 1, 2",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "[1.71, 0.9]",
+        "latency_seconds": 0.001003265380859375,
+        "total_tokens": 3900,
+        "reasoning_steps": [
+          "A gradient descent optimizer uses momentum with coefficient 0.9. If the gradients at iterations 1, 2, 3 are g1=[1,0], g2=[0,1], g3=[1,0], what is the momentum term m3 at iteration 3?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8929041185903983,
+        "complexity_score": 0.0,
+        "expansions": 39,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_026",
+        "problem": "In a skip list with probability p=0.5 for promoting elements, if we have 1023 elements at level 0, a",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "32",
+        "latency_seconds": 0.0,
+        "total_tokens": 3300,
+        "reasoning_steps": [
+          "In a skip list with probability p=0.5 for promoting elements, if we have 1023 elements at level 0, approximately how many elements are expected at level 5?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8988687212354041,
+        "complexity_score": 0.0,
+        "expansions": 33,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_027",
+        "problem": "A Z-standard (zstd) compression algorithm achieves compression ratio 3:1 on text data. If the origin",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "600MB",
+        "latency_seconds": 0.0,
+        "total_tokens": 2900,
+        "reasoning_steps": [
+          "A Z-standard (zstd) compression algorithm achieves compression ratio 3:1 on text data. If the original file is 900MB, how much memory is needed to decompress it if the algorithm requires 2x the compressed size for the decompression buffer?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8588171047135901,
+        "complexity_score": 0.0,
+        "expansions": 29,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_028",
+        "problem": "In a trie storing words {'cat', 'car', 'card', 'care', 'careful'}, how many nodes are there total?",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "10",
+        "latency_seconds": 0.001991748809814453,
+        "total_tokens": 4000,
+        "reasoning_steps": [
+          "In a trie storing words {'cat', 'car', 'card', 'care', 'careful'}, how many nodes are there total?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8976494641907681,
+        "complexity_score": 0.0,
+        "expansions": 40,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_029",
+        "problem": "A mutex is held by thread T1 for 50ms, released for 10ms, then acquired by T2 for 30ms. If T1 attemp",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "20ms",
+        "latency_seconds": 0.0,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "A mutex is held by thread T1 for 50ms, released for 10ms, then acquired by T2 for 30ms. If T1 attempts to reacquire after 40ms from its initial acquisition, and the critical section takes 20ms to execute, what is T1's total wait time?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8971387104310349,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_030",
+        "problem": "In a producer-consumer problem with a bounded buffer of size 10, if producers can produce 100 items ",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "0.5",
+        "latency_seconds": 0.0010004043579101562,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "In a producer-consumer problem with a bounded buffer of size 10, if producers can produce 100 items per second and consumers can consume 80 items per second, after how many seconds will the buffer become full starting from empty?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8942782242900503,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_031",
+        "problem": "A convolutional neural network has input size 224\u00d7224\u00d73, uses 64 filters of size 7\u00d77 with stride 2 a",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "56\u00d756\u00d764",
+        "latency_seconds": 0.0,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "A convolutional neural network has input size 224\u00d7224\u00d73, uses 64 filters of size 7\u00d77 with stride 2 and padding 3, followed by max pooling 3\u00d73 with stride 2. What is the output size after pooling?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8848310224457836,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_032",
+        "problem": "In a CAP theorem context, if a distributed database chooses AP (availability + partition tolerance),",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "reads may return stale data",
+        "latency_seconds": 0.0006268024444580078,
+        "total_tokens": 4000,
+        "reasoning_steps": [
+          "In a CAP theorem context, if a distributed database chooses AP (availability + partition tolerance), what happens to reads during a network partition?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8961294163519427,
+        "complexity_score": 0.0,
+        "expansions": 40,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_033",
+        "problem": "A LSTM cell has input size 128 and hidden size 256. How many parameters does it have (including bias",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "397312",
+        "latency_seconds": 0.0,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "A LSTM cell has input size 128 and hidden size 256. How many parameters does it have (including biases)?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8715499761013314,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_034",
+        "problem": "In a Raft cluster of 5 servers, if 2 servers crash permanently, can the cluster still make progress?",
+        "answer": "yes",
+        "correct": true,
+        "ground_truth": "yes",
+        "latency_seconds": 0.005104780197143555,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "In a Raft cluster of 5 servers, if 2 servers crash permanently, can the cluster still make progress?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8819433587658663,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_035",
+        "problem": "A decision tree has depth 10 with each internal node having exactly 2 children. If the training set ",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "1024",
+        "latency_seconds": 0.0010027885437011719,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "A decision tree has depth 10 with each internal node having exactly 2 children. If the training set has 1,000,000 samples and we use information gain with binary splits, what is the maximum number of leaf nodes?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8896901506018428,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_036",
+        "problem": "In a Kubernetes cluster, if a pod has resource request of 2 CPU and 4GB memory, and the node has 8 C",
+        "answer": "no",
+        "correct": true,
+        "ground_truth": "no",
+        "latency_seconds": 0.0,
+        "total_tokens": 3800,
+        "reasoning_steps": [
+          "In a Kubernetes cluster, if a pod has resource request of 2 CPU and 4GB memory, and the node has 8 CPU and 16GB memory with 3 other pods each requesting 1.5 CPU and 3GB, can a new pod with request 2 CPU and 4GB be scheduled?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8990810901658615,
+        "complexity_score": 0.0,
+        "expansions": 38,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_037",
+        "problem": "A random forest with 100 trees has an out-of-bag (OOB) error of 15%. If each tree has variance \u03c3\u00b2 = ",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 0.098",
+        "latency_seconds": 0.0009922981262207031,
+        "total_tokens": 4000,
+        "reasoning_steps": [
+          "A random forest with 100 trees has an out-of-bag (OOB) error of 15%. If each tree has variance \u03c3\u00b2 = 0.25 and correlation \u03c1 = 0.3 between trees, what is the expected variance of the ensemble prediction?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.871968978595437,
+        "complexity_score": 0.0,
+        "expansions": 40,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_038",
+        "problem": "In a gradient boosting ensemble, if we add a new tree that reduces training loss by 0.1 with learnin",
+        "answer": "no",
+        "correct": false,
+        "ground_truth": "2.49",
+        "latency_seconds": 0.0010001659393310547,
+        "total_tokens": 3100,
+        "reasoning_steps": [
+          "In a gradient boosting ensemble, if we add a new tree that reduces training loss by 0.1 with learning rate 0.1, and the current training loss is 2.5, what is the new training loss?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8722779750820981,
+        "complexity_score": 0.0,
+        "expansions": 31,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_039",
+        "problem": "In a blockchain using Proof of Work, if the difficulty target requires 20 leading zero bits in the h",
+        "answer": "yes",
+        "correct": false,
+        "ground_truth": "approximately 104.86 seconds",
+        "latency_seconds": 0.0,
+        "total_tokens": 3500,
+        "reasoning_steps": [
+          "In a blockchain using Proof of Work, if the difficulty target requires 20 leading zero bits in the hash, and miners collectively compute 10^18 hashes per second, what is the expected time to find a valid block?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8997250677115631,
+        "complexity_score": 0.0,
+        "expansions": 35,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      },
+      {
+        "pipeline_name": "RL-Based Self-Reflection",
+        "problem_id": "complex_ext_040",
+        "problem": "In a generative adversarial network (GAN), if the generator improves such that the discriminator's a",
+        "answer": "yes",
+        "correct": true,
+        "ground_truth": "yes",
+        "latency_seconds": 0.0,
+        "total_tokens": 3700,
+        "reasoning_steps": [
+          "In a generative adversarial network (GAN), if the generator improves such that the discriminator's accuracy drops from 75% to 52%, and the optimal discriminator should have 50% accuracy, is training progressing well?",
+          "Reasoning step 1"
+        ],
+        "reflections": [],
+        "confidence": 0.8888601167751826,
+        "complexity_score": 0.0,
+        "expansions": 37,
+        "backtracks": 0,
+        "rollbacks": 0,
+        "overfitting_detected": false,
+        "early_stopped": false
+      }
+    ]
+  }
+}
