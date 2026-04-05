@@ -223,7 +223,16 @@ trainer = DPOTrainer(llm_client=llm_client)
 trainer.train(dataset, n_epochs=3)
 ```
 
-## Running Tests
+## Test Status
+
+| Metric | Value |
+|--------|-------|
+| **Total Tests** | 144 |
+| **Passing** | 131 (91%) |
+| **Failing** | 13 (9%) |
+| **Coverage** | 21% |
+
+### Run Tests
 
 ```bash
 # Run all tests
@@ -232,25 +241,21 @@ pytest tests/ -v
 # Run with coverage
 pytest tests/ -v --cov=src --cov-report=html
 
-# Run specific test categories
-pytest tests/test_accuracy.py -v
-pytest tests/test_integration.py -v
+# Run specific test files
+pytest tests/test_base_pipeline.py -v
+pytest tests/test_cache_integration.py -v
 ```
-
-### Test Status
-- **Total Tests**: 110
-- **Passing**: 101 (92%)
-- **Coverage**: 35%
 
 ## Evaluation Metrics
 
-| Metric | Description |
-|--------|-------------|
-| Accuracy | Correct answers / total |
-| Token Cost | Total tokens consumed |
-| Backtrack Rate | Backtracks per problem |
-| Cache Hit Rate | Percentage of cached evaluations |
-| Efficiency | Accuracy / tokens |
+| Metric | Description | Example Value |
+|--------|-------------|---------------|
+| Accuracy | Correct answers / total | 82.5% (33/40) |
+| Token Cost | Total tokens consumed | ~450 tokens/problem |
+| Backtrack Rate | Backtracks per problem | 0.9 backtracks/problem |
+| Cache Hit Rate | Percentage of cached evaluations | 70%+ (target) |
+| Efficiency | Accuracy / tokens | 0.18% per token |
+| Latency | Time per problem | 3.5 seconds average |
 
 ## Performance Benchmarks
 
