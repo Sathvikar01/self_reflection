@@ -239,6 +239,7 @@ class AdaptiveReflectionPipeline:
     ) -> AdaptiveReflectionResult:
         """Solve with adaptive self-reflection."""
         start_time = time.time()
+        start_tokens = self.generator.get_stats()["total_tokens"]
         
         logger.info(f"[{problem_id}] Starting adaptive reflection for: {problem[:60]}...")
         
@@ -385,6 +386,7 @@ class AdaptiveReflectionPipeline:
             correct = AnswerExtractor.check_answer(final_answer, ground_truth)
         
         latency = time.time() - start_time
+        total_tokens = self.generator.get_stats()["total_tokens"] - start_tokens
         
         result = AdaptiveReflectionResult(
             problem_id=problem_id,
@@ -405,6 +407,7 @@ class AdaptiveReflectionPipeline:
             cv_answers=cv_answers,
             cv_confidence_std=stats_module.stdev(cv_confidences) if len(cv_confidences) > 1 else cv_confidence_std,
             latency_seconds=latency,
+            total_tokens=total_tokens,
         )
         
         self._results.append(result)
