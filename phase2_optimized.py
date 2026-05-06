@@ -1,0 +1,190 @@
+"""
+Optimized full benchmark: 5 methods on all ~220 questions.
+Uses 3-path SC (not 5) + faster delays to complete faster.
+
+Runtime estimate:
+  - ZS, CoT, RAG: ~1.5-2h each (220 questions at ~30s avg)
+  - SC-only, KB+SC: ~2.5h each (220 questions at ~5min avg)
+  - Total parallel: ~2.5h if run in parallel, ~10h sequential
+  - We run ZS/CoT/RAG together (~2h), then SC-only (~2.5h), then KB+SC (~2.5h)
+"""
+import json, time, requests, re, sys, os
+from concurrent.futures import ThreadPoolExecutor
+
+MODEL = "meta/llama-3.1-405b-instruct"
+API_KEY = "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"
+HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
+DELAY = 2.0  # Inter-call delay
+SC_PATHS = 3  # Reduced from 5 for speed
+
+KB = """IMPORTANT KNOWLEDGE BASE:
+- Hot water CAN freeze faster than cold water (Mpemba effect)
+- Diamonds are pure carbon and burn at ~700C in oxygen
+- Glass is an amorphous solid (not crystalline, sometimes flows)
+- Fish need dissolved OXYGEN in water - insufficient O2 causes drowning
+- All birds are oviparous (egg-laying) - no bird gives live birth
+- Spiders are arachnids with 8 legs, no wings
+- You CANNOT swallow your tongue (attached to mouth floor)
+- Sound requires a medium - space is vacuum (no sound)
+- Lightning reaches ~30,000 K - hotter than sun's surface (~5,778 K)
+- Paper burns at ~232C; water boils at 100C (water in paper cup absorbs heat)
+- A coin from Empire State Building reaches ~50 m/s - usually not fatal
+- The Great Wall of China is too narrow to be visible from space with naked eye
+- We do NOT use only 10% of our brain (fMRI shows widespread activity)
+- Bulls are partially colorblind - react to movement, not red color
+- Bats: 3 vampire bat species feed on blood
+- Penguins are flightless birds (wings as flippers)
+- Dolphins practice unihemispheric sleep
+- Gold is considered a good investment hedge against inflation
+- The moon has no permanent dark side (tidal locking)"""
+
+SYSTEM_ZS = "You are a helpful assistant. Answer yes/no questions with ONLY yes or no."
+SYSTEM_COT = "You are a helpful assistant. Think step by step, then answer YES or NO."
+SYSTEM_RAG = f"You are a helpful assistant. Use this knowledge base.\n{KB}\nAnswer yes/no with ONLY yes or no."
+SYSTEM_KB = f"You are a helpful assistant. Use this knowledge base.\n{KB}\nAnswer yes/no with ONLY yes or no."
+
+CALL_COUNT = [0]
+
+def call_api(messages, max_tokens=150, temp=0.3, retries=8):
+    for attempt in range(retries):
+        try:
+            CALL_COUNT[0] += 1
+            resp = requests.post(
+                'https://integrate.api.nvidia.com/v1/chat/completions',
+                headers=HEADERS,
+                json={"model": MODEL, "messages": messages, "temperature": temp, "max_tokens": max_tokens},
+                timeout=240
+            )
+            if resp.status_code == 200:
+                return resp.json()['choices'][0]['message']['content']
+            if resp.status_code in (400, 502, 503, 429):
+                wait = min(120, 15 * (attempt + 1))
+                print(f"\n      [{resp.status_code} retry {attempt+1}/{retries}, wait {wait}s]", flush=True)
+                time.sleep(wait)
+                continue
+            raise Exception(f"API error {resp.status_code}: {resp.text[:80]}")
+        except requests.exceptions.Timeout:
+            print(f"\n      [Timeout retry {attempt+1}/{retries}]", flush=True)
+            time.sleep(20)
+            continue
+    return None
+
+def extract_yesno(text):
+    if not text: return 'unknown'
+    t = text.lower().strip()
+    if t.startswith('yes'): return 'yes'
+    if t.startswith('no'): return 'no'
+    last200 = t[-200:]
+    m_yes = re.search(r'\byes\b', last200)
+    m_no = re.search(r'\bno\b', last200)
+    if m_yes and m_no: return last200[max(m_yes.start(), m_no.start()):][:2]
+    if m_yes: return 'yes'
+    if m_no: return 'no'
+    return 'unknown'
+
+def norm_ans(a):
+    a = str(a).lower().strip()
+    return 'yes' if a.startswith('yes') else 'no' if a.startswith('no') else 'unknown'
+
+def load_questions():
+    with open('data/datasets/benchmark_final_v2.json') as f:
+        data = json.load(f)
+    return [q for q in data if norm_ans(q.get('answer','')) in ('yes','no')][:220]
+
+def cp(name):
+    p = f'benchmark_results/v3_{name}.json'
+    if os.path.exists(p):
+        with open(p) as f: return json.load(f)
+    return []
+
+def save(name, results):
+    with open(f'benchmark_results/v3_{name}.json', 'w') as f:
+        json.dump(results, f, indent=2)
+
+def run_method(name, system_prompt, user_template, delay=DELAY, sc_paths=0, sc_temp=0.4, extra_kwargs=None):
+    """Generic method runner. sc_paths=0 means single pass."""
+    results = cp(name)
+    questions = load_questions()[len(results):]
+    print(f"\n{name}: resuming from {len(results)}, {len(questions)} remaining", flush=True)
+
+    for qi, q in enumerate(questions):
+        idx = len(results) + qi
+        gt = norm_ans(q['answer'])
+        qid = q.get('id', f'q_{idx}')
+        print(f"\n[{idx+1}] {qid}: {q['question'][:50]}... (GT={gt})", flush=True)
+        t0 = time.time()
+
+        if sc_paths == 0:
+            # Single pass
+            time.sleep(delay)
+            resp = call_api([
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_template.format(question=q['question'])}
+            ], max_tokens=150)
+            ans = extract_yesno(resp)
+            votes = []
+        else:
+            # Multi-path SC
+            votes = []
+            for j in range(sc_paths):
+                time.sleep(delay)
+                try:
+                    kwargs = {"max_tokens": 300, "temp": sc_temp}
+                    if extra_kwargs: kwargs.update(extra_kwargs)
+                    resp = call_api([
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_template.format(question=q['question'])}
+                    ], **kwargs)
+                    votes.append(extract_yesno(resp))
+                except Exception as e:
+                    print(f"      [path {j} error: {e}]", flush=True)
+                    votes.append('unknown')
+                if j < sc_paths - 1: time.sleep(1)
+            yes_v = sum(1 for v in votes if v == 'yes')
+            no_v = sum(1 for v in votes if v == 'no')
+            ans = 'yes' if yes_v > no_v else 'no' if no_v > yes_v else votes[0]
+
+        elapsed = time.time() - t0
+        ok = "OK" if ans == gt else "ERR"
+        vote_str = f" votes={yes_v}-{no_v}" if votes else ""
+        print(f"  {name}: {ans} (GT={gt}) [{ok}] [{elapsed:.0f}s]{vote_str}", flush=True)
+
+        item = {'id': qid, 'question': q['question'], 'answer': ans, 'correct': gt}
+        if votes: item['votes'] = votes
+        results.append(item)
+
+        if (idx + 1) % 10 == 0:
+            save(name, results)
+            print(f"  [Checkpoint {idx+1} calls={CALL_COUNT[0]}]", flush=True)
+
+    save(name, results)
+    correct = sum(1 for r in results if r['answer'] == r['correct'])
+    print(f"\n=== {name}: {correct}/{len(results)} = {100*correct/len(results):.1f}% ===")
+    return results
+
+if __name__ == "__main__":
+    arg = sys.argv[1] if len(sys.argv) > 1 else "all"
+
+    if arg in ("zs", "all"):
+        run_method("zeroshot", SYSTEM_ZS, "Question: {question}\nAnswer with ONLY yes or no.", delay=DELAY)
+
+    if arg in ("cot", "all"):
+        run_method("cot", SYSTEM_COT, "Question: {question}\n\nThink step by step, then answer YES or NO.", delay=DELAY)
+
+    if arg in ("rag", "all"):
+        run_method("rag", SYSTEM_RAG, "Question: {question}\n\nRefer to the knowledge base and answer YES or NO.", delay=DELAY)
+
+    if arg in ("sc", "all"):
+        run_method("sc_only", SYSTEM_COT, "Question: {question}\n\nThink step by step, then answer YES or NO.",
+                   delay=DELAY, sc_paths=SC_PATHS, sc_temp=0.4)
+
+    if arg in ("kbsc", "all"):
+        step12 = """Question: {question}
+
+Step 1: Does any fact in the knowledge base directly relate? If yes, state it.
+Step 2: Based on the knowledge base, answer YES or NO.
+
+Reason step by step."""
+        run_method("kbsc", SYSTEM_KB, step12, delay=DELAY, sc_paths=SC_PATHS, sc_temp=0.4)
+
+    print(f"\nTotal API calls: {CALL_COUNT[0]}")

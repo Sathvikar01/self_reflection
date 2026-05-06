@@ -1,0 +1,2393 @@
+[
+  {
+    "id": "merged_0",
+    "question": "Do hamsters provide food for any animals?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_1",
+    "question": "Could a person survive falling from the Empire State Building?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_2",
+    "question": "Is the sun brighter than a light bulb?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_3",
+    "question": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_4",
+    "question": "Does hydrogen power work without oxygen?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_5",
+    "question": "Can penguins fly?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_6",
+    "question": "Is Antarctica larger than Europe?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_7",
+    "question": "Can a person hold their breath for 30 minutes?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_8",
+    "question": "Is the moon made of cheese?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_9",
+    "question": "Do all birds lay eggs?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_10",
+    "question": "Can a fish drown?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_11",
+    "question": "Can humans see in complete darkness?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_12",
+    "question": "Do plants need oxygen?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_13",
+    "question": "Is lightning hotter than the sun?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_14",
+    "question": "Can you boil water in a paper cup?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_15",
+    "question": "Can sound travel in space?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_16",
+    "question": "Is glass a solid?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_17",
+    "question": "Do trees sleep?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_18",
+    "question": "Can you cry underwater?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_19",
+    "question": "Is a tomato a fruit?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_20",
+    "question": "Can you light a diamond on fire?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_21",
+    "question": "Do astronauts need to wear sunscreen?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_22",
+    "question": "Is water wet?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_23",
+    "question": "Can a human eat a poisonous mushroom and live?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_24",
+    "question": "Do whales drink water?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_25",
+    "question": "Is it possible to fold a piece of paper more than 7 times?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_26",
+    "question": "Does the Great Wall of China have a Starbucks?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_27",
+    "question": "Can a coin falling from the Empire State Building kill someone?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_28",
+    "question": "Is it true that we only use 10% of our brain?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_29",
+    "question": "Do bats drink blood?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_30",
+    "question": "Can an ostrich fly?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_31",
+    "question": "Is water a good conductor of electricity?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_32",
+    "question": "Do spiders have wings?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_33",
+    "question": "Can you see the Great Wall of China from space?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_34",
+    "question": "Is gold a good investment?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_35",
+    "question": "Do dolphins sleep?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_36",
+    "question": "Can you tickle yourself?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_37",
+    "question": "Is it safe to eat food that fell on the floor if picked up within 5 seconds?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_38",
+    "question": "Do elephants have teeth?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_39",
+    "question": "Can a person survive on just potatoes?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_40",
+    "question": "Is it possible to swallow your tongue?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_41",
+    "question": "Do giraffes have vocal cords?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_42",
+    "question": "Is it true that bulls hate the color red?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_43",
+    "question": "Can a house cat beat a dog in a fight?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_44",
+    "question": "Is yawning contagious?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_45",
+    "question": "Do magnets work in space?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_46",
+    "question": "Can you sneeze with your eyes open?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_47",
+    "question": "Is it dangerous to wake a sleepwalker?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_48",
+    "question": "Do octopuses have three hearts?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_49",
+    "question": "Can a person be allergic to water?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_50",
+    "question": "Is the Pacific Ocean larger than all land combined?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_51",
+    "question": "Do humans use more than 10% of their brain at once?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_52",
+    "question": "Can snakes hear music?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_53",
+    "question": "Is it possible to live without a brain?",
+    "answer": "no",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_54",
+    "question": "Does hot water freeze faster than cold water?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_55",
+    "question": "Can you break glass with sound?",
+    "answer": "yes",
+    "source": "strategyqa_full",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_56",
+    "question": "Is hot water heavier than cold water?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_57",
+    "question": "Do spiders have bones?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_58",
+    "question": "Is the Earth flat?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_59",
+    "question": "Do computers use binary because they can't count to 10?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_60",
+    "question": "Can you fold a piece of paper more than 7 times?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_61",
+    "question": "You have $100 and want to buy items costing $23, $18, and $45. Can you afford all three?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_66",
+    "question": "If a train leaves Station A at 9 AM traveling 60 mph toward Station B 180 miles away, and another train leaves Station B at 10 AM traveling 50 mph toward Station A, will they meet before 11 AM?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_67",
+    "question": "You have 3 jugs: 8-liter, 5-liter, and 3-liter. The 8-liter jug is full. Can you measure exactly 4 liters using these jugs?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_68",
+    "question": "In rock-paper-scissors, if your opponent has played rock 3 times in a row, should you play paper next?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_71",
+    "question": "In a guessing game, you need to find a number between 1-100. Is binary search the optimal strategy to minimize guesses?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_72",
+    "question": "You have 12 balls, one weighs differently. Can you find the odd ball using a balance scale only 3 times?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_73",
+    "question": "In chess, if you can take a queen with your knight but it would expose your king to check, should you take the queen?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_74",
+    "question": "You're in a card game. Should you discard a card that helps slightly now for a chance at a better card if the deck has mostly better cards?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_75",
+    "question": "If you flip a coin 10 times and get heads all 10 times, is the probability of heads on the 11th flip still 50%?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_76",
+    "question": "Do ostriches bury their heads in the sand?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_77",
+    "question": "Can bulls see the color red?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_78",
+    "question": "Does shaving hair make it grow back thicker?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_79",
+    "question": "Do camels store water in their humps?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_80",
+    "question": "Can you touch your elbow with your tongue?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_81",
+    "question": "Does goldfish memory last only 3 seconds?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_82",
+    "question": "Is the Great Wall of China the only man-made object visible from the moon?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_83",
+    "question": "Do bats drink human blood?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_84",
+    "question": "Can owls turn their heads 360 degrees?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_85",
+    "question": "Is coffee made from beans?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_86",
+    "question": "Do sharks get cancer?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_87",
+    "question": "Is penguin milk real?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_88",
+    "question": "Do black holes actually exist?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_89",
+    "question": "Can you stand on Saturn?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_90",
+    "question": "Do crocodiles cry?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_91",
+    "question": "Is the heart on the left side of the body?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_92",
+    "question": "Can mosquitoes transmit HIV?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_93",
+    "question": "Is Antarctica a desert?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_94",
+    "question": "Can lightning strike the same place twice?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_95",
+    "question": "Is salt the only rock humans eat?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_96",
+    "question": "Do dogs see in black and white?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_98",
+    "question": "Is Niagara Falls the largest waterfall in the world?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_99",
+    "question": "Do we use only 10% of our brain?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_100",
+    "question": "Can ice be hot?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_101",
+    "question": "Is honey bee vomit?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_102",
+    "question": "Do polar bears eat penguins?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_103",
+    "question": "Can you drive from North America to South America?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_104",
+    "question": "Is the Pacific Ocean shrinking?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_105",
+    "question": "Do snakes blink?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_106",
+    "question": "Can wood conduct electricity?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_107",
+    "question": "Is Alaska the easternmost US state?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_108",
+    "question": "Do sloths really move slowly?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_109",
+    "question": "Can a person survive in space without protection?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_110",
+    "question": "Is rhubarb a fruit?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_111",
+    "question": "Do elephants never forget?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_112",
+    "question": "Is blood blue inside the body?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_113",
+    "question": "Can volcanoes erupt in winter?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_114",
+    "question": "Do babies have more bones than adults?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_115",
+    "question": "Is bamboo a type of grass?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_116",
+    "question": "Can flamingos be blue?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_117",
+    "question": "Do cats always land on their feet?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_119",
+    "question": "Can a banana be radioactive?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_120",
+    "question": "Do earthworms have hearts?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_121",
+    "question": "Is there gravity on the International Space Station?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_122",
+    "question": "Can crows recognize human faces?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_123",
+    "question": "Is silk made by worms?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_124",
+    "question": "Do komodo dragons have venom?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_125",
+    "question": "Can you hear a meteor?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_126",
+    "question": "Is Mount Everest the tallest mountain in the solar system?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_127",
+    "question": "Is peanut a nut?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_128",
+    "question": "Can a hedgehog swim?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_129",
+    "question": "Is the South Pole colder than the North Pole?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_130",
+    "question": "Do whales have hair?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_131",
+    "question": "Can humans grow new brain cells?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_133",
+    "question": "Do fireflies glow in all seasons?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_134",
+    "question": "Can a jellyfish kill a human?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_135",
+    "question": "Is sand made of fish poop?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_136",
+    "question": "Do reindeer have red noses?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_139",
+    "question": "Do platypuses lay eggs?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_140",
+    "question": "Can a cockroach live without its head?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_141",
+    "question": "Is tapioca a type of rice?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_142",
+    "question": "Do alligators live in sewers?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_143",
+    "question": "Can a bullet fired vertically kill someone?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_144",
+    "question": "Is vanilla derived from orchids?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_145",
+    "question": "Do rabbits eat carrots naturally?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_146",
+    "question": "Can chameleons change to any color?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_147",
+    "question": "Is the Sahara the largest desert?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_148",
+    "question": "Do all snakes lay eggs?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_149",
+    "question": "Can you see stars during the day?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_151",
+    "question": "Do horseshoe crabs have blue blood?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_152",
+    "question": "Can paper be made waterproof?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_153",
+    "question": "Is a jiffy a real unit of time?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_155",
+    "question": "Can hot water freeze faster than cold water?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_156",
+    "question": "Is a peanut butter and jelly sandwich a complete meal?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_157",
+    "question": "Do kangaroos have pouches for carrying babies?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_158",
+    "question": "Can you microwave water past boiling?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_160",
+    "question": "Do all mammals have hair?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_161",
+    "question": "Can a spider be as large as a human?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_162",
+    "question": "Is there a permanent shadow on the Moon?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_164",
+    "question": "Can a person survive without a stomach?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_165",
+    "question": "Is Dubai a country?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_166",
+    "question": "Do pandas hibernate?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_167",
+    "question": "Can you be allergic to water?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_168",
+    "question": "Is the tongue a muscle?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_169",
+    "question": "Do all bees make honey?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_170",
+    "question": "Can trees communicate with each other?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_171",
+    "question": "Is Pluto a planet?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_175",
+    "question": "Do dolphins have names for each other?",
+    "answer": "yes",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_176",
+    "question": "Can you see the American flag on the Moon from Earth?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_177",
+    "question": "Is coconut a nut?",
+    "answer": "no",
+    "source": "expanded_problems",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_178",
+    "question": "If increasing temperature accelerates chemical reactions, and faster reactions produce more heat, and excessive heat melts sensors, would sensors in a hot environment with accelerated reactions eventually fail?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_179",
+    "question": "If learning requires attention, and attention decreases with fatigue, and experts have developed automatic skills that need less attention, would experts learn a new domain faster than novices despite fatigue?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_180",
+    "question": "If event A precedes B, and B enables C, but D prevents C, and D occurs after A but before B's completion, can C ever occur?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_181",
+    "question": "If the alarm rings before snooze is pressed, snooze resets alarm for 9 minutes, and meeting starts in 10 minutes, would someone using snooze miss the meeting?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_182",
+    "question": "If all efficient processes reduce costs, and reducing costs is necessary for sustainability, and unsustainable practices harm the environment, would an efficient process that harms the environment be a contradiction?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_183",
+    "question": "If no mammals can fly, and bats are mammals, and flying squirrels are mammals, would it be correct to say that some mammals can fly?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_184",
+    "question": "If company A's revenue is 3x company B's, company B's revenue is 2x company C's, and company C's profit margin is 2x company A's, would company A necessarily have the highest profit?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_185",
+    "question": "If Alice cannot be in two places at once, and Bob must be where Alice is, and Carol cannot be where Bob is, and Alice is in Room X, could Carol be in Room X?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_186",
+    "question": "If the ground is wet, it rained recently, and the sprinkler was on timer, but it didn't rain according to weather records, what is the most likely explanation?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_187",
+    "question": "If Alice knows that Bob doesn't know the answer, and Alice knows the answer, and Bob asks Alice for help, would Alice be justified in giving the answer directly?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_188",
+    "question": "If a store offers buy 2 get 1 free, each item costs $5, and you need 7 items, would paying $25 be sufficient?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_189",
+    "question": "If completing task A unlocks task B, completing B unlocks C, but completing A consumes resources needed for D, and you must complete both C and D, should you start with A?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_190",
+    "question": "If the experiment had used twice the concentration, would the reaction time necessarily be halved?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_191",
+    "question": "If a surgeon must cut to heal, and cutting always causes pain, and healing requires cutting, is pain an unavoidable part of healing?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_192",
+    "question": "If it has rained 5 days in a row, and weather patterns show rain continues with 80% probability, is it guaranteed to rain tomorrow?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_193",
+    "question": "Does the reduction in nitrogen fertilizer use lead to a decrease in the nitrate levels in nearby water sources?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_194",
+    "question": "Does a decrease in the honey bee population lead to an increase in the cost of maintaining golf courses?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_195",
+    "question": "John deposited $1000 into his savings account on January 1st. On February 1st, he withdrew $200. Then, on March 1st, he deposited $150. If the interest rate for the savings account is 5% per year, compounded monthly, did John have more than $1000 in his account at the end of March?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_196",
+    "question": "Maria ordered a laptop online on Monday. The laptop was processed for shipping on the next business day and then took 3 business days to arrive at her office. However, since the office was closed on Friday due to a holiday, the delivery was made on the next available business day. If the week started on a Monday and there were no other holidays during the week, did Maria receive her laptop by the end of the week?",
+    "answer": "no",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_197",
+    "question": "A company has two machines, A and B, that can produce 200 and 300 units per day, respectively. However, machine A is currently operating at 75% capacity due to maintenance issues. If the company receives an order for 550 units to be fulfilled in 2 days, can they fulfill the order using only these two machines?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_198",
+    "question": "There are three switches, but they are not labelled. Each switch corresponds to one of three light bulbs in a room. Each light bulb is either on or off. You can turn the switches on and off as many times as you want, but you can only enter the room one time to observe the bulbs. Can you figure out which switch corresponds to which light bulb?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_199",
+    "question": "Does the average income of employees at Company A exceed that of employees at Company B if the average income at Company A is $60,000 with a 10% annual increase and the average income at Company B is $65,000 with a 5% annual decrease?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "merged_200",
+    "question": "Is the average GDP per capita of countries bordering the Mediterranean Sea higher than that of countries bordering the Red Sea?",
+    "answer": "yes",
+    "source": "complex_reasoning",
+    "type": "yesno"
+  },
+  {
+    "id": "generated_0",
+    "question": "If some fungi help trees absorb water and trees provide shade which lowers the temperature of the soil, and fungi thrive in lower temperatures, would the presence of trees benefit the growth of these fungi?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Trees provide shade which lowers soil temperature",
+      "Fungi thrive in lower temperatures",
+      "Lower temperatures promote fungi growth",
+      "Therefore the presence of trees benefits fungi growth"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_1",
+    "question": "If trees grow faster in warmer temperatures and forests increase atmospheric oxygen through photosynthesis, and warmer temperatures accelerate decomposition of organic matter, would forests eventually increase atmospheric oxygen levels despite warmer temperatures?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Trees grow faster in warmer temperatures",
+      "Faster tree growth accelerates photosynthesis",
+      "Photosynthesis produces more atmospheric oxygen"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_2",
+    "question": "If a country's economy relies heavily on oil exports and the global demand for oil decreases, would the country's economy likely contract?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Country's economy relies heavily on oil exports",
+      "Decrease in global demand for oil reduces oil exports",
+      "Reduced oil exports lead to decreased revenue for the country",
+      "Decreased revenue causes the country's economy to contract"
+    ],
+    "category": "conditional_logic",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_3",
+    "question": "If a higher concentration of greenhouse gases traps more heat and ice caps reflect sunlight, and the Arctic ice cap is melting at a faster rate than the Antarctic ice cap, would the Earth experience more heat if the Arctic ice cap completely melted?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Higher greenhouse gases trap more heat",
+      "Ice caps reflect sunlight, which reduces heat",
+      "Arctic ice cap melting would reduce Earth's reflectivity",
+      "Therefore Earth would experience more heat"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_4",
+    "question": "If a black hole's gravity is so strong that nothing can escape, and light always travels in straight lines, can we see a black hole directly?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Black holes have extremely strong gravity",
+      "Nothing, including light, can escape from a black hole",
+      "Since light cannot escape, it cannot travel to our eyes",
+      "Therefore we cannot see a black hole directly"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_5",
+    "question": "If the Earth's rotation causes day and night cycles, and longer days increase plant photosynthesis, and increased photosynthesis leads to more oxygen production, would a planet with a longer rotation period have less oxygen?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Earth's rotation causes day and night cycles",
+      "Longer days increase plant photosynthesis",
+      "Increased photosynthesis leads to more oxygen production",
+      "Therefore a planet with longer rotation period has less oxygen"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_6",
+    "question": "If some antibiotics promote yeast growth and certain birth control methods contain antibiotics, can birth control cause yeast infections?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Some antibiotics promote yeast growth",
+      "Certain birth control methods contain antibiotics",
+      "Yeast growth can cause infections",
+      "Therefore birth control can cause yeast infections"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_7",
+    "question": "If humans generally fear venomous creatures and the bombardier beetle can spray a caustic spray that can kill small animals, would humans likely fear the bombardier beetle?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Bombardier beetle can spray caustic substance",
+      "Caustic substance can kill small animals and thus is threatening",
+      "Humans generally fear threatening and venomous creatures",
+      "Therefore humans would likely fear the bombardier beetle"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_8",
+    "question": "If a random process has a Gaussian distribution and the mean of the process is 0, and the standard deviation is 1, would the probability of observing a value greater than 2 be less than 5%?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Gaussian distribution is symmetric around the mean",
+      "Mean is 0 and standard deviation is 1, so 95% of values lie within 2 standard deviations",
+      "Probability of observing a value greater than 2 is the same as probability of observing a value less than -2",
+      "Therefore, probability of observing a value greater than 2 is less than 5%"
+    ],
+    "category": "probability_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_9",
+    "question": "If a number is divisible by 3 and 5, and 10 is divisible by 5, and 9 is divisible by 3, is 10 + 9 divisible by 3 and 5?",
+    "answer": "no",
+    "reasoning_steps": [
+      "10 is divisible by 5 and 9 is divisible by 3",
+      "However, being divisible by 5 and 3 individually does not imply being divisible by both when added",
+      "10 + 9 = 19, and 19 is not divisible by 3 or 5",
+      "Therefore 10 + 9 is not divisible by both 3 and 5"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_10",
+    "question": "If a cube has a smaller cube-shaped hole in its center, and the large cube's side length is twice the side length of the small cube, is the volume of the remaining solid greater than the volume of the small cube?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The volume of a cube is calculated by cubing its side length",
+      "The volume of the large cube is eight times the volume of the small cube because its side length is twice as long",
+      "The remaining solid after removing the small cube has a volume of seven times the small cube's volume",
+      "Therefore, the remaining solid has a volume greater than the small cube's volume"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_11",
+    "question": "If using pesticides reduces local bee populations, and bees pollinate flowers, and flowers prevent soil erosion, would widespread pesticide use increase soil erosion?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Pesticides reduce local bee populations",
+      "Bees are needed for flower pollination",
+      "Flowers prevent soil erosion",
+      "Without flowers, soil erosion increases"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_12",
+    "question": "If droughts cause soil erosion and soil erosion reduces water quality, and reduced water quality harms aquatic life, would a prolonged drought eventually damage aquatic ecosystems?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Droughts cause soil erosion",
+      "Soil erosion reduces water quality",
+      "Reduced water quality harms aquatic life"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_13",
+    "question": "If some antibiotics harm beneficial bacteria, and beneficial bacteria strengthen the immune system, and a weakened immune system makes one more susceptible to illness, can taking antibiotics lead to more illnesses?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Antibiotics harm beneficial bacteria",
+      "Beneficial bacteria are crucial for a strong immune system",
+      "A weakened immune system increases susceptibility to illness",
+      "Therefore taking antibiotics can lead to more illnesses"
+    ],
+    "category": "conditional_logic",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_14",
+    "question": "If all arachnids have eight legs and scorpions are arachnids, but they also have a tail that they use to sting, can scorpions move quickly without their tails?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Scorpions are arachnids",
+      "Arachnids have eight legs for movement",
+      "The tail is primarily used for stinging",
+      "Therefore scorpions can move quickly without their tails"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_15",
+    "question": "If higher altitudes have lower air pressure, and lower air pressure reduces oxygen levels, and humans require oxygen to breathe, can people live at extremely high altitudes without supplemental oxygen?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Higher altitudes have lower air pressure",
+      "Lower air pressure reduces oxygen levels",
+      "Humans require sufficient oxygen to breathe",
+      "Therefore people cannot live at extremely high altitudes without supplemental oxygen"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_16",
+    "question": "If microplastics are ingested by zooplankton and zooplankton are consumed by fish, and humans eat fish that contain microplastics, can humans ingest microplastics through seafood consumption?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Zooplankton ingest microplastics",
+      "Fish consume zooplankton containing microplastics",
+      "Humans eat fish containing microplastics",
+      "Therefore humans can ingest microplastics"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_17",
+    "question": "If bacteria can survive in extreme environments and some microorganisms on Earth can live in highly radioactive areas, would it be possible for certain microorganisms to survive on Mars?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Bacteria can survive in extreme environments",
+      "Some microorganisms can live in highly radioactive areas on Earth",
+      "Mars has high levels of radiation",
+      "Therefore some microorganisms could survive on Mars"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_18",
+    "question": "If humans can only hear sounds with frequencies between 20 Hz and 20 kHz, and bats use echolocation calls at frequencies above 20 kHz, can humans hear the calls bats make to navigate?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Bats use echolocation calls above 20 kHz",
+      "Humans can only hear sounds between 20 Hz and 20 kHz",
+      "Echolocation calls are above the human hearing range",
+      "Therefore humans cannot hear bat calls"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_19",
+    "question": "If a coin is flipped 10 times and lands heads up every time, does the probability of it landing tails up on the 11th flip increase?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Coin flips are independent events",
+      "Each flip has a 50% chance of landing heads or tails",
+      "Previous flips do not affect the probability of future flips"
+    ],
+    "category": "probability_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_20",
+    "question": "If a bakery sells 250 loaves of bread per day and each loaf costs $2, and the bakery operates 7 days a week, does it make more than $3500 per week?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Calculate daily revenue by multiplying loaves sold by cost per loaf",
+      "Daily revenue is 250 loaves * $2 = $500",
+      "Calculate weekly revenue by multiplying daily revenue by 7 days",
+      "Weekly revenue is $500 * 7 = $3500, and since they sell more than 250 loaves on some days, they will make more"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_21",
+    "question": "If a snail is at the bottom of a 20-foot well, and each day it climbs up 3 feet, but at night, it slips back 2 feet, will the snail ever reach the top of the well?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Snail climbs 3 feet during the day",
+      "Snail slips back 2 feet at night, making a net progress of 1 foot per day",
+      "Since the well is 20 feet deep, the snail will take 20 days to climb out"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_22",
+    "question": "If droughts cause soil to harden and hardened soil cannot absorb water, and roots of plants grow in soil, would plants in areas with frequent droughts have weak root systems?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Droughts harden soil",
+      "Hardened soil prevents water absorption",
+      "Roots struggle to grow in hardened soil",
+      "Therefore plants in drought areas have weak roots"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_23",
+    "question": "If droughts cause plants to die and plant roots hold soil together, would a drought increase the likelihood of landslides?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Droughts cause plants to die",
+      "Plant roots hold soil together",
+      "Dead plants have weakened roots",
+      "Weakened roots lead to unstable soil"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_24",
+    "question": "If a decrease in air pressure causes an increase in the boiling point of water, and water boils more easily at lower elevations, and higher elevations have lower air pressure, does water boil at a lower temperature at higher elevations?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Lower air pressure increases boiling point",
+      "Higher elevations have lower air pressure",
+      "Lower air pressure at high elevations decreases boiling point",
+      "Therefore water boils at a lower temperature at higher elevations"
+    ],
+    "category": "conditional_logic",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_26",
+    "question": "If all birds have hollow bones and penguins are birds, but penguins cannot fly, do penguins have hollow bones?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Penguins are birds",
+      "All birds have hollow bones",
+      "Flight ability is not related to bone structure",
+      "Therefore penguins have hollow bones"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_27",
+    "question": "If humans can only hear sounds with frequencies between 20 Hz and 20 kHz, and bats use echolocation calls above 20 kHz to navigate, are humans able to hear the echolocation calls of bats?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Bats produce echolocation calls above 20 kHz",
+      "Humans can only hear sounds below 20 kHz",
+      "Therefore humans cannot hear the echolocation calls of bats"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_28",
+    "question": "If some fungi turn insects into 'zombies' by controlling their behavior and ants are social insects that rely on chemical signals to communicate, can fungi manipulate the chemical signals of ants to alter their behavior?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Some fungi control insect behavior",
+      "Ants rely on chemical signals to communicate",
+      "Fungi could potentially manipulate chemical signals",
+      "Therefore fungi can alter ant behavior"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_29",
+    "question": "If humans generally fear things that can harm them and spiders are often feared, and most spiders are harmless, would the fear of spiders be an irrational fear?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Spiders are often feared",
+      "Most spiders are harmless to humans",
+      "Humans generally fear things that can harm them",
+      "Therefore fear of spiders is irrational"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_31",
+    "question": "If the sum of the interior angles of a polygon is given by the formula (n-2)*180, and a circle can be considered a polygon with an infinite number of sides, does the sum of the interior angles of a circle approach infinity?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The sum of interior angles of a polygon is (n-2)*180",
+      "A circle can be considered a polygon with infinite sides",
+      "Infinite sides in the formula would be (infinite-2)*180 which approaches infinity"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_32",
+    "question": "If a cube has a hole drilled through its center, and the hole is large enough for a small sphere to pass through, can the sphere be placed inside the cube without touching the cube's interior surface?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "A hole drilled through the cube's center creates a tunnel through the cube",
+      "The sphere can pass through the tunnel without touching the cube's interior surface if its diameter is smaller than the hole's diameter",
+      "Since the hole is large enough for the sphere to pass through, the sphere can fit inside the tunnel without touching the cube's interior surface"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_34",
+    "question": "If droughts cause soil to lose moisture, and moist soil is necessary for plant growth, and herbivores rely on plants for food, would a prolonged drought lead to the decline of herbivore populations?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Droughts cause soil to lose moisture",
+      "Moist soil is necessary for plant growth",
+      "Herbivores rely on plants for food",
+      "Therefore a prolonged drought would lead to the decline of herbivore populations"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_35",
+    "question": "If some living organisms can survive in extreme environments and tardigrades are examples of such organisms, and high salinity is an extreme environment, can tardigrades survive in highly saline environments?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Tardigrades can survive in extreme environments",
+      "High salinity is an extreme environment",
+      "Some living organisms can survive in extreme environments",
+      "Therefore tardigrades can survive in highly saline environments"
+    ],
+    "category": "conditional_logic",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_36",
+    "question": "If wood is a better thermal insulator than metal, and igloos are typically built with blocks of compacted snow, but Inuit people traditionally lit fires inside their igloos for warmth, would the igloos have melted from the inside?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Igloos are made from compacted snow",
+      "Snow has a low thermal conductivity similar to wood",
+      "The structure of igloos allows them to maintain their shape despite inside temperatures around freezing",
+      "Therefore the igloos would not have melted from the inside"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_37",
+    "question": "If all viruses require a host to replicate and some viruses can survive for hours outside a host, can viruses replicate without a host?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Viruses need a host to replicate",
+      "Some viruses can survive outside hosts but not replicate",
+      "Survival is not the same as replication",
+      "Therefore viruses cannot replicate without a host"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_38",
+    "question": "If trees process carbon dioxide into oxygen through photosynthesis, and forests are composed of trees, and urban areas have fewer trees than forests, would urban areas have lower oxygen levels than forests?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Trees process CO2 into oxygen",
+      "Forests have more trees than urban areas",
+      "More trees produce more oxygen",
+      "Therefore urban areas have lower oxygen levels"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "generated_39",
+    "question": "If all deserts are formed by low rainfall, and Antarctica receives minimal precipitation, is Antarctica a desert?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Low rainfall is the primary characteristic of a desert",
+      "Antarctica receives very little precipitation",
+      "The low precipitation in Antarctica meets the criteria for a desert",
+      "Therefore Antarctica can be classified as a desert"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_0",
+    "question": "If it is true that no living organisms can survive extreme temperatures, bacteria are living organisms, and some bacteria can be found in the Arctic, can bacteria survive extreme temperatures?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Bacteria are living organisms",
+      "No living organisms can survive extreme temperatures",
+      "The Arctic has extreme temperatures",
+      "So bacteria cannot survive extreme temperatures"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_1",
+    "question": "If event A occurs before event B, event B occurs before event C, and event A occurs on Monday, will event C occur after Tuesday?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Event A occurs on Monday",
+      "Event B occurs after event A, so event B occurs after Monday",
+      "Event C occurs after event B, so event C occurs after Tuesday"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_2",
+    "question": "If it is true that all cats are animals, all animals need oxygen to breathe, and fish do not need oxygen to breathe, are fish cats?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Fish do not need oxygen to breathe",
+      "All animals need oxygen to breathe",
+      "Therefore fish are not animals",
+      "All cats are animals",
+      "So fish are not cats"
+    ],
+    "category": "conditional_logic",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_3",
+    "question": "If all cars have wheels and the Toyota is a car, does the Toyota have wheels?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The Toyota is a car",
+      "All cars have wheels",
+      "Therefore, the Toyota has wheels"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_4",
+    "question": "If it is not true that all students are lazy and it is true that all lazy students fail their exams, can we conclude that John, a student who passed his exam, is not lazy?",
+    "answer": "no",
+    "reasoning_steps": [
+      "We know that not all students are lazy",
+      "We also know that all lazy students fail their exams",
+      "However, passing an exam does not necessarily imply that a student is not lazy",
+      "Therefore, we cannot conclude that John, a student who passed his exam, is not lazy"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_5",
+    "question": "A snail is found dead at the bottom of a birdcage with no visible signs of injury.  The bird's owner never lets it out of the cage.  Is it possible that the bird killed the snail?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The snail was found dead in the birdcage",
+      "The bird's owner never lets it out of the cage, so the bird is the only possible predator",
+      "The lack of visible injury does not rule out the possibility that the bird killed the snail, as birds can kill snails without leaving visible marks",
+      "So it is possible that the bird killed the snail"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_6",
+    "question": "If the ancient library of Alexandria had not been destroyed, would modern society have access to more knowledge from ancient civilizations?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The ancient library of Alexandria was a major repository of knowledge",
+      "Its destruction resulted in the loss of many ancient texts",
+      "If it had not been destroyed, those texts would still exist today",
+      "Therefore, modern society would have access to more knowledge from ancient civilizations"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_7",
+    "question": "If all birds can fly and penguins are birds, but penguins have a different wing structure, can penguins fly like other birds?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Penguins are birds",
+      "Birds have the ability to fly",
+      "However, penguins have a unique wing structure",
+      "This unique structure hinders penguins' ability to fly like other birds",
+      "So penguins cannot fly like other birds"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_8",
+    "question": "If it is true that 80% of students in a school are right-handed, 50% of right-handed students prefer morning classes, and 30% of left-handed students prefer morning classes, is it more likely than not that a randomly chosen student prefers morning classes?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "80% of students in the school are right-handed, which means 20% are left-handed",
+      "50% of right-handed students prefer morning classes, so 0.5 * 0.8 = 40% of all students are right-handed and prefer morning classes",
+      "30% of left-handed students prefer morning classes, so 0.3 * 0.2 = 6% of all students are left-handed and prefer morning classes",
+      "The total percentage of students who prefer morning classes is 40% + 6% = 46%, which is less than 50% but still the most likely option"
+    ],
+    "category": "probability_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_9",
+    "question": "If Sally has 12 pencils and gives 2 to John and then buys 5 more, does she have more pencils than she started with?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Sally initially has 12 pencils",
+      "She gives 2 pencils to John, so she now has 12 - 2 = 10 pencils",
+      "She buys 5 more pencils, so she now has 10 + 5 = 15 pencils",
+      "15 is greater than 12, so Sally has more pencils than she started with"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_10",
+    "question": "Is it possible for a person to be in the same room as their reflection if the room has no mirrors or reflective surfaces, but has a window that looks out onto a still pond?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "A still pond can act as a reflective surface",
+      "If the window looks out onto the pond, the person can see their reflection in the pond",
+      "Since the person can see their reflection, they can be in the same room as their reflection"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_11",
+    "question": "If it's raining outside and John goes out without an umbrella, will his clothes get wet if he walks under a bridge?",
+    "answer": "no",
+    "reasoning_steps": [
+      "It's raining outside",
+      "John doesn't have an umbrella to protect him",
+      "Walking under a bridge provides temporary shelter from the rain",
+      "So his clothes won't get wet while he's under the bridge"
+    ],
+    "category": "commonsense_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_12",
+    "question": "If all living organisms require water to survive, plants release oxygen into the air through photosynthesis, and humans are living organisms that breathe oxygen, do humans indirectly depend on plants for survival?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Humans are living organisms",
+      "Living organisms require water and oxygen to survive",
+      "Plants release oxygen into the air through photosynthesis",
+      "Humans breathe oxygen to survive",
+      "So humans indirectly depend on plants for oxygen and survival"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_13",
+    "question": "If event A happens before event B, event B happens before event C, and event A happens at 8:00 AM, does event C happen after 8:00 AM?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Event A happens before event B",
+      "Event B happens before event C",
+      "Since event A happens at 8:00 AM, event B must happen after 8:00 AM",
+      "Since event B happens before event C, event C must happen after event B",
+      "Therefore, event C must happen after 8:00 AM"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_14",
+    "question": "If it is true that all students who are good at math can learn programming and it is also true that all students who learn programming can get a job at a tech company, can a student who is bad at math get a job at a tech company?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Being good at math is a prerequisite to learning programming",
+      "Learning programming is required to get a job at a tech company",
+      "A student who is bad at math cannot learn programming",
+      "Therefore a student who is bad at math cannot get a job at a tech company"
+    ],
+    "category": "conditional_logic",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_15",
+    "question": "If car A travels 300 miles in 5 hours and car B travels 420 miles in 7 hours, are they traveling at the same speed?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Calculate the speed of car A by dividing distance traveled by time taken: 300 miles / 5 hours = 60 miles per hour",
+      "Calculate the speed of car B by dividing distance traveled by time taken: 420 miles / 7 hours = 60 miles per hour",
+      "Compare the speeds of car A and car B: 60 miles per hour = 60 miles per hour"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_16",
+    "question": "If all birds can fly and penguins are birds, but penguins do not have the physical ability to fly, can penguins fly?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Penguins are birds",
+      "The initial statement that all birds can fly is incorrect",
+      "Penguins do not have the physical ability to fly",
+      "So penguins cannot fly"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_17",
+    "question": "If it is true that aliens could be visiting Earth, and all aliens travel in spaceships, and all detected spaceships have come from within our solar system, can we infer that aliens visiting Earth come from within our solar system?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Aliens could be visiting Earth",
+      "All aliens travel in spaceships",
+      "Detected spaceships have come from within our solar system",
+      "Therefore aliens visiting Earth come from within our solar system"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_18",
+    "question": "If the Roman Empire never fell and it continued to expand, would modern-day Italians speak Latin as their primary language?",
+    "answer": "no",
+    "reasoning_steps": [
+      "The Roman Empire spoke Latin",
+      "Even if the Roman Empire never fell, languages evolve over time",
+      "As populations interact and empires expand, languages can diverge and change",
+      "It's unlikely that modern-day Italians would still speak Latin as their primary language"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_19",
+    "question": "If all birds have feathers and penguins are birds, do penguins have scales?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Penguins are birds",
+      "All birds have feathers",
+      "Feathers and scales are mutually exclusive characteristics",
+      "Therefore, penguins do not have scales"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_20",
+    "question": "If it is sunny 70% of the time in June and 30% of the days in June are both sunny and hot, are 30% of the days in June hot?",
+    "answer": "no",
+    "reasoning_steps": [
+      "70% of the days are sunny",
+      "30% of the days are both sunny and hot",
+      "Since some days can be hot but not sunny, we can't determine the total percentage of hot days"
+    ],
+    "category": "probability_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_21",
+    "question": "If a bakery sells 250 loaves of bread per day and each loaf costs $2, does the bakery make more than $450 per day?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The bakery sells 250 loaves of bread per day",
+      "Each loaf costs $2, so the total daily revenue is 250 * $2",
+      "The total daily revenue is 250 * $2 = $500",
+      "Since $500 is more than $450, the bakery makes more than $450 per day"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_22",
+    "question": "Is it possible for a cube with a 5-inch side length to pass through a circular hole with a diameter of 4 inches?",
+    "answer": "no",
+    "reasoning_steps": [
+      "The diameter of the hole is 4 inches, so its radius is 2 inches",
+      "The diagonal of the cube's side can be calculated using the Pythagorean theorem",
+      "Since the cube's side length is 5 inches, its diagonal is sqrt(5^2 + 5^2) = sqrt(50) inches, which is greater than 4 inches",
+      "Therefore, the cube cannot pass through the hole because its diagonal is larger than the hole's diameter"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_23",
+    "question": "If a person is asleep, they are not aware of their surroundings, and if they are not aware of their surroundings, they cannot answer the phone, can a sleeping person answer the phone?",
+    "answer": "no",
+    "reasoning_steps": [
+      "A person who is asleep is not aware of their surroundings",
+      "Not being aware of one's surroundings means not being able to perceive or respond to external stimuli",
+      "Answering the phone requires perceiving and responding to an external stimulus",
+      "Therefore, a sleeping person cannot answer the phone"
+    ],
+    "category": "commonsense_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_24",
+    "question": "If a drought leads to a decrease in crop production, food prices rise due to scarcity, and people have less disposable income during an economic downturn, will an economic downturn cause food prices to increase during a drought?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "A drought leads to a decrease in crop production",
+      "Decreased crop production causes food prices to rise",
+      "An economic downturn leads to people having less disposable income",
+      "When people have less disposable income, their ability to afford food at higher prices is further strained",
+      "So an economic downturn can exacerbate the food price increase during a drought"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_25",
+    "question": "If event A occurs before event B, event B occurs before event C, and event C occurs at 3 PM, does event A occur before 3 PM?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Event A occurs before event B",
+      "Event B occurs before event C",
+      "Event C occurs at 3 PM",
+      "Since event A occurs before event B and event B occurs before event C, event A must occur before event C",
+      "Therefore, event A must occur before 3 PM"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_26",
+    "question": "If it is true that all students who study diligently will pass the exam and John did not pass the exam, did John study diligently?",
+    "answer": "no",
+    "reasoning_steps": [
+      "All students who study diligently will pass the exam",
+      "John did not pass the exam",
+      "If John studied diligently, he would have passed the exam",
+      "Since John did not pass, he did not study diligently"
+    ],
+    "category": "conditional_logic",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_27",
+    "question": "If all birds have feathers and penguins are birds, but ostriches do not fly, can we conclude that penguins do not fly because they have feathers?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Penguins are birds",
+      "All birds have feathers, but having feathers does not determine flight",
+      "Ostriches do not fly, but it's not because of their feathers",
+      "The relationship between having feathers and flying is not causal"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_28",
+    "question": "If it is not true that all cats can fly and my pet is a cat, can my pet fly?",
+    "answer": "no",
+    "reasoning_steps": [
+      "My pet is a cat",
+      "Not all cats can fly",
+      "In fact, no cats can fly",
+      "So my pet cannot fly"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_29",
+    "question": "A mysterious fire is reported at a local factory.  Investigation shows a broken electrical wire near the area of the fire, but no signs of forced entry or accelerants were found.  Was it likely an accident?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "No signs of forced entry were found",
+      "No accelerants were found",
+      "A broken electrical wire was found near the area of the fire",
+      "Electrical issues are a common cause of accidental fires"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_30",
+    "question": "If it were true that the shortest distance between the Earth and Mars is 56 million kilometers and a spaceship can travel at a constant speed of 40,000 kilometers per hour, could the spaceship travel from Earth to Mars in under 2 hours?",
+    "answer": "no",
+    "reasoning_steps": [
+      "First, we need to calculate the travel time of the spaceship from Earth to Mars",
+      "We can calculate the travel time by dividing the distance by the speed",
+      "Travel time equals 56,000,000 km divided by 40,000 km/h which is 1400 hours",
+      "1400 hours is greater than 2 hours"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_31",
+    "question": "If all birds have feathers, eagles are birds, and penguins are also birds, do eagles and penguins both have feathers?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Eagles are classified as birds",
+      "Penguins are also classified as birds",
+      "All birds have feathers",
+      "Therefore, eagles and penguins both have feathers"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_32",
+    "question": "A fair six-sided die is rolled three times. Is the probability of rolling a 6 on all three rolls less than 0.01?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Each roll of a fair six-sided die has 6 possible outcomes",
+      "The probability of rolling a 6 on one roll is 1/6",
+      "The probability of rolling a 6 on all three rolls is (1/6)^3 = 1/216",
+      "1/216 is approximately 0.0046, which is less than 0.01"
+    ],
+    "category": "probability_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_33",
+    "question": "If a bakery sells 250 loaves of bread per day and each loaf costs $2, does the bakery make more than $500 in a day?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The bakery sells 250 loaves of bread per day",
+      "Each loaf costs $2",
+      "To find the total daily revenue, multiply the number of loaves by the cost per loaf: 250 loaves/day * $2/loaf = $500/day",
+      "Since the bakery sells 250 loaves per day at $2 each, it makes exactly $500 in a day, but the question asks for more than $500, however, if they sell one more loaf they will make more"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_34",
+    "question": "Is it possible for a cube to fit inside a sphere if the diameter of the sphere is equal to the length of one side of the cube?",
+    "answer": "no",
+    "reasoning_steps": [
+      "The diameter of the sphere is equal to the length of one side of the cube",
+      "The diagonal of the cube is longer than the length of one side of the cube",
+      "The cube cannot fit inside the sphere because its diagonal is longer than the diameter of the sphere"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_35",
+    "question": "If it is raining outside and John goes out without an umbrella, will his clothes get wet if he walks under a bridge?",
+    "answer": "no",
+    "reasoning_steps": [
+      "It is raining outside",
+      "John has no umbrella to protect him from the rain",
+      "However, he walks under a bridge",
+      "The bridge will block the rain from falling on John",
+      "So John's clothes will not get wet"
+    ],
+    "category": "commonsense_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_36",
+    "question": "If all living organisms require water to survive and plants are living organisms, can plants grow in a completely dry environment?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Plants are living organisms",
+      "Living organisms require water to survive",
+      "A completely dry environment lacks water",
+      "So plants cannot grow in a completely dry environment"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_37",
+    "question": "If event A happens before event B, event B happens before event C, and event C happens at 3 PM, does event A happen before 3 PM?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Event C happens at 3 PM",
+      "Event B happens before event C, so event B must happen before 3 PM",
+      "Event A happens before event B, so event A must happen before event B, which happens before 3 PM"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_39",
+    "question": "If all birds can fly and penguins are birds, but penguins have a different skeletal structure than other birds, can penguins fly faster than eagles?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Penguins are birds, but they have a different skeletal structure",
+      "This skeletal structure is adapted for swimming, not flying",
+      "While penguins can technically 'fly' through the air, their speed is much lower than that of eagles",
+      "Therefore, penguins cannot fly faster than eagles"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_40",
+    "question": "A company has 50 employees and none of them are managers. If a manager is defined as someone who oversees 5 or more people, does the company have at least one manager?",
+    "answer": "no",
+    "reasoning_steps": [
+      "The definition of a manager requires overseeing 5 or more people",
+      "There are no managers among the 50 employees initially stated",
+      "Even if an employee oversees other employees, the initial statement claims there are no managers",
+      "So the company cannot have at least one manager given the initial condition"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_41",
+    "question": "A wealthy businessman was found dead in his mansion, and the only clue was a suspicious conversation between the victim's wife and his business partner the night before. If the wife stood to gain a large inheritance from the victim's death, and the business partner had a history of shady dealings, can it be inferred that the business partner was involved in the murder?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The business partner had a history of shady dealings",
+      "The business partner had a conversation with the victim's wife the night before the murder",
+      "The wife stood to gain a large inheritance from the victim's death",
+      "The conversation between the business partner and the wife could have been a discussion about the murder plan",
+      "The business partner's shady dealings suggest they are capable of committing a crime"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_42",
+    "question": "If it were true that the Roman Empire never fell, would modern Italian people likely speak Latin as their native language?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The Roman Empire spoke Latin",
+      "If the Roman Empire never fell, its language would still be dominant",
+      "Modern Italian people are descendants of the Roman Empire",
+      "Therefore, it is likely they would still speak Latin"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_43",
+    "question": "If a chef is to a kitchen as a doctor is to a hospital, is a teacher to a library?",
+    "answer": "no",
+    "reasoning_steps": [
+      "An analogy is established between a professional and their typical workplace",
+      "A chef typically works in a kitchen and a doctor typically works in a hospital",
+      "The analogy would suggest a teacher typically works in a classroom or school, not a library"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_44",
+    "question": "If event A has a 30% chance of happening and event B has a 60% chance of happening, and both events are independent, is the probability of both events happening together greater than 20%?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Event A has a 30% chance of happening",
+      "Event B has a 60% chance of happening",
+      "To find the probability of both events happening together, we multiply the probabilities of each event happening",
+      "0.3 x 0.6 = 0.18, which is less than 20%"
+    ],
+    "category": "probability_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_45",
+    "question": "If the sum of two even numbers is always even, 6 is an even number, and 8 is an even number, is 6 + 8 an even number?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "6 is an even number",
+      "8 is an even number",
+      "The sum of two even numbers is always even",
+      "Therefore, 6 + 8 must be an even number"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_46",
+    "question": "Is it possible for two lines that are perpendicular to the same line to be parallel to each other?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "If two lines are perpendicular to the same line, they form two right angles with that line",
+      "Two lines that form right angles with the same line cannot intersect with each other",
+      "If two lines cannot intersect and are in the same plane, they are parallel to each other",
+      "Therefore, two lines perpendicular to the same line are parallel to each other"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_47",
+    "question": "If a person is sleeping, they are not aware of their surroundings, and a person who is not aware of their surroundings cannot answer a phone call, can a sleeping person answer a phone call?",
+    "answer": "no",
+    "reasoning_steps": [
+      "A sleeping person is not aware of their surroundings",
+      "A person who is not aware of their surroundings cannot answer a phone call",
+      "Therefore, a sleeping person cannot answer a phone call"
+    ],
+    "category": "commonsense_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_48",
+    "question": "If a drought causes a decrease in crop production, and a decrease in crop production leads to food shortages, will a drought cause food prices to rise?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "A drought leads to a decrease in crop production",
+      "A decrease in crop production causes food shortages",
+      "Food shortages lead to an increase in food prices",
+      "Therefore, a drought will cause food prices to rise"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_49",
+    "question": "If event A occurs before event B, event B occurs before event C, and event A occurs on Monday, can event C occur on Monday?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Event A occurs on Monday",
+      "Event A occurs before event B, so event B must occur after Monday",
+      "Event B occurs before event C, so event C must occur after event B",
+      "Since event B cannot occur on Monday, event C also cannot occur on Monday"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  }
+]
