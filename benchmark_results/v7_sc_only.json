@@ -317,5 +317,38 @@
       "no",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_29",
+    "question": "Do bats drink blood?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_30",
+    "question": "Can an ostrich fly?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_31",
+    "question": "Is water a good conductor of electricity?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "no"
+    ]
   }
 ]
