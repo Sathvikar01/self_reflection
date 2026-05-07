@@ -1234,5 +1234,23 @@
     "question": "If droughts cause soil to harden and hardened soil cannot absorb water, and roots of plants grow in soil, would plants in areas with frequent droughts have weak root systems?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "generated_23",
+    "question": "If droughts cause plants to die and plant roots hold soil together, would a drought increase the likelihood of landslides?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_24",
+    "question": "If a decrease in air pressure causes an increase in the boiling point of water, and water boils more easily at lower elevations, and higher elevations have lower air pressure, does water boil at a lower temperature at higher elevations?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_26",
+    "question": "If all birds have hollow bones and penguins are birds, but penguins cannot fly, do penguins have hollow bones?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
