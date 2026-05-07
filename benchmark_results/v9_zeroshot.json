@@ -1162,5 +1162,23 @@
     "question": "If a cube has a smaller cube-shaped hole in its center, and the large cube's side length is twice the side length of the small cube, is the volume of the remaining solid greater than the volume of the small cube?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "generated_11",
+    "question": "If using pesticides reduces local bee populations, and bees pollinate flowers, and flowers prevent soil erosion, would widespread pesticide use increase soil erosion?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_12",
+    "question": "If droughts cause soil erosion and soil erosion reduces water quality, and reduced water quality harms aquatic life, would a prolonged drought eventually damage aquatic ecosystems?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_13",
+    "question": "If some antibiotics harm beneficial bacteria, and beneficial bacteria strengthen the immune system, and a weakened immune system makes one more susceptible to illness, can taking antibiotics lead to more illnesses?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
