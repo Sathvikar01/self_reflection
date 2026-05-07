@@ -100,5 +100,23 @@
     "question": "Is glass a solid?",
     "answer": "yes",
     "correct": "no"
+  },
+  {
+    "id": "merged_17",
+    "question": "Do trees sleep?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_18",
+    "question": "Can you cry underwater?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_19",
+    "question": "Is a tomato a fruit?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
