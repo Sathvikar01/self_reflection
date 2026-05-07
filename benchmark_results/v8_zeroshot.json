@@ -952,5 +952,23 @@
     "question": "Can you see the American flag on the Moon from Earth?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_177",
+    "question": "Is coconut a nut?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_178",
+    "question": "If increasing temperature accelerates chemical reactions, and faster reactions produce more heat, and excessive heat melts sensors, would sensors in a hot environment with accelerated reactions eventually fail?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_179",
+    "question": "If learning requires attention, and attention decreases with fatigue, and experts have developed automatic skills that need less attention, would experts learn a new domain faster than novices despite fatigue?",
+    "answer": "no",
+    "correct": "yes"
   }
 ]
