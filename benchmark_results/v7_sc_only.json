@@ -1373,5 +1373,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_134",
+    "question": "Can a jellyfish kill a human?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_135",
+    "question": "Is sand made of fish poop?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_136",
+    "question": "Do reindeer have red noses?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
   }
 ]
