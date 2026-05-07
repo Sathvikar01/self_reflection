@@ -152,5 +152,38 @@
       "yes",
       "yes"
     ]
+  },
+  {
+    "id": "merged_14",
+    "question": "Can you boil water in a paper cup?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_15",
+    "question": "Can sound travel in space?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_16",
+    "question": "Is glass a solid?",
+    "answer": "yes",
+    "correct": "no",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
   }
 ]
