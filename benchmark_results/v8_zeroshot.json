@@ -64,5 +64,23 @@
     "question": "Can a fish drown?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_11",
+    "question": "Can humans see in complete darkness?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_12",
+    "question": "Do plants need oxygen?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_13",
+    "question": "Is lightning hotter than the sun?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
