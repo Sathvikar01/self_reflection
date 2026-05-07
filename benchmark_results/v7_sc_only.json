@@ -1274,5 +1274,38 @@
       "yes",
       "yes"
     ]
+  },
+  {
+    "id": "merged_124",
+    "question": "Do komodo dragons have venom?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_125",
+    "question": "Can you hear a meteor?",
+    "answer": "unknown",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_126",
+    "question": "Is Mount Everest the tallest mountain in the solar system?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
   }
 ]
