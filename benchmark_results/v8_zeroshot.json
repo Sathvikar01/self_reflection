@@ -700,5 +700,23 @@
     "question": "Do komodo dragons have venom?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_125",
+    "question": "Can you hear a meteor?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_126",
+    "question": "Is Mount Everest the tallest mountain in the solar system?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_127",
+    "question": "Is peanut a nut?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
