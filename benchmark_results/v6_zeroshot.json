@@ -1,0 +1,1322 @@
+[
+  {
+    "id": "merged_0",
+    "question": "Do hamsters provide food for any animals?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_1",
+    "question": "Could a person survive falling from the Empire State Building?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_2",
+    "question": "Is the sun brighter than a light bulb?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_3",
+    "question": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_4",
+    "question": "Does hydrogen power work without oxygen?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_5",
+    "question": "Can penguins fly?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_6",
+    "question": "Is Antarctica larger than Europe?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_7",
+    "question": "Can a person hold their breath for 30 minutes?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_8",
+    "question": "Is the moon made of cheese?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_9",
+    "question": "Do all birds lay eggs?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_10",
+    "question": "Can a fish drown?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_11",
+    "question": "Can humans see in complete darkness?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_12",
+    "question": "Do plants need oxygen?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_13",
+    "question": "Is lightning hotter than the sun?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_14",
+    "question": "Can you boil water in a paper cup?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_15",
+    "question": "Can sound travel in space?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_16",
+    "question": "Is glass a solid?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_17",
+    "question": "Do trees sleep?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_18",
+    "question": "Can you cry underwater?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_19",
+    "question": "Is a tomato a fruit?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_20",
+    "question": "Can you light a diamond on fire?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_21",
+    "question": "Do astronauts need to wear sunscreen?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_22",
+    "question": "Is water wet?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_23",
+    "question": "Can a human eat a poisonous mushroom and live?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_24",
+    "question": "Do whales drink water?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_25",
+    "question": "Is it possible to fold a piece of paper more than 7 times?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_26",
+    "question": "Does the Great Wall of China have a Starbucks?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_27",
+    "question": "Can a coin falling from the Empire State Building kill someone?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_28",
+    "question": "Is it true that we only use 10% of our brain?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_29",
+    "question": "Do bats drink blood?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_30",
+    "question": "Can an ostrich fly?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_31",
+    "question": "Is water a good conductor of electricity?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_32",
+    "question": "Do spiders have wings?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_33",
+    "question": "Can you see the Great Wall of China from space?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_34",
+    "question": "Is gold a good investment?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_35",
+    "question": "Do dolphins sleep?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_36",
+    "question": "Can you tickle yourself?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_37",
+    "question": "Is it safe to eat food that fell on the floor if picked up within 5 seconds?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_38",
+    "question": "Do elephants have teeth?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_39",
+    "question": "Can a person survive on just potatoes?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_40",
+    "question": "Is it possible to swallow your tongue?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_41",
+    "question": "Do giraffes have vocal cords?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_42",
+    "question": "Is it true that bulls hate the color red?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_43",
+    "question": "Can a house cat beat a dog in a fight?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_44",
+    "question": "Is yawning contagious?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_45",
+    "question": "Do magnets work in space?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_46",
+    "question": "Can you sneeze with your eyes open?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_47",
+    "question": "Is it dangerous to wake a sleepwalker?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_48",
+    "question": "Do octopuses have three hearts?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_49",
+    "question": "Can a person be allergic to water?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_50",
+    "question": "Is the Pacific Ocean larger than all land combined?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_51",
+    "question": "Do humans use more than 10% of their brain at once?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_52",
+    "question": "Can snakes hear music?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_53",
+    "question": "Is it possible to live without a brain?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_54",
+    "question": "Does hot water freeze faster than cold water?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_55",
+    "question": "Can you break glass with sound?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_56",
+    "question": "Is hot water heavier than cold water?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_57",
+    "question": "Do spiders have bones?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_58",
+    "question": "Is the Earth flat?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_59",
+    "question": "Do computers use binary because they can't count to 10?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_60",
+    "question": "Can you fold a piece of paper more than 7 times?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_61",
+    "question": "You have $100 and want to buy items costing $23, $18, and $45. Can you afford all three?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_66",
+    "question": "If a train leaves Station A at 9 AM traveling 60 mph toward Station B 180 miles away, and another train leaves Station B at 10 AM traveling 50 mph toward Station A, will they meet before 11 AM?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_67",
+    "question": "You have 3 jugs: 8-liter, 5-liter, and 3-liter. The 8-liter jug is full. Can you measure exactly 4 liters using these jugs?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_68",
+    "question": "In rock-paper-scissors, if your opponent has played rock 3 times in a row, should you play paper next?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_71",
+    "question": "In a guessing game, you need to find a number between 1-100. Is binary search the optimal strategy to minimize guesses?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_72",
+    "question": "You have 12 balls, one weighs differently. Can you find the odd ball using a balance scale only 3 times?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_73",
+    "question": "In chess, if you can take a queen with your knight but it would expose your king to check, should you take the queen?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_74",
+    "question": "You're in a card game. Should you discard a card that helps slightly now for a chance at a better card if the deck has mostly better cards?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_75",
+    "question": "If you flip a coin 10 times and get heads all 10 times, is the probability of heads on the 11th flip still 50%?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_76",
+    "question": "Do ostriches bury their heads in the sand?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_77",
+    "question": "Can bulls see the color red?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_78",
+    "question": "Does shaving hair make it grow back thicker?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_79",
+    "question": "Do camels store water in their humps?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_80",
+    "question": "Can you touch your elbow with your tongue?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_81",
+    "question": "Does goldfish memory last only 3 seconds?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_82",
+    "question": "Is the Great Wall of China the only man-made object visible from the moon?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_83",
+    "question": "Do bats drink human blood?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_84",
+    "question": "Can owls turn their heads 360 degrees?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_85",
+    "question": "Is coffee made from beans?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_86",
+    "question": "Do sharks get cancer?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_87",
+    "question": "Is penguin milk real?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_88",
+    "question": "Do black holes actually exist?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_89",
+    "question": "Can you stand on Saturn?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_90",
+    "question": "Do crocodiles cry?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_91",
+    "question": "Is the heart on the left side of the body?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_92",
+    "question": "Can mosquitoes transmit HIV?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_93",
+    "question": "Is Antarctica a desert?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_94",
+    "question": "Can lightning strike the same place twice?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_95",
+    "question": "Is salt the only rock humans eat?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_96",
+    "question": "Do dogs see in black and white?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_98",
+    "question": "Is Niagara Falls the largest waterfall in the world?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_99",
+    "question": "Do we use only 10% of our brain?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_100",
+    "question": "Can ice be hot?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_101",
+    "question": "Is honey bee vomit?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_102",
+    "question": "Do polar bears eat penguins?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_103",
+    "question": "Can you drive from North America to South America?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_104",
+    "question": "Is the Pacific Ocean shrinking?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_105",
+    "question": "Do snakes blink?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_106",
+    "question": "Can wood conduct electricity?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_107",
+    "question": "Is Alaska the easternmost US state?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_108",
+    "question": "Do sloths really move slowly?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_109",
+    "question": "Can a person survive in space without protection?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_110",
+    "question": "Is rhubarb a fruit?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_111",
+    "question": "Do elephants never forget?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_112",
+    "question": "Is blood blue inside the body?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_113",
+    "question": "Can volcanoes erupt in winter?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_114",
+    "question": "Do babies have more bones than adults?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_115",
+    "question": "Is bamboo a type of grass?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_116",
+    "question": "Can flamingos be blue?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_117",
+    "question": "Do cats always land on their feet?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_119",
+    "question": "Can a banana be radioactive?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_120",
+    "question": "Do earthworms have hearts?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_121",
+    "question": "Is there gravity on the International Space Station?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_122",
+    "question": "Can crows recognize human faces?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_123",
+    "question": "Is silk made by worms?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_124",
+    "question": "Do komodo dragons have venom?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_125",
+    "question": "Can you hear a meteor?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_126",
+    "question": "Is Mount Everest the tallest mountain in the solar system?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_127",
+    "question": "Is peanut a nut?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_128",
+    "question": "Can a hedgehog swim?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_129",
+    "question": "Is the South Pole colder than the North Pole?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_130",
+    "question": "Do whales have hair?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_131",
+    "question": "Can humans grow new brain cells?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_133",
+    "question": "Do fireflies glow in all seasons?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_134",
+    "question": "Can a jellyfish kill a human?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_135",
+    "question": "Is sand made of fish poop?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_136",
+    "question": "Do reindeer have red noses?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_139",
+    "question": "Do platypuses lay eggs?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_140",
+    "question": "Can a cockroach live without its head?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_141",
+    "question": "Is tapioca a type of rice?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_142",
+    "question": "Do alligators live in sewers?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_143",
+    "question": "Can a bullet fired vertically kill someone?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_144",
+    "question": "Is vanilla derived from orchids?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_145",
+    "question": "Do rabbits eat carrots naturally?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_146",
+    "question": "Can chameleons change to any color?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_147",
+    "question": "Is the Sahara the largest desert?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_148",
+    "question": "Do all snakes lay eggs?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_149",
+    "question": "Can you see stars during the day?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_151",
+    "question": "Do horseshoe crabs have blue blood?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_152",
+    "question": "Can paper be made waterproof?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_153",
+    "question": "Is a jiffy a real unit of time?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_155",
+    "question": "Can hot water freeze faster than cold water?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_156",
+    "question": "Is a peanut butter and jelly sandwich a complete meal?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_157",
+    "question": "Do kangaroos have pouches for carrying babies?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_158",
+    "question": "Can you microwave water past boiling?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_160",
+    "question": "Do all mammals have hair?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_161",
+    "question": "Can a spider be as large as a human?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_162",
+    "question": "Is there a permanent shadow on the Moon?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_164",
+    "question": "Can a person survive without a stomach?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_165",
+    "question": "Is Dubai a country?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_166",
+    "question": "Do pandas hibernate?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_167",
+    "question": "Can you be allergic to water?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_168",
+    "question": "Is the tongue a muscle?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_169",
+    "question": "Do all bees make honey?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_170",
+    "question": "Can trees communicate with each other?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_171",
+    "question": "Is Pluto a planet?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_175",
+    "question": "Do dolphins have names for each other?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_176",
+    "question": "Can you see the American flag on the Moon from Earth?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_177",
+    "question": "Is coconut a nut?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_178",
+    "question": "If increasing temperature accelerates chemical reactions, and faster reactions produce more heat, and excessive heat melts sensors, would sensors in a hot environment with accelerated reactions eventually fail?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_179",
+    "question": "If learning requires attention, and attention decreases with fatigue, and experts have developed automatic skills that need less attention, would experts learn a new domain faster than novices despite fatigue?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_180",
+    "question": "If event A precedes B, and B enables C, but D prevents C, and D occurs after A but before B's completion, can C ever occur?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_181",
+    "question": "If the alarm rings before snooze is pressed, snooze resets alarm for 9 minutes, and meeting starts in 10 minutes, would someone using snooze miss the meeting?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_182",
+    "question": "If all efficient processes reduce costs, and reducing costs is necessary for sustainability, and unsustainable practices harm the environment, would an efficient process that harms the environment be a contradiction?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_183",
+    "question": "If no mammals can fly, and bats are mammals, and flying squirrels are mammals, would it be correct to say that some mammals can fly?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_184",
+    "question": "If company A's revenue is 3x company B's, company B's revenue is 2x company C's, and company C's profit margin is 2x company A's, would company A necessarily have the highest profit?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_185",
+    "question": "If Alice cannot be in two places at once, and Bob must be where Alice is, and Carol cannot be where Bob is, and Alice is in Room X, could Carol be in Room X?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_186",
+    "question": "If the ground is wet, it rained recently, and the sprinkler was on timer, but it didn't rain according to weather records, what is the most likely explanation?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_187",
+    "question": "If Alice knows that Bob doesn't know the answer, and Alice knows the answer, and Bob asks Alice for help, would Alice be justified in giving the answer directly?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_188",
+    "question": "If a store offers buy 2 get 1 free, each item costs $5, and you need 7 items, would paying $25 be sufficient?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_189",
+    "question": "If completing task A unlocks task B, completing B unlocks C, but completing A consumes resources needed for D, and you must complete both C and D, should you start with A?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_190",
+    "question": "If the experiment had used twice the concentration, would the reaction time necessarily be halved?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_191",
+    "question": "If a surgeon must cut to heal, and cutting always causes pain, and healing requires cutting, is pain an unavoidable part of healing?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_192",
+    "question": "If it has rained 5 days in a row, and weather patterns show rain continues with 80% probability, is it guaranteed to rain tomorrow?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_193",
+    "question": "Does the reduction in nitrogen fertilizer use lead to a decrease in the nitrate levels in nearby water sources?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_194",
+    "question": "Does a decrease in the honey bee population lead to an increase in the cost of maintaining golf courses?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_195",
+    "question": "John deposited $1000 into his savings account on January 1st. On February 1st, he withdrew $200. Then, on March 1st, he deposited $150. If the interest rate for the savings account is 5% per year, compounded monthly, did John have more than $1000 in his account at the end of March?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_196",
+    "question": "Maria ordered a laptop online on Monday. The laptop was processed for shipping on the next business day and then took 3 business days to arrive at her office. However, since the office was closed on Friday due to a holiday, the delivery was made on the next available business day. If the week started on a Monday and there were no other holidays during the week, did Maria receive her laptop by the end of the week?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_197",
+    "question": "A company has two machines, A and B, that can produce 200 and 300 units per day, respectively. However, machine A is currently operating at 75% capacity due to maintenance issues. If the company receives an order for 550 units to be fulfilled in 2 days, can they fulfill the order using only these two machines?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_198",
+    "question": "There are three switches, but they are not labelled. Each switch corresponds to one of three light bulbs in a room. Each light bulb is either on or off. You can turn the switches on and off as many times as you want, but you can only enter the room one time to observe the bulbs. Can you figure out which switch corresponds to which light bulb?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_199",
+    "question": "Does the average income of employees at Company A exceed that of employees at Company B if the average income at Company A is $60,000 with a 10% annual increase and the average income at Company B is $65,000 with a 5% annual decrease?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_200",
+    "question": "Is the average GDP per capita of countries bordering the Mediterranean Sea higher than that of countries bordering the Red Sea?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_0",
+    "question": "If some fungi help trees absorb water and trees provide shade which lowers the temperature of the soil, and fungi thrive in lower temperatures, would the presence of trees benefit the growth of these fungi?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_1",
+    "question": "If trees grow faster in warmer temperatures and forests increase atmospheric oxygen through photosynthesis, and warmer temperatures accelerate decomposition of organic matter, would forests eventually increase atmospheric oxygen levels despite warmer temperatures?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_2",
+    "question": "If a country's economy relies heavily on oil exports and the global demand for oil decreases, would the country's economy likely contract?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_3",
+    "question": "If a higher concentration of greenhouse gases traps more heat and ice caps reflect sunlight, and the Arctic ice cap is melting at a faster rate than the Antarctic ice cap, would the Earth experience more heat if the Arctic ice cap completely melted?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_4",
+    "question": "If a black hole's gravity is so strong that nothing can escape, and light always travels in straight lines, can we see a black hole directly?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_5",
+    "question": "If the Earth's rotation causes day and night cycles, and longer days increase plant photosynthesis, and increased photosynthesis leads to more oxygen production, would a planet with a longer rotation period have less oxygen?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_6",
+    "question": "If some antibiotics promote yeast growth and certain birth control methods contain antibiotics, can birth control cause yeast infections?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_7",
+    "question": "If humans generally fear venomous creatures and the bombardier beetle can spray a caustic spray that can kill small animals, would humans likely fear the bombardier beetle?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_8",
+    "question": "If a random process has a Gaussian distribution and the mean of the process is 0, and the standard deviation is 1, would the probability of observing a value greater than 2 be less than 5%?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_9",
+    "question": "If a number is divisible by 3 and 5, and 10 is divisible by 5, and 9 is divisible by 3, is 10 + 9 divisible by 3 and 5?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_10",
+    "question": "If a cube has a smaller cube-shaped hole in its center, and the large cube's side length is twice the side length of the small cube, is the volume of the remaining solid greater than the volume of the small cube?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_11",
+    "question": "If using pesticides reduces local bee populations, and bees pollinate flowers, and flowers prevent soil erosion, would widespread pesticide use increase soil erosion?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_12",
+    "question": "If droughts cause soil erosion and soil erosion reduces water quality, and reduced water quality harms aquatic life, would a prolonged drought eventually damage aquatic ecosystems?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_13",
+    "question": "If some antibiotics harm beneficial bacteria, and beneficial bacteria strengthen the immune system, and a weakened immune system makes one more susceptible to illness, can taking antibiotics lead to more illnesses?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_14",
+    "question": "If all arachnids have eight legs and scorpions are arachnids, but they also have a tail that they use to sting, can scorpions move quickly without their tails?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_15",
+    "question": "If higher altitudes have lower air pressure, and lower air pressure reduces oxygen levels, and humans require oxygen to breathe, can people live at extremely high altitudes without supplemental oxygen?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_16",
+    "question": "If microplastics are ingested by zooplankton and zooplankton are consumed by fish, and humans eat fish that contain microplastics, can humans ingest microplastics through seafood consumption?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_17",
+    "question": "If bacteria can survive in extreme environments and some microorganisms on Earth can live in highly radioactive areas, would it be possible for certain microorganisms to survive on Mars?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_18",
+    "question": "If humans can only hear sounds with frequencies between 20 Hz and 20 kHz, and bats use echolocation calls at frequencies above 20 kHz, can humans hear the calls bats make to navigate?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_19",
+    "question": "If a coin is flipped 10 times and lands heads up every time, does the probability of it landing tails up on the 11th flip increase?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_20",
+    "question": "If a bakery sells 250 loaves of bread per day and each loaf costs $2, and the bakery operates 7 days a week, does it make more than $3500 per week?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_21",
+    "question": "If a snail is at the bottom of a 20-foot well, and each day it climbs up 3 feet, but at night, it slips back 2 feet, will the snail ever reach the top of the well?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_22",
+    "question": "If droughts cause soil to harden and hardened soil cannot absorb water, and roots of plants grow in soil, would plants in areas with frequent droughts have weak root systems?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_23",
+    "question": "If droughts cause plants to die and plant roots hold soil together, would a drought increase the likelihood of landslides?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_24",
+    "question": "If a decrease in air pressure causes an increase in the boiling point of water, and water boils more easily at lower elevations, and higher elevations have lower air pressure, does water boil at a lower temperature at higher elevations?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_26",
+    "question": "If all birds have hollow bones and penguins are birds, but penguins cannot fly, do penguins have hollow bones?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_27",
+    "question": "If humans can only hear sounds with frequencies between 20 Hz and 20 kHz, and bats use echolocation calls above 20 kHz to navigate, are humans able to hear the echolocation calls of bats?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_28",
+    "question": "If some fungi turn insects into 'zombies' by controlling their behavior and ants are social insects that rely on chemical signals to communicate, can fungi manipulate the chemical signals of ants to alter their behavior?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_29",
+    "question": "If humans generally fear things that can harm them and spiders are often feared, and most spiders are harmless, would the fear of spiders be an irrational fear?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_31",
+    "question": "If the sum of the interior angles of a polygon is given by the formula (n-2)*180, and a circle can be considered a polygon with an infinite number of sides, does the sum of the interior angles of a circle approach infinity?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_32",
+    "question": "If a cube has a hole drilled through its center, and the hole is large enough for a small sphere to pass through, can the sphere be placed inside the cube without touching the cube's interior surface?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_34",
+    "question": "If droughts cause soil to lose moisture, and moist soil is necessary for plant growth, and herbivores rely on plants for food, would a prolonged drought lead to the decline of herbivore populations?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_35",
+    "question": "If some living organisms can survive in extreme environments and tardigrades are examples of such organisms, and high salinity is an extreme environment, can tardigrades survive in highly saline environments?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_36",
+    "question": "If wood is a better thermal insulator than metal, and igloos are typically built with blocks of compacted snow, but Inuit people traditionally lit fires inside their igloos for warmth, would the igloos have melted from the inside?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_37",
+    "question": "If all viruses require a host to replicate and some viruses can survive for hours outside a host, can viruses replicate without a host?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_38",
+    "question": "If trees process carbon dioxide into oxygen through photosynthesis, and forests are composed of trees, and urban areas have fewer trees than forests, would urban areas have lower oxygen levels than forests?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_39",
+    "question": "If all deserts are formed by low rainfall, and Antarctica receives minimal precipitation, is Antarctica a desert?",
+    "answer": "yes",
+    "correct": "yes"
+  }
+]
