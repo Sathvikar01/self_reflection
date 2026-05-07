@@ -172,5 +172,23 @@
     "question": "Is it true that we only use 10% of our brain?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_29",
+    "question": "Do bats drink blood?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_30",
+    "question": "Can an ostrich fly?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_31",
+    "question": "Is water a good conductor of electricity?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
