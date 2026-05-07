@@ -1126,5 +1126,23 @@
     "question": "If a black hole's gravity is so strong that nothing can escape, and light always travels in straight lines, can we see a black hole directly?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "generated_5",
+    "question": "If the Earth's rotation causes day and night cycles, and longer days increase plant photosynthesis, and increased photosynthesis leads to more oxygen production, would a planet with a longer rotation period have less oxygen?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_6",
+    "question": "If some antibiotics promote yeast growth and certain birth control methods contain antibiotics, can birth control cause yeast infections?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_7",
+    "question": "If humans generally fear venomous creatures and the bombardier beetle can spray a caustic spray that can kill small animals, would humans likely fear the bombardier beetle?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
