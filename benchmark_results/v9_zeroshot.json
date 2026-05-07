@@ -1198,5 +1198,23 @@
     "question": "If microplastics are ingested by zooplankton and zooplankton are consumed by fish, and humans eat fish that contain microplastics, can humans ingest microplastics through seafood consumption?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "generated_17",
+    "question": "If bacteria can survive in extreme environments and some microorganisms on Earth can live in highly radioactive areas, would it be possible for certain microorganisms to survive on Mars?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_18",
+    "question": "If humans can only hear sounds with frequencies between 20 Hz and 20 kHz, and bats use echolocation calls at frequencies above 20 kHz, can humans hear the calls bats make to navigate?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_19",
+    "question": "If a coin is flipped 10 times and lands heads up every time, does the probability of it landing tails up on the 11th flip increase?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
