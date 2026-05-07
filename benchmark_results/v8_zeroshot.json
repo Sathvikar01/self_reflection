@@ -736,5 +736,23 @@
     "question": "Do whales have hair?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_131",
+    "question": "Can humans grow new brain cells?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_133",
+    "question": "Do fireflies glow in all seasons?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_134",
+    "question": "Can a jellyfish kill a human?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
