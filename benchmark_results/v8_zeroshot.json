@@ -682,5 +682,23 @@
     "question": "Is there gravity on the International Space Station?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_122",
+    "question": "Can crows recognize human faces?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_123",
+    "question": "Is silk made by worms?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_124",
+    "question": "Do komodo dragons have venom?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
