@@ -316,5 +316,23 @@
     "question": "Can snakes hear music?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_53",
+    "question": "Is it possible to live without a brain?",
+    "answer": "unknown",
+    "correct": "no"
+  },
+  {
+    "id": "merged_54",
+    "question": "Does hot water freeze faster than cold water?",
+    "answer": "unknown",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_55",
+    "question": "Can you break glass with sound?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
