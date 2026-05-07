@@ -60,6 +60,10 @@ def call_api(messages, max_tokens=150, temp=0.3, retries=8):
             print(f"\n      [Timeout retry {attempt+1}/{retries}]", flush=True)
             time.sleep(30)
             continue
+        except requests.exceptions.ConnectionError:
+            print(f"\n      [Connection reset retry {attempt+1}/{retries}]", flush=True)
+            time.sleep(30)
+            continue
     return None
 
 def extract_yesno(text):
