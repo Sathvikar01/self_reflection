@@ -1406,5 +1406,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_139",
+    "question": "Do platypuses lay eggs?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_140",
+    "question": "Can a cockroach live without its head?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "yes",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_141",
+    "question": "Is tapioca a type of rice?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
   }
 ]
