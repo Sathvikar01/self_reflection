@@ -515,5 +515,38 @@
       "unknown",
       "no"
     ]
+  },
+  {
+    "id": "merged_47",
+    "question": "Is it dangerous to wake a sleepwalker?",
+    "answer": "yes",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "yes",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_48",
+    "question": "Do octopuses have three hearts?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_49",
+    "question": "Can a person be allergic to water?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "yes",
+      "no"
+    ]
   }
 ]
