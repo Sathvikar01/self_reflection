@@ -812,5 +812,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_80",
+    "question": "Can you touch your elbow with your tongue?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_81",
+    "question": "Does goldfish memory last only 3 seconds?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_82",
+    "question": "Is the Great Wall of China the only man-made object visible from the moon?",
+    "answer": "unknown",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
   }
 ]
