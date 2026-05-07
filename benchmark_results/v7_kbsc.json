@@ -20,5 +20,38 @@
       "yes",
       "yes"
     ]
+  },
+  {
+    "id": "merged_2",
+    "question": "Is the sun brighter than a light bulb?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_3",
+    "question": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_4",
+    "question": "Does hydrogen power work without oxygen?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
   }
 ]
