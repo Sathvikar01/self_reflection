@@ -1276,5 +1276,23 @@
     "question": "If the sum of the interior angles of a polygon is given by the formula (n-2)*180, and a circle can be considered a polygon with an infinite number of sides, does the sum of the interior angles of a circle approach infinity?",
     "answer": "no",
     "correct": "yes"
+  },
+  {
+    "id": "generated_32",
+    "question": "If a cube has a hole drilled through its center, and the hole is large enough for a small sphere to pass through, can the sphere be placed inside the cube without touching the cube's interior surface?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_34",
+    "question": "If droughts cause soil to lose moisture, and moist soil is necessary for plant growth, and herbivores rely on plants for food, would a prolonged drought lead to the decline of herbivore populations?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_35",
+    "question": "If some living organisms can survive in extreme environments and tardigrades are examples of such organisms, and high salinity is an extreme environment, can tardigrades survive in highly saline environments?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
