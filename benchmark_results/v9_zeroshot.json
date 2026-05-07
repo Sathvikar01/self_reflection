@@ -712,5 +712,23 @@
     "question": "Is Mount Everest the tallest mountain in the solar system?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_127",
+    "question": "Is peanut a nut?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_128",
+    "question": "Can a hedgehog swim?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_129",
+    "question": "Is the South Pole colder than the North Pole?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
