@@ -592,5 +592,23 @@
     "question": "Do snakes blink?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_106",
+    "question": "Can wood conduct electricity?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_107",
+    "question": "Is Alaska the easternmost US state?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_108",
+    "question": "Do sloths really move slowly?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
