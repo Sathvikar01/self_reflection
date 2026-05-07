@@ -1340,5 +1340,38 @@
       "yes",
       "yes"
     ]
+  },
+  {
+    "id": "merged_130",
+    "question": "Do whales have hair?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "no",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_131",
+    "question": "Can humans grow new brain cells?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_133",
+    "question": "Do fireflies glow in all seasons?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
   }
 ]
