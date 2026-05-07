@@ -874,5 +874,23 @@
     "question": "Can you microwave water past boiling?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_160",
+    "question": "Do all mammals have hair?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_161",
+    "question": "Can a spider be as large as a human?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_162",
+    "question": "Is there a permanent shadow on the Moon?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
