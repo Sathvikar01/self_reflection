@@ -838,5 +838,23 @@
     "question": "Do horseshoe crabs have blue blood?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_152",
+    "question": "Can paper be made waterproof?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_153",
+    "question": "Is a jiffy a real unit of time?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_155",
+    "question": "Can hot water freeze faster than cold water?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
