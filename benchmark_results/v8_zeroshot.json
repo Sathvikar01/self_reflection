@@ -1270,5 +1270,11 @@
     "question": "If humans generally fear things that can harm them and spiders are often feared, and most spiders are harmless, would the fear of spiders be an irrational fear?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "generated_31",
+    "question": "If the sum of the interior angles of a polygon is given by the formula (n-2)*180, and a circle can be considered a polygon with an infinite number of sides, does the sum of the interior angles of a circle approach infinity?",
+    "answer": "no",
+    "correct": "yes"
   }
 ]
