@@ -1043,5 +1043,38 @@
       "unknown",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_102",
+    "question": "Do polar bears eat penguins?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_103",
+    "question": "Can you drive from North America to South America?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "yes",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_104",
+    "question": "Is the Pacific Ocean shrinking?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
   }
 ]
