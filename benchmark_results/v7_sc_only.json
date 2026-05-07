@@ -284,5 +284,38 @@
       "unknown",
       "no"
     ]
+  },
+  {
+    "id": "merged_26",
+    "question": "Does the Great Wall of China have a Starbucks?",
+    "answer": "yes",
+    "correct": "no",
+    "votes": [
+      "yes",
+      "no",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_27",
+    "question": "Can a coin falling from the Empire State Building kill someone?",
+    "answer": "unknown",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_28",
+    "question": "Is it true that we only use 10% of our brain?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "no",
+      "unknown"
+    ]
   }
 ]
