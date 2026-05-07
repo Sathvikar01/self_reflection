@@ -449,5 +449,38 @@
       "unknown",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_41",
+    "question": "Do giraffes have vocal cords?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "unknown",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_42",
+    "question": "Is it true that bulls hate the color red?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_43",
+    "question": "Can a house cat beat a dog in a fight?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
   }
 ]
