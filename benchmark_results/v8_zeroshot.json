@@ -1042,5 +1042,23 @@
     "question": "If a surgeon must cut to heal, and cutting always causes pain, and healing requires cutting, is pain an unavoidable part of healing?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_192",
+    "question": "If it has rained 5 days in a row, and weather patterns show rain continues with 80% probability, is it guaranteed to rain tomorrow?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_193",
+    "question": "Does the reduction in nitrogen fertilizer use lead to a decrease in the nitrate levels in nearby water sources?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_194",
+    "question": "Does a decrease in the honey bee population lead to an increase in the cost of maintaining golf courses?",
+    "answer": "no",
+    "correct": "yes"
   }
 ]
