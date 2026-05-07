@@ -370,5 +370,23 @@
     "question": "You have $100 and want to buy items costing $23, $18, and $45. Can you afford all three?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_66",
+    "question": "If a train leaves Station A at 9 AM traveling 60 mph toward Station B 180 miles away, and another train leaves Station B at 10 AM traveling 50 mph toward Station A, will they meet before 11 AM?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_67",
+    "question": "You have 3 jugs: 8-liter, 5-liter, and 3-liter. The 8-liter jug is full. Can you measure exactly 4 liters using these jugs?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_68",
+    "question": "In rock-paper-scissors, if your opponent has played rock 3 times in a row, should you play paper next?",
+    "answer": "no",
+    "correct": "yes"
   }
 ]
