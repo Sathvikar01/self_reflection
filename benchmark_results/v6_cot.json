@@ -10,5 +10,23 @@
     "question": "Could a person survive falling from the Empire State Building?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_2",
+    "question": "Is the sun brighter than a light bulb?",
+    "answer": "ye",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_3",
+    "question": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_4",
+    "question": "Does hydrogen power work without oxygen?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
