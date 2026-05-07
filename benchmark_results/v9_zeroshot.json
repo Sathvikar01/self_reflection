@@ -46,5 +46,23 @@
     "question": "Can a person hold their breath for 30 minutes?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_8",
+    "question": "Is the moon made of cheese?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_9",
+    "question": "Do all birds lay eggs?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_10",
+    "question": "Can a fish drown?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
