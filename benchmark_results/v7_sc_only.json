@@ -1505,5 +1505,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_148",
+    "question": "Do all snakes lay eggs?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_149",
+    "question": "Can you see stars during the day?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_151",
+    "question": "Do horseshoe crabs have blue blood?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
   }
 ]
