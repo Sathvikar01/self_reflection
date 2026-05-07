@@ -1072,5 +1072,23 @@
     "question": "Maria ordered a laptop online on Monday. The laptop was processed for shipping on the next business day and then took 3 business days to arrive at her office. However, since the office was closed on Friday due to a holiday, the delivery was made on the next available business day. If the week started on a Monday and there were no other holidays during the week, did Maria receive her laptop by the end of the week?",
     "answer": "yes",
     "correct": "no"
+  },
+  {
+    "id": "merged_197",
+    "question": "A company has two machines, A and B, that can produce 200 and 300 units per day, respectively. However, machine A is currently operating at 75% capacity due to maintenance issues. If the company receives an order for 550 units to be fulfilled in 2 days, can they fulfill the order using only these two machines?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_198",
+    "question": "There are three switches, but they are not labelled. Each switch corresponds to one of three light bulbs in a room. Each light bulb is either on or off. You can turn the switches on and off as many times as you want, but you can only enter the room one time to observe the bulbs. Can you figure out which switch corresponds to which light bulb?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_199",
+    "question": "Does the average income of employees at Company A exceed that of employees at Company B if the average income at Company A is $60,000 with a 10% annual increase and the average income at Company B is $65,000 with a 5% annual decrease?",
+    "answer": "no",
+    "correct": "yes"
   }
 ]
