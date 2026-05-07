@@ -934,5 +934,23 @@
     "question": "Can trees communicate with each other?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_171",
+    "question": "Is Pluto a planet?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_175",
+    "question": "Do dolphins have names for each other?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_176",
+    "question": "Can you see the American flag on the Moon from Earth?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
