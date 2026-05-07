@@ -970,5 +970,23 @@
     "question": "If learning requires attention, and attention decreases with fatigue, and experts have developed automatic skills that need less attention, would experts learn a new domain faster than novices despite fatigue?",
     "answer": "no",
     "correct": "yes"
+  },
+  {
+    "id": "merged_180",
+    "question": "If event A precedes B, and B enables C, but D prevents C, and D occurs after A but before B's completion, can C ever occur?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_181",
+    "question": "If the alarm rings before snooze is pressed, snooze resets alarm for 9 minutes, and meeting starts in 10 minutes, would someone using snooze miss the meeting?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_182",
+    "question": "If all efficient processes reduce costs, and reducing costs is necessary for sustainability, and unsustainable practices harm the environment, would an efficient process that harms the environment be a contradiction?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
