@@ -856,5 +856,23 @@
     "question": "Can hot water freeze faster than cold water?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_156",
+    "question": "Is a peanut butter and jelly sandwich a complete meal?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_157",
+    "question": "Do kangaroos have pouches for carrying babies?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_158",
+    "question": "Can you microwave water past boiling?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
