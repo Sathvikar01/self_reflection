@@ -460,5 +460,23 @@
     "question": "Is the Great Wall of China the only man-made object visible from the moon?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_83",
+    "question": "Do bats drink human blood?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_84",
+    "question": "Can owls turn their heads 360 degrees?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_85",
+    "question": "Is coffee made from beans?",
+    "answer": "yes",
+    "correct": "no"
   }
 ]
