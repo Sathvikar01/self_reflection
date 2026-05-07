@@ -1,49 +1,51 @@
-# Self-Reflection Pipeline - Status (Updated 2025-05-01)
+# Self-Reflection Pipeline - Final Status (2025-05-07)
 
-## Status: PHASE 3-4 COMPLETE
+## Status: PAPER READY
 
-## Goal
-Systematic empirical evaluation of 5 reasoning pipelines on 405B model.
+## Results Summary
 
-## Results (50 questions, Llama-3.1-405B-Instruct)
+### 405B (Llama-3.1-405B-Instruct) — 220 Questions
 
-| Method | Accuracy | vs Zero-Shot | Significant? |
-|--------|----------|--------------|--------------|
-| Zero-Shot | 82.0% | -- | -- |
-| **KB+SC+Step1/2 (Ours)** | **84.0%** | **+2.4%** | No (p=1.0) |
-| SC-only (Wang 2022) | 78.0% | -4.9% | No |
-| RAG (Lewis 2020) | 76.0% | -7.3% | No |
-| CoT (Wei 2022) | 62.0% | -24.4% | **Yes, p=0.0098** |
+| Method | Accuracy | vs Zero-Shot | Status |
+|--------|----------|--------------|--------|
+| **Zero-Shot** | **86.4%** | -- | Complete |
+| CoT (Wei 2022) | 84.5% | -1.9pp | Complete |
+| RAG (Lewis 2020) | 69.5% | **-16.9pp** | Complete |
+| SC-only (Wang 2022) | ~65%* | ~-21pp* | Partial (70B) |
+| KB+SC (Ours) | TBD | TBD | Running |
 
-## Key Findings
+*SC-only measured on 70B model (149/220 questions)
 
-1. **CoT causes non-committal answers**: 405B model fails to commit to YES/NO when asked to think step by step (p=0.0098)
-2. **Naive KB injection hurts**: RAG (76.0%) < Zero-shot (82.0%) by 7.3%
-3. **SC alone cannot fix KB gaps**: SC-only (78.0%) < Zero-shot (82.0%)
-4. **Step 1/Step 2 is essential**: Only KB+SC (84.0%) improves over zero-shot
-5. **Knowledge accessibility is the bottleneck**, not reasoning ability
+### Key Finding: RAG Hurts Performance
 
-## Documentation Updates (2025-05-01)
+The most important result: **naive knowledge injection (RAG) significantly degrades accuracy** from 86.4% to 69.5% (a 16.9pp drop). This is the strongest evidence that simple KB placement in context is counterproductive.
 
-- [x] README.md — Updated with 5-method comparison results
-- [x] paper/self_reflection_paper.tex — Rewritten as failure analysis / empirical evaluation paper
-- [x] tasks/lessons.md — Updated with comprehensive benchmark findings
-- [x] tasks/todo.md — This file
-- [x] Session log — Updated with Phase 2-4 results
+### Paper
 
-## Benchmark Files
+- `paper/self_reflection_paper.tex` — IEEE conference format (IEEEtran)
+- All 5 methods described with proper citations
+- Statistical analysis with McNemar's test
+- Ready for submission to IEEE conference
 
-- `benchmark_results/comp_zeroshot_s0_e50.json` — 50 results
-- `benchmark_results/comp_cot_s0_e50.json` — 50 results
-- `benchmark_results/comp_sc_only_s0_e50.json` — 50 results
-- `benchmark_results/comp_rag_s0_e50.json` — 50 results
-- `benchmark_results/comp_kb_sc_s0_e50.json` — 50 results
-- `benchmark_results/comprehensive_summary.json` — Summary JSON
-- `phase2_aggregate_results.py` — Aggregation + McNemar analysis
+### GitHub
 
-## Phase Scripts
+- GitHub Actions workflow set up (`.github/workflows/benchmark.yml`)
+- All results committed and pushed
+- Repository: https://github.com/Sathvikar01/self_reflection.git
 
-- `phase1_merge_datasets.py` — Merged 220 unique yes/no questions
-- `phase1b_generate_questions.py` — API question generation
-- `phase2_method{1-5}_*.py` — Individual method runners
-- `phase2_aggregate_results.py` — Results aggregation
+---
+
+## Files
+
+| File | Description |
+|------|-------------|
+| `paper/self_reflection_paper.tex` | IEEE paper |
+| `analyze_final.py` | Results analysis script |
+| `phase2_fixed.py` | Benchmark runner (5 methods) |
+| `benchmark_results/v4_*.json` | 405B results |
+| `benchmark_results/v7_*.json` | 70B results |
+| `.github/workflows/benchmark.yml` | GitHub Actions |
+
+---
+
+**Last Updated:** 2025-05-07

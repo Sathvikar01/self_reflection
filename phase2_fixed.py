@@ -8,7 +8,7 @@ import json, time, requests, re, sys, os, subprocess
 MODEL = "mistralai/mistral-large-3-675b-instruct-2512"
 API_KEY = "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"
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
-DELAY = 2.5
+DELAY = 1.5
 
 KB = """IMPORTANT KNOWLEDGE BASE:
 - Hot water CAN freeze faster than cold water (Mpemba effect)
