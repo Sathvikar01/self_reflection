@@ -1054,5 +1054,23 @@
     "question": "Does the reduction in nitrogen fertilizer use lead to a decrease in the nitrate levels in nearby water sources?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_194",
+    "question": "Does a decrease in the honey bee population lead to an increase in the cost of maintaining golf courses?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_195",
+    "question": "John deposited $1000 into his savings account on January 1st. On February 1st, he withdrew $200. Then, on March 1st, he deposited $150. If the interest rate for the savings account is 5% per year, compounded monthly, did John have more than $1000 in his account at the end of March?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_196",
+    "question": "Maria ordered a laptop online on Monday. The laptop was processed for shipping on the next business day and then took 3 business days to arrive at her office. However, since the office was closed on Friday due to a holiday, the delivery was made on the next available business day. If the week started on a Monday and there were no other holidays during the week, did Maria receive her laptop by the end of the week?",
+    "answer": "yes",
+    "correct": "no"
   }
 ]
