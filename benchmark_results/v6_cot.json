@@ -262,5 +262,23 @@
     "question": "Can a house cat beat a dog in a fight?",
     "answer": "no",
     "correct": "yes"
+  },
+  {
+    "id": "merged_44",
+    "question": "Is yawning contagious?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_45",
+    "question": "Do magnets work in space?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_46",
+    "question": "Can you sneeze with your eyes open?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
