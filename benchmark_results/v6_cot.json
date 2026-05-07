@@ -298,5 +298,23 @@
     "question": "Can a person be allergic to water?",
     "answer": "unknown",
     "correct": "yes"
+  },
+  {
+    "id": "merged_50",
+    "question": "Is the Pacific Ocean larger than all land combined?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_51",
+    "question": "Do humans use more than 10% of their brain at once?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_52",
+    "question": "Can snakes hear music?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
