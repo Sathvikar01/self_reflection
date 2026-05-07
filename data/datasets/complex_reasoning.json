@@ -1,446 +1,337 @@
 [
   {
-    "id": "complex_001",
-    "question": "If a company's revenue doubles each year for 3 years starting from $1 million, and then decreases by 50% in the fourth year, is the final revenue greater than the starting revenue?",
+    "id": "cc_001",
+    "question": "If increasing temperature accelerates chemical reactions, and faster reactions produce more heat, and excessive heat melts sensors, would sensors in a hot environment with accelerated reactions eventually fail?",
     "answer": "yes",
-    "complexity": "high",
-    "category": "multi_step_calculation",
-    "reasoning_steps": 5,
-    "facts": [
-      "Starting revenue: $1 million",
-      "Year 1: $1M x 2 = $2M",
-      "Year 2: $2M x 2 = $4M", 
-      "Year 3: $4M x 2 = $8M",
-      "Year 4: $8M x 0.5 = $4M",
-      "$4M > $1M, so yes"
-    ]
+    "reasoning_steps": [
+      "High temp accelerates reactions",
+      "Accelerated reactions produce more heat",
+      "More heat causes sensor melting",
+      "Therefore sensors will eventually fail"
+    ],
+    "category": "causal_chain",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_002",
-    "question": "If all Bloops are Razzies and all Razzies are Lazzies, and some Lazzies are Dazzies, can we conclude that some Bloops might be Dazzies?",
+    "id": "cc_002",
+    "question": "If learning requires attention, and attention decreases with fatigue, and experts have developed automatic skills that need less attention, would experts learn a new domain faster than novices despite fatigue?",
     "answer": "yes",
-    "complexity": "high",
-    "category": "syllogistic_reasoning",
-    "reasoning_steps": 4,
-    "facts": [
-      "All Bloops → Razzies",
-      "All Razzies → Lazzies",
-      "Therefore all Bloops → Lazzies (transitivity)",
-      "Some Lazzies → Dazzies",
-      "Since Bloops are Lazzies, and some Lazzies are Dazzies, some Bloops might be Dazzies"
-    ]
+    "reasoning_steps": [
+      "Learning requires attention",
+      "Attention decreases with fatigue",
+      "Experts have automatic skills needing less attention",
+      "Therefore experts can continue learning despite fatigue"
+    ],
+    "category": "causal_chain",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_003",
-    "question": "A train travels at 60 mph. A car starts 120 miles behind the train and travels at 90 mph. Will the car catch up to the train within 3 hours?",
-    "answer": "yes",
-    "complexity": "high",
-    "category": "relative_motion",
-    "reasoning_steps": 4,
-    "facts": [
-      "Relative speed: 90 - 60 = 30 mph",
-      "Distance to close: 120 miles",
-      "Time to catch up: 120 / 30 = 4 hours",
-      "4 hours > 3 hours, so no - wait, checking: Actually 4 > 3 so NOT within 3 hours"
-    ]
-  },
-  {
-    "id": "complex_003_corrected",
-    "question": "A train travels at 60 mph. A car starts 120 miles behind the train and travels at 90 mph. Will the car catch up to the train within 5 hours?",
-    "answer": "yes",
-    "complexity": "high",
-    "category": "relative_motion",
-    "reasoning_steps": 4,
-    "facts": [
-      "Relative speed: 90 - 60 = 30 mph",
-      "Distance to close: 120 miles",
-      "Time to catch up: 120 / 30 = 4 hours",
-      "4 hours < 5 hours, so yes, car catches up within 5 hours"
-    ]
-  },
-  {
-    "id": "complex_004",
-    "question": "If a population of bacteria doubles every hour and starts with 1 bacterium, will there be more than 1000 bacteria after 10 hours?",
-    "answer": "yes",
-    "complexity": "medium",
-    "category": "exponential_growth",
-    "reasoning_steps": 3,
-    "facts": [
-      "After n hours: 2^n bacteria",
-      "After 10 hours: 2^10 = 1024 bacteria",
-      "1024 > 1000, so yes"
-    ]
-  },
-  {
-    "id": "complex_005",
-    "question": "In a tournament with 16 teams where each match eliminates one team, if Team A has played 3 matches and won all, and Team B has played 2 matches and won all, can both teams still be in the tournament?",
+    "id": "ts_001",
+    "question": "If event A precedes B, and B enables C, but D prevents C, and D occurs after A but before B's completion, can C ever occur?",
     "answer": "no",
-    "complexity": "high",
-    "category": "tournament_logic",
-    "reasoning_steps": 5,
-    "facts": [
-      "16 teams, single elimination",
-      "Total matches needed: 15 (to eliminate 15 teams)",
-      "Team A won 3 matches → eliminated 3 opponents",
-      "Team B won 2 matches → eliminated 2 opponents",
-      "After 3 wins, Team A is in semi-finals (16→8→4→2)",
-      "After 2 wins, Team B is in quarter-finals",
-      "They would meet before Team B reaches Team A's level",
-      "So they cannot both still be undefeated in the tournament simultaneously"
-    ]
+    "reasoning_steps": [
+      "D occurs after A but before B completes",
+      "D prevents C from occurring",
+      "C requires B to complete first",
+      "Since D occurs before B completes, C cannot occur"
+    ],
+    "category": "temporal_sequence",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_006",
-    "question": "If you flip a fair coin 10 times and get heads all 10 times, is the probability of getting heads on the 11th flip still 50%?",
-    "answer": "yes",
-    "complexity": "medium",
-    "category": "probability_misconception",
-    "reasoning_steps": 3,
-    "facts": [
-      "Each coin flip is independent",
-      "Past outcomes don't affect future outcomes",
-      "Probability remains 50% regardless of previous results"
-    ]
-  },
-  {
-    "id": "complex_007",
-    "question": "A rectangular garden is 20 meters long and 15 meters wide. If you increase both dimensions by 10%, will the area increase by more than 20%?",
-    "answer": "yes",
-    "complexity": "medium",
-    "category": "percentage_calculation",
-    "reasoning_steps": 4,
-    "facts": [
-      "Original area: 20 x 15 = 300 sq meters",
-      "New length: 20 x 1.1 = 22 meters",
-      "New width: 15 x 1.1 = 16.5 meters",
-      "New area: 22 x 16.5 = 363 sq meters",
-      "Increase: (363 - 300) / 300 = 21%",
-      "21% > 20%, so yes"
-    ]
-  },
-  {
-    "id": "complex_008",
-    "question": "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?",
-    "answer": "5",
-    "complexity": "high",
-    "category": "rate_reasoning",
-    "reasoning_steps": 4,
-    "facts": [
-      "5 machines make 5 widgets in 5 minutes",
-      "This means 1 machine makes 1 widget in 5 minutes",
-      "100 machines working in parallel",
-      "Each makes 1 widget in 5 minutes",
-      "So 100 widgets in 5 minutes"
-    ]
-  },
-  {
-    "id": "complex_009",
-    "question": "A bat and ball cost $1.10 total. The bat costs $1 more than the ball. Is the ball's price $0.10?",
+    "id": "ts_002",
+    "question": "If the alarm rings before snooze is pressed, snooze resets alarm for 9 minutes, and meeting starts in 10 minutes, would someone using snooze miss the meeting?",
     "answer": "no",
-    "complexity": "medium",
-    "category": "algebra_intuition",
-    "reasoning_steps": 4,
-    "facts": [
-      "If ball = $0.10, bat = $1.10",
-      "Total = $0.10 + $1.10 = $1.20 ≠ $1.10",
-      "Correct: ball = x, bat = x + 1",
-      "x + (x + 1) = 1.10 → 2x = 0.10 → x = $0.05",
-      "Ball costs $0.05, not $0.10"
-    ]
+    "reasoning_steps": [
+      "Alarm rings, snooze pressed",
+      "Snooze resets for 9 minutes",
+      "Meeting starts in 10 minutes",
+      "9 min < 10 min, so alarm would wake before meeting"
+    ],
+    "category": "temporal_sequence",
+    "difficulty": "medium",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_010",
-    "question": "If you have a 3-gallon jug and a 5-gallon jug, can you measure exactly 4 gallons?",
+    "id": "cl_001",
+    "question": "If all efficient processes reduce costs, and reducing costs is necessary for sustainability, and unsustainable practices harm the environment, would an efficient process that harms the environment be a contradiction?",
     "answer": "yes",
-    "complexity": "high",
-    "category": "puzzle_solving",
-    "reasoning_steps": 6,
-    "facts": [
-      "Fill 5-gallon jug completely",
-      "Pour from 5-gallon into 3-gallon until full",
-      "5-gallon now has 2 gallons",
-      "Empty 3-gallon jug",
-      "Pour 2 gallons from 5-gallon into 3-gallon",
-      "Fill 5-gallon jug",
-      "Pour from 5-gallon into 3-gallon (needs 1 gallon to fill)",
-      "5-gallon now has exactly 4 gallons"
-    ]
+    "reasoning_steps": [
+      "All efficient processes reduce costs",
+      "Sustainability requires reduced costs",
+      "Unsustainable practices harm environment",
+      "Efficient + harmful = contradiction"
+    ],
+    "category": "conditional_logic",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_011",
-    "question": "In a room of 30 people, is it more likely than not that at least two people share the same birthday (assuming 365 days)?",
-    "answer": "yes",
-    "complexity": "high",
-    "category": "probability_counterintuitive",
-    "reasoning_steps": 4,
-    "facts": [
-      "Birthday paradox: calculate probability all birthdays are different",
-      "P(all different) = 365/365 × 364/365 × 363/365 × ... × 336/365",
-      "For 30 people: P(all different) ≈ 29.4%",
-      "P(at least one match) = 100% - 29.4% = 70.6%",
-      "70.6% > 50%, so yes, more likely than not"
-    ]
-  },
-  {
-    "id": "complex_012",
-    "question": "If a ladder is leaning against a wall at 45 degrees and the bottom is moved 1 foot away from the wall, will the top move down by exactly 1 foot?",
+    "id": "cl_002",
+    "question": "If no mammals can fly, and bats are mammals, and flying squirrels are mammals, would it be correct to say that some mammals can fly?",
     "answer": "no",
-    "complexity": "high",
-    "category": "geometry",
-    "reasoning_steps": 5,
-    "facts": [
-      "At 45 degrees, height = distance from wall (isosceles right triangle)",
-      "If ladder length = L, then height = L/√2 and distance = L/√2",
-      "Moving bottom by 1 foot: new distance = L/√2 + 1",
-      "New height = √(L² - (L/√2 + 1)²)",
-      "This is not simply height - 1",
-      "The relationship is not linear"
-    ]
+    "reasoning_steps": [
+      "Statement says no mammals can fly",
+      "Bats and flying squirrels are mammals",
+      "Despite names suggesting flight, they cannot truly fly",
+      "Therefore statement is incorrect"
+    ],
+    "category": "conditional_logic",
+    "difficulty": "medium",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_013",
-    "question": "If you travel halfway to work at 30 mph, how fast must you travel the rest of the way to average 60 mph for the entire trip?",
-    "answer": "impossible",
-    "complexity": "high",
-    "category": "harmonic_mean",
-    "reasoning_steps": 5,
-    "facts": [
-      "For average 60 mph over distance D",
-      "Total time must be D/60 hours",
-      "First half (D/2) at 30 mph: time = (D/2)/30 = D/60 hours",
-      "Already used all available time!",
-      "Impossible to average 60 mph - would need infinite speed"
-    ]
-  },
-  {
-    "id": "complex_014",
-    "question": "A snail climbs 3 feet up a wall during the day and slides down 2 feet at night. The wall is 10 feet tall. Will the snail reach the top in 8 days?",
-    "answer": "yes",
-    "complexity": "medium",
-    "category": "sequential_reasoning",
-    "reasoning_steps": 5,
-    "facts": [
-      "Day 1: climbs to 3, slides to 1 (net +1)",
-      "Day 2: climbs to 4, slides to 2 (net +1)",
-      "...",
-      "Day 7: climbs to 9, slides to 7",
-      "Day 8: climbs to 10 - reaches the top!",
-      "8 days is correct"
-    ]
-  },
-  {
-    "id": "complex_015",
-    "question": "If all houses in a street are numbered 1, 2, 3... and the sum of numbers on one side equals the sum on the other side, can there be exactly 10 houses?",
+    "id": "ci_001",
+    "question": "If company A's revenue is 3x company B's, company B's revenue is 2x company C's, and company C's profit margin is 2x company A's, would company A necessarily have the highest profit?",
     "answer": "no",
-    "complexity": "high",
-    "category": "number_theory",
-    "reasoning_steps": 4,
-    "facts": [
-      "Sum 1-10 = 55",
-      "For equal sums, each side must sum to 55/2 = 27.5",
-      "27.5 is not an integer",
-      "Impossible to have equal sums with 10 houses"
-    ]
+    "reasoning_steps": [
+      "A=6C in revenue",
+      "A margin = C margin / 2",
+      "Higher revenue doesn't mean higher profit with lower margin",
+      "A has lowest margin despite highest revenue"
+    ],
+    "category": "comparative_inference",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_016",
-    "question": "A clock shows 3:15. Is the angle between the hour and minute hands exactly 0 degrees?",
+    "id": "nr_001",
+    "question": "If Alice cannot be in two places at once, and Bob must be where Alice is, and Carol cannot be where Bob is, and Alice is in Room X, could Carol be in Room X?",
     "answer": "no",
-    "complexity": "medium",
-    "category": "clock_angle",
-    "reasoning_steps": 4,
-    "facts": [
-      "At 3:15, minute hand is at 90 degrees (pointing at 3)",
-      "Hour hand moves 30 degrees per hour",
-      "Plus 0.5 degrees per minute",
-      "At 3:15, hour hand is at 90 + 7.5 = 97.5 degrees",
-      "Angle difference: 7.5 degrees, not 0"
-    ]
+    "reasoning_steps": [
+      "Alice is in Room X",
+      "Bob must be where Alice is",
+      "So Bob is in Room X",
+      "Carol cannot be where Bob is",
+      "Therefore Carol cannot be in Room X"
+    ],
+    "category": "negation_reasoning",
+    "difficulty": "medium",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_017",
-    "question": "If you roll two fair dice, is the probability of getting a sum of 7 higher than the probability of getting a sum of 12?",
+    "id": "ar_001",
+    "question": "If the ground is wet, it rained recently, and the sprinkler was on timer, but it didn't rain according to weather records, what is the most likely explanation?",
     "answer": "yes",
-    "complexity": "medium",
-    "category": "probability",
-    "reasoning_steps": 3,
-    "facts": [
-      "Ways to get sum 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 ways",
-      "Ways to get sum 12: (6,6) = 1 way",
-      "6 ways > 1 way, so yes, probability of 7 is higher"
-    ]
+    "reasoning_steps": [
+      "Ground is wet (observation)",
+      "Either rain or sprinkler",
+      "Weather records say no rain",
+      "Therefore sprinkler is most likely"
+    ],
+    "category": "abductive_reasoning",
+    "difficulty": "medium",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_018",
-    "question": "In a race, you pass the person in second place. Are you now in first place?",
+    "id": "ck_001",
+    "question": "If Alice knows that Bob doesn't know the answer, and Alice knows the answer, and Bob asks Alice for help, would Alice be justified in giving the answer directly?",
     "answer": "no",
-    "complexity": "low",
-    "category": "logic_trap",
-    "reasoning_steps": 2,
-    "facts": [
-      "You pass the person in second place",
-      "You take their position: second place",
-      "First place is still ahead of you"
-    ]
+    "reasoning_steps": [
+      "Alice knows Bob doesn't know",
+      "Giving answer directly reveals Alice knew",
+      "This violates information asymmetry",
+      "Alice should not give answer directly"
+    ],
+    "category": "common_knowledge",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_019",
-    "question": "A farmer has 17 sheep. All but 9 die. How many sheep does the farmer have left?",
-    "answer": "9",
-    "complexity": "low",
-    "category": "language_parsing",
-    "reasoning_steps": 2,
-    "facts": [
-      "'All but 9 die' means 9 survive",
-      "The farmer has 9 sheep left"
-    ]
+    "id": "mw_001",
+    "question": "If a store offers buy 2 get 1 free, each item costs $5, and you need 7 items, would paying $25 be sufficient?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Buy 2 get 1 free = $10 for 3 items",
+      "2 sets = $20 for 6 items",
+      "Plus 1 more item = $5",
+      "Total $25 for 7 items"
+    ],
+    "category": "math_word_problem",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_020",
-    "question": "If a medicine is 99% effective and you test positive, is there a 99% chance you have the disease?",
+    "id": "sp_001",
+    "question": "If completing task A unlocks task B, completing B unlocks C, but completing A consumes resources needed for D, and you must complete both C and D, should you start with A?",
     "answer": "no",
-    "complexity": "high",
-    "category": "bayesian_reasoning",
-    "reasoning_steps": 5,
-    "facts": [
-      "Effectiveness usually means P(positive|disease) = 99%",
-      "But P(disease|positive) depends on base rate",
-      "If disease prevalence is 1%:",
-      "True positives: 99% of 1% = 0.99%",
-      "False positives: 1% of 99% = 0.99%",
-      "P(disease|positive) ≈ 50%, not 99%"
-    ]
+    "reasoning_steps": [
+      "A unlocks B which unlocks C",
+      "Starting A consumes resources for D",
+      "Must complete C and D",
+      "Alternative: Get resources for D first, then do A→B→C",
+      "So should NOT start with A"
+    ],
+    "category": "strategic_planning",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_021",
-    "question": "Is the sum of all integers from 1 to 100 greater than 5000?",
-    "answer": "yes",
-    "complexity": "medium",
-    "category": "arithmetic_series",
-    "reasoning_steps": 3,
-    "facts": [
-      "Sum = n(n+1)/2",
-      "Sum = 100(101)/2 = 5050",
-      "5050 > 5000, so yes"
-    ]
-  },
-  {
-    "id": "complex_022",
-    "question": "If a car's speed increases from 60 mph to 80 mph, does the stopping distance increase by exactly 33%?",
+    "id": "cf_001",
+    "question": "If the experiment had used twice the concentration, would the reaction time necessarily be halved?",
     "answer": "no",
-    "complexity": "high",
-    "category": "physics_intuition",
-    "reasoning_steps": 4,
-    "facts": [
-      "Kinetic energy = ½mv²",
-      "Energy ratio = (80)²/(60)² = 6400/3600 = 1.78",
-      "Stopping distance increases by 78%, not 33%",
-      "Energy scales with square of speed"
-    ]
+    "reasoning_steps": [
+      "Doubling concentration doesn't guarantee linear rate change",
+      "Reaction rates depend on multiple factors",
+      "Chemical kinetics follow non-linear models",
+      "Cannot assume linear relationship without more info"
+    ],
+    "category": "counterfactual",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_023",
-    "question": "In a family with two children, if at least one is a boy, is the probability that both are boys exactly 50%?",
+    "id": "an_001",
+    "question": "If a surgeon must cut to heal, and cutting always causes pain, and healing requires cutting, is pain an unavoidable part of healing?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Surgeon must cut to heal",
+      "Cutting causes pain",
+      "Healing requires cutting",
+      "Therefore healing always involves pain"
+    ],
+    "category": "analogy_reasoning",
+    "difficulty": "medium",
+    "type": "multi_step_reasoning"
+  },
+  {
+    "id": "pr_001",
+    "question": "If it has rained 5 days in a row, and weather patterns show rain continues with 80% probability, is it guaranteed to rain tomorrow?",
     "answer": "no",
-    "complexity": "high",
-    "category": "conditional_probability",
-    "reasoning_steps": 4,
-    "facts": [
-      "Possible combinations: BB, BG, GB, GG (4 equally likely)",
-      "Given at least one boy: BB, BG, GB (3 cases)",
-      "Both boys: 1 case out of 3",
-      "Probability = 1/3 ≈ 33%, not 50%"
-    ]
+    "reasoning_steps": [
+      "80% probability means 20% chance of no rain",
+      "Past 5 days don't affect tomorrow's probability",
+      "Probability is not certainty",
+      "Even 80% doesn't guarantee rain"
+    ],
+    "category": "probability_reasoning",
+    "difficulty": "medium",
+    "type": "multi_step_reasoning"
   },
   {
-    "id": "complex_024",
-    "question": "If you have a deck of 52 cards and draw 5 cards, is it more likely to get a flush (all same suit) than a straight (5 consecutive cards)?",
+    "id": "api_15",
+    "question": "Does the reduction in nitrogen fertilizer use lead to a decrease in the nitrate levels in nearby water sources?",
+    "answer": "yes",
+    "ground_truth": "yes",
+    "reasoning_steps": [
+      "Reduction in nitrogen fertilizer use leads to a decrease in nitrogen runoff from agricultural fields.",
+      "Nitrogen runoff from agricultural fields is a major contributor to nitrate levels in nearby water sources.",
+      "A decrease in nitrogen runoff from agricultural fields will result in lower nitrate levels in nearby water sources."
+    ],
+    "category": "causal_chain",
+    "difficulty": "medium",
+    "type": "multi_step_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "api_16",
+    "question": "Does a decrease in the honey bee population lead to an increase in the cost of maintaining golf courses?",
+    "answer": "yes",
+    "ground_truth": "yes",
+    "reasoning_steps": [
+      "Step 1: A decrease in the honey bee population leads to reduced pollination of plants and crops.",
+      "Step 2: Reduced pollination results in lower yields of seeds and plants, including grass seeds used for golf courses.",
+      "Step 3: With lower yields of grass seeds, golf course maintenance costs increase due to higher prices for seeds and more frequent reseeding."
+    ],
+    "category": "causal_chain",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "api_17",
+    "question": "John deposited $1000 into his savings account on January 1st. On February 1st, he withdrew $200. Then, on March 1st, he deposited $150. If the interest rate for the savings account is 5% per year, compounded monthly, did John have more than $1000 in his account at the end of March?",
     "answer": "no",
-    "complexity": "high",
-    "category": "poker_probability",
-    "reasoning_steps": 4,
-    "facts": [
-      "Number of possible flushes: 4 × C(13,5) = 4 × 1287 = 5,148",
-      "Number of possible straights: 10 × 4⁵ = 10,240 (minus straight flushes)",
-      "Actually: straights ≈ 10,200, flushes ≈ 5,100",
-      "Straights are approximately twice as likely as flushes"
-    ]
+    "ground_truth": "no",
+    "reasoning_steps": [
+      "Step 1: Calculate the balance after the withdrawal on February 1st. $1000 (initial deposit) - $200 (withdrawal) = $800.",
+      "Step 2: Calculate the balance after the deposit on March 1st. $800 (balance after withdrawal) + $150 (deposit) = $950.",
+      "Step 3: Calculate the interest earned from January to March. Since the interest rate is 5% per year, compounded monthly, we need to calculate the interest for each month. January: $1000 * 0.05/12 = $4.17, February: $800 * 0.05/12 = $3.33, March: $950 * 0.05/12 = $3.96. Total interest = $4.17 + $3.33 + $3.96 = $11.46.",
+      "Step 4: Add the interest earned to the balance after the deposit on March 1st. $950 (balance after deposit) + $11.46 (interest) = $961.46.",
+      "Step 5: Determine if John had more than $1000 in his account at the end of March. Since $961.46 is less than $1000, the answer is no."
+    ],
+    "category": "temporal_sequence",
+    "difficulty": "medium",
+    "type": "multi_step_reasoning",
+    "source": "api_generated"
   },
   {
-    "id": "complex_025",
-    "question": "A plane crashes on the border of two countries. In which country do they bury the survivors?",
-    "answer": "neither",
-    "complexity": "low",
-    "category": "logic_trap",
-    "reasoning_steps": 1,
-    "facts": [
-      "Survivors are not buried - they survived"
-    ]
+    "id": "api_18",
+    "question": "Maria ordered a laptop online on Monday. The laptop was processed for shipping on the next business day and then took 3 business days to arrive at her office. However, since the office was closed on Friday due to a holiday, the delivery was made on the next available business day. If the week started on a Monday and there were no other holidays during the week, did Maria receive her laptop by the end of the week?",
+    "answer": "no",
+    "ground_truth": "no",
+    "reasoning_steps": [
+      "Step 1: Determine the day the laptop was shipped. Since the laptop was ordered on Monday and processed for shipping on the next business day, the laptop was shipped on Tuesday.",
+      "Step 2: Calculate the expected arrival day of the laptop. Given that the shipping took 3 business days, the laptop would arrive on Friday (Tuesday + 3 business days).",
+      "Step 3: Consider the impact of the holiday on the delivery. Since the office was closed on Friday due to a holiday, the delivery would be made on the next available business day, which is Monday of the following week."
+    ],
+    "category": "temporal_sequence",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning",
+    "source": "api_generated"
   },
   {
-    "id": "complex_026",
-    "question": "If you're running a race and overtake the last person, are you in last place?",
-    "answer": "impossible",
-    "complexity": "low",
-    "category": "logic_trap",
-    "reasoning_steps": 2,
-    "facts": [
-      "You cannot overtake the last person",
-      "If you're behind the last person, they're not last - you are"
-    ]
-  },
-  {
-    "id": "complex_027",
-    "question": "Does 0.999... (repeating) equal exactly 1?",
+    "id": "api_19",
+    "question": "A company has two machines, A and B, that can produce 200 and 300 units per day, respectively. However, machine A is currently operating at 75% capacity due to maintenance issues. If the company receives an order for 550 units to be fulfilled in 2 days, can they fulfill the order using only these two machines?",
     "answer": "yes",
-    "complexity": "high",
-    "category": "mathematical_concept",
-    "reasoning_steps": 4,
-    "facts": [
-      "Let x = 0.999...",
-      "10x = 9.999...",
-      "10x - x = 9.999... - 0.999... = 9",
-      "9x = 9, so x = 1"
-    ]
+    "ground_truth": "yes",
+    "reasoning_steps": [
+      "Step 1: Calculate the current production capacity of machine A by multiplying its maximum capacity by the percentage of its current operating capacity. current_capacity_A = 200 * 0.75 = 150 units/day.",
+      "Step 2: Calculate the combined daily production capacity of both machines by adding the current capacity of machine A and the maximum capacity of machine B. combined_capacity = current_capacity_A + 300 = 150 + 300 = 450 units/day.",
+      "Step 3: Determine the total number of units needed to be produced to fulfill the order. total_units_needed = 550 units.",
+      "Step 4: Calculate the number of days required to produce the total units needed by dividing the total units by the combined daily capacity. days_required = total_units_needed / combined_capacity = 550 / 450 = 1.22 days, which is less than 2 days."
+    ],
+    "category": "conditional_logic",
+    "difficulty": "medium",
+    "type": "multi_step_reasoning",
+    "source": "api_generated"
   },
   {
-    "id": "complex_028",
-    "question": "If a pizza is cut into 8 equal slices and you eat 3 slices, have you eaten more than one-third of the pizza?",
+    "id": "api_20",
+    "question": "There are three switches, but they are not labelled. Each switch corresponds to one of three light bulbs in a room. Each light bulb is either on or off. You can turn the switches on and off as many times as you want, but you can only enter the room one time to observe the bulbs. Can you figure out which switch corresponds to which light bulb?",
     "answer": "yes",
-    "complexity": "low",
-    "category": "fraction_comparison",
-    "reasoning_steps": 2,
-    "facts": [
-      "3/8 = 0.375",
-      "1/3 ≈ 0.333",
-      "3/8 > 1/3, so yes"
-    ]
+    "ground_truth": "yes",
+    "reasoning_steps": [
+      "Step 1: Turn switch 1 to the 'on' position for 5 minutes, then turn it off. Turn switch 2 to the 'on' position and immediately enter the room. This will allow us to observe the bulbs in a specific state.",
+      "Step 2: Observe the bulbs in the room. If one of the bulbs is on, it must correspond to switch 2. If one of the bulbs is warm but off, it must correspond to switch 1. If one of the bulbs is off and cold, it must correspond to switch 3.",
+      "Step 3: Now that we know the state of each bulb, we can use the process of elimination to figure out the correct switch for each bulb. If the bulb corresponding to switch 1 is warm but off, we know that switch 1 was recently turned off, so it can't be the bulb that's currently on. Similarly, if the bulb corresponding to switch 2 is on, we know that switch 2 is the correct switch for that bulb."
+    ],
+    "category": "conditional_logic",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning",
+    "source": "api_generated"
   },
   {
-    "id": "complex_029",
-    "question": "In a group of 6 people, is it guaranteed that either 3 people all know each other or 3 people are all strangers to each other?",
+    "id": "api_21",
+    "question": "Does the average income of employees at Company A exceed that of employees at Company B if the average income at Company A is $60,000 with a 10% annual increase and the average income at Company B is $65,000 with a 5% annual decrease?",
     "answer": "yes",
-    "complexity": "high",
-    "category": "ramsey_theory",
-    "reasoning_steps": 5,
-    "facts": [
-      "This is Ramsey's theorem: R(3,3) = 6",
-      "Take any person A",
-      "A has 5 relationships, so at least 3 are same type (friends or strangers)",
-      "If A has 3 friends: either two are friends (triangle) or all strangers",
-      "Mathematical guarantee - Ramsey number R(3,3)=6"
-    ]
+    "ground_truth": "yes",
+    "reasoning_steps": [
+      "First, calculate the new average income at Company A after the 10% annual increase: $60,000 * 1.1 = $66,000.",
+      "Next, calculate the new average income at Company B after the 5% annual decrease: $65,000 * 0.95 = $61,750.",
+      "Finally, compare the new average incomes to determine if Company A's average income exceeds Company B's: $66,000 > $61,750."
+    ],
+    "category": "comparative_inference",
+    "difficulty": "medium",
+    "type": "multi_step_reasoning",
+    "source": "api_generated"
   },
   {
-    "id": "complex_030",
-    "question": "If you add 1 to a number and then subtract 1, is the result always the original number?",
+    "id": "api_22",
+    "question": "Is the average GDP per capita of countries bordering the Mediterranean Sea higher than that of countries bordering the Red Sea?",
     "answer": "yes",
-    "complexity": "low",
-    "category": "basic_arithmetic",
-    "reasoning_steps": 1,
-    "facts": [
-      "(n + 1) - 1 = n for any number n",
-      "Addition and subtraction are inverse operations"
-    ]
+    "ground_truth": "yes",
+    "reasoning_steps": [
+      "Step 1: Identify the countries bordering the Mediterranean Sea and the Red Sea. Countries bordering the Mediterranean Sea include France, Spain, Italy, and Greece, which are generally high-income countries. Countries bordering the Red Sea include Egypt, Sudan, and Eritrea, which are generally lower-income countries.",
+      "Step 2: Determine the GDP per capita of these countries. According to World Bank data, the GDP per capita of countries bordering the Mediterranean Sea is significantly higher than that of countries bordering the Red Sea. For example, France has a GDP per capita of over $40,000, while Egypt has a GDP per capita of around $2,500.",
+      "Step 3: Calculate the average GDP per capita of the countries bordering each sea. To do this, add up the GDP per capita of each country bordering the Mediterranean Sea and divide by the number of countries. Repeat the same process for the countries bordering the Red Sea. The average GDP per capita of countries bordering the Mediterranean Sea is likely to be higher than that of countries bordering the Red Sea."
+    ],
+    "category": "comparative_inference",
+    "difficulty": "hard",
+    "type": "multi_step_reasoning",
+    "source": "api_generated"
   }
 ]

@@ -1,9 +1,15 @@
-"""Pipeline with TRUE self-reflection - LLM critiques and corrects its own reasoning."""
+"""Pipeline with TRUE self-reflection - LLM critiques and corrects its own reasoning.
+
+FIXED: 
+- Uses XML-based prompts for better Llama 8B compatibility
+- Uses UnifiedAnswerExtractor for fair evaluation
+- Fixed brittle parsing with regex instead of simple splits
+"""
 
 import os
 import time
 import random
-import hashlib
+import re
 from typing import List, Dict, Optional, Any, Tuple
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -12,7 +18,7 @@ from loguru import logger
 
 from .base import BasePipeline, BaseResult, BasePipelineConfig
 from ..generator.nim_client import NVIDIANIMClient, GenerationConfig
-from evaluation.accuracy import AnswerExtractor
+from ..utils.unified_extractor import UnifiedAnswerExtractor
 
 
 @dataclass
@@ -211,9 +217,13 @@ Problem: {problem}
 Provide the first reasoning step. Focus on key facts or definitions."""
 
     def _self_reflect(self, problem: str, reasoning: List[str], iteration: int) -> Dict[str, Any]:
-        """Perform self-reflection on reasoning."""
-        reasoning_text = "\n".join(f"{i+1}. {s}" for i, s in enumerate(reasoning))
+        """Perform self-reflection on reasoning.
         
+        FIXED: Uses XML-based format for better Llama 8B compatibility.
+        Uses regex parsing instead of brittle splits.
+        """
+        reasoning_text = "\n".join(f"{i+1}. {s}" for i, s in enumerate(reasoning))
+
         prompt = f"""Review this reasoning for errors, flaws, or missing considerations.
 
 Problem: {problem}
@@ -227,28 +237,41 @@ Analyze each step critically:
 3. Are there edge cases not considered?
 4. Is the reasoning complete?
 
-If you find issues, list them clearly.
-Format:
-ISSUES:
-- [issue 1]
-- [issue 2]
-...
-ANALYSIS: [your analysis]"""
+Provide your analysis in this XML format:
+<reflection>
+<issues>
+<issue>[describe issue 1]</issue>
+<issue>[describe issue 2]</issue>
+</issues>
+<analysis>[your overall analysis]</analysis>
+</reflection>
+
+If no issues found, use: <reflection><issues></issues><analysis>No issues found</analysis></reflection>"""
 
         messages = [{"role": "user", "content": prompt}]
         config = GenerationConfig(
             model=self.generator_model,
             temperature=self.config.temperature_reflect,
-            max_tokens=512,
+            max_tokens=600,
         )
         response = self.generator.generate(messages, config)
-        
+
         issues = []
         analysis = response.text
-        if "ISSUES:" in analysis:
-            issues_section = analysis.split("ISSUES:")[1].split("ANALYSIS:")[0]
-            issues = [line.strip("- ").strip() for line in issues_section.strip().split("\n") if line.strip().startswith("-")]
         
+        # FIXED: Use regex to extract issues from XML tags
+        issues_match = re.search(r'<issues>(.*?)</issues>', response.text, re.DOTALL | re.IGNORECASE)
+        if issues_match:
+            issues_content = issues_match.group(1)
+            # Extract individual issues
+            issue_matches = re.findall(r'<issue>(.*?)</issue>', issues_content, re.DOTALL | re.IGNORECASE)
+            issues = [m.strip() for m in issue_matches if m.strip()]
+        
+        # Also try legacy format for backwards compatibility
+        if not issues and "ISSUES:" in analysis:
+            issues_section = analysis.split("ISSUES:")[1].split("ANALYSIS:")[0] if "ANALYSIS:" in analysis else analysis.split("ISSUES:")[1]
+            issues = [line.strip("- ").strip() for line in issues_section.strip().split("\n") if line.strip().startswith("-")]
+
         return {"reflection": response.text, "issues_found": issues}
 
     def _apply_correction(self, problem: str, reasoning: List[str], issues: List[str]) -> str:
@@ -336,7 +359,7 @@ Provide ONLY the final answer, concise and clear."""
             max_tokens=100,
         )
         response = self.generator.generate(messages, config)
-        return AnswerExtractor.extract(response.text, problem)
+        return UnifiedAnswerExtractor.extract(response.text, problem).answer
 
     def _classify_problem_type(self, problem: str) -> str:
         """Classify problem type for adaptive reflection."""
@@ -376,14 +399,8 @@ Provide ONLY the final answer, concise and clear."""
         return max(0.1, min(1.0, base_confidence - correction_penalty + 0.2))
 
     def _check_answer(self, answer: str, ground_truth: str) -> bool:
-        """Check if answer matches ground truth."""
-        answer_lower = answer.lower().strip()
-        truth_lower = ground_truth.lower().strip()
-        
-        if truth_lower in ["yes", "no"]:
-            return truth_lower in answer_lower
-        
-        return truth_lower in answer_lower or answer_lower == truth_lower
+        """Check if answer matches ground truth using unified extractor."""
+        return UnifiedAnswerExtractor.check_answer(answer, ground_truth)
 
     def save_results(self, filename: str = "self_reflection_results.json"):
         """Save all results."""

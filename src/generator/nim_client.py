@@ -45,7 +45,7 @@ class NVIDIANIMClient:
         self,
         api_key: Optional[str] = None,
         base_url: str = "https://integrate.api.nvidia.com/v1",
-        timeout: int = 60,
+        timeout: int = 600,
         max_retries: int = 3,
         retry_delay: float = 1.0,
         cache_enabled: bool = True,

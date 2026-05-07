@@ -12,6 +12,7 @@ import os
 import json
 import time
 import hashlib
+import re
 import statistics as stats_module
 from typing import List, Dict, Optional, Any, Tuple
 from dataclasses import dataclass, field, asdict
@@ -383,7 +384,8 @@ class AdaptiveReflectionPipeline:
         # Step 8: Check correctness
         correct = None
         if ground_truth:
-            correct = AnswerExtractor.check_answer(final_answer, ground_truth)
+            from utils.unified_extractor import UnifiedAnswerExtractor
+            correct = UnifiedAnswerExtractor.check_answer(final_answer, ground_truth)
         
         latency = time.time() - start_time
         total_tokens = self.generator.get_stats()["total_tokens"] - start_tokens
@@ -559,22 +561,26 @@ Provide the corrected reasoning as numbered steps."""
         problem: str,
         reasoning_chain: List[str]
     ) -> Tuple[str, float]:
-        """Generate answer with confidence score."""
-        reasoning_text = "\n".join(f"Step {i+1}: {s}" for i, s in enumerate(reasoning_chain))
+        """Generate answer with confidence score.
         
-        prompt = f"""Based on the reasoning, answer the question.
+        FIXED: No longer hardcoded to yes/no - now extracts actual answers.
+        """
+        reasoning_text = "\n".join(f"Step {i+1}: {s}" for i, s in enumerate(reasoning_chain))
+
+        prompt = f"""Based on the reasoning, provide a concise final answer.
 
 Problem: {problem}
 
 Reasoning:
 {reasoning_text}
 
-Provide:
-1. Your final answer (yes/no)
-2. Your confidence (0.0 to 1.0)
+Instructions:
+1. Provide ONLY the final answer (number, word, yes/no, or short phrase)
+2. Wrap your answer in <answer> tags like: <answer>42</answer>
+3. Also provide a confidence score (0.0 to 1.0)
 
 Format:
-Answer: [your answer]
+<answer>[your answer here]</answer>
 Confidence: [0.0-1.0]"""
 
         response = self.generator.generate(
@@ -582,27 +588,35 @@ Confidence: [0.0-1.0]"""
             config=GenerationConfig(
                 model=self.generator_model,
                 temperature=self.config.temperature_conclude,
-                max_tokens=100,
+                max_tokens=150,
             )
         )
+
+        text = response.text
+
+        # Import unified extractor
+        import sys
+        sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        from utils.unified_extractor import UnifiedAnswerExtractor
         
-        text = response.text.lower()
-        
-        # Extract answer
-        answer = "unknown"
-        if "yes" in text:
-            answer = "yes"
-        elif "no" in text:
-            answer = "no"
-        
+        # Extract answer using unified logic
+        extracted = UnifiedAnswerExtractor.extract(text)
+        answer = extracted.answer if extracted.answer else "unknown"
+
         # Extract confidence
         confidence = 0.5
-        import re
-        confidence_match = re.search(r"confidence[:\s]+([0-9.]+)", text)
+        confidence_match = re.search(r"confidence[:\s]+([0-9.]+)", text, re.IGNORECASE)
         if confidence_match:
-            confidence = float(confidence_match.group(1))
-            confidence = max(0.0, min(1.0, confidence))
+            try:
+                confidence = float(confidence_match.group(1))
+                confidence = max(0.0, min(1.0, confidence))
+            except ValueError:
+                confidence = 0.5
         
+        # Higher confidence if we used a reliable extraction method
+        if extracted.extraction_method in ["xml_tag", "boxed_latex"]:
+            confidence = max(confidence, 0.7)
+
         return answer, confidence
     
     def _cross_validate(
@@ -610,16 +624,22 @@ Confidence: [0.0-1.0]"""
         problem: str,
         reasoning_chain: List[str]
     ) -> Tuple[List[str], List[float]]:
-        """Perform cross-validation to detect overfitting."""
+        """Perform cross-validation to detect overfitting.
+        
+        FIXED: No longer hardcoded to yes/no.
+        """
         cv_answers = []
         cv_confidences = []
-        
+
         reasoning_text = "\n".join(f"Step {i+1}: {s}" for i, s in enumerate(reasoning_chain))
         
+        import sys
+        sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        from utils.unified_extractor import UnifiedAnswerExtractor
+
         for i in range(self.config.validation_samples):
-            # Vary temperature slightly for each sample
             temp = self.config.temperature_conclude + (i * 0.1)
-            
+
             prompt = f"""Answer the question based on the reasoning.
 
 Problem: {problem}
@@ -627,29 +647,30 @@ Problem: {problem}
 Reasoning:
 {reasoning_text}
 
-Answer (yes/no):"""
+Wrap your answer in <answer> tags: <answer>your answer</answer>"""
 
             response = self.generator.generate(
                 messages=[{"role": "user", "content": prompt}],
                 config=GenerationConfig(
                     model=self.generator_model,
                     temperature=temp,
-                    max_tokens=50,
+                    max_tokens=100,
                 )
             )
+
+            text = response.text
+            extracted = UnifiedAnswerExtractor.extract(text)
+            answer = extracted.answer if extracted.answer else "unknown"
+            cv_answers.append(answer)
             
-            text = response.text.lower()
-            
-            if "yes" in text:
-                cv_answers.append("yes")
-            elif "no" in text:
-                cv_answers.append("no")
+            # Confidence based on extraction method reliability
+            if extracted.extraction_method in ["xml_tag", "boxed_latex", "explicit_marker"]:
+                cv_confidences.append(0.85)
+            elif extracted.extraction_method in ["yes_no", "last_sentence"]:
+                cv_confidences.append(0.7)
             else:
-                cv_answers.append("unknown")
-            
-            # Estimate confidence from response
-            cv_confidences.append(0.7 if cv_answers[-1] != "unknown" else 0.3)
-        
+                cv_confidences.append(0.5)
+
         return cv_answers, cv_confidences
     
     def close(self):

@@ -1,0 +1,693 @@
+Dataset: 220 yes/no questions
+
+cot: resuming from 0, 220 remaining
+
+[1] merged_0: Do hamsters provide food for any animals?... (GT=yes)
+  cot: yes (GT=yes) [OK] [17s]
+
+[3] merged_1: Could a person survive falling from the Empire Sta... (GT=no)
+  cot: no (GT=no) [OK] [92s]
+
+[5] merged_2: Is the sun brighter than a light bulb?... (GT=yes)
+  cot: yes (GT=yes) [OK] [56s]
+
+[7] merged_3: Would a person born in 2000 be eligible to vote in... (GT=no)
+  cot: no (GT=no) [OK] [19s]
+
+[9] merged_4: Does hydrogen power work without oxygen?... (GT=no)
+  cot: no (GT=no) [OK] [92s]
+
+[11] merged_5: Can penguins fly?... (GT=no)
+  cot: no (GT=no) [OK] [16s]
+
+[13] merged_6: Is Antarctica larger than Europe?... (GT=yes)
+  cot: yes (GT=yes) [OK] [12s]
+
+[15] merged_7: Can a person hold their breath for 30 minutes?... (GT=no)
+  cot: no (GT=no) [OK] [18s]
+
+[17] merged_8: Is the moon made of cheese?... (GT=no)
+  cot: no (GT=no) [OK] [27s]
+
+[19] merged_9: Do all birds lay eggs?... (GT=yes)
+  cot: yes (GT=yes) [OK] [12s]
+
+[21] merged_10: Can a fish drown?... (GT=yes)
+  cot: no (GT=yes) [ERR] [18s]
+
+[23] merged_11: Can humans see in complete darkness?... (GT=no)
+  cot: no (GT=no) [OK] [13s]
+
+[25] merged_12: Do plants need oxygen?... (GT=yes)
+  cot: yes (GT=yes) [OK] [16s]
+
+[27] merged_13: Is lightning hotter than the sun?... (GT=yes)
+  cot: yes (GT=yes) [OK] [15s]
+
+[29] merged_14: Can you boil water in a paper cup?... (GT=yes)
+  cot: no (GT=yes) [ERR] [14s]
+
+[31] merged_15: Can sound travel in space?... (GT=no)
+  cot: no (GT=no) [OK] [13s]
+
+[33] merged_16: Is glass a solid?... (GT=no)
+  cot: yes (GT=no) [ERR] [11s]
+
+[35] merged_17: Do trees sleep?... (GT=no)
+  cot: no (GT=no) [OK] [23s]
+
+[37] merged_18: Can you cry underwater?... (GT=yes)
+  cot: no (GT=yes) [ERR] [36s]
+
+[39] merged_19: Is a tomato a fruit?... (GT=yes)
+  cot: yes (GT=yes) [OK] [9s]
+
+[41] merged_20: Can you light a diamond on fire?... (GT=yes)
+  cot: yes (GT=yes) [OK] [16s]
+
+[43] merged_21: Do astronauts need to wear sunscreen?... (GT=no)
+  cot: no (GT=no) [OK] [27s]
+
+[45] merged_22: Is water wet?... (GT=yes)
+
+      [Timeout retry 1/8]
+  cot: yes (GT=yes) [OK] [352s]
+
+[47] merged_23: Can a human eat a poisonous mushroom and live?... (GT=yes)
+  cot: yes (GT=yes) [OK] [16s]
+
+[49] merged_24: Do whales drink water?... (GT=no)
+  cot: no (GT=no) [OK] [17s]
+
+[51] merged_25: Is it possible to fold a piece of paper more than ... (GT=yes)
+  cot: yes (GT=yes) [OK] [13s]
+
+[53] merged_26: Does the Great Wall of China have a Starbucks?... (GT=no)
+  cot: yes (GT=no) [ERR] [12s]
+
+[55] merged_27: Can a coin falling from the Empire State Building ... (GT=no)
+  cot: no (GT=no) [OK] [31s]
+
+[57] merged_28: Is it true that we only use 10% of our brain?... (GT=no)
+  cot: no (GT=no) [OK] [50s]
+
+[59] merged_29: Do bats drink blood?... (GT=yes)
+  cot: yes (GT=yes) [OK] [32s]
+
+[61] merged_30: Can an ostrich fly?... (GT=no)
+  cot: no (GT=no) [OK] [11s]
+
+[63] merged_31: Is water a good conductor of electricity?... (GT=no)
+  cot: yes (GT=no) [ERR] [24s]
+
+[65] merged_32: Do spiders have wings?... (GT=no)
+  cot: no (GT=no) [OK] [10s]
+
+[67] merged_33: Can you see the Great Wall of China from space?... (GT=no)
+  cot: no (GT=no) [OK] [25s]
+
+[69] merged_34: Is gold a good investment?... (GT=yes)
+  cot: yes (GT=yes) [OK] [50s]
+
+[71] merged_35: Do dolphins sleep?... (GT=yes)
+  cot: yes (GT=yes) [OK] [22s]
+
+[73] merged_36: Can you tickle yourself?... (GT=no)
+
+      [Timeout retry 1/8]
+
+      [400 retry 2/8, wait 40s]
+
+      [400 retry 3/8, wait 60s]
+
+      [400 retry 4/8, wait 80s]
+
+      [400 retry 5/8, wait 100s]
+  cot: no (GT=no) [OK] [637s]
+
+[75] merged_37: Is it safe to eat food that fell on the floor if p... (GT=no)
+
+      [400 retry 1/8, wait 20s]
+  cot: no (GT=no) [OK] [65s]
+
+[77] merged_38: Do elephants have teeth?... (GT=yes)
+  cot: yes (GT=yes) [OK] [49s]
+
+[79] merged_39: Can a person survive on just potatoes?... (GT=yes)
+  cot: no (GT=yes) [ERR] [51s]
+
+[81] merged_40: Is it possible to swallow your tongue?... (GT=no)
+  cot: no (GT=no) [OK] [31s]
+
+[83] merged_41: Do giraffes have vocal cords?... (GT=yes)
+  cot: yes (GT=yes) [OK] [25s]
+
+[85] merged_42: Is it true that bulls hate the color red?... (GT=no)
+  cot: no (GT=no) [OK] [31s]
+
+[87] merged_43: Can a house cat beat a dog in a fight?... (GT=yes)
+  cot: no (GT=yes) [ERR] [58s]
+
+[89] merged_44: Is yawning contagious?... (GT=yes)
+  cot: yes (GT=yes) [OK] [32s]
+
+[91] merged_45: Do magnets work in space?... (GT=yes)
+  cot: yes (GT=yes) [OK] [31s]
+
+[93] merged_46: Can you sneeze with your eyes open?... (GT=yes)
+  cot: no (GT=yes) [ERR] [38s]
+
+[95] merged_47: Is it dangerous to wake a sleepwalker?... (GT=no)
+  cot: yes (GT=no) [ERR] [20s]
+
+[97] merged_48: Do octopuses have three hearts?... (GT=yes)
+  cot: yes (GT=yes) [OK] [42s]
+
+[99] merged_49: Can a person be allergic to water?... (GT=yes)
+  cot: no (GT=yes) [ERR] [69s]
+
+[101] merged_50: Is the Pacific Ocean larger than all land combined... (GT=yes)
+  cot: yes (GT=yes) [OK] [99s]
+
+[103] merged_51: Do humans use more than 10% of their brain at once... (GT=yes)
+  cot: yes (GT=yes) [OK] [30s]
+
+[105] merged_52: Can snakes hear music?... (GT=no)
+  cot: no (GT=no) [OK] [37s]
+
+[107] merged_53: Is it possible to live without a brain?... (GT=no)
+  cot: no (GT=no) [OK] [26s]
+
+[109] merged_54: Does hot water freeze faster than cold water?... (GT=yes)
+  cot: yes (GT=yes) [OK] [37s]
+
+[111] merged_55: Can you break glass with sound?... (GT=yes)
+  cot: yes (GT=yes) [OK] [27s]
+
+[113] merged_56: Is hot water heavier than cold water?... (GT=no)
+  cot: no (GT=no) [OK] [20s]
+
+[115] merged_57: Do spiders have bones?... (GT=no)
+  cot: no (GT=no) [OK] [42s]
+
+[117] merged_58: Is the Earth flat?... (GT=no)
+  cot: no (GT=no) [OK] [58s]
+
+[119] merged_59: Do computers use binary because they can't count t... (GT=no)
+  cot: no (GT=no) [OK] [73s]
+
+[121] merged_60: Can you fold a piece of paper more than 7 times?... (GT=yes)
+  cot: yes (GT=yes) [OK] [26s]
+
+[123] merged_61: You have $100 and want to buy items costing $23, $... (GT=yes)
+  cot: yes (GT=yes) [OK] [7s]
+
+[125] merged_66: If a train leaves Station A at 9 AM traveling 60 m... (GT=no)
+  cot: no (GT=no) [OK] [41s]
+
+[127] merged_67: You have 3 jugs: 8-liter, 5-liter, and 3-liter. Th... (GT=yes)
+  cot: yes (GT=yes) [OK] [77s]
+
+[129] merged_68: In rock-paper-scissors, if your opponent has playe... (GT=yes)
+  cot: yes (GT=yes) [OK] [49s]
+
+[131] merged_71: In a guessing game, you need to find a number betw... (GT=yes)
+  cot: ye (GT=yes) [ERR] [81s]
+
+[133] merged_72: You have 12 balls, one weighs differently. Can you... (GT=yes)
+  cot: yes (GT=yes) [OK] [26s]
+
+[135] merged_73: In chess, if you can take a queen with your knight... (GT=no)
+  cot: no (GT=no) [OK] [28s]
+
+[137] merged_74: You're in a card game. Should you discard a card t... (GT=yes)
+  cot: yes (GT=yes) [OK] [139s]
+
+[139] merged_75: If you flip a coin 10 times and get heads all 10 t... (GT=yes)
+  cot: yes (GT=yes) [OK] [89s]
+
+[141] merged_76: Do ostriches bury their heads in the sand?... (GT=no)
+
+      [Timeout retry 1/8]
+  cot: no (GT=no) [OK] [361s]
+
+[143] merged_77: Can bulls see the color red?... (GT=no)
+  cot: no (GT=no) [OK] [29s]
+
+[145] merged_78: Does shaving hair make it grow back thicker?... (GT=no)
+  cot: no (GT=no) [OK] [36s]
+
+[147] merged_79: Do camels store water in their humps?... (GT=no)
+  cot: no (GT=no) [OK] [34s]
+
+[149] merged_80: Can you touch your elbow with your tongue?... (GT=yes)
+  cot: no (GT=yes) [ERR] [70s]
+
+[151] merged_81: Does goldfish memory last only 3 seconds?... (GT=no)
+  cot: no (GT=no) [OK] [18s]
+
+[153] merged_82: Is the Great Wall of China the only man-made objec... (GT=no)
+  cot: no (GT=no) [OK] [20s]
+
+[155] merged_83: Do bats drink human blood?... (GT=no)
+  cot: yes (GT=no) [ERR] [34s]
+
+[157] merged_84: Can owls turn their heads 360 degrees?... (GT=no)
+  cot: no (GT=no) [OK] [21s]
+
+[159] merged_85: Is coffee made from beans?... (GT=no)
+  cot: yes (GT=no) [ERR] [64s]
+
+[161] merged_86: Do sharks get cancer?... (GT=yes)
+  cot: yes (GT=yes) [OK] [26s]
+
+[163] merged_87: Is penguin milk real?... (GT=yes)
+  cot: no (GT=yes) [ERR] [20s]
+
+[165] merged_88: Do black holes actually exist?... (GT=yes)
+  cot: yes (GT=yes) [OK] [78s]
+
+[167] merged_89: Can you stand on Saturn?... (GT=no)
+  cot: no (GT=no) [OK] [10s]
+
+[169] merged_90: Do crocodiles cry?... (GT=yes)
+  cot: no (GT=yes) [ERR] [45s]
+
+[171] merged_91: Is the heart on the left side of the body?... (GT=no)
+  cot: yes (GT=no) [ERR] [65s]
+
+[173] merged_92: Can mosquitoes transmit HIV?... (GT=no)
+  cot: no (GT=no) [OK] [29s]
+
+[175] merged_93: Is Antarctica a desert?... (GT=yes)
+  cot: yes (GT=yes) [OK] [32s]
+
+[177] merged_94: Can lightning strike the same place twice?... (GT=yes)
+  cot: yes (GT=yes) [OK] [33s]
+
+[179] merged_95: Is salt the only rock humans eat?... (GT=no)
+  cot: no (GT=no) [OK] [37s]
+
+[181] merged_96: Do dogs see in black and white?... (GT=no)
+  cot: no (GT=no) [OK] [64s]
+
+[183] merged_98: Is Niagara Falls the largest waterfall in the worl... (GT=no)
+  cot: no (GT=no) [OK] [17s]
+
+[185] merged_99: Do we use only 10% of our brain?... (GT=no)
+  cot: no (GT=no) [OK] [31s]
+
+[187] merged_100: Can ice be hot?... (GT=yes)
+  cot: no (GT=yes) [ERR] [25s]
+
+[189] merged_101: Is honey bee vomit?... (GT=no)
+  cot: yes (GT=no) [ERR] [29s]
+
+[191] merged_102: Do polar bears eat penguins?... (GT=no)
+
+      [Timeout retry 1/8]
+  cot: no (GT=no) [OK] [357s]
+
+[193] merged_103: Can you drive from North America to South America?... (GT=no)
+  cot: yes (GT=no) [ERR] [21s]
+
+[195] merged_104: Is the Pacific Ocean shrinking?... (GT=yes)
+  cot: yes (GT=yes) [OK] [137s]
+
+[197] merged_105: Do snakes blink?... (GT=no)
+  cot: no (GT=no) [OK] [19s]
+
+[199] merged_106: Can wood conduct electricity?... (GT=yes)
+  cot: no (GT=yes) [ERR] [41s]
+
+[201] merged_107: Is Alaska the easternmost US state?... (GT=yes)
+
+      [Timeout retry 1/8]
+  cot: no (GT=yes) [ERR] [351s]
+
+[203] merged_108: Do sloths really move slowly?... (GT=yes)
+  cot: yes (GT=yes) [OK] [23s]
+
+[205] merged_109: Can a person survive in space without protection?... (GT=no)
+  cot: no (GT=no) [OK] [37s]
+
+[207] merged_110: Is rhubarb a fruit?... (GT=no)
+  cot: no (GT=no) [OK] [16s]
+
+[209] merged_111: Do elephants never forget?... (GT=yes)
+  cot: yes (GT=yes) [OK] [62s]
+
+[211] merged_112: Is blood blue inside the body?... (GT=no)
+  cot: no (GT=no) [OK] [29s]
+
+[213] merged_113: Can volcanoes erupt in winter?... (GT=yes)
+  cot: yes (GT=yes) [OK] [19s]
+
+[215] merged_114: Do babies have more bones than adults?... (GT=yes)
+  cot: yes (GT=yes) [OK] [15s]
+
+[217] merged_115: Is bamboo a type of grass?... (GT=yes)
+  cot: yes (GT=yes) [OK] [27s]
+
+[219] merged_116: Can flamingos be blue?... (GT=no)
+  cot: no (GT=no) [OK] [13s]
+
+[221] merged_117: Do cats always land on their feet?... (GT=no)
+  cot: no (GT=no) [OK] [37s]
+
+[223] merged_119: Can a banana be radioactive?... (GT=yes)
+  cot: yes (GT=yes) [OK] [31s]
+
+[225] merged_120: Do earthworms have hearts?... (GT=yes)
+  cot: yes (GT=yes) [OK] [19s]
+
+[227] merged_121: Is there gravity on the International Space Statio... (GT=yes)
+  cot: yes (GT=yes) [OK] [25s]
+
+[229] merged_122: Can crows recognize human faces?... (GT=yes)
+  cot: yes (GT=yes) [OK] [22s]
+
+[231] merged_123: Is silk made by worms?... (GT=no)
+  cot: yes (GT=no) [ERR] [18s]
+
+[233] merged_124: Do komodo dragons have venom?... (GT=yes)
+  cot: yes (GT=yes) [OK] [133s]
+
+[235] merged_125: Can you hear a meteor?... (GT=no)
+  cot: yes (GT=no) [ERR] [61s]
+
+[237] merged_126: Is Mount Everest the tallest mountain in the solar... (GT=no)
+  cot: no (GT=no) [OK] [46s]
+
+[239] merged_127: Is peanut a nut?... (GT=no)
+  cot: no (GT=no) [OK] [39s]
+
+[241] merged_128: Can a hedgehog swim?... (GT=yes)
+  cot: yes (GT=yes) [OK] [23s]
+
+[243] merged_129: Is the South Pole colder than the North Pole?... (GT=yes)
+  cot: yes (GT=yes) [OK] [23s]
+
+[245] merged_130: Do whales have hair?... (GT=yes)
+  cot: no (GT=yes) [ERR] [21s]
+
+[247] merged_131: Can humans grow new brain cells?... (GT=yes)
+  cot: yes (GT=yes) [OK] [45s]
+
+[249] merged_133: Do fireflies glow in all seasons?... (GT=no)
+  cot: no (GT=no) [OK] [21s]
+
+[251] merged_134: Can a jellyfish kill a human?... (GT=yes)
+  cot: yes (GT=yes) [OK] [19s]
+
+[253] merged_135: Is sand made of fish poop?... (GT=yes)
+  cot: no (GT=yes) [ERR] [28s]
+
+[255] merged_136: Do reindeer have red noses?... (GT=no)
+  cot: no (GT=no) [OK] [17s]
+
+[257] merged_139: Do platypuses lay eggs?... (GT=yes)
+  cot: yes (GT=yes) [OK] [11s]
+
+[259] merged_140: Can a cockroach live without its head?... (GT=yes)
+  cot: yes (GT=yes) [OK] [37s]
+
+[261] merged_141: Is tapioca a type of rice?... (GT=no)
+  cot: no (GT=no) [OK] [22s]
+
+[263] merged_142: Do alligators live in sewers?... (GT=no)
+  cot: no (GT=no) [OK] [37s]
+
+[265] merged_143: Can a bullet fired vertically kill someone?... (GT=yes)
+  cot: yes (GT=yes) [OK] [43s]
+
+[267] merged_144: Is vanilla derived from orchids?... (GT=yes)
+  cot: yes (GT=yes) [OK] [23s]
+
+[269] merged_145: Do rabbits eat carrots naturally?... (GT=no)
+  cot: no (GT=no) [OK] [23s]
+
+[271] merged_146: Can chameleons change to any color?... (GT=no)
+  cot: no (GT=no) [OK] [38s]
+
+[273] merged_147: Is the Sahara the largest desert?... (GT=no)
+  cot: no (GT=no) [OK] [34s]
+
+[275] merged_148: Do all snakes lay eggs?... (GT=no)
+  cot: no (GT=no) [OK] [50s]
+
+[277] merged_149: Can you see stars during the day?... (GT=yes)
+  cot: ye (GT=yes) [ERR] [25s]
+
+[279] merged_151: Do horseshoe crabs have blue blood?... (GT=yes)
+  cot: yes (GT=yes) [OK] [28s]
+
+[281] merged_152: Can paper be made waterproof?... (GT=yes)
+  cot: yes (GT=yes) [OK] [32s]
+
+[283] merged_153: Is a jiffy a real unit of time?... (GT=yes)
+  cot: yes (GT=yes) [OK] [95s]
+
+[285] merged_155: Can hot water freeze faster than cold water?... (GT=yes)
+  cot: yes (GT=yes) [OK] [169s]
+
+[287] merged_156: Is a peanut butter and jelly sandwich a complete m... (GT=no)
+  cot: no (GT=no) [OK] [32s]
+
+[289] merged_157: Do kangaroos have pouches for carrying babies?... (GT=yes)
+  cot: yes (GT=yes) [OK] [33s]
+
+[291] merged_158: Can you microwave water past boiling?... (GT=yes)
+  cot: yes (GT=yes) [OK] [26s]
+
+[293] merged_160: Do all mammals have hair?... (GT=yes)
+  cot: yes (GT=yes) [OK] [11s]
+
+[295] merged_161: Can a spider be as large as a human?... (GT=no)
+  cot: no (GT=no) [OK] [26s]
+
+[297] merged_162: Is there a permanent shadow on the Moon?... (GT=yes)
+  cot: yes (GT=yes) [OK] [14s]
+
+[299] merged_164: Can a person survive without a stomach?... (GT=yes)
+  cot: yes (GT=yes) [OK] [46s]
+
+[301] merged_165: Is Dubai a country?... (GT=no)
+  cot: no (GT=no) [OK] [8s]
+
+[303] merged_166: Do pandas hibernate?... (GT=no)
+  cot: no (GT=no) [OK] [44s]
+
+[305] merged_167: Can you be allergic to water?... (GT=yes)
+  cot: no (GT=yes) [ERR] [36s]
+
+[307] merged_168: Is the tongue a muscle?... (GT=yes)
+  cot: yes (GT=yes) [OK] [23s]
+
+[309] merged_169: Do all bees make honey?... (GT=no)
+  cot: no (GT=no) [OK] [12s]
+
+[311] merged_170: Can trees communicate with each other?... (GT=yes)
+  cot: yes (GT=yes) [OK] [63s]
+
+[313] merged_171: Is Pluto a planet?... (GT=no)
+  cot: no (GT=no) [OK] [118s]
+
+[315] merged_175: Do dolphins have names for each other?... (GT=yes)
+  cot: yes (GT=yes) [OK] [28s]
+
+[317] merged_176: Can you see the American flag on the Moon from Ear... (GT=no)
+  cot: no (GT=no) [OK] [20s]
+
+[319] merged_177: Is coconut a nut?... (GT=no)
+  cot: no (GT=no) [OK] [22s]
+
+[321] merged_178: If increasing temperature accelerates chemical rea... (GT=yes)
+  cot: yes (GT=yes) [OK] [20s]
+
+[323] merged_179: If learning requires attention, and attention decr... (GT=yes)
+  cot: no (GT=yes) [ERR] [23s]
+
+[325] merged_180: If event A precedes B, and B enables C, but D prev... (GT=no)
+  cot: no (GT=no) [OK] [21s]
+
+[327] merged_181: If the alarm rings before snooze is pressed, snooz... (GT=no)
+  cot: yes (GT=no) [ERR] [20s]
+
+[329] merged_182: If all efficient processes reduce costs, and reduc... (GT=yes)
+  cot: yes (GT=yes) [OK] [20s]
+
+[331] merged_183: If no mammals can fly, and bats are mammals, and f... (GT=no)
+  cot: yes (GT=no) [ERR] [23s]
+
+[333] merged_184: If company A's revenue is 3x company B's, company ... (GT=no)
+  cot: no (GT=no) [OK] [12s]
+
+[335] merged_185: If Alice cannot be in two places at once, and Bob ... (GT=no)
+
+      [Timeout retry 1/8]
+  cot: no (GT=no) [OK] [345s]
+
+[337] merged_186: If the ground is wet, it rained recently, and the ... (GT=yes)
+  cot: yes (GT=yes) [OK] [10s]
+
+[339] merged_187: If Alice knows that Bob doesn't know the answer, a... (GT=no)
+  cot: yes (GT=no) [ERR] [26s]
+
+[341] merged_188: If a store offers buy 2 get 1 free, each item cost... (GT=yes)
+  cot: yes (GT=yes) [OK] [16s]
+
+[343] merged_189: If completing task A unlocks task B, completing B ... (GT=no)
+  cot: yes (GT=no) [ERR] [25s]
+
+[345] merged_190: If the experiment had used twice the concentration... (GT=no)
+  cot: no (GT=no) [OK] [71s]
+
+[347] merged_191: If a surgeon must cut to heal, and cutting always ... (GT=yes)
+  cot: yes (GT=yes) [OK] [13s]
+
+[349] merged_192: If it has rained 5 days in a row, and weather patt... (GT=no)
+  cot: no (GT=no) [OK] [13s]
+
+[351] merged_193: Does the reduction in nitrogen fertilizer use lead... (GT=yes)
+  cot: yes (GT=yes) [OK] [25s]
+
+[353] merged_194: Does a decrease in the honey bee population lead t... (GT=yes)
+  cot: yes (GT=yes) [OK] [34s]
+
+[355] merged_195: John deposited $1000 into his savings account on J... (GT=no)
+  cot: no (GT=no) [OK] [56s]
+
+[357] merged_196: Maria ordered a laptop online on Monday. The lapto... (GT=no)
+  cot: no (GT=no) [OK] [59s]
+
+[359] merged_197: A company has two machines, A and B, that can prod... (GT=yes)
+  cot: yes (GT=yes) [OK] [90s]
+
+[361] merged_198: There are three switches, but they are not labelle... (GT=yes)
+  cot: yes (GT=yes) [OK] [25s]
+
+[363] merged_199: Does the average income of employees at Company A ... (GT=yes)
+  cot: yes (GT=yes) [OK] [32s]
+
+[365] merged_200: Is the average GDP per capita of countries borderi... (GT=yes)
+  cot: yes (GT=yes) [OK] [146s]
+
+[367] generated_0: If some fungi help trees absorb water and trees pr... (GT=yes)
+  cot: yes (GT=yes) [OK] [26s]
+
+[369] generated_1: If trees grow faster in warmer temperatures and fo... (GT=yes)
+  cot: yes (GT=yes) [OK] [121s]
+
+[371] generated_2: If a country's economy relies heavily on oil expor... (GT=yes)
+  cot: yes (GT=yes) [OK] [41s]
+
+[373] generated_3: If a higher concentration of greenhouse gases trap... (GT=yes)
+  cot: yes (GT=yes) [OK] [45s]
+
+[375] generated_4: If a black hole's gravity is so strong that nothin... (GT=no)
+  cot: no (GT=no) [OK] [23s]
+
+[377] generated_5: If the Earth's rotation causes day and night cycle... (GT=yes)
+  cot: no (GT=yes) [ERR] [78s]
+
+[379] generated_6: If some antibiotics promote yeast growth and certa... (GT=yes)
+  cot: yes (GT=yes) [OK] [23s]
+
+[381] generated_7: If humans generally fear venomous creatures and th... (GT=yes)
+  cot: yes (GT=yes) [OK] [23s]
+
+[383] generated_8: If a random process has a Gaussian distribution an... (GT=yes)
+  cot: yes (GT=yes) [OK] [24s]
+
+[385] generated_9: If a number is divisible by 3 and 5, and 10 is div... (GT=no)
+  cot: no (GT=no) [OK] [13s]
+
+[387] generated_10: If a cube has a smaller cube-shaped hole in its ce... (GT=yes)
+
+      [Timeout retry 1/8]
+  cot: yes (GT=yes) [OK] [414s]
+
+[389] generated_11: If using pesticides reduces local bee populations,... (GT=yes)
+  cot: yes (GT=yes) [OK] [30s]
+
+[391] generated_12: If droughts cause soil erosion and soil erosion re... (GT=yes)
+  cot: yes (GT=yes) [OK] [47s]
+
+[393] generated_13: If some antibiotics harm beneficial bacteria, and ... (GT=yes)
+  cot: yes (GT=yes) [OK] [10s]
+
+[395] generated_14: If all arachnids have eight legs and scorpions are... (GT=yes)
+  cot: yes (GT=yes) [OK] [34s]
+
+[397] generated_15: If higher altitudes have lower air pressure, and l... (GT=no)
+  cot: no (GT=no) [OK] [11s]
+
+[399] generated_16: If microplastics are ingested by zooplankton and z... (GT=yes)
+  cot: yes (GT=yes) [OK] [40s]
+
+[401] generated_17: If bacteria can survive in extreme environments an... (GT=yes)
+  cot: yes (GT=yes) [OK] [112s]
+
+[403] generated_18: If humans can only hear sounds with frequencies be... (GT=no)
+  cot: no (GT=no) [OK] [17s]
+
+[405] generated_19: If a coin is flipped 10 times and lands heads up e... (GT=no)
+  cot: no (GT=no) [OK] [20s]
+
+[407] generated_20: If a bakery sells 250 loaves of bread per day and ... (GT=yes)
+  cot: no (GT=yes) [ERR] [22s]
+
+[409] generated_21: If a snail is at the bottom of a 20-foot well, and... (GT=yes)
+  cot: yes (GT=yes) [OK] [36s]
+
+[411] generated_22: If droughts cause soil to harden and hardened soil... (GT=yes)
+  cot: yes (GT=yes) [OK] [12s]
+
+[413] generated_23: If droughts cause plants to die and plant roots ho... (GT=yes)
+  cot: yes (GT=yes) [OK] [140s]
+
+[415] generated_24: If a decrease in air pressure causes an increase i... (GT=yes)
+  cot: yes (GT=yes) [OK] [12s]
+
+[417] generated_26: If all birds have hollow bones and penguins are bi... (GT=yes)
+  cot: yes (GT=yes) [OK] [14s]
+
+[419] generated_27: If humans can only hear sounds with frequencies be... (GT=no)
+  cot: no (GT=no) [OK] [15s]
+
+[421] generated_28: If some fungi turn insects into 'zombies' by contr... (GT=yes)
+  cot: yes (GT=yes) [OK] [15s]
+
+[423] generated_29: If humans generally fear things that can harm them... (GT=yes)
+
+      [502 retry 1/8, wait 20s]
+  cot: yes (GT=yes) [OK] [123s]
+
+[425] generated_31: If the sum of the interior angles of a polygon is ... (GT=yes)
+  cot: yes (GT=yes) [OK] [44s]
+
+[427] generated_32: If a cube has a hole drilled through its center, a... (GT=yes)
+  cot: no (GT=yes) [ERR] [26s]
+
+[429] generated_34: If droughts cause soil to lose moisture, and moist... (GT=yes)
+  cot: yes (GT=yes) [OK] [38s]
+
+[431] generated_35: If some living organisms can survive in extreme en... (GT=yes)
+  cot: yes (GT=yes) [OK] [48s]
+
+[433] generated_36: If wood is a better thermal insulator than metal, ... (GT=no)
+  cot: yes (GT=no) [ERR] [29s]
+
+[435] generated_37: If all viruses require a host to replicate and som... (GT=no)
+  cot: no (GT=no) [OK] [34s]
+
+[437] generated_38: If trees process carbon dioxide into oxygen throug... (GT=yes)
+  cot: yes (GT=yes) [OK] [52s]
+
+[439] generated_39: If all deserts are formed by low rainfall, and Ant... (GT=yes)
+  cot: yes (GT=yes) [OK] [30s]
+
+=== cot: 182/220 = 82.7% ===
+
+Total API calls: 233

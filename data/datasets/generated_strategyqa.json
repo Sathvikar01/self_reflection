@@ -1,0 +1,482 @@
+[
+  {
+    "id": "nim_1",
+    "question": "Can hot water freeze faster than cold water?",
+    "answer": "yes",
+    "explanation": "Under certain conditions the Mpemba effect can cause hot water to freeze more quickly than cold water.",
+    "category": "physics",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_2",
+    "question": "Is lightning hotter than the surface of the sun?",
+    "answer": "yes",
+    "explanation": "Lightning channels reach ~30,000 K, exceeding the Sun's photospheric temperature of ~5,800 K.",
+    "category": "physics",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_3",
+    "question": "Can a coin falling from a tall building kill someone?",
+    "answer": "no",
+    "explanation": "A coin reaches terminal velocity (~50 m/s) and carries insufficient kinetic energy to cause a fatal injury.",
+    "category": "physics",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_4",
+    "question": "Does the moon have a dark side?",
+    "answer": "no",
+    "explanation": "The Moon is tidally locked, but both sides receive sunlight; the far side is illuminated just like the near side.",
+    "category": "physics",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_5",
+    "question": "Can you hear sounds in space?",
+    "answer": "no",
+    "explanation": "Sound requires a medium to travel through, and space is a near‑vacuum that cannot transmit acoustic waves.",
+    "category": "physics",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_6",
+    "question": "Is glass a solid or a liquid?",
+    "answer": "no",
+    "explanation": "Glass has a definite shape and does not flow appreciably, characteristic of a solid.",
+    "category": "physics",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_7",
+    "question": "Can you sneeze with your eyes open?",
+    "answer": "no",
+    "explanation": "The sneeze reflex usually closes the eyelids to protect the eyes from expelled particles.",
+    "category": "physics",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_8",
+    "question": "Does the Great Wall of China visible from space?",
+    "answer": "no",
+    "explanation": "The wall is too narrow and blends with the terrain to be seen from orbit without magnification.",
+    "category": "physics",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_9",
+    "question": "Can sound break glass?",
+    "answer": "yes",
+    "explanation": "A loud sound at the resonant frequency can cause vibrations that exceed the glass's strength, shattering it.",
+    "category": "physics",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_10",
+    "question": "Do bullets from different calibers travel at different speeds?",
+    "answer": "yes",
+    "explanation": "Bullet velocity depends on caliber, propellant, and barrel design, so different calibers have different typical speeds.",
+    "category": "physics",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_11",
+    "question": "Can diamonds burn?",
+    "answer": "yes",
+    "explanation": "Diamonds are pure carbon and can undergo combustion in oxygen at temperatures around 700 °C, turning into carbon dioxide.",
+    "category": "chemistry",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_12",
+    "question": "Can gold be destroyed?",
+    "answer": "no",
+    "explanation": "Gold is chemically inert and cannot be destroyed by ordinary chemical reactions; it can only be melted, alloyed, or transmuted via nuclear processes.",
+    "category": "chemistry",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_13",
+    "question": "Is pure water a good conductor of electricity?",
+    "answer": "no",
+    "explanation": "Pure water lacks ions or free electrons, so its electrical conductivity is extremely low.",
+    "category": "chemistry",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_14",
+    "question": "Can water be boiled in a paper cup?",
+    "answer": "yes",
+    "explanation": "Water’s high heat capacity can temporarily protect a paper cup from ignition, allowing it to boil before the paper chars, especially when heated gently.",
+    "category": "chemistry",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_15",
+    "question": "Does the 5-second rule work?",
+    "answer": "no",
+    "explanation": "Bacterial transfer to food occurs almost instantly; the 5‑second rule is a myth with no scientific basis.",
+    "category": "chemistry",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_16",
+    "question": "Are all poisonous mushrooms deadly?",
+    "answer": "no",
+    "explanation": "Many poisonous mushrooms cause only mild to moderate toxicity, not necessarily fatal outcomes.",
+    "category": "chemistry",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_17",
+    "question": "Can humans survive on just potatoes and dairy?",
+    "answer": "no",
+    "explanation": "Such a diet lacks essential nutrients like vitamins, fiber, and certain minerals, making long‑term survival impossible.",
+    "category": "chemistry",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_18",
+    "question": "Is hydrogen peroxide dangerous?",
+    "answer": "yes",
+    "explanation": "Concentrated hydrogen peroxide is a strong oxidizer that can cause burns and toxicity, posing health risks.",
+    "category": "chemistry",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_19",
+    "question": "Can vinegar clean everything?",
+    "answer": "no",
+    "explanation": "Vinegar is effective on some surfaces but not on all materials and may not remove all types of stains or pathogens.",
+    "category": "chemistry",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_20",
+    "question": "Does alcohol evaporate faster than water?",
+    "answer": "yes",
+    "explanation": "Ethanol has a higher vapor pressure and lower boiling point than water, causing it to evaporate more quickly.",
+    "category": "chemistry",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_21",
+    "question": "Do bats drink blood?",
+    "answer": "no",
+    "explanation": "Only three species of vampire bats feed on blood; the vast majority of bat species are insectivores or frugivores.",
+    "category": "biology",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_22",
+    "question": "Can fish drown?",
+    "answer": "no",
+    "explanation": "Fish extract oxygen through gills; they can suffocate if water is low in dissolved oxygen, but they do not drown in the way air‑breathing animals do.",
+    "category": "biology",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_23",
+    "question": "Do humans use only 10% of their brain?",
+    "answer": "no",
+    "explanation": "Neuroimaging shows that virtually all brain regions have metabolic activity, and different tasks activate different networks throughout the brain.",
+    "category": "biology",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_24",
+    "question": "Can cats beat dogs in a fight?",
+    "answer": "no",
+    "explanation": "Dogs are generally larger and have stronger bite forces, giving them a physical advantage over cats in direct confrontations.",
+    "category": "biology",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_25",
+    "question": "Do spiders have wings?",
+    "answer": "no",
+    "explanation": "Spiders are arachnids and lack wings; they move using eight legs, though some can glide using silk threads.",
+    "category": "biology",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_26",
+    "question": "Can ostriches fly?",
+    "answer": "no",
+    "explanation": "Ostriches are large flightless birds; their wings are too small and their body mass too great to generate lift for sustained flight.",
+    "category": "biology",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_27",
+    "question": "Do ants sleep?",
+    "answer": "yes",
+    "explanation": "Ants exhibit rest cycles with reduced activity and lowered metabolic rates, which are functionally similar to sleep, though they do not have a consolidated sleep period like mammals.",
+    "category": "biology",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_28",
+    "question": "Can sharks get cancer?",
+    "answer": "yes",
+    "explanation": "Sharks can develop tumors; documented cases of cancer have been found in various shark species, showing they are not immune to the disease.",
+    "category": "biology",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_29",
+    "question": "Do dolphins sleep?",
+    "answer": "yes",
+    "explanation": "Dolphins practice unihemispheric slow-wave sleep, allowing one brain hemisphere to rest while the other remains awake to surface for air and maintain vigilance.",
+    "category": "biology",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_30",
+    "question": "Can plants survive without oxygen?",
+    "answer": "no",
+    "explanation": "Plants require oxygen for cellular respiration; while they can tolerate low‑oxygen conditions, complete absence of oxygen leads to cellular failure and death.",
+    "category": "biology",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_31",
+    "question": "Is Antarctica larger than Europe?",
+    "answer": "yes",
+    "explanation": "Antarctica's ice-covered area (~14 million km²) exceeds Europe's land area (~10 million km²).",
+    "category": "earth_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_32",
+    "question": "Is the Pacific Ocean larger than all land combined?",
+    "answer": "yes",
+    "explanation": "The Pacific Ocean covers about 165 million km², which is greater than the total land area (~149 million km²).",
+    "category": "earth_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_33",
+    "question": "Are there more stars in the universe than grains of sand on Earth?",
+    "answer": "yes",
+    "explanation": "Current estimates place the number of stars at ~10²²–10²⁴, far surpassing the ~10¹⁸–10¹⁹ sand grains on Earth.",
+    "category": "earth_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_34",
+    "question": "Can it be too cold to snow?",
+    "answer": "yes",
+    "explanation": "Snow requires moisture and temperatures near freezing, so extremely cold, dry air often lacks the necessary water vapor.",
+    "category": "earth_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_35",
+    "question": "Does lightning always come before thunder?",
+    "answer": "yes",
+    "explanation": "Lightning creates the electrical discharge, and thunder is the resulting sound wave that arrives after the lightning.",
+    "category": "earth_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_36",
+    "question": "Is the Sahara desert the largest desert in the world?",
+    "answer": "no",
+    "explanation": "The Sahara is the largest hot desert, but the Antarctic desert covers a larger area (~14 million km² vs ~9 million km²).",
+    "category": "earth_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_37",
+    "question": "Can a person be allergic to water?",
+    "answer": "no",
+    "explanation": "Allergic reactions require an immune response to a protein or chemical; water molecules themselves are not allergenic, though a rare condition called aquagenic urticaria can cause skin reactions.",
+    "category": "earth_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_38",
+    "question": "Do trees sleep?",
+    "answer": "no",
+    "explanation": "Trees lack nervous systems and do not sleep; they exhibit circadian rhythms and physiological changes but not sleep as animals do.",
+    "category": "earth_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_39",
+    "question": "Is Mount Everest the tallest mountain?",
+    "answer": "yes",
+    "explanation": "Everest is the highest mountain above sea level (8,848 m); however, Mauna Kea is taller when measured from its base on the ocean floor.",
+    "category": "earth_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_40",
+    "question": "Can you see the Great Wall of China from space?",
+    "answer": "no",
+    "explanation": "The Great Wall is too narrow and blends with the terrain; it is not distinguishable to the naked eye from low Earth orbit.",
+    "category": "earth_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_41",
+    "question": "Is yawning contagious?",
+    "answer": "yes",
+    "explanation": "Contagious yawning is linked to social bonding and mirror‑neuron activity, causing people to yawn when they see others yawn.",
+    "category": "everyday_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_42",
+    "question": "Can you swallow your tongue?",
+    "answer": "no",
+    "explanation": "The tongue is anchored by the frenulum and cannot be displaced far enough to block the airway, so it cannot be swallowed.",
+    "category": "everyday_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_43",
+    "question": "Do Bulls hate the color red?",
+    "answer": "no",
+    "explanation": "Bulls are dichromatic and cannot distinguish red from other colors; they react to the motion of the cape, not its hue.",
+    "category": "everyday_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_44",
+    "question": "Is it dangerous to wake a sleepwalker?",
+    "answer": "no",
+    "explanation": "Waking a sleepwalker is generally safe; the main risk is confusion or minor injury, not physiological danger.",
+    "category": "everyday_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_45",
+    "question": "Do humans have more than 5 senses?",
+    "answer": "yes",
+    "explanation": "Beyond the traditional five, humans possess additional senses such as proprioception, equilibrioception, and thermoreception.",
+    "category": "everyday_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_46",
+    "question": "Can you fold a paper more than 7 times?",
+    "answer": "no",
+    "explanation": "Folding doubles the thickness each time, so after a few folds the paper becomes too thick and too small to continue; practical limits make more than seven folds impossible with ordinary paper.",
+    "category": "everyday_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_47",
+    "question": "Is the sun brighter than a light bulb?",
+    "answer": "yes",
+    "explanation": "The Sun emits ~3.8×10^26 W of power, far exceeding the few watts from a typical incandescent bulb, making it vastly brighter.",
+    "category": "everyday_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_48",
+    "question": "Do giraffes have vocal cords?",
+    "answer": "yes",
+    "explanation": "Giraffes possess a larynx and vocal cords that enable them to produce low-frequency hums and other vocalizations.",
+    "category": "everyday_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_49",
+    "question": "Can you tickle yourself?",
+    "answer": "no",
+    "explanation": "The brain predicts self‑generated touch and suppresses the tickle sensation, so self‑tickling is ineffective.",
+    "category": "everyday_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_50",
+    "question": "Is water wet?",
+    "answer": "no",
+    "explanation": "Wetness describes the sensation produced when a liquid contacts a surface; water is the liquid that makes other things wet, not wet itself.",
+    "category": "everyday_science",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_51",
+    "question": "Can a person born in 2000 vote in a 2016 US election?",
+    "answer": "no",
+    "explanation": "To vote in a U.S. presidential election you must be at least 18 years old on Election Day. Someone born in 2000 would be 16 (or turning 17 later in 2016), which is below the legal voting age.",
+    "category": "commonsense",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_52",
+    "question": "Is a hamburger a sandwich?",
+    "answer": "yes",
+    "explanation": "A hamburger consists of a patty of meat (or other protein) placed between two slices of bread, which meets the definition of a sandwich—a filling enclosed by bread.",
+    "category": "commonsense",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_53",
+    "question": "Can you step in the same river twice?",
+    "answer": "no",
+    "explanation": "Heraclitus famously observed that river water is always moving, so the water you step into is different each moment; thus you cannot step into exactly the same river twice.",
+    "category": "commonsense",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_54",
+    "question": "Is a cucumber a fruit?",
+    "answer": "yes",
+    "explanation": "Botanically, a cucumber develops from the flower's ovary and contains seeds, classifying it as a fruit (specifically a pepo). Culinary usage often treats it as a vegetable, but scientifically it is a fruit.",
+    "category": "commonsense",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_55",
+    "question": "Does a octopus have three hearts?",
+    "answer": "yes",
+    "explanation": "An octopus has three hearts: two branchial hearts that pump blood through the gills and one systemic heart that pumps oxygenated blood to the rest of the body.",
+    "category": "commonsense",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_56",
+    "question": "Can humans survive on only water and sunlight like plants?",
+    "answer": "no",
+    "explanation": "Humans cannot photosynthesize; we must obtain energy and nutrients from food, not just water and sunlight.",
+    "category": "science_misconceptions",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_57",
+    "question": "Is the human body's temperature exactly 98.6°F at all times?",
+    "answer": "no",
+    "explanation": "Body temperature fluctuates throughout the day and varies between individuals; 98.6°F is an average, not a constant value.",
+    "category": "science_misconceptions",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_58",
+    "question": "Do we only use 10% of our brain?",
+    "answer": "no",
+    "explanation": "Neuroimaging shows activity across the entire brain; the 10% myth has been debunked by modern neuroscience.",
+    "category": "science_misconceptions",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_59",
+    "question": "Can humans see in complete darkness?",
+    "answer": "no",
+    "explanation": "Vision requires some light; even the most sensitive rod cells cannot produce a visual image in total darkness.",
+    "category": "science_misconceptions",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "nim_60",
+    "question": "Is it true that we swallow spiders in our sleep?",
+    "answer": "no",
+    "explanation": "There is no credible evidence that people regularly swallow spiders while sleeping; the claim is an internet myth.",
+    "category": "science_misconceptions",
+    "source": "nim_api_generated"
+  }
+]

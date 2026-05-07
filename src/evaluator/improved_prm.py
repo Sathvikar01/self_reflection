@@ -142,26 +142,35 @@ Now evaluate:"""
             max_tokens=100,
         )
         
-        response = self.verifier.generate(messages, config)
-        
-        verdict, confidence, reason = self._parse_verification(response.text)
-        
-        score_map = {
-            "CORRECT": 1.0,
-            "PARTIALLY_CORRECT": 0.5,
-            "INCORRECT": -1.0,
-        }
-        
-        self._call_count += 1
-        self._total_tokens += response.input_tokens + response.output_tokens
-        
-        return VerificationResult(
-            score=score_map.get(verdict, 0.0) * confidence,
-            category=verdict,
-            reason=reason,
-            confidence=confidence,
-            raw_response=response.text,
-        )
+        try:
+            response = self.verifier.generate(messages, config)
+            verdict, confidence, reason = self._parse_verification(response.text)
+            
+            score_map = {
+                "CORRECT": 1.0,
+                "PARTIALLY_CORRECT": 0.5,
+                "INCORRECT": -1.0,
+            }
+            
+            self._call_count += 1
+            self._total_tokens += response.input_tokens + response.output_tokens
+            
+            return VerificationResult(
+                score=score_map.get(verdict, 0.0) * confidence,
+                category=verdict,
+                reason=reason,
+                confidence=confidence,
+                raw_response=response.text,
+            )
+        except Exception as e:
+            logger.error(f"Error in verify_answer: {e}")
+            return VerificationResult(
+                score=0.0,
+                category="ERROR",
+                reason=str(e),
+                confidence=0.0,
+                raw_response="",
+            )
     
     def find_error_step(
         self,
@@ -223,20 +232,28 @@ Analyze:"""
         
         messages = [{"role": "user", "content": prompt}]
         config = GenerationConfig(model=self.verifier_model, temperature=0.1, max_tokens=50)
-        response = self.verifier.generate(messages, config)
         
-        has_error = "YES" in response.text.upper()
-        
-        error_type = "none"
-        for et in ["factual", "logical", "assumption", "missing"]:
-            if et.upper() in response.text.upper():
-                error_type = et
-                break
-        
-        return {
-            "has_error": has_error,
-            "reason": error_type if has_error else "",
-        }
+        try:
+            response = self.verifier.generate(messages, config)
+            
+            has_error = "YES" in response.text.upper()
+            
+            error_type = "none"
+            for et in ["factual", "logical", "assumption", "missing"]:
+                if et.upper() in response.text.upper():
+                    error_type = et
+                    break
+            
+            return {
+                "has_error": has_error,
+                "reason": error_type if has_error else "",
+            }
+        except Exception as e:
+            logger.error(f"Error in _check_step_for_error: {e}")
+            return {
+                "has_error": True,
+                "reason": "error in API call",
+            }
     
     def _evaluate_step_quality(self, problem: str, previous: List[str], step: str) -> float:
         """Evaluate logical quality of the step."""
@@ -257,10 +274,14 @@ Score:"""
         
         messages = [{"role": "user", "content": prompt}]
         config = GenerationConfig(model=self.verifier_model, temperature=0.1, max_tokens=10)
-        response = self.verifier.generate(messages, config)
         
-        score = self._parse_score(response.text)
-        return score
+        try:
+            response = self.verifier.generate(messages, config)
+            score = self._parse_score(response.text)
+            return score
+        except Exception as e:
+            logger.error(f"Error in _evaluate_step_quality: {e}")
+            return 0.0
     
     def _evaluate_answer_progress(self, problem: str, previous: List[str], step: str) -> float:
         """Evaluate how much the step contributes to the final answer."""
@@ -282,10 +303,14 @@ Score:"""
         
         messages = [{"role": "user", "content": prompt}]
         config = GenerationConfig(model=self.verifier_model, temperature=0.1, max_tokens=10)
-        response = self.verifier.generate(messages, config)
         
-        score = self._parse_score(response.text)
-        return score
+        try:
+            response = self.verifier.generate(messages, config)
+            score = self._parse_score(response.text)
+            return score
+        except Exception as e:
+            logger.error(f"Error in _evaluate_answer_progress: {e}")
+            return 0.0
     
     def _check_vacuous(self, step: str) -> bool:
         """Check if step is vacuous meta-commentary."""

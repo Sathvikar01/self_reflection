@@ -2,6 +2,8 @@
 
 This module provides abstract base classes to reduce code duplication
 across the 8+ pipeline implementations in the codebase.
+
+FIXED: Uses UnifiedAnswerExtractor for fair evaluation across all pipelines.
 """
 
 import json
@@ -11,6 +13,8 @@ from dataclasses import dataclass, field, asdict
 from pathlib import Path
 from typing import List, Dict, Optional, Any, Generic, TypeVar
 from loguru import logger
+
+from ..utils.unified_extractor import UnifiedAnswerExtractor
 
 
 @dataclass
@@ -217,27 +221,19 @@ class BasePipeline(ABC, Generic[TResult, TConfig]):
         return stats
     
     def _check_answer(self, answer: str, ground_truth: str) -> bool:
-        """Check if answer matches ground truth.
-        
-        Handles various answer formats including yes/no and numeric answers.
-        
+        """Check if answer matches ground truth using unified extractor.
+
+        This ensures fair evaluation across all pipelines - no pipeline
+        gets special treatment with loose or strict matching.
+
         Args:
             answer: Extracted answer
             ground_truth: Expected answer
-            
+
         Returns:
             True if answers match
         """
-        if not answer or not ground_truth:
-            return False
-        
-        answer_lower = answer.lower().strip()
-        truth_lower = ground_truth.lower().strip()
-        
-        if truth_lower in ["yes", "no"]:
-            return truth_lower in answer_lower
-        
-        return truth_lower in answer_lower or answer_lower == truth_lower
+        return UnifiedAnswerExtractor.check_answer(answer, ground_truth)
     
     def get_summary(self) -> str:
         """Get summary string of results.

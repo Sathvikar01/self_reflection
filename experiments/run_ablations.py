@@ -25,7 +25,11 @@ def run_ablation_no_reflect(
     """Run ablation with reflection action disabled."""
     print("\nRunning ablation: No Reflection")
     
-    pipeline = RLPipeline(config=config, results_dir=str(output_path))
+    import copy
+    ablation_config = copy.deepcopy(config)
+    ablation_config.action.disable_reflection = True
+    
+    pipeline = RLPipeline(config=ablation_config, results_dir=str(output_path))
     evaluator = AnswerEvaluator()
     
     results = []
@@ -50,8 +54,8 @@ def run_ablation_no_reflect(
     
     return {
         "name": "no_reflect",
-        "accuracy": sum(1 for r in results if r["correct"]) / len(results),
-        "avg_tokens": sum(r["tokens"] for r in results) / len(results),
+        "accuracy": sum(1 for r in results if r["correct"]) / max(1, len(results)),
+        "avg_tokens": sum(r["tokens"] for r in results) / max(1, len(results)),
     }
 
 
@@ -64,7 +68,11 @@ def run_ablation_no_backtrack(
     """Run ablation with backtrack action disabled."""
     print("\nRunning ablation: No Backtrack")
     
-    pipeline = RLPipeline(config=config, results_dir=str(output_path))
+    import copy
+    ablation_config = copy.deepcopy(config)
+    ablation_config.action.disable_backtrack = True
+    
+    pipeline = RLPipeline(config=ablation_config, results_dir=str(output_path))
     evaluator = AnswerEvaluator()
     
     results = []
@@ -89,8 +97,8 @@ def run_ablation_no_backtrack(
     
     return {
         "name": "no_backtrack",
-        "accuracy": sum(1 for r in results if r["correct"]) / len(results),
-        "avg_tokens": sum(r["tokens"] for r in results) / len(results),
+        "accuracy": sum(1 for r in results if r["correct"]) / max(1, len(results)),
+        "avg_tokens": sum(r["tokens"] for r in results) / max(1, len(results)),
     }
 
 
@@ -106,7 +114,11 @@ def run_ablation_random_policy(
     import random
     random.seed(seed)
     
-    pipeline = RLPipeline(config=config, results_dir=str(output_path))
+    import copy
+    ablation_config = copy.deepcopy(config)
+    ablation_config.action.random_policy = True
+    
+    pipeline = RLPipeline(config=ablation_config, results_dir=str(output_path))
     evaluator = AnswerEvaluator()
     
     results = []
@@ -131,8 +143,8 @@ def run_ablation_random_policy(
     
     return {
         "name": "random_policy",
-        "accuracy": sum(1 for r in results if r["correct"]) / len(results),
-        "avg_tokens": sum(r["tokens"] for r in results) / len(results),
+        "accuracy": sum(1 for r in results if r["correct"]) / max(1, len(results)),
+        "avg_tokens": sum(r["tokens"] for r in results) / max(1, len(results)),
     }
 
 

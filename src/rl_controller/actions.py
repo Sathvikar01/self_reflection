@@ -35,6 +35,10 @@ class ActionConfig:
     backtrack_threshold: float = 0.3
     reflect_on_low_score: bool = True
     low_score_threshold: float = 0.2
+    
+    disable_reflection: bool = False
+    disable_backtrack: bool = False
+    random_policy: bool = False
 
 
 @dataclass
@@ -159,10 +163,12 @@ class ActionExecutor:
                 output_tokens=0
             )
 
+        score = getattr(eval_result, 'score', eval_result.get('score', 0.0)) if isinstance(eval_result, dict) else getattr(eval_result, 'score', 0.0)
+        
         new_node = current_node.add_child(
             content=new_step,
             node_type=NodeType.STEP,
-            score=eval_result.score,
+            score=score,
             action_taken=ActionType.EXPAND.value,
         )
 
@@ -170,11 +176,11 @@ class ActionExecutor:
             success=True,
             action_type=ActionType.EXPAND,
             content=new_step,
-            score=eval_result.score,
+            score=score,
             new_node=new_node,
-            input_tokens=response.input_tokens + getattr(eval_result, 'input_tokens', 0),
-            output_tokens=response.output_tokens + getattr(eval_result, 'output_tokens', 0),
-            metadata={"eval_confidence": getattr(eval_result, 'confidence', 0.5)},
+            input_tokens=response.input_tokens + getattr(eval_result, 'input_tokens', eval_result.get('input_tokens', 0) if isinstance(eval_result, dict) else 0),
+            output_tokens=response.output_tokens + getattr(eval_result, 'output_tokens', eval_result.get('output_tokens', 0) if isinstance(eval_result, dict) else 0),
+            metadata={"eval_confidence": getattr(eval_result, 'confidence', eval_result.get('confidence', 0.5) if isinstance(eval_result, dict) else 0.5)},
         )
     
     def _execute_reflect(
@@ -349,6 +355,16 @@ class ActionExecutor:
         if current_node.depth > 10:
             weights[ActionType.CONCLUDE] += 0.2
             weights[ActionType.EXPAND] -= 0.2
+            
+        if self.config.disable_reflection:
+            weights[ActionType.REFLECT] = 0.0
+        if self.config.disable_backtrack:
+            weights[ActionType.BACKTRACK] = 0.0
+            
+        if self.config.random_policy:
+            for action in weights:
+                if weights[action] > 0:
+                    weights[action] = 1.0
         
         total = sum(weights.values())
         if total > 0:

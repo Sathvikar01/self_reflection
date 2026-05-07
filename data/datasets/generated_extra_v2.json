@@ -1,0 +1,638 @@
+[
+  {
+    "id": "new_0",
+    "question": "If it is true that no living organisms can survive extreme temperatures, bacteria are living organisms, and some bacteria can be found in the Arctic, can bacteria survive extreme temperatures?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Bacteria are living organisms",
+      "No living organisms can survive extreme temperatures",
+      "The Arctic has extreme temperatures",
+      "So bacteria cannot survive extreme temperatures"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_1",
+    "question": "If event A occurs before event B, event B occurs before event C, and event A occurs on Monday, will event C occur after Tuesday?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Event A occurs on Monday",
+      "Event B occurs after event A, so event B occurs after Monday",
+      "Event C occurs after event B, so event C occurs after Tuesday"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_2",
+    "question": "If it is true that all cats are animals, all animals need oxygen to breathe, and fish do not need oxygen to breathe, are fish cats?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Fish do not need oxygen to breathe",
+      "All animals need oxygen to breathe",
+      "Therefore fish are not animals",
+      "All cats are animals",
+      "So fish are not cats"
+    ],
+    "category": "conditional_logic",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_3",
+    "question": "If all cars have wheels and the Toyota is a car, does the Toyota have wheels?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The Toyota is a car",
+      "All cars have wheels",
+      "Therefore, the Toyota has wheels"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_4",
+    "question": "If it is not true that all students are lazy and it is true that all lazy students fail their exams, can we conclude that John, a student who passed his exam, is not lazy?",
+    "answer": "no",
+    "reasoning_steps": [
+      "We know that not all students are lazy",
+      "We also know that all lazy students fail their exams",
+      "However, passing an exam does not necessarily imply that a student is not lazy",
+      "Therefore, we cannot conclude that John, a student who passed his exam, is not lazy"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_5",
+    "question": "A snail is found dead at the bottom of a birdcage with no visible signs of injury.  The bird's owner never lets it out of the cage.  Is it possible that the bird killed the snail?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The snail was found dead in the birdcage",
+      "The bird's owner never lets it out of the cage, so the bird is the only possible predator",
+      "The lack of visible injury does not rule out the possibility that the bird killed the snail, as birds can kill snails without leaving visible marks",
+      "So it is possible that the bird killed the snail"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_6",
+    "question": "If the ancient library of Alexandria had not been destroyed, would modern society have access to more knowledge from ancient civilizations?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The ancient library of Alexandria was a major repository of knowledge",
+      "Its destruction resulted in the loss of many ancient texts",
+      "If it had not been destroyed, those texts would still exist today",
+      "Therefore, modern society would have access to more knowledge from ancient civilizations"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_7",
+    "question": "If all birds can fly and penguins are birds, but penguins have a different wing structure, can penguins fly like other birds?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Penguins are birds",
+      "Birds have the ability to fly",
+      "However, penguins have a unique wing structure",
+      "This unique structure hinders penguins' ability to fly like other birds",
+      "So penguins cannot fly like other birds"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_8",
+    "question": "If it is true that 80% of students in a school are right-handed, 50% of right-handed students prefer morning classes, and 30% of left-handed students prefer morning classes, is it more likely than not that a randomly chosen student prefers morning classes?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "80% of students in the school are right-handed, which means 20% are left-handed",
+      "50% of right-handed students prefer morning classes, so 0.5 * 0.8 = 40% of all students are right-handed and prefer morning classes",
+      "30% of left-handed students prefer morning classes, so 0.3 * 0.2 = 6% of all students are left-handed and prefer morning classes",
+      "The total percentage of students who prefer morning classes is 40% + 6% = 46%, which is less than 50% but still the most likely option"
+    ],
+    "category": "probability_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_9",
+    "question": "If Sally has 12 pencils and gives 2 to John and then buys 5 more, does she have more pencils than she started with?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Sally initially has 12 pencils",
+      "She gives 2 pencils to John, so she now has 12 - 2 = 10 pencils",
+      "She buys 5 more pencils, so she now has 10 + 5 = 15 pencils",
+      "15 is greater than 12, so Sally has more pencils than she started with"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_10",
+    "question": "Is it possible for a person to be in the same room as their reflection if the room has no mirrors or reflective surfaces, but has a window that looks out onto a still pond?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "A still pond can act as a reflective surface",
+      "If the window looks out onto the pond, the person can see their reflection in the pond",
+      "Since the person can see their reflection, they can be in the same room as their reflection"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_11",
+    "question": "If it's raining outside and John goes out without an umbrella, will his clothes get wet if he walks under a bridge?",
+    "answer": "no",
+    "reasoning_steps": [
+      "It's raining outside",
+      "John doesn't have an umbrella to protect him",
+      "Walking under a bridge provides temporary shelter from the rain",
+      "So his clothes won't get wet while he's under the bridge"
+    ],
+    "category": "commonsense_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_12",
+    "question": "If all living organisms require water to survive, plants release oxygen into the air through photosynthesis, and humans are living organisms that breathe oxygen, do humans indirectly depend on plants for survival?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Humans are living organisms",
+      "Living organisms require water and oxygen to survive",
+      "Plants release oxygen into the air through photosynthesis",
+      "Humans breathe oxygen to survive",
+      "So humans indirectly depend on plants for oxygen and survival"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_13",
+    "question": "If event A happens before event B, event B happens before event C, and event A happens at 8:00 AM, does event C happen after 8:00 AM?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Event A happens before event B",
+      "Event B happens before event C",
+      "Since event A happens at 8:00 AM, event B must happen after 8:00 AM",
+      "Since event B happens before event C, event C must happen after event B",
+      "Therefore, event C must happen after 8:00 AM"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_14",
+    "question": "If it is true that all students who are good at math can learn programming and it is also true that all students who learn programming can get a job at a tech company, can a student who is bad at math get a job at a tech company?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Being good at math is a prerequisite to learning programming",
+      "Learning programming is required to get a job at a tech company",
+      "A student who is bad at math cannot learn programming",
+      "Therefore a student who is bad at math cannot get a job at a tech company"
+    ],
+    "category": "conditional_logic",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_15",
+    "question": "If car A travels 300 miles in 5 hours and car B travels 420 miles in 7 hours, are they traveling at the same speed?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Calculate the speed of car A by dividing distance traveled by time taken: 300 miles / 5 hours = 60 miles per hour",
+      "Calculate the speed of car B by dividing distance traveled by time taken: 420 miles / 7 hours = 60 miles per hour",
+      "Compare the speeds of car A and car B: 60 miles per hour = 60 miles per hour"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_16",
+    "question": "If all birds can fly and penguins are birds, but penguins do not have the physical ability to fly, can penguins fly?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Penguins are birds",
+      "The initial statement that all birds can fly is incorrect",
+      "Penguins do not have the physical ability to fly",
+      "So penguins cannot fly"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_17",
+    "question": "If it is true that aliens could be visiting Earth, and all aliens travel in spaceships, and all detected spaceships have come from within our solar system, can we infer that aliens visiting Earth come from within our solar system?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Aliens could be visiting Earth",
+      "All aliens travel in spaceships",
+      "Detected spaceships have come from within our solar system",
+      "Therefore aliens visiting Earth come from within our solar system"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_18",
+    "question": "If the Roman Empire never fell and it continued to expand, would modern-day Italians speak Latin as their primary language?",
+    "answer": "no",
+    "reasoning_steps": [
+      "The Roman Empire spoke Latin",
+      "Even if the Roman Empire never fell, languages evolve over time",
+      "As populations interact and empires expand, languages can diverge and change",
+      "It's unlikely that modern-day Italians would still speak Latin as their primary language"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_19",
+    "question": "If all birds have feathers and penguins are birds, do penguins have scales?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Penguins are birds",
+      "All birds have feathers",
+      "Feathers and scales are mutually exclusive characteristics",
+      "Therefore, penguins do not have scales"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_20",
+    "question": "If it is sunny 70% of the time in June and 30% of the days in June are both sunny and hot, are 30% of the days in June hot?",
+    "answer": "no",
+    "reasoning_steps": [
+      "70% of the days are sunny",
+      "30% of the days are both sunny and hot",
+      "Since some days can be hot but not sunny, we can't determine the total percentage of hot days"
+    ],
+    "category": "probability_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_21",
+    "question": "If a bakery sells 250 loaves of bread per day and each loaf costs $2, does the bakery make more than $450 per day?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The bakery sells 250 loaves of bread per day",
+      "Each loaf costs $2, so the total daily revenue is 250 * $2",
+      "The total daily revenue is 250 * $2 = $500",
+      "Since $500 is more than $450, the bakery makes more than $450 per day"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_22",
+    "question": "Is it possible for a cube with a 5-inch side length to pass through a circular hole with a diameter of 4 inches?",
+    "answer": "no",
+    "reasoning_steps": [
+      "The diameter of the hole is 4 inches, so its radius is 2 inches",
+      "The diagonal of the cube's side can be calculated using the Pythagorean theorem",
+      "Since the cube's side length is 5 inches, its diagonal is sqrt(5^2 + 5^2) = sqrt(50) inches, which is greater than 4 inches",
+      "Therefore, the cube cannot pass through the hole because its diagonal is larger than the hole's diameter"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_23",
+    "question": "If a person is asleep, they are not aware of their surroundings, and if they are not aware of their surroundings, they cannot answer the phone, can a sleeping person answer the phone?",
+    "answer": "no",
+    "reasoning_steps": [
+      "A person who is asleep is not aware of their surroundings",
+      "Not being aware of one's surroundings means not being able to perceive or respond to external stimuli",
+      "Answering the phone requires perceiving and responding to an external stimulus",
+      "Therefore, a sleeping person cannot answer the phone"
+    ],
+    "category": "commonsense_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_24",
+    "question": "If a drought leads to a decrease in crop production, food prices rise due to scarcity, and people have less disposable income during an economic downturn, will an economic downturn cause food prices to increase during a drought?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "A drought leads to a decrease in crop production",
+      "Decreased crop production causes food prices to rise",
+      "An economic downturn leads to people having less disposable income",
+      "When people have less disposable income, their ability to afford food at higher prices is further strained",
+      "So an economic downturn can exacerbate the food price increase during a drought"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_25",
+    "question": "If event A occurs before event B, event B occurs before event C, and event C occurs at 3 PM, does event A occur before 3 PM?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Event A occurs before event B",
+      "Event B occurs before event C",
+      "Event C occurs at 3 PM",
+      "Since event A occurs before event B and event B occurs before event C, event A must occur before event C",
+      "Therefore, event A must occur before 3 PM"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_26",
+    "question": "If it is true that all students who study diligently will pass the exam and John did not pass the exam, did John study diligently?",
+    "answer": "no",
+    "reasoning_steps": [
+      "All students who study diligently will pass the exam",
+      "John did not pass the exam",
+      "If John studied diligently, he would have passed the exam",
+      "Since John did not pass, he did not study diligently"
+    ],
+    "category": "conditional_logic",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_27",
+    "question": "If all birds have feathers and penguins are birds, but ostriches do not fly, can we conclude that penguins do not fly because they have feathers?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Penguins are birds",
+      "All birds have feathers, but having feathers does not determine flight",
+      "Ostriches do not fly, but it's not because of their feathers",
+      "The relationship between having feathers and flying is not causal"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_28",
+    "question": "If it is not true that all cats can fly and my pet is a cat, can my pet fly?",
+    "answer": "no",
+    "reasoning_steps": [
+      "My pet is a cat",
+      "Not all cats can fly",
+      "In fact, no cats can fly",
+      "So my pet cannot fly"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_29",
+    "question": "A mysterious fire is reported at a local factory.  Investigation shows a broken electrical wire near the area of the fire, but no signs of forced entry or accelerants were found.  Was it likely an accident?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "No signs of forced entry were found",
+      "No accelerants were found",
+      "A broken electrical wire was found near the area of the fire",
+      "Electrical issues are a common cause of accidental fires"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_30",
+    "question": "If it were true that the shortest distance between the Earth and Mars is 56 million kilometers and a spaceship can travel at a constant speed of 40,000 kilometers per hour, could the spaceship travel from Earth to Mars in under 2 hours?",
+    "answer": "no",
+    "reasoning_steps": [
+      "First, we need to calculate the travel time of the spaceship from Earth to Mars",
+      "We can calculate the travel time by dividing the distance by the speed",
+      "Travel time equals 56,000,000 km divided by 40,000 km/h which is 1400 hours",
+      "1400 hours is greater than 2 hours"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_31",
+    "question": "If all birds have feathers, eagles are birds, and penguins are also birds, do eagles and penguins both have feathers?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Eagles are classified as birds",
+      "Penguins are also classified as birds",
+      "All birds have feathers",
+      "Therefore, eagles and penguins both have feathers"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_32",
+    "question": "A fair six-sided die is rolled three times. Is the probability of rolling a 6 on all three rolls less than 0.01?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Each roll of a fair six-sided die has 6 possible outcomes",
+      "The probability of rolling a 6 on one roll is 1/6",
+      "The probability of rolling a 6 on all three rolls is (1/6)^3 = 1/216",
+      "1/216 is approximately 0.0046, which is less than 0.01"
+    ],
+    "category": "probability_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_33",
+    "question": "If a bakery sells 250 loaves of bread per day and each loaf costs $2, does the bakery make more than $500 in a day?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The bakery sells 250 loaves of bread per day",
+      "Each loaf costs $2",
+      "To find the total daily revenue, multiply the number of loaves by the cost per loaf: 250 loaves/day * $2/loaf = $500/day",
+      "Since the bakery sells 250 loaves per day at $2 each, it makes exactly $500 in a day, but the question asks for more than $500, however, if they sell one more loaf they will make more"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_34",
+    "question": "Is it possible for a cube to fit inside a sphere if the diameter of the sphere is equal to the length of one side of the cube?",
+    "answer": "no",
+    "reasoning_steps": [
+      "The diameter of the sphere is equal to the length of one side of the cube",
+      "The diagonal of the cube is longer than the length of one side of the cube",
+      "The cube cannot fit inside the sphere because its diagonal is longer than the diameter of the sphere"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_35",
+    "question": "If it is raining outside and John goes out without an umbrella, will his clothes get wet if he walks under a bridge?",
+    "answer": "no",
+    "reasoning_steps": [
+      "It is raining outside",
+      "John has no umbrella to protect him from the rain",
+      "However, he walks under a bridge",
+      "The bridge will block the rain from falling on John",
+      "So John's clothes will not get wet"
+    ],
+    "category": "commonsense_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_36",
+    "question": "If all living organisms require water to survive and plants are living organisms, can plants grow in a completely dry environment?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Plants are living organisms",
+      "Living organisms require water to survive",
+      "A completely dry environment lacks water",
+      "So plants cannot grow in a completely dry environment"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_37",
+    "question": "If event A happens before event B, event B happens before event C, and event C happens at 3 PM, does event A happen before 3 PM?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Event C happens at 3 PM",
+      "Event B happens before event C, so event B must happen before 3 PM",
+      "Event A happens before event B, so event A must happen before event B, which happens before 3 PM"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_39",
+    "question": "If all birds can fly and penguins are birds, but penguins have a different skeletal structure than other birds, can penguins fly faster than eagles?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Penguins are birds, but they have a different skeletal structure",
+      "This skeletal structure is adapted for swimming, not flying",
+      "While penguins can technically 'fly' through the air, their speed is much lower than that of eagles",
+      "Therefore, penguins cannot fly faster than eagles"
+    ],
+    "category": "comparative_inference",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_40",
+    "question": "A company has 50 employees and none of them are managers. If a manager is defined as someone who oversees 5 or more people, does the company have at least one manager?",
+    "answer": "no",
+    "reasoning_steps": [
+      "The definition of a manager requires overseeing 5 or more people",
+      "There are no managers among the 50 employees initially stated",
+      "Even if an employee oversees other employees, the initial statement claims there are no managers",
+      "So the company cannot have at least one manager given the initial condition"
+    ],
+    "category": "negation_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_41",
+    "question": "A wealthy businessman was found dead in his mansion, and the only clue was a suspicious conversation between the victim's wife and his business partner the night before. If the wife stood to gain a large inheritance from the victim's death, and the business partner had a history of shady dealings, can it be inferred that the business partner was involved in the murder?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The business partner had a history of shady dealings",
+      "The business partner had a conversation with the victim's wife the night before the murder",
+      "The wife stood to gain a large inheritance from the victim's death",
+      "The conversation between the business partner and the wife could have been a discussion about the murder plan",
+      "The business partner's shady dealings suggest they are capable of committing a crime"
+    ],
+    "category": "abductive_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_42",
+    "question": "If it were true that the Roman Empire never fell, would modern Italian people likely speak Latin as their native language?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "The Roman Empire spoke Latin",
+      "If the Roman Empire never fell, its language would still be dominant",
+      "Modern Italian people are descendants of the Roman Empire",
+      "Therefore, it is likely they would still speak Latin"
+    ],
+    "category": "counterfactual",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_43",
+    "question": "If a chef is to a kitchen as a doctor is to a hospital, is a teacher to a library?",
+    "answer": "no",
+    "reasoning_steps": [
+      "An analogy is established between a professional and their typical workplace",
+      "A chef typically works in a kitchen and a doctor typically works in a hospital",
+      "The analogy would suggest a teacher typically works in a classroom or school, not a library"
+    ],
+    "category": "analogy_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_44",
+    "question": "If event A has a 30% chance of happening and event B has a 60% chance of happening, and both events are independent, is the probability of both events happening together greater than 20%?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Event A has a 30% chance of happening",
+      "Event B has a 60% chance of happening",
+      "To find the probability of both events happening together, we multiply the probabilities of each event happening",
+      "0.3 x 0.6 = 0.18, which is less than 20%"
+    ],
+    "category": "probability_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_45",
+    "question": "If the sum of two even numbers is always even, 6 is an even number, and 8 is an even number, is 6 + 8 an even number?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "6 is an even number",
+      "8 is an even number",
+      "The sum of two even numbers is always even",
+      "Therefore, 6 + 8 must be an even number"
+    ],
+    "category": "mathematical_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_46",
+    "question": "Is it possible for two lines that are perpendicular to the same line to be parallel to each other?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "If two lines are perpendicular to the same line, they form two right angles with that line",
+      "Two lines that form right angles with the same line cannot intersect with each other",
+      "If two lines cannot intersect and are in the same plane, they are parallel to each other",
+      "Therefore, two lines perpendicular to the same line are parallel to each other"
+    ],
+    "category": "spatial_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_47",
+    "question": "If a person is sleeping, they are not aware of their surroundings, and a person who is not aware of their surroundings cannot answer a phone call, can a sleeping person answer a phone call?",
+    "answer": "no",
+    "reasoning_steps": [
+      "A sleeping person is not aware of their surroundings",
+      "A person who is not aware of their surroundings cannot answer a phone call",
+      "Therefore, a sleeping person cannot answer a phone call"
+    ],
+    "category": "commonsense_reasoning",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_48",
+    "question": "If a drought causes a decrease in crop production, and a decrease in crop production leads to food shortages, will a drought cause food prices to rise?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "A drought leads to a decrease in crop production",
+      "A decrease in crop production causes food shortages",
+      "Food shortages lead to an increase in food prices",
+      "Therefore, a drought will cause food prices to rise"
+    ],
+    "category": "causal_chain",
+    "source": "api_generated"
+  },
+  {
+    "id": "new_49",
+    "question": "If event A occurs before event B, event B occurs before event C, and event A occurs on Monday, can event C occur on Monday?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Event A occurs on Monday",
+      "Event A occurs before event B, so event B must occur after Monday",
+      "Event B occurs before event C, so event C must occur after event B",
+      "Since event B cannot occur on Monday, event C also cannot occur on Monday"
+    ],
+    "category": "temporal_sequence",
+    "source": "api_generated"
+  }
+]

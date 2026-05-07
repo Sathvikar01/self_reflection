@@ -83,9 +83,10 @@ def run_baseline(
     runner.save_results("baseline_results.json")
     
     correct_count = sum(1 for r in results if r["correct"])
-    accuracy = correct_count / len(results)
-    avg_tokens = sum(r["tokens"] for r in results) / len(results)
-    avg_latency = sum(r["latency"] for r in results) / len(results)
+    n = max(1, len(results))
+    accuracy = correct_count / n
+    avg_tokens = sum(r["tokens"] for r in results) / n
+    avg_latency = sum(r["latency"] for r in results) / n
     
     summary = {
         "dataset": dataset,

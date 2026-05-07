@@ -1,4 +1,7 @@
-"""Baseline zero-shot runner for comparison."""
+"""Baseline zero-shot runner for comparison.
+
+FIXED: Uses UnifiedAnswerExtractor for fair evaluation.
+"""
 
 import time
 from typing import List, Dict, Optional, Any
@@ -9,6 +12,7 @@ from .base import BasePipeline, BaseResult, BasePipelineConfig
 from ..generator.nim_client import NVIDIANIMClient, GenerationConfig
 from ..generator.prompts import PromptBuilder
 from ..generator.mock_client import MockNVIDIANIMClient
+from ..utils.unified_extractor import UnifiedAnswerExtractor
 
 
 @dataclass
@@ -88,12 +92,17 @@ class BaselineRunner(BasePipeline[BaselineResult, BaselineConfig]):
 
         answer = self._extract_answer(response.text)
 
+        correct = None
+        if ground_truth:
+            correct = self._check_answer(answer, ground_truth)
+
         result = BaselineResult(
             problem_id=problem_id,
             problem=problem,
             final_answer=answer,
             full_response=response.text,
             ground_truth=ground_truth,
+            correct=correct,
             input_tokens=response.input_tokens,
             output_tokens=response.output_tokens,
             total_tokens=response.input_tokens + response.output_tokens,
@@ -110,33 +119,9 @@ class BaselineRunner(BasePipeline[BaselineResult, BaselineConfig]):
         return result
 
     def _extract_answer(self, response: str) -> str:
-        """Extract final answer from response."""
-        markers = [
-            "therefore,",
-            "thus,",
-            "the answer is",
-            "final answer:",
-            "answer:",
-            "in conclusion,",
-        ]
-
-        response_lower = response.lower()
-
-        for marker in markers:
-            if marker in response_lower:
-                idx = response_lower.index(marker)
-                answer_part = response[idx + len(marker):].strip()
-                lines = answer_part.split("\n")
-                if lines:
-                    return lines[0].strip()
-
-        lines = response.strip().split("\n")
-        non_empty = [l.strip() for l in lines if l.strip()]
-
-        if non_empty:
-            return non_empty[-1]
-
-        return response.strip()
+        """Extract final answer from response using unified extractor."""
+        extracted = UnifiedAnswerExtractor.extract(response)
+        return extracted.answer
 
     def run_single(
         self,

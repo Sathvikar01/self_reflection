@@ -1,0 +1,156 @@
+[
+  {
+    "id": "reasoning_1777461222_0",
+    "question": "If a city implements a policy that bans all private cars but provides free public transit, will traffic congestion decrease?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Banning private cars removes most vehicles from city streets, directly reducing traffic volume.",
+      "Providing free public transit encourages many drivers to switch to buses and trains, further lowering car numbers.",
+      "The combined reduction in cars leads to fewer traffic jams, so congestion decreases."
+    ],
+    "category": "causal_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "easy",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "reasoning_1777461227_1",
+    "question": "If a city implements a strict curfew during a pandemic, will it necessarily reduce the spread of the virus?",
+    "answer": "no",
+    "reasoning_steps": [
+      "A curfew limits nighttime movement, reducing some social contacts.",
+      "People may still interact during permitted hours or in private settings not restricted by the curfew.",
+      "Thus, the curfew alone does not guarantee a reduction in transmission without additional measures and compliance."
+    ],
+    "category": "causal_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "medium",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "reasoning_1777461233_2",
+    "question": "If a city introduces a congestion charge for all private vehicles entering the downtown area during peak hours, will the overall traffic congestion decrease within the first month?",
+    "answer": "no",
+    "reasoning_steps": [
+      "The congestion charge raises the cost of driving, incentivizing some drivers to switch to public transit or delay trips.",
+      "However, drivers may also alter routes, adjust travel times, or undertake discretionary trips that offset the reduction in volume.",
+      "Empirical evidence shows that short‑term behavioral adjustments often mask the full impact, so a noticeable congestion drop within a month is unlikely."
+    ],
+    "category": "causal_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "hard",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "reasoning_1777461246_3",
+    "question": "If a city permanently adopts year-round daylight saving time starting in 2025, will the average resident's sleep duration increase by the end of the first year?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Permanent daylight saving time shifts sunrise and sunset times later in the morning and earlier in the evening, altering natural light exposure patterns.",
+      "Changes in morning light can delay wake times, while evening light can push bedtime later, potentially affecting total sleep time.",
+      "Empirical analyses of past DST policy changes show inconsistent or negligible net effects on average sleep duration, with no systematic increase observed."
+    ],
+    "category": "temporal_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "medium",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "reasoning_1777461251_4",
+    "question": "If a city adopts permanent daylight saving time by moving clocks forward 2 hours in March and never reverts, will the average resident's sleep duration increase by the end of the first year?",
+    "answer": "no",
+    "reasoning_steps": [
+      "People's circadian rhythms tend to align with natural light, so a permanent 2‑hour advance shifts evening light later but does not change the biological need for sleep.",
+      "Social and work schedules are anchored to clock time, not solar time; thus wake‑up times remain fixed, preventing a net gain in total sleep.",
+      "Empirical studies of permanent DST show no significant increase in average sleep duration, only a shift in activity timing."
+    ],
+    "category": "temporal_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "hard",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "reasoning_1777461256_5",
+    "question": "If a student enrolls in an online course that requires completing weekly assignments and passing a final exam, will they earn a certificate if they complete all assignments but fail the final exam?",
+    "answer": "no",
+    "reasoning_steps": [
+      "The certificate requires both completion of all weekly assignments and passing the final exam.",
+      "The student completes assignments but fails the final exam.",
+      "Since both conditions are not satisfied, the certificate is not earned."
+    ],
+    "category": "conditional_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "easy",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "reasoning_1777461266_6",
+    "question": "If a city implements a strict water rationing policy that limits each household to 50 liters of water per day, will the average household be able to maintain a vegetable garden that requires 100 liters of water daily without additional water sources?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Estimate the daily water needed for the garden based on typical irrigation requirements for vegetable plants.",
+      "Compare the allocated household water limit to the garden's requirement to see if the limit meets or exceeds it.",
+      "Assess whether common mitigation strategies (e.g., using drought‑tolerant crops or reusing greywater) can bridge the shortfall under the given constraints."
+    ],
+    "category": "conditional_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "hard",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "reasoning_1777461271_7",
+    "question": "If a typical 10-year-old can run a mile in 8 minutes, can a 10-year-old who trains regularly in swimming improve their mile-running time to under 7 minutes?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Compare the baseline aerobic capacity of a 10-year-old runner with that of a swimmer, noting that swimming primarily enhances upper-body and core endurance rather than leg-specific running efficiency.",
+      "Assess how cross-training in swimming influences cardiovascular fitness and leg strength, recognizing that gains are modest and often limited to overall stamina without significantly increasing running speed.",
+      "Estimate the potential improvement from swimming training—typically a few seconds to perhaps 30 seconds on a mile—and compare this to the required 1-minute reduction from 8 to under 7 minutes, which exceeds realistic gains."
+    ],
+    "category": "comparative_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "easy",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "reasoning_1777461275_8",
+    "question": "If a region increases its renewable energy share but also expands coal power plants to meet demand, will total carbon emissions increase?",
+    "answer": "yes",
+    "reasoning_steps": [
+      "Expanding renewable energy reduces emissions from electricity generation.",
+      "Expanding coal power plants increases emissions more than the reduction achieved by renewables.",
+      "The net effect is higher overall carbon emissions."
+    ],
+    "category": "comparative_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "medium",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "reasoning_1777461279_9",
+    "question": "If a company doubles its advertising budget while also reducing product quality, will its market share increase compared to keeping the budget the same but maintaining current product quality?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Step 1: Doubling the advertising budget increases visibility and may attract new customers.",
+      "Step 2: Reducing product quality lowers customer satisfaction and can cause existing customers to switch to competitors.",
+      "Step 3: The negative impact of reduced quality typically outweighs the positive effect of extra advertising, leading to a net loss in market share relative to the baseline."
+    ],
+    "category": "comparative_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "hard",
+    "source": "nim_api_generated"
+  },
+  {
+    "id": "reasoning_1777461295_10",
+    "question": "If a city implements a complete ban on single‑use plastic bags but encourages the use of reusable cotton bags, will the overall environmental impact of waste necessarily decrease?",
+    "answer": "no",
+    "reasoning_steps": [
+      "Step 1: Cotton bag production consumes significant water, fertilizer, and energy, often resulting in a higher carbon footprint than thin plastic bags.",
+      "Step 2: The environmental benefit of a cotton bag is only realized after it is reused many times; if users discard it quickly, the cumulative impact can exceed that of the plastic bags it replaces.",
+      "Step 3: Additional washing and transportation of cotton bags generate emissions that may offset any reduction in plastic waste, so the net effect on overall waste impact is not guaranteed to improve."
+    ],
+    "category": "negative_reasoning",
+    "type": "multi_step_reasoning",
+    "difficulty": "hard",
+    "source": "nim_api_generated"
+  }
+]

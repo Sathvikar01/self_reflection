@@ -271,8 +271,8 @@ def statistical_analysis(baseline: Dict, fixed: Dict, adaptive: Dict) -> Dict:
     
     # McNemar's tests
     def mcnemar_test(r1_results, r2_results):
-        b = sum(1 for a, b in zip(r1_results, r2_results) if a["correct"] and not b["correct"])
-        c = sum(1 for a, b in zip(r1_results, r2_results) if not a["correct"] and b["correct"])
+        b = sum(1 for res1, res2 in zip(r1_results, r2_results) if res1["correct"] and not res2["correct"])
+        c = sum(1 for res1, res2 in zip(r1_results, r2_results) if not res1["correct"] and res2["correct"])
         if b + c > 0:
             stat = (abs(b - c) - 1) ** 2 / (b + c)
         else:

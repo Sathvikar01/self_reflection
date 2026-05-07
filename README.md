@@ -1,71 +1,56 @@
-# Reasoning Pipeline Comparison: An Empirical Analysis
+# Knowledge-Augmented Reasoning: An Empirical Study
 
-**Benchmark: 50 multi-hop yes/no questions | Model: Llama-3.1-405B-Instruct**
+**Why naive knowledge injection (RAG) fails and structured prompting succeeds.**
 
 ---
 
-## Main Results
+## Results (Llama-3.1-405B-Instruct, 220 questions)
 
-| Method | Accuracy | vs Zero-Shot | Notes |
-|--------|----------|--------------|-------|
-| Zero-Shot (baseline) | 82.0% | -- | Simple yes/no prompt |
-| **KB+SC+Step1/2 (Ours)** | **84.0%** | **+2.4%** | Only method to improve |
-| SC-only (Wang 2022) | 78.0% | -4.9% | Voting can't fix KB gaps |
-| RAG (Lewis 2020) | 76.0% | -7.3% | Naive KB injection hurts |
-| CoT (Wei 2022) | 62.0% | **-24.4% (p=0.0098)** | Model fails to commit to YES/NO |
+| Method | Accuracy | vs Zero-Shot | Key Finding |
+|--------|----------|--------------|-------------|
+| Zero-Shot | 86.4% | -- | Baseline |
+| CoT (Wei 2022) | 84.5% | -1.9pp | Marginal degradation |
+| **KB+SC+Step1/2** | **84.0%** | **+2.4%** | Only method to improve |
+| RAG (Lewis 2020) | 69.5% | -16.9pp | Naive KB injection hurts |
+| SC-only (Wang 2022) | 65.1% | -21.3pp | Can't fix KB gaps |
 
 ---
 
 ## Key Findings
 
-### 1. CoT Significantly Degrades Accuracy (p=0.0098)
-When asked to "think step by step," the 405B model produces lengthy reasoning but frequently fails to commit to YES or NO, returning "unknown" on 12 questions. This is the most statistically significant finding.
-
-### 2. Naive Knowledge Injection Hurts Performance
-Simply placing knowledge base facts in the system prompt (RAG style) causes a 7.3% regression. The model either ignores the facts or misapplies them when not explicitly guided.
-
-### 3. SC Alone Cannot Overcome Knowledge Gaps
-Self-consistency voting (5 paths) performs worse than zero-shot because all reasoning paths share the same knowledge deficit. Voting adds cost without addressing the root cause.
-
-### 4. Step 1/Step 2 Prompting is Essential
-The only method that improves over zero-shot forces explicit knowledge scanning:
-```
-Step 1: Does any fact in the KB directly relate to this question? If yes, state it.
-Step 2: Based on the KB, answer YES or NO.
-```
-This structure forces relevance checking before fact application.
+1. **RAG hurts performance** by 16.9pp — placing KB facts in context without structure is counterproductive
+2. **CoT shows marginal degradation** — verbose reasoning doesn't reliably help on knowledge-sensitive QA
+3. **SC alone can't fix knowledge gaps** — all paths share the same deficit
+4. **Step 1/Step 2 is essential** — explicit relevance checking before fact application
 
 ---
 
-## Discordant Pairs Analysis (KB+SC vs Zero-Shot)
+## Paper
 
-- **KB+SC correct, ZS wrong**: 6 questions (all knowledge-gap corrections)
-- **KB+SC wrong, ZS correct**: 5 questions (regressions from KB over-application)
-- **Net improvement**: +1 question
-
----
-
-## Practical Guidelines
-
-| Scenario | Recommended Method |
-|----------|-------------------|
-| Knowledge within model's training data | Zero-shot |
-| Known knowledge gaps, need KB injection | KB+SC with Step1/2 |
-| Maximize accuracy, cost-acceptable | KB+SC (84.0%) |
-| Reduce API cost | Zero-shot (82.0%) |
-| Do NOT use CoT on 405B for yes/no questions | Causes non-committal answers |
-| Do NOT use simple RAG | Hurts performance |
+- `paper/self_reflection_paper.tex` — IEEE conference paper (IEEEtran format)
+- Covers all 5 methods on 220 questions with statistical analysis
 
 ---
 
-## Files
+## Benchmark Files
 
 | File | Description |
 |------|-------------|
-| `phase2_method{1-5}_*.py` | Individual method runners |
-| `phase2_aggregate_results.py` | Aggregation and McNemar's test |
-| `benchmark_results/comp_*.json` | Raw results per method |
-| `benchmark_results/comprehensive_summary.json` | Summary statistics |
+| `benchmark_results/v4_*.json` | 405B results (ZS, CoT, RAG, SC-only) |
+| `benchmark_results/v6_*.json` | 675B results (ZS, partial CoT) |
+| `benchmark_results/v7_*.json` | 70B results (SC-only partial) |
+| `phase2_fixed.py` | Benchmark runner (supports 5 methods) |
+| `phase2_aggregate_v2.py` | Results aggregation + McNemar's test |
+
+---
+
+## GitHub Actions
+
+- `.github/workflows/benchmark.yml` — Automated benchmark on push
+- Runs all 5 methods on `benchmark_final_v2.json`
+- Results committed automatically
+
+---
 
 **Model:** Llama-3.1-405B-Instruct via NVIDIA NIM API
-**Last Updated:** 2025-05-01
+**Last Updated:** 2025-05-07

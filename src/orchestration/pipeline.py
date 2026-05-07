@@ -1,4 +1,9 @@
-"""Main RL-guided reasoning pipeline."""
+"""Main RL-guided reasoning pipeline.
+
+FIXED:
+- Uses UnifiedAnswerExtractor for fair evaluation
+- Prevents the "substring in paragraph" loophole
+"""
 
 import time
 from typing import List, Dict, Optional, Any
@@ -12,6 +17,7 @@ from ..evaluator.prm_client import PRMEvaluator, PRMConfig, EvaluationResult
 from ..rl_controller.tree import StateTree, TreeNode, NodeType
 from ..rl_controller.actions import ActionExecutor, ActionType, ActionConfig
 from ..rl_controller.mcts import MCTSController, MCTSConfig, MCTSStats
+from ..utils.unified_extractor import UnifiedAnswerExtractor
 
 
 @dataclass
@@ -94,15 +100,26 @@ class RLPipeline(BasePipeline[ProblemResult, PipelineConfig]):
 
         logger.info(f"Solving problem {problem_id}: {problem[:100]}...")
 
-        answer, score, path = self.mcts.search(
+        raw_answer, score, path = self.mcts.search(
             problem=problem,
             max_iterations=self.config.max_iterations,
             early_stop_threshold=self.config.early_stop_score,
         )
+        
+        # FIXED: Extract the actual answer from the raw conclusion paragraph
+        extracted = UnifiedAnswerExtractor.extract(raw_answer)
+        answer = extracted.answer
+        
+        logger.info(f"[{problem_id}] Extracted answer '{answer}' from: {raw_answer[:100]}...")
 
         mcts_stats = self.mcts.get_stats()
         gen_stats = self.generator.get_stats()
         action_stats = self.action_executor.get_stats()
+
+        correct = None
+        if ground_truth:
+            # FIXED: Use unified extractor for fair evaluation
+            correct = UnifiedAnswerExtractor.check_answer(answer, ground_truth)
 
         result = ProblemResult(
             problem_id=problem_id,
@@ -111,6 +128,7 @@ class RLPipeline(BasePipeline[ProblemResult, PipelineConfig]):
             reasoning_path=path,
             final_score=score,
             ground_truth=ground_truth,
+            correct=correct,
             total_tokens=gen_stats["total_input_tokens"] + gen_stats["total_output_tokens"],
             total_tokens_input=gen_stats["total_input_tokens"],
             total_tokens_output=gen_stats["total_output_tokens"],
