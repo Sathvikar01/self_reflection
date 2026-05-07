@@ -1306,5 +1306,17 @@
     "question": "If all viruses require a host to replicate and some viruses can survive for hours outside a host, can viruses replicate without a host?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "generated_38",
+    "question": "If trees process carbon dioxide into oxygen through photosynthesis, and forests are composed of trees, and urban areas have fewer trees than forests, would urban areas have lower oxygen levels than forests?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_39",
+    "question": "If all deserts are formed by low rainfall, and Antarctica receives minimal precipitation, is Antarctica a desert?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
