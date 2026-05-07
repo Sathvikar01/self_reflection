@@ -862,5 +862,23 @@
     "question": "Is a peanut butter and jelly sandwich a complete meal?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_157",
+    "question": "Do kangaroos have pouches for carrying babies?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_158",
+    "question": "Can you microwave water past boiling?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_160",
+    "question": "Do all mammals have hair?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
