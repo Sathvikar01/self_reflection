@@ -28,5 +28,23 @@
     "question": "Does hydrogen power work without oxygen?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_5",
+    "question": "Can penguins fly?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_6",
+    "question": "Is Antarctica larger than Europe?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_7",
+    "question": "Can a person hold their breath for 30 minutes?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
