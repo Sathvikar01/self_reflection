@@ -244,5 +244,23 @@
     "question": "Is it possible to swallow your tongue?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_41",
+    "question": "Do giraffes have vocal cords?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_42",
+    "question": "Is it true that bulls hate the color red?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_43",
+    "question": "Can a house cat beat a dog in a fight?",
+    "answer": "no",
+    "correct": "yes"
   }
 ]
