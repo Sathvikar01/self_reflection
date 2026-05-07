@@ -406,5 +406,23 @@
     "question": "In chess, if you can take a queen with your knight but it would expose your king to check, should you take the queen?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_74",
+    "question": "You're in a card game. Should you discard a card that helps slightly now for a chance at a better card if the deck has mostly better cards?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_75",
+    "question": "If you flip a coin 10 times and get heads all 10 times, is the probability of heads on the 11th flip still 50%?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_76",
+    "question": "Do ostriches bury their heads in the sand?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
