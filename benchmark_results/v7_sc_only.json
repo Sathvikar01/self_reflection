@@ -53,5 +53,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_5",
+    "question": "Can penguins fly?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_6",
+    "question": "Is Antarctica larger than Europe?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_7",
+    "question": "Can a person hold their breath for 30 minutes?",
+    "answer": "unknown",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
   }
 ]
