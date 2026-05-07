@@ -664,5 +664,23 @@
     "question": "Do cats always land on their feet?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_119",
+    "question": "Can a banana be radioactive?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_120",
+    "question": "Do earthworms have hearts?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_121",
+    "question": "Is there gravity on the International Space Station?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
