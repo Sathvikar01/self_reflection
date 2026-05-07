@@ -779,5 +779,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_77",
+    "question": "Can bulls see the color red?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_78",
+    "question": "Does shaving hair make it grow back thicker?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "no",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_79",
+    "question": "Do camels store water in their humps?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
   }
 ]
