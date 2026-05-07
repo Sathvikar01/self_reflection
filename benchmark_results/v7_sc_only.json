@@ -581,5 +581,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_53",
+    "question": "Is it possible to live without a brain?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_54",
+    "question": "Does hot water freeze faster than cold water?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_55",
+    "question": "Can you break glass with sound?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "yes"
+    ]
   }
 ]
