@@ -1109,5 +1109,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_108",
+    "question": "Do sloths really move slowly?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_109",
+    "question": "Can a person survive in space without protection?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_110",
+    "question": "Is rhubarb a fruit?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
   }
 ]
