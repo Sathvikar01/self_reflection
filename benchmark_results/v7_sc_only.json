@@ -86,5 +86,38 @@
       "unknown",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_8",
+    "question": "Is the moon made of cheese?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_9",
+    "question": "Do all birds lay eggs?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "ye",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_10",
+    "question": "Can a fish drown?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "no"
+    ]
   }
 ]
