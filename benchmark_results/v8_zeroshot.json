@@ -988,5 +988,23 @@
     "question": "If all efficient processes reduce costs, and reducing costs is necessary for sustainability, and unsustainable practices harm the environment, would an efficient process that harms the environment be a contradiction?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_183",
+    "question": "If no mammals can fly, and bats are mammals, and flying squirrels are mammals, would it be correct to say that some mammals can fly?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_184",
+    "question": "If company A's revenue is 3x company B's, company B's revenue is 2x company C's, and company C's profit margin is 2x company A's, would company A necessarily have the highest profit?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_185",
+    "question": "If Alice cannot be in two places at once, and Bob must be where Alice is, and Carol cannot be where Bob is, and Alice is in Room X, could Carol be in Room X?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
