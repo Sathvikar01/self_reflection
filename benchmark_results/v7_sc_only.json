@@ -1472,5 +1472,38 @@
       "yes",
       "yes"
     ]
+  },
+  {
+    "id": "merged_145",
+    "question": "Do rabbits eat carrots naturally?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_146",
+    "question": "Can chameleons change to any color?",
+    "answer": "unknown",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_147",
+    "question": "Is the Sahara the largest desert?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
   }
 ]
