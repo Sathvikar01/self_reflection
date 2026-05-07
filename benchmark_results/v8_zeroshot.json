@@ -826,5 +826,23 @@
     "question": "Do all snakes lay eggs?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_149",
+    "question": "Can you see stars during the day?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_151",
+    "question": "Do horseshoe crabs have blue blood?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_152",
+    "question": "Can paper be made waterproof?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
