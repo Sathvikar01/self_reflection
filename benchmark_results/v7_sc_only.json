@@ -1571,5 +1571,38 @@
       "unknown",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_156",
+    "question": "Is a peanut butter and jelly sandwich a complete meal?",
+    "answer": "unknown",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_157",
+    "question": "Do kangaroos have pouches for carrying babies?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_158",
+    "question": "Can you microwave water past boiling?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "no",
+      "yes"
+    ]
   }
 ]
