@@ -1000,5 +1000,23 @@
     "question": "If company A's revenue is 3x company B's, company B's revenue is 2x company C's, and company C's profit margin is 2x company A's, would company A necessarily have the highest profit?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_185",
+    "question": "If Alice cannot be in two places at once, and Bob must be where Alice is, and Carol cannot be where Bob is, and Alice is in Room X, could Carol be in Room X?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_186",
+    "question": "If the ground is wet, it rained recently, and the sprinkler was on timer, but it didn't rain according to weather records, what is the most likely explanation?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_187",
+    "question": "If Alice knows that Bob doesn't know the answer, and Alice knows the answer, and Bob asks Alice for help, would Alice be justified in giving the answer directly?",
+    "answer": "yes",
+    "correct": "no"
   }
 ]
