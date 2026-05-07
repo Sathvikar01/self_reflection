@@ -1288,5 +1288,23 @@
     "question": "If droughts cause soil to lose moisture, and moist soil is necessary for plant growth, and herbivores rely on plants for food, would a prolonged drought lead to the decline of herbivore populations?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "generated_35",
+    "question": "If some living organisms can survive in extreme environments and tardigrades are examples of such organisms, and high salinity is an extreme environment, can tardigrades survive in highly saline environments?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_36",
+    "question": "If wood is a better thermal insulator than metal, and igloos are typically built with blocks of compacted snow, but Inuit people traditionally lit fires inside their igloos for warmth, would the igloos have melted from the inside?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_37",
+    "question": "If all viruses require a host to replicate and some viruses can survive for hours outside a host, can viruses replicate without a host?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
