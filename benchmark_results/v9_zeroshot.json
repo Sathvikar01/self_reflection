@@ -1018,5 +1018,23 @@
     "question": "If Alice knows that Bob doesn't know the answer, and Alice knows the answer, and Bob asks Alice for help, would Alice be justified in giving the answer directly?",
     "answer": "yes",
     "correct": "no"
+  },
+  {
+    "id": "merged_188",
+    "question": "If a store offers buy 2 get 1 free, each item costs $5, and you need 7 items, would paying $25 be sufficient?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_189",
+    "question": "If completing task A unlocks task B, completing B unlocks C, but completing A consumes resources needed for D, and you must complete both C and D, should you start with A?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_190",
+    "question": "If the experiment had used twice the concentration, would the reaction time necessarily be halved?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
