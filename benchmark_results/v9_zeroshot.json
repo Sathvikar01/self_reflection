@@ -190,5 +190,23 @@
     "question": "Is water a good conductor of electricity?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_32",
+    "question": "Do spiders have wings?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_33",
+    "question": "Can you see the Great Wall of China from space?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_34",
+    "question": "Is gold a good investment?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
