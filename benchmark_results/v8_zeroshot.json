@@ -136,5 +136,23 @@
     "question": "Is water wet?",
     "answer": "no",
     "correct": "yes"
+  },
+  {
+    "id": "merged_23",
+    "question": "Can a human eat a poisonous mushroom and live?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_24",
+    "question": "Do whales drink water?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_25",
+    "question": "Is it possible to fold a piece of paper more than 7 times?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
