@@ -218,5 +218,38 @@
       "yes",
       "yes"
     ]
+  },
+  {
+    "id": "merged_20",
+    "question": "Can you light a diamond on fire?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "yes",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_21",
+    "question": "Do astronauts need to wear sunscreen?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "yes",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_22",
+    "question": "Is water wet?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "no",
+      "yes"
+    ]
   }
 ]
