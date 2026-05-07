@@ -280,5 +280,23 @@
     "question": "Can you sneeze with your eyes open?",
     "answer": "no",
     "correct": "yes"
+  },
+  {
+    "id": "merged_47",
+    "question": "Is it dangerous to wake a sleepwalker?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_48",
+    "question": "Do octopuses have three hearts?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_49",
+    "question": "Can a person be allergic to water?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
