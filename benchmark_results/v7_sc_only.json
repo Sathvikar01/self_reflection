@@ -614,5 +614,38 @@
       "unknown",
       "yes"
     ]
+  },
+  {
+    "id": "merged_56",
+    "question": "Is hot water heavier than cold water?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_57",
+    "question": "Do spiders have bones?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_58",
+    "question": "Is the Earth flat?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "no",
+      "no"
+    ]
   }
 ]
