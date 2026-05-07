@@ -1142,5 +1142,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_111",
+    "question": "Do elephants never forget?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "unknown",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_112",
+    "question": "Is blood blue inside the body?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_113",
+    "question": "Can volcanoes erupt in winter?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "unknown"
+    ]
   }
 ]
