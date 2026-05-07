@@ -748,5 +748,23 @@
     "question": "Do fireflies glow in all seasons?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_134",
+    "question": "Can a jellyfish kill a human?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_135",
+    "question": "Is sand made of fish poop?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_136",
+    "question": "Do reindeer have red noses?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
