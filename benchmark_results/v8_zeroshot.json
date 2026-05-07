@@ -1180,5 +1180,23 @@
     "question": "If some antibiotics harm beneficial bacteria, and beneficial bacteria strengthen the immune system, and a weakened immune system makes one more susceptible to illness, can taking antibiotics lead to more illnesses?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "generated_14",
+    "question": "If all arachnids have eight legs and scorpions are arachnids, but they also have a tail that they use to sting, can scorpions move quickly without their tails?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_15",
+    "question": "If higher altitudes have lower air pressure, and lower air pressure reduces oxygen levels, and humans require oxygen to breathe, can people live at extremely high altitudes without supplemental oxygen?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_16",
+    "question": "If microplastics are ingested by zooplankton and zooplankton are consumed by fish, and humans eat fish that contain microplastics, can humans ingest microplastics through seafood consumption?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
