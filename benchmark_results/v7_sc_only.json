@@ -1604,5 +1604,38 @@
       "no",
       "yes"
     ]
+  },
+  {
+    "id": "merged_160",
+    "question": "Do all mammals have hair?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_161",
+    "question": "Can a spider be as large as a human?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_162",
+    "question": "Is there a permanent shadow on the Moon?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "yes",
+      "no"
+    ]
   }
 ]
