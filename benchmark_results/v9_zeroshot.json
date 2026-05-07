@@ -820,5 +820,23 @@
     "question": "Is the Sahara the largest desert?",
     "answer": "yes",
     "correct": "no"
+  },
+  {
+    "id": "merged_148",
+    "question": "Do all snakes lay eggs?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_149",
+    "question": "Can you see stars during the day?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_151",
+    "question": "Do horseshoe crabs have blue blood?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
