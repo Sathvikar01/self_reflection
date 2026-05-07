@@ -1076,5 +1076,38 @@
       "unknown",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_105",
+    "question": "Do snakes blink?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_106",
+    "question": "Can wood conduct electricity?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_107",
+    "question": "Is Alaska the easternmost US state?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
   }
 ]
