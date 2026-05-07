@@ -911,5 +911,38 @@
       "unknown",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_89",
+    "question": "Can you stand on Saturn?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_90",
+    "question": "Do crocodiles cry?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "no",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_91",
+    "question": "Is the heart on the left side of the body?",
+    "answer": "yes",
+    "correct": "no",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
   }
 ]
