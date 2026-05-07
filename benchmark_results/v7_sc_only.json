@@ -350,5 +350,38 @@
       "unknown",
       "no"
     ]
+  },
+  {
+    "id": "merged_32",
+    "question": "Do spiders have wings?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_33",
+    "question": "Can you see the Great Wall of China from space?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_34",
+    "question": "Is gold a good investment?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
   }
 ]
