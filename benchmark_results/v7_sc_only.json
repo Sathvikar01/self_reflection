@@ -1241,5 +1241,38 @@
       "yes",
       "yes"
     ]
+  },
+  {
+    "id": "merged_121",
+    "question": "Is there gravity on the International Space Station?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "no",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_122",
+    "question": "Can crows recognize human faces?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_123",
+    "question": "Is silk made by worms?",
+    "answer": "yes",
+    "correct": "no",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
   }
 ]
