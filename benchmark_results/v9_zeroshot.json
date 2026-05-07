@@ -496,5 +496,23 @@
     "question": "Do black holes actually exist?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_89",
+    "question": "Can you stand on Saturn?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_90",
+    "question": "Do crocodiles cry?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_91",
+    "question": "Is the heart on the left side of the body?",
+    "answer": "yes",
+    "correct": "no"
   }
 ]
