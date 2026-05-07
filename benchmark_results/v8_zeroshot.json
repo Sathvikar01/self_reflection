@@ -1216,5 +1216,23 @@
     "question": "If a coin is flipped 10 times and lands heads up every time, does the probability of it landing tails up on the 11th flip increase?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "generated_20",
+    "question": "If a bakery sells 250 loaves of bread per day and each loaf costs $2, and the bakery operates 7 days a week, does it make more than $3500 per week?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_21",
+    "question": "If a snail is at the bottom of a 20-foot well, and each day it climbs up 3 feet, but at night, it slips back 2 feet, will the snail ever reach the top of the well?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_22",
+    "question": "If droughts cause soil to harden and hardened soil cannot absorb water, and roots of plants grow in soil, would plants in areas with frequent droughts have weak root systems?",
+    "answer": "no",
+    "correct": "yes"
   }
 ]
