@@ -442,5 +442,23 @@
     "question": "Do camels store water in their humps?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_80",
+    "question": "Can you touch your elbow with your tongue?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_81",
+    "question": "Does goldfish memory last only 3 seconds?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_82",
+    "question": "Is the Great Wall of China the only man-made object visible from the moon?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
