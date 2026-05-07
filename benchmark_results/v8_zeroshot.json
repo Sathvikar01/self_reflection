@@ -532,5 +532,23 @@
     "question": "Can lightning strike the same place twice?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_95",
+    "question": "Is salt the only rock humans eat?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_96",
+    "question": "Do dogs see in black and white?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_98",
+    "question": "Is Niagara Falls the largest waterfall in the world?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
