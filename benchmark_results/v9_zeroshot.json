@@ -892,5 +892,23 @@
     "question": "Is there a permanent shadow on the Moon?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_164",
+    "question": "Can a person survive without a stomach?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_165",
+    "question": "Is Dubai a country?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_166",
+    "question": "Do pandas hibernate?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
