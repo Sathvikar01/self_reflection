@@ -1252,5 +1252,23 @@
     "question": "If all birds have hollow bones and penguins are birds, but penguins cannot fly, do penguins have hollow bones?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "generated_27",
+    "question": "If humans can only hear sounds with frequencies between 20 Hz and 20 kHz, and bats use echolocation calls above 20 kHz to navigate, are humans able to hear the echolocation calls of bats?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "generated_28",
+    "question": "If some fungi turn insects into 'zombies' by controlling their behavior and ants are social insects that rely on chemical signals to communicate, can fungi manipulate the chemical signals of ants to alter their behavior?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_29",
+    "question": "If humans generally fear things that can harm them and spiders are often feared, and most spiders are harmless, would the fear of spiders be an irrational fear?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
