@@ -772,5 +772,23 @@
     "question": "Do platypuses lay eggs?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_140",
+    "question": "Can a cockroach live without its head?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_141",
+    "question": "Is tapioca a type of rice?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_142",
+    "question": "Do alligators live in sewers?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
