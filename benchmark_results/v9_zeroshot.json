@@ -784,5 +784,23 @@
     "question": "Is tapioca a type of rice?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_142",
+    "question": "Do alligators live in sewers?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_143",
+    "question": "Can a bullet fired vertically kill someone?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_144",
+    "question": "Is vanilla derived from orchids?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
