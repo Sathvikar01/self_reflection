@@ -1175,5 +1175,38 @@
       "yes",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_114",
+    "question": "Do babies have more bones than adults?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_115",
+    "question": "Is bamboo a type of grass?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_116",
+    "question": "Can flamingos be blue?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
   }
 ]
