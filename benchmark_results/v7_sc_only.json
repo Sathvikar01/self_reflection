@@ -1208,5 +1208,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_117",
+    "question": "Do cats always land on their feet?",
+    "answer": "unknown",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_119",
+    "question": "Can a banana be radioactive?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_120",
+    "question": "Do earthworms have hearts?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
   }
 ]
