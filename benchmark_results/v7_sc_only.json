@@ -944,5 +944,38 @@
       "yes",
       "yes"
     ]
+  },
+  {
+    "id": "merged_92",
+    "question": "Can mosquitoes transmit HIV?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_93",
+    "question": "Is Antarctica a desert?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_94",
+    "question": "Can lightning strike the same place twice?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
   }
 ]
