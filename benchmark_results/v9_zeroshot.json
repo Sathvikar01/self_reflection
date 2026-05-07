@@ -568,5 +568,23 @@
     "question": "Is honey bee vomit?",
     "answer": "yes",
     "correct": "no"
+  },
+  {
+    "id": "merged_102",
+    "question": "Do polar bears eat penguins?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_103",
+    "question": "Can you drive from North America to South America?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_104",
+    "question": "Is the Pacific Ocean shrinking?",
+    "answer": "no",
+    "correct": "yes"
   }
 ]
