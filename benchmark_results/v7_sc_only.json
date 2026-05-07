@@ -845,5 +845,38 @@
       "unknown",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_83",
+    "question": "Do bats drink human blood?",
+    "answer": "unknown",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_84",
+    "question": "Can owls turn their heads 360 degrees?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_85",
+    "question": "Is coffee made from beans?",
+    "answer": "yes",
+    "correct": "no",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
   }
 ]
