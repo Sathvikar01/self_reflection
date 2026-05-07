@@ -478,5 +478,23 @@
     "question": "Is coffee made from beans?",
     "answer": "yes",
     "correct": "no"
+  },
+  {
+    "id": "merged_86",
+    "question": "Do sharks get cancer?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_87",
+    "question": "Is penguin milk real?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_88",
+    "question": "Do black holes actually exist?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
