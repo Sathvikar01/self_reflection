@@ -185,5 +185,38 @@
       "yes",
       "yes"
     ]
+  },
+  {
+    "id": "merged_17",
+    "question": "Do trees sleep?",
+    "answer": "unknown",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_18",
+    "question": "Can you cry underwater?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_19",
+    "question": "Is a tomato a fruit?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
   }
 ]
