@@ -730,5 +730,23 @@
     "question": "Is the South Pole colder than the North Pole?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_130",
+    "question": "Do whales have hair?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_131",
+    "question": "Can humans grow new brain cells?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_133",
+    "question": "Do fireflies glow in all seasons?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
