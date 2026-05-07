@@ -185,7 +185,7 @@ def run_method(name, system_prompt, user_template, delay=DELAY, sc_paths=0, sc_t
             item['votes'] = votes
         results.append(item)
 
-        if (idx + 1) % 10 == 0:
+        if (idx + 1) % 3 == 0:
             save(name, results)
             correct = sum(1 for r in results if r['answer'] == r['correct'])
             print(f"  [Checkpoint {idx+1} | {correct}/{len(results)} = {100*correct/len(results):.1f}%]", flush=True)
@@ -210,7 +210,7 @@ if __name__ == "__main__":
         run_method("zeroshot", SYSTEM_ZS, "Question: {question}\nAnswer with ONLY yes or no.", max_tokens=100)
 
     if arg in ("cot", "all"):
-        run_method("cot", SYSTEM_COT, "Question: {question}\n\nThink step by step, then answer YES or NO.", max_tokens=500)
+        run_method("cot", SYSTEM_COT, "Question: {question}\n\nThink step by step, then answer YES or NO.", max_tokens=300)
 
     if arg in ("rag", "all"):
         run_method("rag", SYSTEM_RAG, "Question: {question}\n\nRefer to the knowledge base and answer YES or NO.", max_tokens=300)
