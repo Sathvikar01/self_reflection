@@ -226,5 +226,23 @@
     "question": "Is it safe to eat food that fell on the floor if picked up within 5 seconds?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_38",
+    "question": "Do elephants have teeth?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_39",
+    "question": "Can a person survive on just potatoes?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_40",
+    "question": "Is it possible to swallow your tongue?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
