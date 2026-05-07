@@ -1108,5 +1108,23 @@
     "question": "If trees grow faster in warmer temperatures and forests increase atmospheric oxygen through photosynthesis, and warmer temperatures accelerate decomposition of organic matter, would forests eventually increase atmospheric oxygen levels despite warmer temperatures?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "generated_2",
+    "question": "If a country's economy relies heavily on oil exports and the global demand for oil decreases, would the country's economy likely contract?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_3",
+    "question": "If a higher concentration of greenhouse gases traps more heat and ice caps reflect sunlight, and the Arctic ice cap is melting at a faster rate than the Antarctic ice cap, would the Earth experience more heat if the Arctic ice cap completely melted?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_4",
+    "question": "If a black hole's gravity is so strong that nothing can escape, and light always travels in straight lines, can we see a black hole directly?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
