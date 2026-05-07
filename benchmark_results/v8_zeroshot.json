@@ -352,5 +352,23 @@
     "question": "Is the Earth flat?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_59",
+    "question": "Do computers use binary because they can't count to 10?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_60",
+    "question": "Can you fold a piece of paper more than 7 times?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_61",
+    "question": "You have $100 and want to buy items costing $23, $18, and $45. Can you afford all three?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
