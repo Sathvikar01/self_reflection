@@ -910,5 +910,23 @@
     "question": "Do pandas hibernate?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_167",
+    "question": "Can you be allergic to water?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_168",
+    "question": "Is the tongue a muscle?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_169",
+    "question": "Do all bees make honey?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
