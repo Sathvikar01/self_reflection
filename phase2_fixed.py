@@ -5,7 +5,7 @@ Usage: python phase2_fixed.py [all|zs|cot|rag|sc|kbsc]
 """
 import json, time, requests, re, sys, os, subprocess
 
-MODEL = "meta/llama-3.1-405b-instruct"
+MODEL = "mistralai/mistral-large-3-675b-instruct-2512"
 API_KEY = "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"
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 DELAY = 2.5
@@ -122,14 +122,14 @@ def load_questions():
     return [q for q in data if norm_ans(q.get('answer','')) in ('yes','no')][:220]
 
 def cp(name):
-    p = f'benchmark_results/v4_{name}.json'
+    p = f'benchmark_results/v6_{name}.json'
     if os.path.exists(p):
         with open(p) as f:
             return json.load(f)
     return []
 
 def save(name, results):
-    with open(f'benchmark_results/v4_{name}.json', 'w') as f:
+    with open(f'benchmark_results/v6_{name}.json', 'w') as f:
         json.dump(results, f, indent=2)
 
 def run_method(name, system_prompt, user_template, delay=DELAY, sc_paths=0, sc_temp=0.4, max_tokens=150):

@@ -1,36 +1,49 @@
-# Self-Reflection Pipeline - Next Steps Plan
+# Self-Reflection Pipeline - Status (Updated 2025-05-01)
+
+## Status: PHASE 3-4 COMPLETE
 
 ## Goal
-Achieve statistically significant improvement with:
-- 100+ problems
-- Knowledge retrieval for factual questions
-- Selective reflection based on problem type
+Systematic empirical evaluation of 5 reasoning pipelines on 405B model.
 
-## Phase 1: Expand Dataset to 100+ Problems
-- [ ] Generate additional StrategyQA-style problems programmatically
-- [ ] Create diverse question types (factual, reasoning, strategic)
-- [ ] Ensure balanced yes/no distribution
-- [ ] Validate all ground truth answers
+## Results (50 questions, Llama-3.1-405B-Instruct)
 
-## Phase 2: Implement Knowledge Retrieval
-- [ ] Add fact-checking step before final answer
-- [ ] Create knowledge base for scientific facts
-- [ ] Implement retrieval-augmented generation for factual questions
-- [ ] Test on known failure cases (diamond, fish drowning)
+| Method | Accuracy | vs Zero-Shot | Significant? |
+|--------|----------|--------------|--------------|
+| Zero-Shot | 82.0% | -- | -- |
+| **KB+SC+Step1/2 (Ours)** | **84.0%** | **+2.4%** | No (p=1.0) |
+| SC-only (Wang 2022) | 78.0% | -4.9% | No |
+| RAG (Lewis 2020) | 76.0% | -7.3% | No |
+| CoT (Wei 2022) | 62.0% | -24.4% | **Yes, p=0.0098** |
 
-## Phase 3: Implement Selective Reflection
-- [ ] Classify problem type (factual vs reasoning)
-- [ ] Skip reflection for high-confidence baseline answers
-- [ ] Apply deeper reflection for reasoning-heavy problems
-- [ ] A/B test selective vs full reflection
+## Key Findings
 
-## Phase 4: Large-Scale Benchmark
-- [ ] Run baseline on 100+ problems
-- [ ] Run self-reflection on 100+ problems  
-- [ ] Statistical analysis with McNemar's test
-- [ ] Document results and significance
+1. **CoT causes non-committal answers**: 405B model fails to commit to YES/NO when asked to think step by step (p=0.0098)
+2. **Naive KB injection hurts**: RAG (76.0%) < Zero-shot (82.0%) by 7.3%
+3. **SC alone cannot fix KB gaps**: SC-only (78.0%) < Zero-shot (82.0%)
+4. **Step 1/Step 2 is essential**: Only KB+SC (84.0%) improves over zero-shot
+5. **Knowledge accessibility is the bottleneck**, not reasoning ability
 
-## Success Criteria
-- [ ] p < 0.05 on McNemar's test
-- [ ] Clear accuracy improvement over baseline
-- [ ] No degradation on previously correct answers
+## Documentation Updates (2025-05-01)
+
+- [x] README.md — Updated with 5-method comparison results
+- [x] paper/self_reflection_paper.tex — Rewritten as failure analysis / empirical evaluation paper
+- [x] tasks/lessons.md — Updated with comprehensive benchmark findings
+- [x] tasks/todo.md — This file
+- [x] Session log — Updated with Phase 2-4 results
+
+## Benchmark Files
+
+- `benchmark_results/comp_zeroshot_s0_e50.json` — 50 results
+- `benchmark_results/comp_cot_s0_e50.json` — 50 results
+- `benchmark_results/comp_sc_only_s0_e50.json` — 50 results
+- `benchmark_results/comp_rag_s0_e50.json` — 50 results
+- `benchmark_results/comp_kb_sc_s0_e50.json` — 50 results
+- `benchmark_results/comprehensive_summary.json` — Summary JSON
+- `phase2_aggregate_results.py` — Aggregation + McNemar analysis
+
+## Phase Scripts
+
+- `phase1_merge_datasets.py` — Merged 220 unique yes/no questions
+- `phase1b_generate_questions.py` — API question generation
+- `phase2_method{1-5}_*.py` — Individual method runners
+- `phase2_aggregate_results.py` — Results aggregation

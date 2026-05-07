@@ -1,0 +1,76 @@
+name: Benchmark Pipeline
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'phase2_fixed.py'
+      - 'phase2_aggregate_v2.py'
+      - 'data/datasets/**'
+  workflow_dispatch:
+    inputs:
+      num_questions:
+        description: 'Number of questions to benchmark (default: 220)'
+        default: '220'
+
+env:
+  NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 600
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install requests scipy
+
+    - name: Run Zero-Shot
+      run: python phase2_fixed.py zs
+      env:
+        NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+
+    - name: Run CoT
+      run: python phase2_fixed.py cot
+      env:
+        NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+
+    - name: Run RAG
+      run: python phase2_fixed.py rag
+      env:
+        NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+
+    - name: Run SC-only
+      run: python phase2_fixed.py sc
+      env:
+        NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+
+    - name: Run KB+SC
+      run: python phase2_fixed.py kbsc
+      env:
+        NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+
+    - name: Aggregate results
+      run: python phase2_aggregate_v2.py
+
+    - name: Upload results
+      uses: actions/upload-artifact@v4
+      with:
+        name: benchmark-results
+        path: benchmark_results/v6_*.json
+
+    - name: Commit results
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add benchmark_results/v6_*.json
+        git diff --staged --quiet || git commit -m "benchmark: automated results [skip ci]"
+        git push
