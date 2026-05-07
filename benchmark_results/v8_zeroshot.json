@@ -82,5 +82,23 @@
     "question": "Is lightning hotter than the sun?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_14",
+    "question": "Can you boil water in a paper cup?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_15",
+    "question": "Can sound travel in space?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_16",
+    "question": "Is glass a solid?",
+    "answer": "yes",
+    "correct": "no"
   }
 ]
