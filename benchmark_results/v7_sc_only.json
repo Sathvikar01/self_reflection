@@ -1010,5 +1010,38 @@
       "unknown",
       "no"
     ]
+  },
+  {
+    "id": "merged_99",
+    "question": "Do we use only 10% of our brain?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "no",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_100",
+    "question": "Can ice be hot?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_101",
+    "question": "Is honey bee vomit?",
+    "answer": "unknown",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
   }
 ]
