@@ -1,0 +1,1367 @@
+{
+  "timestamp": 1777323285.0292442,
+  "iteration": 6,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 28,
+  "start_offset": 28,
+  "pipelines": {
+    "Baseline": {
+      "accuracy": 0.7857142857142857,
+      "correct": 22,
+      "total": 28,
+      "avg_tokens": 219.35714285714286,
+      "avg_latency": 0.7589870861598423,
+      "results": [
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_029",
+          "problem": "Is it true that we only use 10% of our brain?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 327,
+          "latency_seconds": 3.0669124126434326,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "This myth has been debunked by experts in neuroscience and psychology. \n\nThe idea that we only use 10% of our brain is a common misconception that has been perpetuated by popular culture, but it is not supported by scientific evidence.\n\nIn reality, brain imaging techniques such as functional magnetic resonance imaging (fMRI) and positron emission tomography (PET) have shown that different areas of the brain are active at different times, and even the supposedly \"idle\" areas of the brain are stil"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_030",
+          "problem": "Do bats drink blood?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 165,
+          "latency_seconds": 0.43260717391967773,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Some species of bats are known to feed on the blood of animals, particularly in the family Desmodontinae, which includes the vampire bats. \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_031",
+          "problem": "Can an ostrich fly?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 194,
+          "latency_seconds": 0.6356401443481445,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Ostriches are birds, and birds are known to have the ability to fly. However, ostriches are also known to be flightless birds, which means they do not have the ability to fly.\n\nConsidering these two facts, I would conclude that ostriches cannot fly.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_032",
+          "problem": "Is water a good conductor of electricity?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 194,
+          "latency_seconds": 0.6091451644897461,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Water is a polar solvent, which means it can dissolve and carry ions. However, pure water is not a good conductor of electricity. \n\nBut, when water is contaminated with salts or other impurities, it can conduct electricity.\n\nSo, considering pure water, the answer is: <answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_033",
+          "problem": "Do spiders have wings?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 157,
+          "latency_seconds": 0.5111446380615234,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Spiders belong to the class Arachnida, and arachnids do not have wings. \n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_034",
+          "problem": "Can you see the Great Wall of China from space?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 284,
+          "latency_seconds": 0.9321637153625488,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "The Great Wall of China is a large structure, but it is not wide enough or tall enough to be visible from space. It is often said that it is visible from space, but this is a common myth.\n\nThe Great Wall of China is about 30 feet wide and blends in with the surrounding terrain, making it difficult to spot from space. In reality, it is only visible from low Earth orbit under certain conditions, such as when the sun is behind the observer and the wall is shadowed.\n\nHowever, astronauts have reporte"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_035",
+          "problem": "Is gold a good investment?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 248,
+          "latency_seconds": 0.9041600227355957,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Gold has historically been a stable store of value and a hedge against inflation and market volatility. It is also a physical asset that can be held directly, providing a sense of security and control.\n\nGold prices tend to increase during times of economic uncertainty, making it a popular choice for investors seeking to diversify their portfolios.\n\nHowever, it's essential to note that investing in gold comes with its own set of risks and considerations, such as storage and security costs, market"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_036",
+          "problem": "Do dolphins sleep?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 174,
+          "latency_seconds": 0.5411362648010254,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Dolphins do have periods of rest, but they don't sleep like humans do. They sleep with only half their brain at a time, allowing them to remain alert and aware of their surroundings.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_037",
+          "problem": "Can you tickle yourself?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 221,
+          "latency_seconds": 0.6291816234588623,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if you can tickle yourself, let's consider the process of tickling. Tickle is a sensation that occurs when nerve endings are stimulated in a specific way, often by someone else's touch. \n\nWhen you try to tickle yourself, the brain anticipates the sensation and can prepare the body to react accordingly. This anticipation can reduce the effectiveness of the tickling sensation.\n\nConsidering this, the answer is: <answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_038",
+          "problem": "Is it safe to eat food that fell on the floor if picked up within 5 seconds?",
+          "answer": "however, if we're considering a very specific scen",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 341,
+          "latency_seconds": 1.139446496963501,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.6,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "last_sentence",
+            "raw_response": "To determine if it's safe to eat food that fell on the floor if picked up within 5 seconds, let's consider the following factors:\n\n1. The cleanliness of the floor: Floors can be contaminated with various substances such as dust, dirt, bacteria, and other microorganisms.\n2. The type of food: Some foods are more susceptible to contamination than others. For example, foods with high moisture content, such as fruits and vegetables, are more likely to harbor bacteria.\n3. The time frame: Picking up th"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_039",
+          "problem": "Do elephants have teeth?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 192,
+          "latency_seconds": 0.5195660591125488,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Elephants have large incisors that are used for grasping and plucking food. These incisors are actually large, elongated tusks that are made of ivory. However, they do have cheek teeth, also known as molars, which are used for grinding and crushing food.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_040",
+          "problem": "Can a person survive on just potatoes?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 272,
+          "latency_seconds": 0.8325798511505127,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "While potatoes are a good source of carbohydrates, fiber, and some essential vitamins and minerals, they lack other essential nutrients like protein, healthy fats, and various vitamins and minerals.\n\n1. Potatoes do not contain enough protein to sustain a person's muscle mass and overall health.\n2. They lack essential fatty acids, which are crucial for brain function and overall health.\n3. Potatoes are low in vitamin B12, which is necessary for the production of red blood cells and nerve function"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_041",
+          "problem": "Is it possible to swallow your tongue?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 171,
+          "latency_seconds": 0.4925875663757324,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "It is not possible for a person to swallow their tongue. The tongue is held in place by muscles and ligaments, and it is not capable of being swallowed.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_042",
+          "problem": "Do giraffes have vocal cords?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 164,
+          "latency_seconds": 0.4421999454498291,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Giraffes do have a laryngeal prominence, which is the equivalent of a vocal cord in other animals. \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_043",
+          "problem": "Is it true that bulls hate the color red?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 283,
+          "latency_seconds": 0.933546781539917,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Bulls are often associated with the color red due to the myth that they are enraged by it. However, this is not entirely accurate. \n\nThe myth likely originated from the use of red capes in bullfighting, which is a spectacle that involves provoking and killing a bull in a public setting. The red cape is used to provoke the bull, but it's not the color itself that angers the bull. \n\nIn reality, bulls are colorblind to red and green, as they have dichromatic vision, which means they can only see bl"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_044",
+          "problem": "Can a house cat beat a dog in a fight?",
+          "answer": "in these cases, they may be able to hold their own",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 333,
+          "latency_seconds": 1.1303660869598389,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.6,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "last_sentence",
+            "raw_response": "It's difficult to make a general statement about all house cats and dogs, as it depends on various factors such as the size, breed, and temperament of the animals involved. However, in general, a dog is likely to have the physical advantage in a fight against a house cat.\n\nDogs are often larger and more powerful than house cats, with stronger jaws and more aggressive instincts. They are also more social animals and are often trained to be protective of their owners, which can make them more aggr"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_045",
+          "problem": "Is yawning contagious?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 190,
+          "latency_seconds": 0.6869003772735596,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Yes, yawning is contagious. \n\nResearch has shown that observing someone else yawn can trigger a yawn in the observer, suggesting that yawning is indeed contagious. This phenomenon is often attributed to the brain's ability to mimic social cues and emotions, including yawning.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_046",
+          "problem": "Do magnets work in space?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 232,
+          "latency_seconds": 0.7401876449584961,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Magnets work due to the magnetic field they generate, which is a result of the interaction between the magnetic field and the surrounding space. However, in space, there is no air resistance or medium to carry the magnetic field, which is why magnets don't work in the same way as they do on Earth.\n\nHowever, magnets can still attract or repel each other in space, but the effect is much weaker due to the lack of a medium to carry the magnetic field. \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_047",
+          "problem": "Can you sneeze with your eyes open?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 233,
+          "latency_seconds": 0.6460978984832764,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Sneezing is a natural reflex that involves the sudden release of air from the lungs, which is usually accompanied by the closure of the eyelids due to the sudden contraction of the facial muscles. \n\nHowever, it is theoretically possible to sneeze with your eyes open if you can control the muscles involved in sneezing and eyelid closure simultaneously. \n\nBut in most cases, people's eyelids will close involuntarily when they sneeze.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_048",
+          "problem": "Is it dangerous to wake a sleepwalker?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 282,
+          "latency_seconds": 1.0014727115631104,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Waking a sleepwalker can be dangerous because it can cause them to become disoriented and confused, leading to a range of potential problems, including:\n\n1. Confusion and agitation: Sleepwalkers may become agitated or confused when woken, which can lead to physical aggression or other behaviors.\n2. Injury: Waking a sleepwalker can cause them to become startled and potentially injure themselves or others in the process.\n3. Emotional distress: Waking a sleepwalker can also cause them emotional dis"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_049",
+          "problem": "Do octopuses have three hearts?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 201,
+          "latency_seconds": 0.5402779579162598,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Octopuses have a unique circulatory system. \n\nThey have three hearts in total, but two of these hearts are branchial hearts, which are responsible for pumping blood to the octopus's gills. The third heart is a systemic heart, which pumps blood to the rest of the octopus's body.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_050",
+          "problem": "Can a person be allergic to water?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 229,
+          "latency_seconds": 0.7079358100891113,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "While it may seem counterintuitive, there is a condition known as aquagenic urticaria, which is a rare skin allergy that causes hives or itchy skin in response to contact with water. This condition is not an allergy to the chemical composition of water itself, but rather an immune system reaction to the physical properties of water, such as its temperature or the way it interacts with the skin.\n\nConsidering this information, the answer is: \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_051",
+          "problem": "Is the Pacific Ocean larger than all land combined?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 206,
+          "latency_seconds": 0.7203807830810547,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "The Pacific Ocean is the largest of the world's five oceans, covering an area of approximately 155.6 million square kilometers. \n\nThe total area of all land on Earth is approximately 148,940,000 square kilometers.\n\nSince the Pacific Ocean's area is larger than the total area of all land, the answer is:\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_052",
+          "problem": "Do humans use more than 10% of their brain at once?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 138,
+          "latency_seconds": 0.28197240829467773,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.85,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "yes_no",
+            "raw_response": "no"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_053",
+          "problem": "Can snakes hear music?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 174,
+          "latency_seconds": 0.4211111068725586,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Snakes do not have ears or a auditory system that can detect sound waves in the same way humans do. They rely on other senses, such as vibration and smell, to navigate their environment.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_054",
+          "problem": "Is it possible to live without a brain?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 157,
+          "latency_seconds": 0.550856351852417,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "No, it is not biologically possible for a human to live without a brain. \n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_055",
+          "problem": "Does hot water freeze faster than cold water?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 192,
+          "latency_seconds": 0.5660445690155029,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "This phenomenon is known as the Mpemba effect. It suggests that under certain conditions, hot water can indeed freeze faster than cold water. However, the scientific community is still debating the validity and causes of this effect.\n\nConsidering the available information, I would say:\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_056",
+          "problem": "Can you break glass with sound?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 188,
+          "latency_seconds": 0.636016845703125,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Yes, it is possible to break glass with sound. This phenomenon is known as acoustic cavitation or sonic shattering. When a high-frequency sound wave is applied to a glass surface, it can create a pressure difference that causes the glass to shatter.\n\n<answer>yes</answer>"
+          }
+        }
+      ]
+    },
+    "Self-Reflection": {
+      "accuracy": 0.8571428571428571,
+      "correct": 24,
+      "total": 28,
+      "avg_tokens": 3917.214285714286,
+      "avg_latency": 7.6793330907821655,
+      "results": [
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_029",
+          "problem": "Is it true that we only use 10% of our brain?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 4011,
+          "latency_seconds": 1.4952051639556885,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_030",
+          "problem": "Do bats drink blood?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3829,
+          "latency_seconds": 36.13736867904663,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_031",
+          "problem": "Can an ostrich fly?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3918,
+          "latency_seconds": 1.434539794921875,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=1.00)",
+            "[Path 1]: no (conf=1.00)",
+            "[Path 3]: no (conf=1.00)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_032",
+          "problem": "Is water a good conductor of electricity?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3993,
+          "latency_seconds": 1.1432735919952393,
+          "reasoning_steps": [
+            "[Path 3]: no (conf=0.80)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 1]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_033",
+          "problem": "Do spiders have wings?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3859,
+          "latency_seconds": 1.441511631011963,
+          "reasoning_steps": [
+            "[Path 3]: no (conf=1.00)",
+            "[Path 1]: no (conf=1.00)",
+            "[Path 2]: no (conf=0.85)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_034",
+          "problem": "Can you see the Great Wall of China from space?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3829,
+          "latency_seconds": 1.693420648574829,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=1.00)",
+            "[Path 3]: no (conf=1.00)",
+            "[Path 2]: no (conf=1.00)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_035",
+          "problem": "Is gold a good investment?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3743,
+          "latency_seconds": 0.8839075565338135,
+          "reasoning_steps": [
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_036",
+          "problem": "Do dolphins sleep?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3906,
+          "latency_seconds": 1.299163818359375,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: yes]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_037",
+          "problem": "Can you tickle yourself?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3954,
+          "latency_seconds": 1.1369833946228027,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=1.00)",
+            "[Path 3]: no (conf=0.85)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_038",
+          "problem": "Is it safe to eat food that fell on the floor if picked up within 5 seconds?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 4020,
+          "latency_seconds": 1.1391029357910156,
+          "reasoning_steps": [
+            "[Path 3]: no (conf=1.00)",
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_039",
+          "problem": "Do elephants have teeth?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3741,
+          "latency_seconds": 0.9494576454162598,
+          "reasoning_steps": [
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_040",
+          "problem": "Can a person survive on just potatoes?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3917,
+          "latency_seconds": 1.3090496063232422,
+          "reasoning_steps": [
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_041",
+          "problem": "Is it possible to swallow your tongue?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3993,
+          "latency_seconds": 36.25914168357849,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Path 1]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_042",
+          "problem": "Do giraffes have vocal cords?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 3795,
+          "latency_seconds": 36.85907244682312,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.85)",
+            "[Vote]: {'yes': 1, 'no': 2}, majority=no, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: no]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 1,
+              "no": 2
+            },
+            "majority_answer": "no",
+            "is_unanimous": false,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_043",
+          "problem": "Is it true that bulls hate the color red?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3942,
+          "latency_seconds": 1.4409255981445312,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=1.00)",
+            "[Path 2]: no (conf=1.00)",
+            "[Path 3]: no (conf=1.00)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_044",
+          "problem": "Can a house cat beat a dog in a fight?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 4002,
+          "latency_seconds": 1.7532508373260498,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_045",
+          "problem": "Is yawning contagious?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3898,
+          "latency_seconds": 1.4124433994293213,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 3]: no (conf=0.30)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: yes]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_046",
+          "problem": "Do magnets work in space?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3892,
+          "latency_seconds": 1.3761634826660156,
+          "reasoning_steps": [
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_047",
+          "problem": "Can you sneeze with your eyes open?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 3999,
+          "latency_seconds": 1.6212592124938965,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_048",
+          "problem": "Is it dangerous to wake a sleepwalker?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3886,
+          "latency_seconds": 1.53340482711792,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=1.00)",
+            "[Path 3]: no (conf=1.00)",
+            "[Path 1]: no (conf=0.85)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_049",
+          "problem": "Do octopuses have three hearts?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3905,
+          "latency_seconds": 1.5459086894989014,
+          "reasoning_steps": [
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: yes]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_050",
+          "problem": "Can a person be allergic to water?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3942,
+          "latency_seconds": 1.3438961505889893,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: yes]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_051",
+          "problem": "Is the Pacific Ocean larger than all land combined?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3920,
+          "latency_seconds": 1.4609942436218262,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: yes]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_052",
+          "problem": "Do humans use more than 10% of their brain at once?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 3897,
+          "latency_seconds": 1.6495630741119385,
+          "reasoning_steps": [
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'yes': 1, 'no': 2}, majority=no, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: no]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 1,
+              "no": 2
+            },
+            "majority_answer": "no",
+            "is_unanimous": false,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_053",
+          "problem": "Can snakes hear music?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3984,
+          "latency_seconds": 71.57161736488342,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_054",
+          "problem": "Is it possible to live without a brain?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3996,
+          "latency_seconds": 1.545083999633789,
+          "reasoning_steps": [
+            "[Path 3]: no (conf=0.85)",
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.85)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_055",
+          "problem": "Does hot water freeze faster than cold water?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3933,
+          "latency_seconds": 2.1620824337005615,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_056",
+          "problem": "Can you break glass with sound?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3978,
+          "latency_seconds": 1.423534631729126,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: no (conf=0.85)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: yes]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        }
+      ]
+    }
+  }
+}

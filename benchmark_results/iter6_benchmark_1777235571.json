@@ -1,0 +1,108 @@
+{
+  "timestamp": 1777235571.2099688,
+  "iteration": 6,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 5,
+  "start_offset": 0,
+  "pipelines": {
+    "Baseline": {
+      "accuracy": 1.0,
+      "correct": 5,
+      "total": 5,
+      "avg_tokens": 250.8,
+      "avg_latency": 27.872670078277586,
+      "results": [
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 183,
+          "latency_seconds": 28.824005126953125,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Hamsters are prey animals and can be a food source for other animals. \n\nSome animals that prey on hamsters include birds of prey, owls, hawks, foxes, coyotes, and domestic cats.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 287,
+          "latency_seconds": 27.762500047683716,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a person could survive falling from the Empire State Building, let's consider the factors involved:\n\n1. The height of the Empire State Building is approximately 1,454 feet (443 meters).\n2. The terminal velocity of a human body is around 120-140 mph (193-225 kph), which is the speed at which air resistance equals the force of gravity.\n3. The impact force on a person falling from such a height would be extreme, but if they could somehow manage to land on their feet or in a way that"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 320,
+          "latency_seconds": 38.922932386398315,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "The sun is a massive nuclear reactor that emits an enormous amount of energy in the form of light and heat. A light bulb, on the other hand, is a relatively small device that produces a limited amount of light.\n\nThe sun's surface temperature is approximately 5500\u00b0C, while a typical incandescent light bulb has a surface temperature of around 2500\u00b0C. This means the sun is much hotter and therefore emits much more light.\n\nIn terms of luminosity, the sun is about 400 billion times brighter than a ty"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_004",
+          "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 263,
+          "latency_seconds": 10.455730676651001,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a person born in 2000 would be eligible to vote in the 2016 US election, we need to consider the following steps:\n\n1. The minimum age to vote in the US is 18 years old.\n2. The 2016 US election took place on November 8, 2016.\n3. If a person was born in 2000, they would be 16 years old in 2016.\n\nSince the person would not be 18 years old in 2016, they would not be eligible to vote.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_005",
+          "problem": "Does hydrogen power work without oxygen?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 201,
+          "latency_seconds": 33.39818215370178,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.9,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "explicit_marker_yn",
+            "raw_response": "Hydrogen power typically involves a reaction with oxygen to produce electricity, such as in a fuel cell. However, there are some alternative methods, like electrolysis, that can split hydrogen into its components without oxygen. \n\nHowever, in the context of hydrogen power as a source of electricity, the answer is no, because it generally requires oxygen to function."
+          }
+        }
+      ]
+    }
+  }
+}

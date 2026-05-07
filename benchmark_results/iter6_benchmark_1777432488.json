@@ -1,0 +1,549 @@
+{
+  "timestamp": 1777432488.8789794,
+  "iteration": 6,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 10,
+  "start_offset": 0,
+  "pipelines": {
+    "Baseline": {
+      "accuracy": 0.8,
+      "correct": 8,
+      "total": 10,
+      "avg_tokens": 233.9,
+      "avg_latency": 5.401122331619263,
+      "results": [
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 202,
+          "latency_seconds": 6.001501560211182,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Hamsters are prey animals and can be a food source for other animals. \n\nThey can be preyed upon by birds of prey, owls, hawks, and other small predators.\n\nThey can also be preyed upon by larger animals such as cats, dogs, and snakes.\n\nSo, the answer is: <answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 312,
+          "latency_seconds": 2.669626474380493,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a person could survive falling from the Empire State Building, let's consider the factors involved:\n\n1. The height of the Empire State Building is approximately 381 meters (1,250 feet).\n2. The terminal velocity of a human body is around 120-140 mph (193-225 kph), which is the speed at which the air resistance equals the force of gravity.\n3. Assuming a person falls headfirst, the impact would be more likely to be fatal due to the high force of the impact.\n4. However, if a person w"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 239,
+          "latency_seconds": 2.569901704788208,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "The sun is a massive ball of hot, glowing gas and its surface temperature is about 5500\u00b0C. A typical light bulb, on the other hand, has a surface temperature of around 2500-3000\u00b0C. \n\nThe sun's energy output is also much higher than a light bulb. The sun emits an enormous amount of electromagnetic radiation, including visible light, ultraviolet (UV) radiation, and X-rays.\n\nConsidering these factors, the sun is significantly brighter than a light bulb.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_004",
+          "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 277,
+          "latency_seconds": 1.6455919742584229,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a person born in 2000 would be eligible to vote in the 2016 US election, we need to consider the typical age requirement for voting in the US, which is 18 years old.\n\n1. The 2016 US election took place in November 2016.\n2. If a person was born in 2000, they would have been 16 years old in 2016.\n3. Since the typical age requirement for voting in the US is 18 years old, a person born in 2000 would not have met the age requirement to vote in the 2016 US election.\n\n<answer>no</answer"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_005",
+          "problem": "Does hydrogen power work without oxygen?",
+          "answer": "considering these",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 329,
+          "latency_seconds": 6.2599310874938965,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.6,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "last_sentence",
+            "raw_response": "Hydrogen power typically involves a reaction between hydrogen and oxygen to produce electricity. This reaction is known as a fuel cell reaction. \n\nIn a fuel cell, hydrogen is combined with oxygen to produce electricity and water. The reaction is as follows: 2H2 + O2 \u2192 2H2O.\n\nHowever, there are some alternative methods that can potentially generate electricity from hydrogen without oxygen. These methods include:\n\n1. Hydrogen fuel cells with alternative oxidizers: Some researchers have explored th"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_006",
+          "problem": "Can penguins fly?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 237,
+          "latency_seconds": 9.025161743164062,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Penguins belong to the bird family, but they have a unique body structure that makes them flightless. They have wings, but their wings are modified to be more suited for swimming and diving in the water.\n\nTheir wings are not strong enough to generate the lift needed to fly through the air. They also have a heavy body and a short breastbone, which makes it difficult for them to flap their wings quickly enough to generate the speed and lift needed for flight.\n\nTherefore, the answer to the question"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_007",
+          "problem": "Is Antarctica larger than Europe?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 176,
+          "latency_seconds": 6.594881296157837,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Antarctica's total area is approximately 14 million km\u00b2. \nEurope's total area is approximately 10.18 million km\u00b2.\n\nConsidering the areas, Antarctica is indeed larger than Europe.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_008",
+          "problem": "Can a person hold their breath for 30 minutes?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 263,
+          "latency_seconds": 5.599473476409912,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "The maximum time a person can hold their breath varies depending on factors such as physical condition, lung capacity, and the ability to slow down heart rate and conserve oxygen.\n\nTypically, a well-trained freediver can hold their breath for around 4-6 minutes in optimal conditions. However, this is extremely rare and requires extensive training and practice.\n\nFor an average person, the maximum breath-holding time is usually around 1-2 minutes, depending on their physical condition and ability "
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_009",
+          "problem": "Is the moon made of cheese?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 152,
+          "latency_seconds": 5.343119859695435,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "No scientific evidence supports the idea that the moon is made of cheese. \n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_010",
+          "problem": "Do all birds lay eggs?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 152,
+          "latency_seconds": 8.302034139633179,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "All birds are oviparous, which means they reproduce by laying eggs. \n\n<answer>yes</answer>"
+          }
+        }
+      ]
+    },
+    "Self-Reflection": {
+      "accuracy": 1.0,
+      "correct": 10,
+      "total": 10,
+      "avg_tokens": 9327.8,
+      "avg_latency": 13.20903251171112,
+      "results": [
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 9154,
+          "latency_seconds": 11.265831470489502,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 6]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 5]: yes (conf=1.00)",
+            "[Path 4]: yes (conf=1.00)",
+            "[Path 7]: yes (conf=1.00)",
+            "[Vote]: {'yes': 7}, majority=yes, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 7,
+          "metadata": {
+            "vote_counts": {
+              "yes": 7
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 9397,
+          "latency_seconds": 17.31056547164917,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=1.00)",
+            "[Path 7]: no (conf=0.30)",
+            "[Path 4]: no (conf=0.30)",
+            "[Path 2]: no (conf=1.00)",
+            "[Path 6]: no (conf=1.00)",
+            "[Path 5]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'no': 7}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 7,
+          "metadata": {
+            "vote_counts": {
+              "no": 7
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 9186,
+          "latency_seconds": 12.309036016464233,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 7]: yes (conf=1.00)",
+            "[Path 4]: yes (conf=1.00)",
+            "[Path 6]: yes (conf=1.00)",
+            "[Path 5]: yes (conf=1.00)",
+            "[Vote]: {'no': 1, 'yes': 6}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: yes]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 7,
+          "metadata": {
+            "vote_counts": {
+              "no": 1,
+              "yes": 6
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_004",
+          "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 9523,
+          "latency_seconds": 14.859915494918823,
+          "reasoning_steps": [
+            "[Path 4]: no (conf=1.00)",
+            "[Path 1]: no (conf=1.00)",
+            "[Path 3]: no (conf=1.00)",
+            "[Path 6]: no (conf=1.00)",
+            "[Path 5]: no (conf=1.00)",
+            "[Path 7]: no (conf=1.00)",
+            "[Path 2]: no (conf=1.00)",
+            "[Vote]: {'no': 7}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 7,
+          "metadata": {
+            "vote_counts": {
+              "no": 7
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_005",
+          "problem": "Does hydrogen power work without oxygen?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 9237,
+          "latency_seconds": 9.42824387550354,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=1.00)",
+            "[Path 1]: no (conf=0.30)",
+            "[Path 4]: no (conf=1.00)",
+            "[Path 6]: no (conf=1.00)",
+            "[Path 3]: no (conf=1.00)",
+            "[Path 7]: no (conf=1.00)",
+            "[Path 5]: no (conf=1.00)",
+            "[Vote]: {'no': 7}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 7,
+          "metadata": {
+            "vote_counts": {
+              "no": 7
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_006",
+          "problem": "Can penguins fly?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 9133,
+          "latency_seconds": 13.220172643661499,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 3]: no (conf=1.00)",
+            "[Path 2]: no (conf=1.00)",
+            "[Path 6]: no (conf=1.00)",
+            "[Path 4]: yes (conf=0.80)",
+            "[Path 5]: no (conf=1.00)",
+            "[Path 7]: no (conf=1.00)",
+            "[Vote]: {'no': 6, 'yes': 1}, majority=no, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: no]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 7,
+          "metadata": {
+            "vote_counts": {
+              "no": 6,
+              "yes": 1
+            },
+            "majority_answer": "no",
+            "is_unanimous": false,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_007",
+          "problem": "Is Antarctica larger than Europe?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 9153,
+          "latency_seconds": 14.855910539627075,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 4]: yes (conf=1.00)",
+            "[Path 6]: yes (conf=1.00)",
+            "[Path 7]: yes (conf=1.00)",
+            "[Path 5]: yes (conf=1.00)",
+            "[Vote]: {'yes': 6, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: yes]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 7,
+          "metadata": {
+            "vote_counts": {
+              "yes": 6,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_008",
+          "problem": "Can a person hold their breath for 30 minutes?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 9194,
+          "latency_seconds": 15.055853843688965,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=1.00)",
+            "[Path 5]: no (conf=1.00)",
+            "[Path 7]: no (conf=0.30)",
+            "[Path 1]: no (conf=1.00)",
+            "[Path 6]: no (conf=1.00)",
+            "[Path 4]: no (conf=1.00)",
+            "[Vote]: {'no': 7}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 7,
+          "metadata": {
+            "vote_counts": {
+              "no": 7
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_009",
+          "problem": "Is the moon made of cheese?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 9298,
+          "latency_seconds": 14.457653760910034,
+          "reasoning_steps": [
+            "[Path 7]: no (conf=1.00)",
+            "[Path 4]: no (conf=1.00)",
+            "[Path 5]: no (conf=1.00)",
+            "[Path 6]: no (conf=1.00)",
+            "[Path 1]: no (conf=1.00)",
+            "[Path 2]: no (conf=1.00)",
+            "[Path 3]: no (conf=1.00)",
+            "[Vote]: {'no': 7}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 7,
+          "metadata": {
+            "vote_counts": {
+              "no": 7
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_010",
+          "problem": "Do all birds lay eggs?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 10003,
+          "latency_seconds": 9.327142000198364,
+          "reasoning_steps": [
+            "[Path 2]: yes (conf=0.80)",
+            "[Path 5]: no (conf=0.30)",
+            "[Path 3]: yes (conf=0.80)",
+            "[Path 4]: no (conf=0.30)",
+            "[Path 1]: yes (conf=0.80)",
+            "[Path 7]: yes (conf=0.80)",
+            "[Path 6]: yes (conf=0.80)",
+            "[Vote]: {'yes': 5, 'no': 2}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Split vote - keeping majority: yes]"
+          ],
+          "confidence": 0.75,
+          "num_api_calls": 7,
+          "metadata": {
+            "vote_counts": {
+              "yes": 5,
+              "no": 2
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        }
+      ]
+    }
+  }
+}

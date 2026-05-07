@@ -1,0 +1,70 @@
+{
+  "timestamp": 1777000380.2468264,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 3,
+  "pipelines": {
+    "Baseline": {
+      "accuracy": 1.0,
+      "correct": 3,
+      "total": 3,
+      "avg_tokens": 419.6666666666667,
+      "avg_latency": 3.5531912644704184,
+      "results": [
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 318,
+          "latency_seconds": 3.4421350955963135,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To answer this question, let's consider the role of hamsters in their ecosystem.\n\n1. Hamsters are small, nocturnal rodents that are often kept as pets. However, in the wild, they are an important part of their native ecosystems.\n2. Hamsters primarily feed on seeds, fruits, and vegetation. They forage for food in their burrows and on the surface.\n3. As a food source, hamsters can be preyed upon by various animals, such as:\n   - Owls and hawks, which are birds of prey that hunt small mammals like "
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 556,
+          "latency_seconds": 4.033919334411621,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine the likelihood of survival, let's consider several factors:\n\n1. **Height and terminal velocity**: The Empire State Building stands at approximately 1,454 feet (443 meters). When a person falls, they initially accelerate downward due to gravity, but as they pick up speed, air resistance, or drag, slows them down. This is known as terminal velocity, which is typically reached at around 120-140 mph (193-225 kph) for a human body. However, the terminal velocity is also dependent on the "
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 385,
+          "latency_seconds": 3.1835193634033203,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To compare the brightness of the sun and a light bulb, we need to consider a few factors:\n\n1. **Intensity of light**: The sun's surface emits an enormous amount of electromagnetic radiation, including visible light. Its intensity is measured in watts per square meter (W/m\u00b2). The average intensity of sunlight at the Earth's surface is about 1,000 W/m\u00b2.\n\n2. **Comparison to a light bulb**: A typical household light bulb emits light with an intensity of around 100-200 W/m\u00b2. This is significantly low"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "timestamp": 1777243389.4896026,
+  "iteration": 6,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 14,
+  "start_offset": 0,
+  "pipelines": {
+    "Baseline": {
+      "accuracy": 0.8571428571428571,
+      "correct": 12,
+      "total": 14,
+      "avg_tokens": 210.71428571428572,
+      "avg_latency": 28.326337456703186,
+      "results": [
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 184,
+          "latency_seconds": 11.194672107696533,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Hamsters are prey animals, and they are a food source for various predators. \n\nSome of these predators include owls, hawks, foxes, coyotes, and domestic cats. \n\nTherefore, the answer is: <answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 292,
+          "latency_seconds": 5.964065313339233,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a person could survive falling from the Empire State Building, let's consider the factors involved:\n\n1. The height of the Empire State Building is approximately 1,454 feet (443 meters).\n2. The terminal velocity of a human body is around 120-140 mph (193-225 kph), which is the speed at which the air resistance equals the force of gravity.\n3. If a person were to fall from the Empire State Building, they would likely reach terminal velocity before hitting the ground, reducing the im"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 249,
+          "latency_seconds": 77.71712946891785,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "The sun is a massive nuclear reactor that emits an enormous amount of energy in the form of light and heat. A light bulb, on the other hand, is a relatively small device that produces a much smaller amount of light.\n\nThe sun's surface temperature is about 5500\u00b0C, which is much hotter than the filament of a light bulb, which is typically around 2500\u00b0C. This means that the sun emits a much greater amount of light and heat than a light bulb.\n\nTherefore, the sun is indeed much brighter than a light "
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_004",
+          "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 275,
+          "latency_seconds": 14.042230606079102,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a person born in 2000 would be eligible to vote in the 2016 US election, we need to consider the typical age requirement for voting in the US, which is 18 years old.\n\n1. The 2016 US election took place in November 2016.\n2. If a person was born in 2000, they would have been 16 years old in 2016.\n3. Since the typical age requirement for voting in the US is 18 years old, a person born in 2000 would not have been eligible to vote in the 2016 US election.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_005",
+          "problem": "Does hydrogen power work without oxygen?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 201,
+          "latency_seconds": 8.101679563522339,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Hydrogen power typically involves a reaction with oxygen to produce electricity, such as in a fuel cell. However, there are some alternative methods that don't require oxygen, like the electrolysis of water or the use of a proton exchange membrane (PEM) without oxygen. \n\nConsidering these exceptions, the answer is: <answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_006",
+          "problem": "Can penguins fly?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 234,
+          "latency_seconds": 34.823140382766724,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Penguins are birds, but they have a number of physical characteristics that distinguish them from other birds. One of the main differences is their wings. While penguins do have wings, they are not as well-suited for flying as the wings of other birds. In fact, penguins use their wings to swim and dive in the water, rather than to fly through the air.\n\nSo, considering the physical characteristics of penguins and their adaptations for aquatic life, the answer to the question is:\n\n<answer>no</answ"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_007",
+          "problem": "Is Antarctica larger than Europe?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 177,
+          "latency_seconds": 11.989774703979492,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Antarctica is approximately 14 million km\u00b2 in size. \nEurope is approximately 10.18 million km\u00b2 in size.\n\nSince 14 million is greater than 10.18 million, \n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_008",
+          "problem": "Can a person hold their breath for 30 minutes?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 164,
+          "latency_seconds": 14.144168853759766,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "No, the average person can hold their breath for around 15-30 seconds, not 30 minutes. \n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_009",
+          "problem": "Is the moon made of cheese?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 152,
+          "latency_seconds": 20.49954342842102,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "No scientific evidence supports the idea that the moon is made of cheese. \n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_010",
+          "problem": "Do all birds lay eggs?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 222,
+          "latency_seconds": 8.811312913894653,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Birds are a class of warm-blooded animals that belong to the group called Aves. They are characterized by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton.\n\nAll birds, without exception, reproduce by laying eggs. This is a fundamental characteristic of the class Aves.\n\nTherefore, the answer is: <answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_011",
+          "problem": "Can a fish drown?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 258,
+          "latency_seconds": 55.102126598358154,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Fish do not have lungs, so they do not breathe air like humans do. However, they can still experience respiratory distress if they are unable to extract oxygen from the water. This can happen if the water is not providing enough oxygen, or if the fish is experiencing some other issue that prevents it from breathing properly.\n\nSince fish do not breathe air, the concept of \"drowning\" as it applies to humans does not directly apply to fish. However, fish can still experience a similar type of distr"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_012",
+          "problem": "Can humans see in complete darkness?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 131,
+          "latency_seconds": 49.071921586990356,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.85,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "yes_no",
+            "raw_response": "No"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_013",
+          "problem": "Do plants need oxygen?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 199,
+          "latency_seconds": 62.261860370635986,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Plants undergo photosynthesis, which involves the conversion of carbon dioxide and light energy into glucose and oxygen. \n\nPlants release oxygen as a byproduct of photosynthesis.\n\nHowever, plants also require oxygen for cellular respiration, which is the process by which cells generate energy from glucose.\n\nTherefore, plants do need oxygen.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_014",
+          "problem": "Is lightning hotter than the sun?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 212,
+          "latency_seconds": 22.8450984954834,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if lightning is hotter than the sun, let's consider the following facts:\n\n1. The surface temperature of the sun is about 5500\u00b0C (10,000\u00b0F).\n2. Lightning can reach temperatures of up to 30,000 Kelvin (50,000\u00b0F), which is hotter than the surface of the sun.\n\nConsidering these facts, the answer is:\n\n<answer>yes</answer>"
+          }
+        }
+      ]
+    }
+  }
+}

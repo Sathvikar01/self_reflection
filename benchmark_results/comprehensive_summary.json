@@ -1,0 +1,38 @@
+{
+  "study": "Empirical Analysis of Reasoning Pipelines on Multi-Hop QA",
+  "model": "meta/llama-3.1-405b-instruct",
+  "n_questions": 50,
+  "methods": {
+    "zeroshot": {
+      "accuracy": 0.82,
+      "correct": 41
+    },
+    "cot": {
+      "accuracy": 0.62,
+      "correct": 31,
+      "vs_zeroshot": -0.244,
+      "p_value": 0.0098
+    },
+    "sc_only": {
+      "accuracy": 0.78,
+      "correct": 39,
+      "vs_zeroshot": -0.049
+    },
+    "rag": {
+      "accuracy": 0.76,
+      "correct": 38,
+      "vs_zeroshot": -0.073
+    },
+    "kb_sc": {
+      "accuracy": 0.84,
+      "correct": 42,
+      "vs_zeroshot": 0.024
+    }
+  },
+  "key_findings": [
+    "CoT degrades accuracy -24.4% (p=0.0098)",
+    "Naive KB injection hurts -7.3%",
+    "SC alone cannot fix KB gaps",
+    "KB+SC with Step1/2 is only method to improve +2.4%"
+  ]
+}

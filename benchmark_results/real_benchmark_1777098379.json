@@ -1,0 +1,1173 @@
+{
+  "timestamp": 1777098379.0730317,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 28,
+  "pipelines": {
+    "Baseline": {
+      "accuracy": 0.6785714285714286,
+      "correct": 19,
+      "total": 28,
+      "avg_tokens": 206.92857142857142,
+      "avg_latency": 1.7093600034713745,
+      "results": [
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 153,
+          "latency_seconds": 2.5443015098571777,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.85,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "yes_no",
+            "raw_response": "Hamsters are prey for certain animals, such as owls, hawks, and snakes. \n\nYes"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 297,
+          "latency_seconds": 2.087611436843872,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a person could survive falling from the Empire State Building, I will consider the factors involved:\n\n1. The height of the Empire State Building is approximately 1,454 feet (443 meters).\n2. The terminal velocity for a human body is around 120-140 mph (193-225 kph), which is relatively low and can be reached in a short period of time.\n3. The impact force is a critical factor, and the human body is designed to absorb some impact.\n4. The condition of the person (injury, age, etc.) a"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 133,
+          "latency_seconds": 0.46690964698791504,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.85,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "yes_no",
+            "raw_response": "Yes"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_004",
+          "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 234,
+          "latency_seconds": 1.5788605213165283,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To be eligible to vote in the 2016 US election, a person must be at least 18 years old and a US citizen.\n\n1. The 2016 US election was held in November 2016.\n2. A person born in 2000 would be 16 years old in November 2016.\n3. Therefore, they would not be eligible to vote in the 2016 US election.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_005",
+          "problem": "Does hydrogen power work without oxygen?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 223,
+          "latency_seconds": 1.2004048824310303,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Hydrogen power typically works by combining hydrogen with oxygen to produce electricity through a process called fuel cell reaction. However, hydrogen itself can also be used in a combustion reaction to produce energy. In a combustion reaction, hydrogen is not required to be combined with oxygen to produce energy. It can also be used with other elements like carbon or in a process called a hydrogen internal combustion engine.\n\nSo, the answer to the question is: <answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_006",
+          "problem": "Can penguins fly?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 168,
+          "latency_seconds": 0.7005970478057861,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Penguins are a type of bird. \nBirds have wings, but their wings are adapted for swimming rather than flying. \nThey are flightless birds. \n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_007",
+          "problem": "Is Antarctica larger than Europe?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 201,
+          "latency_seconds": 1.1610782146453857,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To answer this question, we need to compare the land areas of Antarctica and Europe.\n\nStep 1: The total land area of Antarctica is approximately 14 million km\u00b2.\nStep 2: The total land area of Europe is approximately 10 million km\u00b2.\n\nSince 14 million is greater than 10 million, \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_008",
+          "problem": "Can a person hold their breath for 30 minutes?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 212,
+          "latency_seconds": 1.0994317531585693,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "No, the average person can hold their breath for around 15-30 seconds, but not 30 minutes.\n\nHowever, some trained freedivers can hold their breath for a short time, but even the best freedivers can only manage to hold their breath for around 11-16 minutes with specific training and techniques.\n\nConsidering this, the answer is: <answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_009",
+          "problem": "Is the moon made of cheese?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 163,
+          "latency_seconds": 0.8143596649169922,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "No scientific evidence supports the claim that the moon is made of cheese. The moon is actually composed of rock and silicate minerals.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_010",
+          "problem": "Do all birds lay eggs?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 259,
+          "latency_seconds": 1.5358707904815674,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Most birds do lay eggs. However, there are a few species that are known to be egg-laying mammals, not birds. These species include the Kiwi and the Emu, but they are more often classified as birds due to their physical characteristics. There is one species of bird, the Ostrich's cousin, the Hoatzin, and another one, the Steatornis caripensis, where the young are born alive, but this is a rare occurrence. However, there are species that lay eggs in the Hoatzin's family. Therefore, considering the"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_011",
+          "problem": "Can a fish drown?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 303,
+          "latency_seconds": 3.9915637969970703,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Fish do not have lungs and breathe air like humans do. They extract oxygen from water using gills. \n\nWhen a fish is submerged in water, it can still extract oxygen from the water. \n\nDrowning typically occurs when a living being inhales water or cannot extract oxygen from the air. Since fish do not inhale water or use air to breathe, they do not meet the typical definition of drowning.\n\nHowever, fish can still experience respiratory distress or suffocation if they are unable to extract enough oxy"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_012",
+          "problem": "Can humans see in complete darkness?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 228,
+          "latency_seconds": 3.383455991744995,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Humans can see some light levels that are very low, but not complete darkness. Our eyes can adapt to low light levels by opening the pupil and increasing the sensitivity of the retina. However, there is a point at which the amount of light is too low for the eye to detect.\n\nSome people have conditions that allow them to see in extremely low light levels, such as those with night vision, but even they are not able to see in complete darkness.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_013",
+          "problem": "Do plants need oxygen?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 211,
+          "latency_seconds": 1.225454568862915,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Plants undergo a process called photosynthesis, where they convert carbon dioxide and light energy into glucose and oxygen. However, they also undergo a process called respiration, where they convert glucose and oxygen into carbon dioxide and water.\n\nConsidering this, plants require oxygen for respiration to occur, but they also produce oxygen as a byproduct of photosynthesis. So, the answer is:\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_014",
+          "problem": "Is lightning hotter than the sun?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 197,
+          "latency_seconds": 1.4298596382141113,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "The surface temperature of the sun is approximately 5500 degrees Celsius. \n\nLightning can reach temperatures of up to 30,000 Kelvin, which is around 30,000 degrees Celsius. \n\nThis is indeed hotter than the surface temperature of the sun. \n\nSo, the answer is: \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_015",
+          "problem": "Can you boil water in a paper cup?",
+          "answer": "the paper can catch fire and cause a fire hazard",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 163,
+          "latency_seconds": 0.9004697799682617,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.6,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "last_sentence",
+            "raw_response": "Paper cups are not designed for high heat and can burn or melt when exposed to boiling water. \n\nThe paper can catch fire and cause a fire hazard."
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_016",
+          "problem": "Can sound travel in space?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 164,
+          "latency_seconds": 0.7414729595184326,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Sound requires a medium to travel, such as air or water. In space, there is no air, so sound cannot travel through it.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_017",
+          "problem": "Is glass a solid?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 152,
+          "latency_seconds": 0.709946870803833,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Glass is formed by cooling molten material, and it has a rigid structure. \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_018",
+          "problem": "Do trees sleep?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 217,
+          "latency_seconds": 1.533557415008545,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Trees do not have a traditional nervous system or brain, which are typically associated with the concept of sleep.\n\nThey do not have the ability to experience fatigue, relaxation, or other states that are typically associated with sleep.\n\nSome studies suggest that trees do have periods of dormancy, particularly during winter, but this is not the same as sleep.\n\nTherefore, based on the information provided, the answer to the question is:\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_019",
+          "problem": "Can you cry underwater?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 167,
+          "latency_seconds": 0.7230501174926758,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.85,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "yes_no",
+            "raw_response": "No tears can escape through the eyes underwater due to the pressure preventing tears from surfacing. However, the lacrimal gland can still produce tears. \n\nYes, you can produce tears underwater."
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_020",
+          "problem": "Is a tomato a fruit?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 165,
+          "latency_seconds": 0.7219407558441162,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "From a botanical standpoint, a tomato is considered a fruit because it is the edible, ripened ovary of a plant that contains seeds. \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_021",
+          "problem": "Can you light a diamond on fire?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 246,
+          "latency_seconds": 3.332062244415283,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Diamonds are made of carbon and are extremely hard. \n\nTo light something on fire, it typically needs to be a combustible material, meaning it can undergo a chemical reaction with oxygen to release heat and light, which is known as combustion.\n\nDiamonds, due to their hardness, do not easily react with oxygen, so they are not typically considered combustible materials.\n\nHowever, in a lab or under certain conditions, it's possible to ignite a diamond using high-energy sources like lasers or other s"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_022",
+          "problem": "Do astronauts need to wear sunscreen?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 131,
+          "latency_seconds": 0.34651660919189453,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.85,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "yes_no",
+            "raw_response": "Yes"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_023",
+          "problem": "Is water wet?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 230,
+          "latency_seconds": 2.1518146991729736,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if water is wet, we need to understand the concept of \"wet.\" Wet typically refers to the sensation or state of being covered or saturated with a liquid, usually water. \n\nIn this context, water is a liquid itself, so it is hard to say that it is \"wet\" in the same way that a cloth or a person can be wet. \n\nHowever, water can make other substances wet. Therefore, the answer to the question is: \n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_024",
+          "problem": "Can a human eat a poisonous mushroom and live?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 144,
+          "latency_seconds": 0.6148488521575928,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.85,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "yes_no",
+            "raw_response": "Yes, some people have eaten poisonous mushrooms and lived."
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_025",
+          "problem": "Do whales drink water?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 222,
+          "latency_seconds": 3.0106041431427,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Whales are marine mammals that live in the ocean and obtain their water from their food, primarily krill and other small aquatic animals. They also have a high concentration of salt in their bodies, which is the same as the salt concentration in the ocean. \n\nSince they don't need to drink water to stay hydrated and their bodies already have the same salt concentration as the ocean, the answer is no, whales do not drink water.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_026",
+          "problem": "Is it possible to fold a piece of paper more than 7 times?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 309,
+          "latency_seconds": 3.9514362812042236,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if it's possible to fold a piece of paper more than 7 times, let's consider the main factors involved:\n\n1. The size of the paper: Theoretically, as long as the paper is large enough, it should be possible to fold it more than 7 times, since the area of the paper is increasing exponentially with each fold.\n\n2. The thickness of the paper: However, the thickness of the paper increases exponentially with each fold as well. In reality, after a certain number of folds (usually around 7-8)"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_027",
+          "problem": "Does the Great Wall of China have a Starbucks?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 190,
+          "latency_seconds": 1.4334468841552734,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "No major Starbucks locations are directly attached to the Great Wall of China. However, there are some cafes and restaurants located near or within some of the Great Wall's tourist sites, which might include a coffee shop or cafe, but not typically a Starbucks.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_028",
+          "problem": "Can a coin falling from the Empire State Building kill someone?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 312,
+          "latency_seconds": 4.471153020858765,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a coin falling from the Empire State Building can kill someone, let's break down the steps:\n\n1. The Empire State Building is a very tall building, approximately 381 meters (1,250 feet) high.\n2. When an object falls, its speed and potential to cause harm increase with its velocity, which is influenced by gravity.\n3. However, the size and mass of a coin are relatively small, which affects its kinetic energy and potential to cause harm.\n4. Considering the terminal velocity of a coin"
+          }
+        }
+      ]
+    },
+    "Self-Reflection": {
+      "accuracy": 0.75,
+      "correct": 21,
+      "total": 28,
+      "avg_tokens": 1212.4285714285713,
+      "avg_latency": 6.5409570676939826,
+      "results": [
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 1023,
+          "latency_seconds": 7.013827800750732,
+          "reasoning_steps": [
+            "[Initial]: To determine if the question involves a counterintuitive science fact, let's break it down step by step:\n\n1. The question is about hamsters providing food for other animals. This doesn't seem to involve any specific scientific phenomenon.\n2. There are no obvious counterintuitive facts related to ham"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: Upon analyzing the given scientific facts, I couldn't find any direct evidence that hamsters provide food for other animals. However, I noticed that vampire bats do drink blood, which might seem like "
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1343,
+          "latency_seconds": 18.835370540618896,
+          "reasoning_steps": [
+            "[Initial]: To determine if the obvious answer might be wrong, I'll consider the counterintuitive science facts I've been trained on.\n\nFalling from a great height is a classic example of a situation where the expected outcome might be different from the actual outcome due to various factors. However, in this ca"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: Upon analyzing the initial answer 'no', we must consider the factors involved in a person falling from the Empire State Building. The primary concerns are the impact force upon hitting the ground and "
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1172,
+          "latency_seconds": 14.30413269996643,
+          "reasoning_steps": [
+            "[Initial]: To determine if the obvious answer might be wrong due to counterintuitive science, I'll break down the question step by step.\n\n1. The question is about the brightness of the sun compared to a light bulb. \n2. The sun is a massive ball of hot, glowing gas and its brightness is measured in terms of its"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: To evaluate whether the answer 'yes' could be wrong, I need to find a strong reason why the answer might be 'no' instead. \n\nConsidering the scientific facts provided, I notice that none of them direct"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_004",
+          "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1187,
+          "latency_seconds": 6.149406909942627,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, let's break it down step by step:\n\n1. The question is about voting eligibility in the 2016 US election.\n2. Voting eligibility is determined by age, citizenship, and other factors, but age is the primary factor.\n3. The minimum age to vote in federal elections in the US is 18 "
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To determine if the answer should be 'yes', we need to examine the eligibility criteria for voting in the 2016 US election. According to the National Archives, the eligibility criteria for voting in f"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_005",
+          "problem": "Does hydrogen power work without oxygen?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 1717,
+          "latency_seconds": 11.255486249923706,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, let's break it down step by step:\n\n1. Hydrogen power typically involves the reaction of hydrogen with oxygen to produce electricity and water. This is a well-known reaction: 2H2 + O2 \u2192 2H2O.\n2. However, the question is asking if hydrogen power can work without oxygen.\n3. One"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: To evaluate whether hydrogen power works without oxygen, we need to consider the process of hydrogen combustion. Hydrogen is a highly flammable gas that can be burned in the presence of oxygen to prod"
+          ],
+          "confidence": 0.9,
+          "num_api_calls": 3,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_006",
+          "problem": "Can penguins fly?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1139,
+          "latency_seconds": 10.794015884399414,
+          "reasoning_steps": [
+            "[Initial]: To determine if the question is one where the obvious answer might be wrong due to counterintuitive science, let's analyze it step by step.\n\n1. The question is about penguins and their ability to fly. This is a well-known fact in biology and zoology.\n2. Penguins are birds, and birds are generally kn"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To determine if the answer should be 'yes', let's analyze the available information. \n\nPenguins are birds, and birds are known for their ability to fly. However, penguins have several physical charact"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_007",
+          "problem": "Is Antarctica larger than Europe?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1021,
+          "latency_seconds": 6.553447723388672,
+          "reasoning_steps": [
+            "[Initial]: To determine if this question involves any counterintuitive science, let's analyze it step by step.\n\n1. The question is about the size of two geographical areas: Antarctica and Europe.\n2. The question does not involve any specific scientific phenomenon or concept that is commonly known to be counter"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: To evaluate whether Antarctica is larger than Europe, we need to compare their land areas.\n\nThe land area of Europe is approximately 10,180,000 square kilometers (3,930,000 sq mi).\n\nThe land area of A"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_008",
+          "problem": "Can a person hold their breath for 30 minutes?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1224,
+          "latency_seconds": 7.071030139923096,
+          "reasoning_steps": [
+            "[Initial]: To determine if the obvious answer might be wrong due to counterintuitive science, let's consider the factors involved in holding one's breath.\n\n1. The human body can survive for a short period without oxygen by using stored oxygen in the muscles and other tissues. However, this period is typically "
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To determine if a person can hold their breath for 30 minutes, let's consider the physiological limits of human respiration. \n\nThe maximum time a person can hold their breath is generally considered t"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_009",
+          "problem": "Is the moon made of cheese?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1088,
+          "latency_seconds": 7.362865209579468,
+          "reasoning_steps": [
+            "[Initial]: To determine if the obvious answer might be wrong due to counterintuitive science, let's break down the question and the possible implications.\n\n1. The question is about the composition of the moon. \n2. The obvious answer is \"no,\" as there is no scientific evidence to support the idea that the moon "
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To evaluate whether the answer 'no' could be wrong, I need to consider the scientific facts provided and look for any relevant information related to the composition of the moon. \n\nThe provided scient"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_010",
+          "problem": "Do all birds lay eggs?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 975,
+          "latency_seconds": 5.54646897315979,
+          "reasoning_steps": [
+            "[Initial]: To determine if the obvious answer might be wrong, let's consider the counterintuitive science facts listed earlier. \n\nThis question does not involve any of the counterintuitive science facts listed. \n\nSo, we can rely on general knowledge. Birds are a class of warm-blooded vertebrates that lay eggs "
+          ],
+          "reflections": [
+            "[Counter-arg for no]: At first glance, the answer 'yes' seems correct. However, let's examine the scientific facts to see if there's any strong evidence to support the answer being 'no'.\n\nOne potential counterexample could"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_011",
+          "problem": "Can a fish drown?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1093,
+          "latency_seconds": 8.182053327560425,
+          "reasoning_steps": [
+            "[Initial]: To determine if the question \"Can a fish drown?\" has a counterintuitive answer, let's break it down step by step:\n\n1. The question involves a living organism (fish) and a concept (drowning) that is typically associated with humans.\n2. Drowning is generally understood as the inability of a human to b"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: At first glance, the answer \"yes\" seems correct, as it's common knowledge that fish can drown. However, let's examine the given scientific facts for any counterintuitive evidence.\n\nOne fact that might"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_012",
+          "problem": "Can humans see in complete darkness?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1112,
+          "latency_seconds": 6.453981637954712,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, let's consider the counterintuitive facts that might apply:\n\n1. There's no mention of hot water freezing faster, diamonds burning, water boiling in a paper cup, glass not being a true solid, fish drowning, humans surviving on potatoes and dairy, bats drinking blood, house ca"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To determine if the answer should be 'yes', I'll examine the scientific facts provided. \n\nOne fact that stands out is the concept of the \"Mpemba effect,\" where hot water can freeze faster than cold wa"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_013",
+          "problem": "Do plants need oxygen?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1467,
+          "latency_seconds": 6.341145753860474,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, let's break it down step by step:\n\n1. Plants undergo photosynthesis, which involves converting carbon dioxide and water into glucose and oxygen.\n2. The process of photosynthesis requires energy, which is obtained from sunlight.\n3. Plants use the glucose produced during photo"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: Analyzing the question, \"Do plants need oxygen?\" \n\nPlants undergo photosynthesis, a process where they convert carbon dioxide and water into glucose and oxygen. This process is essential for their gro"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_014",
+          "problem": "Is lightning hotter than the sun?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1096,
+          "latency_seconds": 5.707273006439209,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, I'll consider the counterintuitive scientific facts that might apply.\n\n1. The question involves temperature, which is not directly related to any of the counterintuitive facts I listed.\n2. However, lightning is a high-energy event, and it's possible that its temperature coul"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: To analyze this question, let's consider the temperatures involved. The surface temperature of the sun is approximately 5500\u00b0C (or 5800 K). Lightning, on the other hand, can reach temperatures of up t"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_015",
+          "problem": "Can you boil water in a paper cup?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1059,
+          "latency_seconds": 3.372979164123535,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, let's consider the counterintuitive science facts provided. \n\nOne fact that might be relevant is that water in a paper cup can be boiled. This is because water keeps the paper below its ignition point, preventing the paper from catching fire.\n\nHowever, the question is about "
+          ],
+          "reflections": [
+            "[Counter-arg for no]: Analyzing the given scientific facts, there's a relevant fact that might seem to contradict the initial answer. However, it actually supports the initial 'yes'. The fact is: \"Water in a paper cup CAN "
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_016",
+          "problem": "Can sound travel in space?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1495,
+          "latency_seconds": 6.784286975860596,
+          "reasoning_steps": [
+            "[Initial]: To determine if the obvious answer might be wrong due to counterintuitive science, let's break down the question step by step:\n\n1. The question is about sound traveling in space. Sound is a form of vibration that requires a medium to propagate, such as air, water, or solids.\n2. Space is a vacuum, me"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To analyze whether sound can travel in space, we need to understand what sound is and how it propagates. Sound is a type of mechanical wave that requires a medium, such as air, water, or solids, to tr"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_017",
+          "problem": "Is glass a solid?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 1141,
+          "latency_seconds": 4.15467095375061,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, let's consider the properties of glass. Glass is often perceived as a solid because it has a fixed shape and volume, and it doesn't flow like a liquid. However, the key to answering this question lies in understanding the molecular structure of glass.\n\nGlass is an amorphous "
+          ],
+          "reflections": [
+            "[Counter-arg for no]: At first glance, it might seem that glass is a solid, as it maintains its shape and structure under normal conditions. However, upon closer examination of the scientific facts, we find a crucial disti"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_018",
+          "problem": "Do trees sleep?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1425,
+          "latency_seconds": 5.269163370132446,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, I will consider the possibility of counterintuitive science. Trees do not have a central nervous system or brain, which are typically associated with the concept of sleep. However, trees do have a circadian rhythm and undergo changes in their growth and activity patterns thr"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To evaluate whether the answer 'no' could be wrong, I'll examine the scientific facts provided and any additional relevant information. Trees, as living organisms, do exhibit various behaviors and phy"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_019",
+          "problem": "Can you cry underwater?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 1614,
+          "latency_seconds": 5.899404525756836,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, let's break it down step by step:\n\n1. Crying involves tears, which are a liquid.\n2. When you cry, you are producing tears, which are then released from your eyes.\n3. The question is asking if you can cry underwater, which implies that the tears are being released while you a"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To evaluate whether the answer 'no' could be wrong, let's analyze the situation. The initial answer 'no' implies that it's not possible to cry underwater because the tears would be trapped and unable "
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_020",
+          "problem": "Is a tomato a fruit?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1057,
+          "latency_seconds": 3.417893648147583,
+          "reasoning_steps": [
+            "[Initial]: To determine if the question is related to a counterintuitive scientific fact, let's analyze it step by step:\n\n1. The question is about the classification of a tomato.\n2. From a botanical standpoint, a fruit is the part of a plant that contains seeds, such as apples, bananas, and tomatoes.\n3. Tomato"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: The question of whether a tomato is a fruit is a matter of botanical classification. In botany, a fruit is the ripened ovary of a plant, which contains seeds, typically developed from the ovary of a f"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_021",
+          "problem": "Can you light a diamond on fire?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 997,
+          "latency_seconds": 5.630510568618774,
+          "reasoning_steps": [
+            "[Initial]: To determine the correct answer, let's break down the question step by step:\n\n1. Diamonds are made of pure carbon.\n2. Carbon is a fundamental element that can exist in various forms, such as graphite and diamond.\n3. Graphite, a form of carbon, can burn in the presence of oxygen.\n4. Diamonds, being p"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: To determine if the answer 'yes' could be wrong, I'll examine the given scientific facts. \n\nThe fact that diamonds can burn is mentioned in the scientific facts. It states that \"diamonds CAN burn (pur"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_022",
+          "problem": "Do astronauts need to wear sunscreen?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1442,
+          "latency_seconds": 4.618100166320801,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, let's break it down step by step:\n\n1. The primary concern with sunscreen is protection against UV radiation, which can cause sunburn, premature aging, and skin cancer.\n2. Astronauts are exposed to space, where there is no atmosphere to block UV radiation.\n3. However, the Ear"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: Analyzing the given scientific facts, I found that the fact \"Astronauts inside the ISS do NOT need sunscreen (they are shielded)\" suggests that astronauts inside a shielded environment, such as the In"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_023",
+          "problem": "Is water wet?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 1153,
+          "latency_seconds": 4.2018373012542725,
+          "reasoning_steps": [
+            "[Initial]: To determine if the answer to this question is counterintuitive, let's analyze it step by step.\n\n1. The question is asking if water is wet. This seems like a straightforward question, but let's consider what \"wet\" means. Wet typically refers to a surface or object that has a liquid on it, which can "
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To determine if the answer should be 'yes', let's analyze the concept of 'wetness'. Wetness is often associated with the sensation of water touching a surface, but this is a subjective experience. Fro"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_024",
+          "problem": "Can a human eat a poisonous mushroom and live?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1064,
+          "latency_seconds": 3.1765878200531006,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, I need to consider the counterintuitive facts related to mushrooms. \n\nOne such fact is that not all poisonous mushrooms are deadly. Some poisonous mushrooms can cause mild symptoms, but not life-threatening ones.\n\nConsidering this fact, the question about whether a human can"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: Analyzing the question, it's essential to note that eating a poisonous mushroom can indeed be fatal. However, there are some specific cases where a human might survive eating a poisonous mushroom, alb"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_025",
+          "problem": "Do whales drink water?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1240,
+          "latency_seconds": 4.2869791984558105,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, let's break it down step by step:\n\n1. The question is about whales drinking water. This is a straightforward question that might seem to have a simple answer.\n2. However, we need to consider if there's any counterintuitive science involved. In this case, there isn't a well-k"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: The initial answer is 'no', implying that whales do not drink water. However, let's analyze the given scientific facts to find any counterintuitive evidence that might suggest the answer should be 'ye"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_026",
+          "problem": "Is it possible to fold a piece of paper more than 7 times?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 1224,
+          "latency_seconds": 3.850977897644043,
+          "reasoning_steps": [
+            "[Initial]: To determine if the question is related to counterintuitive science, let's analyze it step by step:\n\n1. The question involves folding a piece of paper, which is a physical action.\n2. The question asks about the limit of folding a piece of paper, which seems to be related to the physical properties o"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To evaluate the possibility of folding a piece of paper more than 7 times, let's consider the relevant scientific facts.\n\nOne fact that comes to mind is the Mpemba effect, where hot water can freeze f"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_027",
+          "problem": "Does the Great Wall of China have a Starbucks?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 1167,
+          "latency_seconds": 3.210850715637207,
+          "reasoning_steps": [
+            "[Initial]: To answer this question, I will consider the possibility of counterintuitive science.\n\n1. The question is about the presence of a specific business (Starbucks) at a specific location (the Great Wall of China).\n2. This question does not involve any of the counterintuitive scientific facts I am aware "
+          ],
+          "reflections": [
+            "[Counter-arg for no]: To determine if the initial answer 'yes' could be wrong, I need to find strong evidence that contradicts it. The initial answer is 'yes' because it is a factual statement that the Great Wall of China "
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_028",
+          "problem": "Can a coin falling from the Empire State Building kill someone?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1213,
+          "latency_seconds": 3.702049732208252,
+          "reasoning_steps": [
+            "[Initial]: To determine if the obvious answer might be wrong due to counterintuitive science, let's analyze the situation.\n\nThe question involves a coin falling from a great height, in this case, the Empire State Building. The obvious answer might be \"yes,\" as one might expect a high-speed impact from a fallin"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To evaluate whether the answer 'no' could be wrong, let's analyze the situation. A coin falling from the Empire State Building would have a significant amount of kinetic energy due to its height. Howe"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 2,
+          "metadata": {
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        }
+      ]
+    }
+  }
+}

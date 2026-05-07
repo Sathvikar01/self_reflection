@@ -1,0 +1,1376 @@
+{
+  "timestamp": 1777320832.9654195,
+  "iteration": 6,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 28,
+  "start_offset": 0,
+  "pipelines": {
+    "Baseline": {
+      "accuracy": 0.75,
+      "correct": 21,
+      "total": 28,
+      "avg_tokens": 212.78571428571428,
+      "avg_latency": 1.5860341787338257,
+      "results": [
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 186,
+          "latency_seconds": 15.03742504119873,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Hamsters are prey animals, and they are a food source for various predators in the wild. \n\nSome of these predators include owls, hawks, foxes, and domestic cats.\n\nConsidering this information, the answer is: \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 302,
+          "latency_seconds": 2.05743408203125,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a person could survive falling from the Empire State Building, let's consider the factors involved:\n\n1. The height of the Empire State Building is approximately 1,454 feet (443 meters).\n2. The terminal velocity of a human body is around 120-140 mph (193-225 kph), which is the speed at which the body reaches maximum descent speed.\n3. The impact force on the body is determined by its mass and the terminal velocity at the time of impact.\n4. The human body can withstand a certain amo"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 229,
+          "latency_seconds": 1.0295019149780273,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "The sun is a massive ball of hot, glowing gas and its surface temperature is about 5500\u00b0C. A light bulb, on the other hand, is a relatively small device that produces light through electrical resistance. The surface temperature of a typical light bulb is around 2500\u00b0C.\n\nConsidering the surface temperatures and the enormous size of the sun, it is clear that the sun emits an enormous amount of energy and light compared to a light bulb.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_004",
+          "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 256,
+          "latency_seconds": 0.9090626239776611,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a person born in 2000 would be eligible to vote in the 2016 US election, we need to consider the typical age requirement for voting in the US, which is 18 years old.\n\n1. The 2016 US election took place in November 2016.\n2. If a person was born in 2000, they would be 16 years old in 2016.\n3. Since they would not have reached the age of 18, they would not be eligible to vote.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_005",
+          "problem": "Does hydrogen power work without oxygen?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 253,
+          "latency_seconds": 1.6572530269622803,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Hydrogen power typically involves a reaction between hydrogen and oxygen to produce electricity or energy. However, there are some alternative methods that use hydrogen in a different way.\n\nOne such method is the use of hydrogen in a fuel cell, where hydrogen is combined with a catalyst to produce electricity. In this case, the reaction does not require oxygen, but rather uses the hydrogen to generate electricity.\n\nAnother method is the use of hydrogen in a solid oxide electrolyzer, where hydrog"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_006",
+          "problem": "Can penguins fly?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 205,
+          "latency_seconds": 0.7149627208709717,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Penguins belong to the bird family, but they have a few distinct physical characteristics that make flying difficult for them. They have wings, but their wings are more suited for swimming and diving in the water. They also have a heavy body and a unique skeletal system that makes it hard for them to generate lift.\n\nConsidering these factors, the answer is:\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_007",
+          "problem": "Is Antarctica larger than Europe?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 165,
+          "latency_seconds": 0.7045111656188965,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Antarctica's total area is approximately 14 million km\u00b2. \nEurope's total area is approximately 10.18 million km\u00b2.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_008",
+          "problem": "Can a person hold their breath for 30 minutes?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 209,
+          "latency_seconds": 1.2399678230285645,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "No, the average person can hold their breath for around 15-30 seconds, but not 30 minutes. The maximum time a person can hold their breath varies depending on factors such as physical condition, lung capacity, and the ability to slow down heart rate and conserve oxygen. However, 30 minutes is far beyond the human limit.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_009",
+          "problem": "Is the moon made of cheese?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 152,
+          "latency_seconds": 0.42639708518981934,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "No scientific evidence supports the idea that the moon is made of cheese. \n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_010",
+          "problem": "Do all birds lay eggs?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 170,
+          "latency_seconds": 0.6766579151153564,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "All birds are oviparous, which means they lay eggs as their primary method of reproduction. \n\nThere are no known species of birds that give birth to live young.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_011",
+          "problem": "Can a fish drown?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 201,
+          "latency_seconds": 0.9127585887908936,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Fish do not have lungs, so they do not breathe air. They extract oxygen from the water using gills. \n\nIf a fish is unable to extract oxygen from the water, it can experience respiratory distress.\n\nTherefore, a fish can experience a condition similar to drowning, but it is not exactly the same as drowning in air.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_012",
+          "problem": "Can humans see in complete darkness?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 236,
+          "latency_seconds": 0.8491499423980713,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Humans have limited ability to see in low light conditions due to the structure of the eye. The retina contains specialized cells called rods that are sensitive to dim light, but they do not allow for color vision or sharp detail.\n\nHowever, in complete darkness, the rods are still active, allowing humans to see faint light sources, shapes, and movement. This is often referred to as \"night vision.\"\n\nSo, considering the ability to see faint light sources and movement in complete darkness, the answ"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_013",
+          "problem": "Do plants need oxygen?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 201,
+          "latency_seconds": 0.6434919834136963,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Plants undergo photosynthesis, which involves the conversion of carbon dioxide and water into glucose and oxygen. This process requires energy from sunlight, and oxygen is released as a byproduct.\n\nPlants also need oxygen for cellular respiration, where they use oxygen to break down glucose and produce energy.\n\nConsidering these points, the answer is: <answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_014",
+          "problem": "Is lightning hotter than the sun?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 194,
+          "latency_seconds": 0.5649847984313965,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "The surface temperature of the sun is about 5500\u00b0C. \n\nLightning can reach temperatures of up to 30,000 Kelvin, which is equivalent to about 30,000\u00b0C.\n\nSince 30,000\u00b0C is hotter than 5500\u00b0C, the answer is:\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_015",
+          "problem": "Can you boil water in a paper cup?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 155,
+          "latency_seconds": 0.3523843288421631,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.85,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "yes_no",
+            "raw_response": "No, paper cups are not designed to withstand high temperatures and can catch fire or melt when exposed to boiling water."
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_016",
+          "problem": "Can sound travel in space?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 171,
+          "latency_seconds": 0.5224926471710205,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Sound requires a medium to travel, such as air, water, or solids. Space is a vacuum, which means it has no air or medium for sound to travel through.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_017",
+          "problem": "Is glass a solid?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 198,
+          "latency_seconds": 0.8305132389068604,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Glass is formed by rapidly cooling molten materials, typically silicon dioxide, into a rigid and non-crystalline state. This process prevents the formation of a crystalline structure, which is characteristic of solids. However, the resulting material is still rigid and maintains its shape, which is a defining property of solids.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_018",
+          "problem": "Do trees sleep?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 174,
+          "latency_seconds": 3.6923224925994873,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Trees do not have a nervous system or brain, which are typically associated with the concept of sleep. They also do not have eyelids or other physical features that would indicate they are resting or sleeping.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_019",
+          "problem": "Can you cry underwater?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 190,
+          "latency_seconds": 0.5139906406402588,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Yes, humans can cry underwater. Tears are made of water, so they don't affect the buoyancy of the tears in the water. However, the tears may not be visible underwater because the water pressure and density can cause the tears to be dispersed or not visible. \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_020",
+          "problem": "Is a tomato a fruit?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 168,
+          "latency_seconds": 0.5043292045593262,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "From a botanical standpoint, a tomato is classified as a type of fruit known as a berry. It develops from the ovary of a flower and contains seeds.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_021",
+          "problem": "Can you light a diamond on fire?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 212,
+          "latency_seconds": 0.7274990081787109,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Diamonds are made of pure carbon and are extremely hard, which makes them resistant to heat and flames. \n\nIn order to light a diamond on fire, you would need to apply an extremely high amount of heat, far beyond what is possible with a typical flame.\n\nHowever, diamonds can be ignited with a laser or other high-energy source.\n\nSo, the answer is: <answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_022",
+          "problem": "Do astronauts need to wear sunscreen?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 256,
+          "latency_seconds": 1.0324459075927734,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Astronauts are exposed to space where there is no atmosphere, which means there is no protection from the sun's ultraviolet (UV) rays. \n\nUV rays can cause damage to the skin, leading to sunburn, premature aging, and even skin cancer.\n\nTo protect themselves from these harmful effects, astronauts do wear sunscreen, but it's not just any ordinary sunscreen. It's a special type that's designed to work in space, where the lack of atmosphere makes it difficult for traditional sunscreen to function.\n\nS"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_023",
+          "problem": "Is water wet?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 259,
+          "latency_seconds": 0.9401803016662598,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if water is wet, we need to understand what \"wet\" means. Wet typically refers to the sensation or state of being moistened or covered with a liquid, usually water.\n\nWater is a liquid, and when it comes into contact with a surface, it can cause that surface to become moist or wet. Therefore, water can be considered wet in the sense that it can make other surfaces wet.\n\nHowever, the question asks if water itself is wet. In this context, water is not wet because it is the substance cau"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_024",
+          "problem": "Can a human eat a poisonous mushroom and live?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 287,
+          "latency_seconds": 4.4785475730896,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "While it's theoretically possible for a human to eat a poisonous mushroom and live, it's extremely rare and often depends on various factors such as the type of mushroom, the amount consumed, and the individual's overall health.\n\nIn some cases, a person might survive eating a poisonous mushroom if they:\n\n1. Eat a small amount, which may not be enough to cause severe poisoning.\n2. Receive prompt medical attention, which can help mitigate the effects of the toxin.\n3. Have a strong immune system or"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_025",
+          "problem": "Do whales drink water?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 178,
+          "latency_seconds": 0.8329191207885742,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Whales are marine mammals that live in the ocean. They get the water they need from the food they eat, such as fish and plankton. They also conserve water by producing very dry dung and concentrated urine.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_026",
+          "problem": "Is it possible to fold a piece of paper more than 7 times?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 316,
+          "latency_seconds": 1.0980474948883057,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "The concept of folding a piece of paper is often related to the idea of the \"folding limit,\" which is the maximum number of times a piece of paper can be folded in half. This limit is generally considered to be around 7-8 times, due to the physical properties of paper and the limitations of human dexterity.\n\nHowever, the idea of folding a piece of paper more than 7 times is not entirely impossible. In theory, it is possible to fold a piece of paper more than 7 times if the folds are not strictly"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_027",
+          "problem": "Does the Great Wall of China have a Starbucks?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 169,
+          "latency_seconds": 0.4427065849304199,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "There are no Starbucks locations directly on the Great Wall of China. However, there are some cafes and restaurants near the wall's tourist areas. \n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_028",
+          "problem": "Can a coin falling from the Empire State Building kill someone?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 266,
+          "latency_seconds": 1.0170197486877441,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if a coin falling from the Empire State Building can kill someone, let's consider the following factors:\n\n1. The height of the Empire State Building is approximately 1,454 feet (443 meters). \n2. The terminal velocity of a coin, which is the maximum speed it can reach while falling through the air, is relatively low due to its small size and weight. \n3. The impact force of a coin is also relatively low compared to other objects of similar weight and size.\n\nConsidering these factors, "
+          }
+        }
+      ]
+    },
+    "Self-Reflection": {
+      "accuracy": 0.8571428571428571,
+      "correct": 24,
+      "total": 28,
+      "avg_tokens": 4506.25,
+      "avg_latency": 6.634183602673667,
+      "results": [
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3838,
+          "latency_seconds": 1.7600433826446533,
+          "reasoning_steps": [
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 4002,
+          "latency_seconds": 36.56947374343872,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5448,
+          "latency_seconds": 6.213234901428223,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 3]: no (conf=0.30)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Argument for 'yes':**\n\n1. The sun is a massive star that produces enormous energy through nuclear fusion in its c"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_004",
+          "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3860,
+          "latency_seconds": 1.1203291416168213,
+          "reasoning_steps": [
+            "[Path 3]: no (conf=1.00)",
+            "[Path 2]: no (conf=1.00)",
+            "[Path 1]: no (conf=1.00)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_005",
+          "problem": "Does hydrogen power work without oxygen?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3909,
+          "latency_seconds": 1.5643548965454102,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=1.00)",
+            "[Path 2]: no (conf=1.00)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_006",
+          "problem": "Can penguins fly?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3919,
+          "latency_seconds": 1.8129091262817383,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=1.00)",
+            "[Path 3]: no (conf=1.00)",
+            "[Path 2]: no (conf=0.85)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_007",
+          "problem": "Is Antarctica larger than Europe?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 5421,
+          "latency_seconds": 3.1748905181884766,
+          "reasoning_steps": [
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 1]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.85)",
+            "[Vote]: {'yes': 1, 'no': 2}, majority=no, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Argument for 'no':**\n\n* Europe is a continent with a well-defined geographical boundary, and its size is commonly"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 1,
+              "no": 2
+            },
+            "majority_answer": "no",
+            "is_unanimous": false,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_008",
+          "problem": "Can a person hold their breath for 30 minutes?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3981,
+          "latency_seconds": 1.5196003913879395,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_009",
+          "problem": "Is the moon made of cheese?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3907,
+          "latency_seconds": 1.4262866973876953,
+          "reasoning_steps": [
+            "[Path 3]: no (conf=1.00)",
+            "[Path 1]: no (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_010",
+          "problem": "Do all birds lay eggs?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5378,
+          "latency_seconds": 3.021578788757324,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Argument for 'yes':**\n\n1. The vast majority of bird species lay eggs, and it's a fundamental characteristic of bi"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_011",
+          "problem": "Can a fish drown?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 5431,
+          "latency_seconds": 5.43402886390686,
+          "reasoning_steps": [
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 1]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'yes': 1, 'no': 2}, majority=no, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate both sides of the question, let's consider the strongest arguments for both answers.\n\n**Argument for 'no':**\n\n1. Fish are aquatic animals that live in water, so they are not susceptible to"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 1,
+              "no": 2
+            },
+            "majority_answer": "no",
+            "is_unanimous": false,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_012",
+          "problem": "Can humans see in complete darkness?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3990,
+          "latency_seconds": 37.55498027801514,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.85)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_013",
+          "problem": "Do plants need oxygen?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5434,
+          "latency_seconds": 3.457707405090332,
+          "reasoning_steps": [
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Argument for 'yes':**\n\n* Plants undergo cellular respiration, a process that requires oxygen to produce energy.\n*"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_014",
+          "problem": "Is lightning hotter than the sun?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5342,
+          "latency_seconds": 6.634534597396851,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Argument for \"yes\":**\n\n1. Lightning is a massive electrical discharge that can reach temperatures of up to 30,000"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_015",
+          "problem": "Can you boil water in a paper cup?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5333,
+          "latency_seconds": 3.5869810581207275,
+          "reasoning_steps": [
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Argument for 'yes':**\n\n* Water can be heated to its boiling point in a paper cup, and the paper will not catch fi"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_016",
+          "problem": "Can sound travel in space?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3987,
+          "latency_seconds": 1.5483062267303467,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.85)",
+            "[Path 3]: no (conf=0.80)",
+            "[Path 2]: no (conf=0.85)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_017",
+          "problem": "Is glass a solid?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3975,
+          "latency_seconds": 1.547982931137085,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=1.00)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_018",
+          "problem": "Do trees sleep?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 5402,
+          "latency_seconds": 6.056492805480957,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 3]: no (conf=0.30)",
+            "[Vote]: {'no': 2, 'yes': 1}, majority=no, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Argument for 'no':**\n\n1. Trees do not have a nervous system or brain, which are typically associated with sleep.\n"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 2,
+              "yes": 1
+            },
+            "majority_answer": "no",
+            "is_unanimous": false,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_019",
+          "problem": "Can you cry underwater?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3917,
+          "latency_seconds": 1.591027021408081,
+          "reasoning_steps": [
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_020",
+          "problem": "Is a tomato a fruit?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 3876,
+          "latency_seconds": 1.8389391899108887,
+          "reasoning_steps": [
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_021",
+          "problem": "Can you light a diamond on fire?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 5472,
+          "latency_seconds": 3.6797547340393066,
+          "reasoning_steps": [
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: no (conf=0.30)",
+            "[Path 1]: no (conf=0.30)",
+            "[Vote]: {'yes': 1, 'no': 2}, majority=no, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To determine the correct answer, let's evaluate both sides of the argument.\n\n**Argument for 'no':**\n\n* Diamonds are extremely hard and resistant to heat, making them difficult to ignite.\n* The high me"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 1,
+              "no": 2
+            },
+            "majority_answer": "no",
+            "is_unanimous": false,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_022",
+          "problem": "Do astronauts need to wear sunscreen?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3942,
+          "latency_seconds": 4.604741334915161,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=1.00)",
+            "[Path 3]: no (conf=1.00)",
+            "[Path 1]: no (conf=1.00)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_023",
+          "problem": "Is water wet?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 3981,
+          "latency_seconds": 36.97541785240173,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_024",
+          "problem": "Can a human eat a poisonous mushroom and live?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5399,
+          "latency_seconds": 3.8358964920043945,
+          "reasoning_steps": [
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: no (conf=1.00)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Arguments for 'yes':**\n\n1. Some poisonous mushrooms can cause mild symptoms, and in rare cases, individuals may n"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_025",
+          "problem": "Do whales drink water?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3919,
+          "latency_seconds": 2.6828718185424805,
+          "reasoning_steps": [
+            "[Path 3]: no (conf=1.00)",
+            "[Path 1]: no (conf=1.00)",
+            "[Path 2]: no (conf=1.00)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_026",
+          "problem": "Is it possible to fold a piece of paper more than 7 times?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5342,
+          "latency_seconds": 3.461073398590088,
+          "reasoning_steps": [
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'yes': 2, 'no': 1}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Arguments for \"yes\":**\n\n1. The majority answer is 'yes', indicating that many people believe it is possible to fo"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_027",
+          "problem": "Does the Great Wall of China have a Starbucks?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3795,
+          "latency_seconds": 1.5486340522766113,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.85)",
+            "[Path 3]: no (conf=1.00)",
+            "[Path 2]: no (conf=1.00)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_028",
+          "problem": "Can a coin falling from the Empire State Building kill someone?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 3975,
+          "latency_seconds": 1.535069227218628,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=1.00)",
+            "[Path 3]: no (conf=0.30)",
+            "[Path 1]: no (conf=0.85)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [],
+          "confidence": 0.95,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        }
+      ]
+    }
+  }
+}

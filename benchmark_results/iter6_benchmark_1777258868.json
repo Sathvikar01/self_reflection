@@ -1,0 +1,717 @@
+{
+  "timestamp": 1777258868.8056748,
+  "iteration": 6,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 14,
+  "start_offset": 14,
+  "pipelines": {
+    "Baseline": {
+      "accuracy": 0.5,
+      "correct": 7,
+      "total": 14,
+      "avg_tokens": 210.78571428571428,
+      "avg_latency": 11.77609772341592,
+      "results": [
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_015",
+          "problem": "Can you boil water in a paper cup?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 155,
+          "latency_seconds": 8.494295358657837,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.85,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "yes_no",
+            "raw_response": "No, paper cups are not designed to withstand high temperatures and can catch fire or burn when exposed to boiling water."
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_016",
+          "problem": "Can sound travel in space?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 177,
+          "latency_seconds": 3.3862695693969727,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Sound requires a medium to travel, such as air, water, or solids. Space is a vacuum, which means it does not have a medium for sound to travel through.\n\nSo, the answer is: <answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_017",
+          "problem": "Is glass a solid?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 203,
+          "latency_seconds": 5.854862689971924,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Glass is formed by the rapid cooling of molten material, which can result in a disordered and rigid structure. This structure is typically non-crystalline, meaning it lacks the long-range order found in crystalline solids.\n\nConsidering this, glass can be considered a solid due to its rigid structure and resistance to deformation under normal conditions.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_018",
+          "problem": "Do trees sleep?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 164,
+          "latency_seconds": 8.700606107711792,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Trees do not have a nervous system or brain, which are essential for sleep. They also do not have a circadian rhythm like humans do. \n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_019",
+          "problem": "Can you cry underwater?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 166,
+          "latency_seconds": 3.9015109539031982,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Yes, humans can cry underwater. Tears will still be produced, but they won't be able to roll down the face due to the water pressure. \n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_020",
+          "problem": "Is a tomato a fruit?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 170,
+          "latency_seconds": 1.036306619644165,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "From a botanical standpoint, a tomato is classified as a type of fruit known as a berry. It grows from a flower and contains seeds, which are characteristics of fruits.\n\n<answer>yes</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_021",
+          "problem": "Can you light a diamond on fire?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 195,
+          "latency_seconds": 2.2661194801330566,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Diamonds are made of pure carbon. \n\nCarbon is a non-flammable element at room temperature. \n\nHowever, diamonds can be set on fire under extreme conditions, such as high temperatures and pressures.\n\nBut in a normal setting, it's not possible to light a diamond on fire.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_022",
+          "problem": "Do astronauts need to wear sunscreen?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 242,
+          "latency_seconds": 6.265605449676514,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Astronauts are exposed to the sun's radiation in space, but the Earth's atmosphere protects us from most of the sun's harmful ultraviolet (UV) rays. However, in space, there is no atmosphere to block these rays.\n\nAstronauts do wear protective gear, including spacesuits, which have built-in protection against the sun's radiation. However, this protection is not the same as wearing sunscreen.\n\nConsidering the unique environment of space and the protective gear astronauts wear, the answer to the qu"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_023",
+          "problem": "Is water wet?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 214,
+          "latency_seconds": 40.960938453674316,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "To determine if water is wet, we need to understand what \"wet\" means. The term \"wet\" typically refers to the sensation or state of being moistened or covered with a liquid, usually water. \n\nConsidering this definition, water itself cannot be wet because it is the substance that causes something to be wet, not the one that is wet. \n\nTherefore, the answer is: <answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_024",
+          "problem": "Can a human eat a poisonous mushroom and live?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 251,
+          "latency_seconds": 9.023043155670166,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "While some poisonous mushrooms can be treated with medical care, there are many that are fatal if ingested. However, there are some poisonous mushrooms that can be treated with medical care if ingested in small amounts and the person receives medical attention promptly.\n\nThere are some poisonous mushrooms that are edible in small amounts, but if eaten in large amounts, they can be fatal. \n\nThere are some poisonous mushrooms that can be treated with medical care if the person receives treatment p"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_025",
+          "problem": "Do whales drink water?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 178,
+          "latency_seconds": 8.274605512619019,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Whales are marine mammals that live in the ocean. They get the water they need from the food they eat, such as fish and plankton. They also conserve water by producing very dry dung and concentrated urine.\n\n<answer>no</answer>"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_026",
+          "problem": "Is it possible to fold a piece of paper more than 7 times?",
+          "answer": "8 mm, which is beyond",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 337,
+          "latency_seconds": 46.82127046585083,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.6,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "last_sentence",
+            "raw_response": "The thickness of a folded paper increases exponentially with each fold. However, the thickness of a standard A4 sheet of paper is limited by its physical properties. \n\nThe thickness of a standard A4 sheet of paper is approximately 0.15 mm. \n\nWhen folded, the thickness of the paper doubles with each fold. \n\nAfter 7-8 folds, the thickness of the paper would be around 2^7 * 0.15 mm = 1.95 mm, which is still within the physical limits of a standard sheet of paper.\n\nHowever, after 8-9 folds, the thic"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_027",
+          "problem": "Does the Great Wall of China have a Starbucks?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 246,
+          "latency_seconds": 12.528796434402466,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "There are several Starbucks locations near the Great Wall of China, but I do not have information about any Starbucks locations within the Great Wall itself. However, I do know that there are some Starbucks locations near the Mutianyu Great Wall, which is a popular tourist destination.\n\nConsidering this information, I would say that there is a Starbucks near the Great Wall of China, but I do not have information about any Starbucks locations within the Great Wall itself.\n\nHowever, I can say that"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_028",
+          "problem": "Can a coin falling from the Empire State Building kill someone?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 253,
+          "latency_seconds": 7.35113787651062,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "A coin falling from a great height can potentially cause injury or death if it hits a person at a high enough velocity. \n\nThe height of the Empire State Building is approximately 1,454 feet (443 meters). \n\nAssuming a coin is dropped from this height, it would likely reach a terminal velocity of around 35-50 mph (56-80 km/h) before hitting the ground.\n\nThis velocity is still relatively high and could potentially cause serious injury or death if the coin hits a person directly in the head or other"
+          }
+        }
+      ]
+    },
+    "Self-Reflection": {
+      "accuracy": 0.7857142857142857,
+      "correct": 11,
+      "total": 14,
+      "avg_tokens": 5362.785714285715,
+      "avg_latency": 43.11911954198565,
+      "results": [
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_015",
+          "problem": "Can you boil water in a paper cup?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5354,
+          "latency_seconds": 25.607909202575684,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Vote]: {'no': 1, 'yes': 2}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Argument for 'yes':**\n\n1. Water can absorb heat from the surroundings, potentially keeping the paper cup below th"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 1,
+              "yes": 2
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_016",
+          "problem": "Can sound travel in space?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 5294,
+          "latency_seconds": 16.389466762542725,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=0.85)",
+            "[Path 1]: no (conf=0.80)",
+            "[Path 3]: no (conf=0.85)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To determine if the answer should be 'yes', I will analyze the given scientific facts. \n\nUpon reviewing the facts, I see that \"Sound CANNOT travel in space (vacuum has no medium for vibration)\" is men"
+          ],
+          "confidence": 0.95,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_017",
+          "problem": "Is glass a solid?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 5646,
+          "latency_seconds": 64.39115285873413,
+          "reasoning_steps": [
+            "[Path 3]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 1]: no (conf=1.00)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: Upon reviewing the provided scientific facts, I found that glass is indeed considered an amorphous solid or a supercooled liquid. This characteristic is a result of the rapid cooling process that glas"
+          ],
+          "confidence": 0.85,
+          "num_api_calls": 5,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "yes",
+            "switched": true
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_018",
+          "problem": "Do trees sleep?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 5378,
+          "latency_seconds": 55.324658155441284,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.85)",
+            "[Path 3]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: Upon reviewing the scientific facts provided, I see that trees are mentioned in the context of \"Trees do NOT sleep\" under the list of counterintuitive facts. This suggests that the answer is indeed \"n"
+          ],
+          "confidence": 0.95,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_019",
+          "problem": "Can you cry underwater?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 5453,
+          "latency_seconds": 51.23098039627075,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Vote]: {'no': 2, 'yes': 1}, majority=no, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers:\n\n**Arguments for 'no':**\n\n1. Intuition: It seems counterintuitive that one can cry underwater, as the water would be"
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 2,
+              "yes": 1
+            },
+            "majority_answer": "no",
+            "is_unanimous": false,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_020",
+          "problem": "Is a tomato a fruit?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5215,
+          "latency_seconds": 18.16300129890442,
+          "reasoning_steps": [
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: To determine if the answer should be 'no', I'll consider the scientific facts provided. The fact that \"Tomatoes ARE fruits botanically (develop from flowers, contain seeds)\" directly addresses the que"
+          ],
+          "confidence": 0.95,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_021",
+          "problem": "Can you light a diamond on fire?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5449,
+          "latency_seconds": 11.375428915023804,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Vote]: {'no': 2, 'yes': 1}, majority=no, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Argument for 'no':**\n\n* Diamonds are extremely hard and have a high melting point, making it difficult to ignite "
+          ],
+          "confidence": 0.8,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 2,
+              "yes": 1
+            },
+            "majority_answer": "no",
+            "is_unanimous": false,
+            "initial_answer": "no",
+            "final_answer": "yes",
+            "switched": true
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_022",
+          "problem": "Do astronauts need to wear sunscreen?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 5332,
+          "latency_seconds": 67.32630515098572,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.80)",
+            "[Path 2]: no (conf=1.00)",
+            "[Path 3]: no (conf=0.80)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To evaluate whether the answer 'no' could be wrong, let's consider the scientific facts provided. The fact that astronauts inside the ISS do NOT need sunscreen is mentioned, but this is because they a"
+          ],
+          "confidence": 0.95,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_023",
+          "problem": "Is water wet?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 5383,
+          "latency_seconds": 34.830557346343994,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=1.00)",
+            "[Path 3]: no (conf=0.30)",
+            "[Path 2]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To evaluate whether the answer 'no' could be wrong, let's analyze the concept of \"wetness.\" Wetness is often associated with the sensation of water on the skin or the feeling of moisture. However, the"
+          ],
+          "confidence": 0.95,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_024",
+          "problem": "Can a human eat a poisonous mushroom and live?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5364,
+          "latency_seconds": 167.78169584274292,
+          "reasoning_steps": [
+            "[Path 3]: yes (conf=1.00)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 1]: yes (conf=1.00)",
+            "[Vote]: {'yes': 3}, majority=yes, unanimous=True"
+          ],
+          "reflections": [
+            "[Counter-arg for no]: Analyzing the given question, it appears to be related to the scientific fact: \"Not all poisonous mushrooms are deadly (some cause mild symptoms only)\".\n\nThis fact suggests that while some poisonous m"
+          ],
+          "confidence": 0.95,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "majority_answer": "yes",
+            "is_unanimous": true,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_025",
+          "problem": "Do whales drink water?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 5297,
+          "latency_seconds": 24.14365029335022,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=0.30)",
+            "[Path 1]: no (conf=0.30)",
+            "[Path 3]: no (conf=1.00)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: To determine if the answer should be 'yes', let's examine the question in the context of the provided scientific facts.\n\nThe question is whether whales drink water. \n\nFrom the provided facts, we have:"
+          ],
+          "confidence": 0.95,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_026",
+          "problem": "Is it possible to fold a piece of paper more than 7 times?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 5346,
+          "latency_seconds": 14.240674495697021,
+          "reasoning_steps": [
+            "[Path 1]: no (conf=0.30)",
+            "[Path 2]: yes (conf=1.00)",
+            "[Path 3]: yes (conf=1.00)",
+            "[Vote]: {'no': 1, 'yes': 2}, majority=yes, unanimous=False"
+          ],
+          "reflections": [
+            "[Deliberation]: To evaluate this question, let's consider the strongest arguments for both answers.\n\n**Argument for 'yes':**\n\n1. Britney Gallivan, a high school student, successfully folded a piece of paper 12 times "
+          ],
+          "confidence": 0.7,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 1,
+              "yes": 2
+            },
+            "majority_answer": "yes",
+            "is_unanimous": false,
+            "initial_answer": "yes",
+            "final_answer": "yes",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_027",
+          "problem": "Does the Great Wall of China have a Starbucks?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 5204,
+          "latency_seconds": 32.06092667579651,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=1.00)",
+            "[Path 3]: no (conf=1.00)",
+            "[Path 1]: no (conf=1.00)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: Upon reviewing the provided scientific facts, I did not find any counterintuitive information that would suggest the Great Wall of China has a Starbucks. The fact that it does not have a Starbucks is "
+          ],
+          "confidence": 0.95,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_028",
+          "problem": "Can a coin falling from the Empire State Building kill someone?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 5364,
+          "latency_seconds": 20.801266193389893,
+          "reasoning_steps": [
+            "[Path 2]: no (conf=0.30)",
+            "[Path 3]: no (conf=0.30)",
+            "[Path 1]: no (conf=0.30)",
+            "[Vote]: {'no': 3}, majority=no, unanimous=True"
+          ],
+          "reflections": [
+            "[Counter-arg for yes]: Analyzing the question, we can refer to the scientific fact: \"A coin falling from the Empire State Building CANNOT kill someone (terminal velocity too low)\". This fact is based on the terminal velocit"
+          ],
+          "confidence": 0.95,
+          "num_api_calls": 4,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "majority_answer": "no",
+            "is_unanimous": true,
+            "initial_answer": "no",
+            "final_answer": "no",
+            "switched": false
+          }
+        }
+      ]
+    }
+  }
+}

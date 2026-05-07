@@ -1,0 +1,14 @@
+[
+  {
+    "id": "merged_0",
+    "question": "Do hamsters provide food for any animals?",
+    "answer": "ye",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_1",
+    "question": "Could a person survive falling from the Empire State Building?",
+    "answer": "no",
+    "correct": "no"
+  }
+]

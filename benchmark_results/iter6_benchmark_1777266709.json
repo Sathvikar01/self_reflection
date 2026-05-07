@@ -1,0 +1,36 @@
+{
+  "timestamp": 1777266709.4595869,
+  "iteration": 6,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 1,
+  "start_offset": 0,
+  "pipelines": {
+    "Baseline": {
+      "accuracy": 1.0,
+      "correct": 1,
+      "total": 1,
+      "avg_tokens": 224.0,
+      "avg_latency": 25.2832293510437,
+      "results": [
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 224,
+          "latency_seconds": 25.2832293510437,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 1.0,
+          "num_api_calls": 1,
+          "metadata": {
+            "extraction_method": "xml_tag",
+            "raw_response": "Hamsters are prey animals, and they can be a food source for various predators in the wild. \n\nSome of these predators include owls, hawks, foxes, coyotes, and domestic cats. \n\nIn addition, some birds of prey, such as owls and hawks, have been known to hunt hamsters in their natural habitats.\n\nTherefore, considering the information provided, the answer to the question is:\n\n<answer>yes</answer>"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "id": "cc_001",
+    "category": "causal_chain",
+    "difficulty": "hard",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "cc_002",
+    "category": "causal_chain",
+    "difficulty": "hard",
+    "baseline": "yes",
+    "sr": "unknown",
+    "correct": "yes"
+  },
+  {
+    "id": "ts_001",
+    "category": "temporal_sequence",
+    "difficulty": "hard",
+    "baseline": "no",
+    "sr": "no",
+    "correct": "no"
+  },
+  {
+    "id": "ts_002",
+    "category": "temporal_sequence",
+    "difficulty": "medium",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "cl_001",
+    "category": "conditional_logic",
+    "difficulty": "hard",
+    "baseline": "no",
+    "sr": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "cl_002",
+    "category": "conditional_logic",
+    "difficulty": "medium",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "ci_001",
+    "category": "comparative_inference",
+    "difficulty": "hard",
+    "baseline": "no",
+    "sr": "no",
+    "correct": "no"
+  },
+  {
+    "id": "nr_001",
+    "category": "negation_reasoning",
+    "difficulty": "medium",
+    "baseline": "no",
+    "sr": "no",
+    "correct": "no"
+  },
+  {
+    "id": "ar_001",
+    "category": "abductive_reasoning",
+    "difficulty": "medium",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "ck_001",
+    "category": "common_knowledge",
+    "difficulty": "hard",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "mw_001",
+    "category": "math_word_problem",
+    "difficulty": "hard",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "sp_001",
+    "category": "strategic_planning",
+    "difficulty": "hard",
+    "baseline": "no",
+    "sr": "no",
+    "correct": "no"
+  },
+  {
+    "id": "cf_001",
+    "category": "counterfactual",
+    "difficulty": "hard",
+    "baseline": "no",
+    "sr": "no",
+    "correct": "no"
+  },
+  {
+    "id": "an_001",
+    "category": "analogy_reasoning",
+    "difficulty": "medium",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "pr_001",
+    "category": "probability_reasoning",
+    "difficulty": "medium",
+    "baseline": "no",
+    "sr": "no",
+    "correct": "no"
+  },
+  {
+    "id": "api_15",
+    "category": "causal_chain",
+    "difficulty": "medium",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "api_16",
+    "category": "causal_chain",
+    "difficulty": "hard",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "api_17",
+    "category": "temporal_sequence",
+    "difficulty": "medium",
+    "baseline": "unknown",
+    "sr": "no",
+    "correct": "no"
+  },
+  {
+    "id": "api_18",
+    "category": "temporal_sequence",
+    "difficulty": "hard",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "api_19",
+    "category": "conditional_logic",
+    "difficulty": "medium",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "api_20",
+    "category": "conditional_logic",
+    "difficulty": "hard",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "api_21",
+    "category": "comparative_inference",
+    "difficulty": "medium",
+    "baseline": "unknown",
+    "sr": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "api_22",
+    "category": "comparative_inference",
+    "difficulty": "hard",
+    "baseline": "yes",
+    "sr": "yes",
+    "correct": "yes"
+  }
+]

@@ -1,0 +1,702 @@
+[
+  {
+    "id": "merged_0",
+    "question": "Do hamsters provide food for any animals?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 371.9398491382599,
+    "votes": [
+      "yes",
+      "ye",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_1",
+    "question": "Could a person survive falling from the Empire State Building?",
+    "answer": "yes",
+    "correct": "no",
+    "elapsed": 200.1032121181488,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_2",
+    "question": "Is the sun brighter than a light bulb?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 171.0009639263153,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_3",
+    "question": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 220.87702918052673,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_4",
+    "question": "Does hydrogen power work without oxygen?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 97.08459830284119,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_5",
+    "question": "Can penguins fly?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 88.36444783210754,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_6",
+    "question": "Is Antarctica larger than Europe?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 55.50014281272888,
+    "votes": [
+      "yes",
+      "yes",
+      "no",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_7",
+    "question": "Can a person hold their breath for 30 minutes?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 141.41308999061584,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_8",
+    "question": "Is the moon made of cheese?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 119.81392478942871,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_9",
+    "question": "Do all birds lay eggs?",
+    "answer": "ye",
+    "correct": "yes",
+    "elapsed": 213.60804343223572,
+    "votes": [
+      "ye",
+      "ye",
+      "ye",
+      "ye",
+      "ye"
+    ]
+  },
+  {
+    "id": "merged_10",
+    "question": "Can a fish drown?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 170.2627236843109,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_11",
+    "question": "Can humans see in complete darkness?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 197.6315140724182,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_12",
+    "question": "Do plants need oxygen?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 207.97500658035278,
+    "votes": [
+      "no",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_13",
+    "question": "Is lightning hotter than the sun?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 73.01762366294861,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_14",
+    "question": "Can you boil water in a paper cup?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 85.41140460968018,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_15",
+    "question": "Can sound travel in space?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 44.93405055999756,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_16",
+    "question": "Is glass a solid?",
+    "answer": "yes",
+    "correct": "no",
+    "elapsed": 47.115989446640015,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_17",
+    "question": "Do trees sleep?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 78.4345977306366,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_18",
+    "question": "Can you cry underwater?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 125.33933925628662,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_19",
+    "question": "Is a tomato a fruit?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 129.53120374679565,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_20",
+    "question": "Can you light a diamond on fire?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 137.93508577346802,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_21",
+    "question": "Do astronauts need to wear sunscreen?",
+    "answer": "yes",
+    "correct": "no",
+    "elapsed": 128.60667634010315,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_22",
+    "question": "Is water wet?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 180.02455878257751,
+    "votes": [
+      "no",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_23",
+    "question": "Can a human eat a poisonous mushroom and live?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 121.76215147972107,
+    "votes": [
+      "unknown",
+      "yes",
+      "yes",
+      "yes",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_24",
+    "question": "Do whales drink water?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 64.51102471351624,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_25",
+    "question": "Is it possible to fold a piece of paper more than 7 times?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 220.78563714027405,
+    "votes": [
+      "yes",
+      "yes",
+      "ye",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_26",
+    "question": "Does the Great Wall of China have a Starbucks?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 78.94311738014221,
+    "votes": [
+      "unknown",
+      "no",
+      "unknown",
+      "no",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_27",
+    "question": "Can a coin falling from the Empire State Building kill someone?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 166.19798111915588,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_28",
+    "question": "Is it true that we only use 10% of our brain?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 75.06390690803528,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_29",
+    "question": "Do bats drink blood?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 122.99138522148132,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_30",
+    "question": "Can an ostrich fly?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 159.33690643310547,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_31",
+    "question": "Is water a good conductor of electricity?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 65.32850313186646,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_32",
+    "question": "Do spiders have wings?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 248.43234086036682,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_33",
+    "question": "Can you see the Great Wall of China from space?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 73.11259126663208,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_34",
+    "question": "Is gold a good investment?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 49.76633858680725,
+    "votes": [
+      "no",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_35",
+    "question": "Do dolphins sleep?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 325.44571685791016,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "no",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_36",
+    "question": "Can you tickle yourself?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 134.64733815193176,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_37",
+    "question": "Is it safe to eat food that fell on the floor if picked up within 5 seconds?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 143.46852588653564,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_38",
+    "question": "Do elephants have teeth?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 66.56375002861023,
+    "votes": [
+      "yes",
+      "yes",
+      "no",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_39",
+    "question": "Can a person survive on just potatoes?",
+    "answer": "no",
+    "correct": "yes",
+    "elapsed": 141.90256643295288,
+    "votes": [
+      "unknown",
+      "no",
+      "yes",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_40",
+    "question": "Is it possible to swallow your tongue?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 79.34611582756042,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_41",
+    "question": "Do giraffes have vocal cords?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 105.92280578613281,
+    "votes": [
+      "yes",
+      "ye",
+      "no",
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_42",
+    "question": "Is it true that bulls hate the color red?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 79.62640619277954,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_43",
+    "question": "Can a house cat beat a dog in a fight?",
+    "answer": "no",
+    "correct": "yes",
+    "elapsed": 78.37501573562622,
+    "votes": [
+      "no",
+      "yes",
+      "no",
+      "yes",
+      "ye"
+    ]
+  },
+  {
+    "id": "merged_44",
+    "question": "Is yawning contagious?",
+    "answer": "no",
+    "correct": "yes",
+    "elapsed": 88.8594422340393,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_45",
+    "question": "Do magnets work in space?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 411.1644425392151,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_46",
+    "question": "Can you sneeze with your eyes open?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 392.7160611152649,
+    "votes": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_47",
+    "question": "Is it dangerous to wake a sleepwalker?",
+    "answer": "no",
+    "correct": "no",
+    "elapsed": 163.7095377445221,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_48",
+    "question": "Do octopuses have three hearts?",
+    "answer": "yes",
+    "correct": "yes",
+    "elapsed": 51.82465720176697,
+    "votes": [
+      "yes",
+      "no",
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_49",
+    "question": "Can a person be allergic to water?",
+    "answer": "no",
+    "correct": "yes",
+    "elapsed": 132.63045263290405,
+    "votes": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "yes"
+    ]
+  }
+]

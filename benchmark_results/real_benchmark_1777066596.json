@@ -1,0 +1,851 @@
+{
+  "timestamp": 1777066596.3427923,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 28,
+  "pipelines": {
+    "Self-Reflection": {
+      "accuracy": 0.6428571428571429,
+      "correct": 18,
+      "total": 28,
+      "avg_tokens": 939.8928571428571,
+      "avg_latency": 18.890044859477452,
+      "results": [
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 887,
+          "latency_seconds": 31.423224925994873,
+          "reasoning_steps": [
+            "[Path 1]: To determine if hamsters provide food for any animals, we need to consider the role of hamsters in their ecosystem.\n\n1. Hamsters are small, furry rodents that primarily feed on seeds, fruits, and vege",
+            "[Path 2]: To determine if hamsters provide food for any animals, let's consider the following steps:\n\n1. Hamsters are small, furry rodents that are often kept as pets. They are primarily carnivorous and omnivor",
+            "[Path 3]: To determine if hamsters provide food for any animals, let's consider their role in the ecosystem.\n\n1. Hamsters are small, omnivorous mammals that primarily feed on seeds, fruits, and insects.\n2. As p"
+          ],
+          "reflections": [
+            "Consensus: yes(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "yes",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 1318,
+          "latency_seconds": 35.52577328681946,
+          "reasoning_steps": [
+            "[Path 1]: To determine if a person could survive falling from the Empire State Building, we need to consider several factors.\n\n1. **Definition of Survival**: Survival in this context means the person would not ",
+            "[Path 2]: To determine if a person could survive falling from the Empire State Building, let's consider the factors involved.\n\n1. **Distance and Terminal Velocity**: The Empire State Building stands at approxim",
+            "[Path 3]: To determine whether a person could survive falling from the Empire State Building, we need to consider several factors.\n\n1. **Height and Velocity**: The Empire State Building stands at approximately "
+          ],
+          "reflections": [
+            "Strong majority: yes(2/3)"
+          ],
+          "confidence": 0.6833333333333333,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "vote_ratio": 0.6666666666666666,
+            "path_answers": [
+              "yes",
+              "no",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1078,
+          "latency_seconds": 32.67152762413025,
+          "reasoning_steps": [
+            "[Path 1]: To answer this question, let's break it down step by step.\n\n1. **Definition of Brightness**: Brightness refers to the amount of light emitted by a source. It's a measure of how much light is radiated ",
+            "[Path 2]: To determine if the sun is brighter than a light bulb, let's consider the characteristics of both.\n\n1. The sun is a massive ball of hot, glowing gas, primarily composed of hydrogen and helium. It has ",
+            "[Path 3]: To answer this question, let's consider the luminosity of both the sun and a light bulb.\n\n1. The sun is a massive ball of hot, glowing gas, primarily composed of hydrogen and helium. It produces an en"
+          ],
+          "reflections": [
+            "Consensus: yes(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "yes",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_004",
+          "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 883,
+          "latency_seconds": 19.559551000595093,
+          "reasoning_steps": [
+            "[Path 1]: To determine if a person born in 2000 would be eligible to vote in the 2016 US election, we need to consider the following steps:\n\n1. **Age requirement for voting:** In the United States, a person mus",
+            "[Path 2]: To determine if a person born in 2000 would be eligible to vote in the 2016 US election, let's break down the requirements.\n\n1. The person must be a US citizen: This is a requirement for voting in the",
+            "[Path 3]: To determine if a person born in 2000 would be eligible to vote in the 2016 US election, we need to consider the voting age and the eligibility requirements.\n\n1. The voting age in the United States is"
+          ],
+          "reflections": [
+            "Consensus: no(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "no",
+              "no",
+              "no"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_005",
+          "problem": "Does hydrogen power work without oxygen?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 1077,
+          "latency_seconds": 20.373929500579834,
+          "reasoning_steps": [
+            "[Path 1]: To determine if hydrogen power works without oxygen, let's break down the concept step by step.\n\n1. **Definition of Hydrogen Power**: Hydrogen power refers to the use of hydrogen as a fuel source to g",
+            "[Path 2]: To determine if hydrogen power works without oxygen, let's break down the process step by step.\n\n1. Hydrogen power typically involves the reaction between hydrogen gas (H2) and oxygen gas (O2) to prod",
+            "[Path 3]: To determine if hydrogen power works without oxygen, let's break down the concept:\n\n1. Hydrogen power typically involves the reaction of hydrogen (H2) with oxygen (O2) to produce electricity, water, a"
+          ],
+          "reflections": [
+            "Strong majority: yes(2/3)"
+          ],
+          "confidence": 0.6833333333333333,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "vote_ratio": 0.6666666666666666,
+            "path_answers": [
+              "yes",
+              "no",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_006",
+          "problem": "Can penguins fly?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 904,
+          "latency_seconds": 23.56369137763977,
+          "reasoning_steps": [
+            "[Path 1]: To determine if penguins can fly, let's break down the question into its basic components.\n\n1. **Definition of flying**: Flying refers to the ability of an object or living being to generate lift and ",
+            "[Path 2]: To determine if penguins can fly, let's consider the characteristics of penguins and flying birds.\n\n1. Penguins are classified as birds, and birds are known for their ability to fly. However, this is ",
+            "[Path 3]: To answer whether penguins can fly, let's consider the following steps:\n\n1. Penguins are birds, and most birds are capable of flying.\n2. However, penguins have some distinct physical characteristics, "
+          ],
+          "reflections": [
+            "Consensus: no(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "no",
+              "no",
+              "no"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_007",
+          "problem": "Is Antarctica larger than Europe?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 717,
+          "latency_seconds": 17.51014232635498,
+          "reasoning_steps": [
+            "[Path 1]: To determine if Antarctica is larger than Europe, we need to understand the basic definitions and geographical characteristics of both continents.\n\n1. **Definition of Continent**: A continent is a lar",
+            "[Path 2]: To determine if Antarctica is larger than Europe, we need to compare their land areas.\n\n1. The total area of Antarctica is approximately 14 million square kilometers (5.4 million square miles).\n2. The",
+            "[Path 3]: To determine if Antarctica is larger than Europe, we need to compare their respective land areas.\n\n1. Antarctica's land area is approximately 14 million square kilometers (5.4 million square miles).\n2"
+          ],
+          "reflections": [
+            "Consensus: yes(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "yes",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_008",
+          "problem": "Can a person hold their breath for 30 minutes?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1208,
+          "latency_seconds": 34.91470980644226,
+          "reasoning_steps": [
+            "[Path 1]: To determine if a person can hold their breath for 30 minutes, we need to understand the basic physiology of breathing and the effects of holding one's breath.\n\n1. Breathing is the process by which th",
+            "[Path 2]: To determine if a person can hold their breath for 30 minutes, let's consider the physiological limitations of the human body.\n\n1. The maximum time a person can hold their breath is limited by the amo",
+            "[Path 3]: To determine if a person can hold their breath for 30 minutes, let's consider the relevant factors:\n\n1. **Physiological Limitations**: The average adult human can hold their breath for around 1-2 minu"
+          ],
+          "reflections": [
+            "Consensus: no(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "no",
+              "no",
+              "no"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_009",
+          "problem": "Is the moon made of cheese?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1181,
+          "latency_seconds": 18.11707878112793,
+          "reasoning_steps": [
+            "[Path 1]: To determine if the moon is made of cheese, let's start with basic definitions and principles.\n\n1. **Definition of the Moon**: The moon is a natural satellite that orbits a planet. In this case, it or",
+            "[Path 2]: To determine if the moon is made of cheese, let's consider the available information and evidence.\n\n1. **Scientific Consensus**: The overwhelming consensus among astronomers and space scientists is th",
+            "[Path 3]: To determine if the moon is made of cheese, let's consider the available information and evidence.\n\n1. Scientific consensus: The overwhelming majority of scientists and experts in the field of astrono"
+          ],
+          "reflections": [
+            "Consensus: no(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "no",
+              "no",
+              "no"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_010",
+          "problem": "Do all birds lay eggs?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 503 Server Error: Service Unavailable for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_011",
+          "problem": "Can a fish drown?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 503 Server Error: Service Unavailable for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_012",
+          "problem": "Can humans see in complete darkness?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1055,
+          "latency_seconds": 18.0232834815979,
+          "reasoning_steps": [
+            "[Path 1]: To determine if humans can see in complete darkness, we need to understand what \"complete darkness\" means and how the human visual system works.\n\n1. \"Complete darkness\" refers to an environment with z",
+            "[Path 2]: To determine if humans can see in complete darkness, let's break down the process step by step.\n\n1. **Understanding Complete Darkness**: Complete darkness refers to an environment with zero light, whe",
+            "[Path 3]: To determine if humans can see in complete darkness, let's consider the following steps:\n\n1. **Biological limitations**: The human eye relies on the detection of photons (light particles) to form imag"
+          ],
+          "reflections": [
+            "Consensus: no(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "no",
+              "no",
+              "no"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_013",
+          "problem": "Do plants need oxygen?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1033,
+          "latency_seconds": 14.67303991317749,
+          "reasoning_steps": [
+            "[Path 1]: To determine if plants need oxygen, we need to understand the basic processes of plant growth and respiration.\n\n1. Plants are living organisms that require energy to grow and thrive. This energy is ty",
+            "[Path 2]: To determine if plants need oxygen, let's consider their basic needs and functions.\n\n1. Plants undergo photosynthesis, a process where they convert light energy into chemical energy. This process requ",
+            "[Path 3]: To determine if plants need oxygen, let's analyze the process of photosynthesis, which is how plants produce their own food.\n\n1. Photosynthesis occurs in specialized organelles called chloroplasts wit"
+          ],
+          "reflections": [
+            "Consensus: yes(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "yes",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_014",
+          "problem": "Is lightning hotter than the sun?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 969,
+          "latency_seconds": 13.293383836746216,
+          "reasoning_steps": [
+            "[Path 1]: To determine if lightning is hotter than the sun, we need to understand the basic definitions and principles involved.\n\n1. **Temperature**: Temperature is a measure of the average kinetic energy of th",
+            "[Path 2]: To determine if lightning is hotter than the sun, let's consider the temperatures associated with each.\n\n1. The surface temperature of the sun is about 5,500 degrees Celsius (5,773 degrees Fahrenheit)",
+            "[Path 3]: To compare the temperature of lightning to the temperature of the sun, we need to consider the temperature at the surface of the sun and the temperature of lightning.\n\nThe surface temperature of the s"
+          ],
+          "reflections": [
+            "Consensus: yes(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "yes",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_015",
+          "problem": "Can you boil water in a paper cup?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 900,
+          "latency_seconds": 11.354350805282593,
+          "reasoning_steps": [
+            "[Path 1]: To determine if you can boil water in a paper cup, let's break down the process step by step:\n\n1. A paper cup is made of paper, which is a combustible material. When exposed to heat, paper can catch f",
+            "[Path 2]: To determine if you can boil water in a paper cup, let's consider the properties of paper and the process of boiling water.\n\n1. Paper is a combustible material, meaning it can catch fire and burn when",
+            "[Path 3]: To determine if you can boil water in a paper cup, let's consider the properties of paper and the conditions required to boil water.\n\n1. Paper cups are typically made from paper pulp, which is a combu"
+          ],
+          "reflections": [
+            "Consensus: no(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "no",
+              "no",
+              "no"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_016",
+          "problem": "Can sound travel in space?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1039,
+          "latency_seconds": 13.313906908035278,
+          "reasoning_steps": [
+            "[Path 1]: To determine if sound can travel in space, we need to understand the basic principles of sound and space.\n\n1. **Definition of Sound**: Sound is a form of energy that is produced by vibrations. When an",
+            "[Path 2]: To determine if sound can travel in space, let's consider the properties of sound and space.\n\n1. Sound is a form of mechanical wave that requires a medium to propagate. This means it needs a physical ",
+            "[Path 3]: To determine if sound can travel in space, we need to consider the properties of sound and the environment of space.\n\n1. Sound is a form of mechanical wave that requires a medium to propagate. On Eart"
+          ],
+          "reflections": [
+            "Consensus: no(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "no",
+              "no",
+              "no"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_017",
+          "problem": "Is glass a solid?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 880,
+          "latency_seconds": 13.209352731704712,
+          "reasoning_steps": [
+            "[Path 1]: To determine if glass is a solid, we need to understand the definitions of solid, liquid, and gas.\n\nA solid is a state of matter where the particles (atoms, molecules, or ions) are closely packed and ",
+            "[Path 2]: To determine if glass is a solid, let's consider the definition of a solid. A solid is a state of matter that has a fixed shape and volume. Solids maintain their shape and volume unless they are subje",
+            "[Path 3]: To determine whether glass is a solid, let's consider its properties. \n\n1. Glass is typically made from molten sand (silicon dioxide) that is cooled and solidified. This process suggests that glass is"
+          ],
+          "reflections": [
+            "Consensus: yes(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "yes",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_018",
+          "problem": "Do trees sleep?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1129,
+          "latency_seconds": 18.229649543762207,
+          "reasoning_steps": [
+            "[Path 1]: To determine if trees sleep, we need to understand what sleep is and how it applies to living organisms.\n\n1. **Definition of sleep**: Sleep is a state of reduced consciousness or activity, typically c",
+            "[Path 2]: To determine if trees sleep, let's consider the definition of sleep and apply it to trees.\n\n1. Sleep is typically defined as a state of reduced consciousness, decreased responsiveness, and a decrease ",
+            "[Path 3]: To determine if trees sleep, let's consider the following steps:\n\n1. **Definition of sleep**: Sleep is typically defined as a state of reduced consciousness or activity, characterized by specific phys"
+          ],
+          "reflections": [
+            "Consensus: no(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "no",
+              "no",
+              "no"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_019",
+          "problem": "Can you cry underwater?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1061,
+          "latency_seconds": 24.883450031280518,
+          "reasoning_steps": [
+            "[Path 1]: To determine if you can cry underwater, let's break down the concept step by step.\n\n1. **Crying**: Crying is a natural human response to emotional stimuli, characterized by the release of tears from t",
+            "[Path 2]: To determine if you can cry underwater, let's consider the process of crying and the effects of water on the human body.\n\n1. Crying is the result of emotional release, which triggers the lacrimal glan",
+            "[Path 3]: To determine if it's possible to cry underwater, let's break down the process of crying and the effects of water on the body.\n\n1. Crying is a natural response to emotional stimuli, and it involves the"
+          ],
+          "reflections": [
+            "Strong majority: yes(2/3)"
+          ],
+          "confidence": 0.6833333333333333,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 2,
+              "no": 1
+            },
+            "vote_ratio": 0.6666666666666666,
+            "path_answers": [
+              "yes",
+              "yes",
+              "no"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_020",
+          "problem": "Is a tomato a fruit?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 932,
+          "latency_seconds": 13.720873594284058,
+          "reasoning_steps": [
+            "[Path 1]: To determine if a tomato is a fruit, let's start with basic definitions.\n\n1. A fruit is typically defined as the edible part of a plant that contains seeds, often developing from the ovary of a flower",
+            "[Path 2]: To determine whether a tomato is a fruit, let's consider the definition of a fruit. A fruit is typically the edible part of a plant that contains seeds, often sweet or fleshy in texture.\n\n1. Tomatoes ",
+            "[Path 3]: To determine if a tomato is a fruit, let's break down the definition of a fruit and examine the characteristics of a tomato.\n\n1. **Definition of a Fruit:** A fruit is the ripened ovary of a plant, con"
+          ],
+          "reflections": [
+            "Consensus: yes(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "yes",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_021",
+          "problem": "Can you light a diamond on fire?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1179,
+          "latency_seconds": 19.051969289779663,
+          "reasoning_steps": [
+            "[Path 1]: To answer this question, let's break it down step by step:\n\n1. **Definition of a Diamond**: A diamond is a crystalline solid form of pure carbon, known for its exceptional hardness and brilliance.\n\n2.",
+            "[Path 2]: To determine if a diamond can be lit on fire, let's consider the properties of diamonds and the process of combustion.\n\n1. Diamonds are made of pure carbon, which is the same element that makes up mos",
+            "[Path 3]: To determine if a diamond can be lit on fire, let's consider the properties of diamonds and the conditions required for combustion.\n\n1. Diamonds are made of pure carbon, which is the same element foun"
+          ],
+          "reflections": [
+            "Strong majority: yes(2/3)"
+          ],
+          "confidence": 0.6833333333333333,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 1,
+              "yes": 2
+            },
+            "vote_ratio": 0.6666666666666666,
+            "path_answers": [
+              "no",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_022",
+          "problem": "Do astronauts need to wear sunscreen?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 1093,
+          "latency_seconds": 17.30262303352356,
+          "reasoning_steps": [
+            "[Path 1]: To determine if astronauts need to wear sunscreen, let's break down the key components involved.\n\n1. **Definition of Sunscreen**: Sunscreen is a topical product applied to the skin to protect it from ",
+            "[Path 2]: To determine if astronauts need to wear sunscreen, let's consider the factors involved.\n\n1. **Earth's Atmosphere**: On Earth, the atmosphere protects us from the sun's ultraviolet (UV) radiation, whic",
+            "[Path 3]: To determine if astronauts need to wear sunscreen, let's consider the factors involved.\n\n1. **Space Environment**: In space, there's no atmosphere to protect against harmful UV radiation from the sun."
+          ],
+          "reflections": [
+            "Consensus: yes(3/3)"
+          ],
+          "confidence": 1.0,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 3
+            },
+            "vote_ratio": 1.0,
+            "path_answers": [
+              "yes",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_023",
+          "problem": "Is water wet?",
+          "answer": "no",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 1082,
+          "latency_seconds": 23.19861125946045,
+          "reasoning_steps": [
+            "[Path 1]: To determine if water is wet, we need to understand the concept of \"wetness.\" Wetness is a tactile sensation that we experience when our skin comes into contact with a liquid, such as water. It's a su",
+            "[Path 2]: To determine if water is wet, let's consider the definition of the term \"wet.\" The term \"wet\" generally refers to a surface or substance that has a significant amount of moisture or liquid on it. \n\nWh",
+            "[Path 3]: To answer this question, let's break it down step by step:\n\n1. The term \"wet\" is often used to describe a surface that is covered in liquid. In this context, it implies the presence of a liquid that i"
+          ],
+          "reflections": [
+            "Strong majority: no(2/3)"
+          ],
+          "confidence": 0.6833333333333333,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "yes": 1,
+              "no": 2
+            },
+            "vote_ratio": 0.6666666666666666,
+            "path_answers": [
+              "yes",
+              "no",
+              "no"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_024",
+          "problem": "Can a human eat a poisonous mushroom and live?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1208,
+          "latency_seconds": 34.552284955978394,
+          "reasoning_steps": [
+            "[Path 1]: To answer this question, we need to consider the definition of a poisonous mushroom and the concept of survival.\n\n1. A poisonous mushroom is a type of fungus that contains toxins that can harm or kill",
+            "[Path 2]: To determine if a human can eat a poisonous mushroom and live, let's consider the following steps:\n\n1. **Poisonous mushrooms contain toxins**: Many poisonous mushrooms contain toxic compounds that can",
+            "[Path 3]: To determine if a human can eat a poisonous mushroom and live, let's break down the situation:\n\n1. **Definition of \"live\"**: When considering the question, \"live\" implies not only survival but also th"
+          ],
+          "reflections": [
+            "Strong majority: yes(2/3)"
+          ],
+          "confidence": 0.6833333333333333,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 1,
+              "yes": 2
+            },
+            "vote_ratio": 0.6666666666666666,
+            "path_answers": [
+              "no",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_025",
+          "problem": "Do whales drink water?",
+          "answer": "no",
+          "ground_truth": "no",
+          "correct": true,
+          "total_tokens": 1042,
+          "latency_seconds": 19.669337272644043,
+          "reasoning_steps": [
+            "[Path 1]: To determine if whales drink water, let's break down the question into its basic components.\n\n1. **Definition of Drinking**: Drinking refers to the act of consuming a liquid, typically water, through ",
+            "[Path 2]: To determine if whales drink water, let's consider their anatomy and behavior.\n\n1. Whales are marine mammals that live in the ocean. They don't have lungs like humans do, but instead have a system cal",
+            "[Path 3]: To determine if whales drink water, let's consider their physiology and behavior.\n\n1. Whales are marine mammals that live in the ocean. They are adapted to a aquatic environment and are primarily comp"
+          ],
+          "reflections": [
+            "Strong majority: no(2/3)"
+          ],
+          "confidence": 0.6833333333333333,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 2,
+              "yes": 1
+            },
+            "vote_ratio": 0.6666666666666666,
+            "path_answers": [
+              "no",
+              "no",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_026",
+          "problem": "Is it possible to fold a piece of paper more than 7 times?",
+          "answer": "yes",
+          "ground_truth": "yes",
+          "correct": true,
+          "total_tokens": 1169,
+          "latency_seconds": 22.02224850654602,
+          "reasoning_steps": [
+            "[Path 1]: To determine if it's possible to fold a piece of paper more than 7 times, let's break it down step by step.\n\n1. **Definition of a fold**: A fold is when you take a piece of paper and fold it in half, ",
+            "[Path 2]: To determine if it's possible to fold a piece of paper more than 7 times, let's consider the factors involved.\n\n1. **Paper thickness**: When you fold a piece of paper, its thickness increases. However",
+            "[Path 3]: To determine if it's possible to fold a piece of paper more than 7 times, let's consider the process and limitations.\n\n1. Folding a paper in half creates two layers, effectively doubling its thickness"
+          ],
+          "reflections": [
+            "Strong majority: yes(2/3)"
+          ],
+          "confidence": 0.6833333333333333,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 1,
+              "yes": 2
+            },
+            "vote_ratio": 0.6666666666666666,
+            "path_answers": [
+              "no",
+              "yes",
+              "yes"
+            ]
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_027",
+          "problem": "Does the Great Wall of China have a Starbucks?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 503 Server Error: Service Unavailable for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Self-Reflection",
+          "problem_id": "sq_028",
+          "problem": "Can a coin falling from the Empire State Building kill someone?",
+          "answer": "yes",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 1293,
+          "latency_seconds": 18.763262271881104,
+          "reasoning_steps": [
+            "[Path 1]: To answer this question, let's break it down step by step.\n\n1. **Definition of a Coin**: A coin is a small, flat piece of metal or other material used as a medium of exchange. It's typically around 1-",
+            "[Path 2]: To determine if a coin falling from the Empire State Building can kill someone, let's consider the factors involved:\n\n1. **Height of the Empire State Building**: The Empire State Building stands at ap",
+            "[Path 3]: To determine if a coin falling from the Empire State Building can kill someone, let's consider the factors involved:\n\n1. **Height**: The Empire State Building is approximately 1,454 feet (443 meters) "
+          ],
+          "reflections": [
+            "Strong majority: yes(2/3)"
+          ],
+          "confidence": 0.6833333333333333,
+          "num_api_calls": 3,
+          "metadata": {
+            "vote_counts": {
+              "no": 1,
+              "yes": 2
+            },
+            "vote_ratio": 0.6666666666666666,
+            "path_answers": [
+              "no",
+              "yes",
+              "yes"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

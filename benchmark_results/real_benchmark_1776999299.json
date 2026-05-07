@@ -1,0 +1,968 @@
+{
+  "timestamp": 1776999299.6422896,
+  "dataset": "data/datasets/strategyqa_full.json",
+  "n_problems": 56,
+  "pipelines": {
+    "Baseline": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 56,
+      "avg_tokens": 0.0,
+      "avg_latency": 0.0,
+      "results": [
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_001",
+          "problem": "Do hamsters provide food for any animals?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_002",
+          "problem": "Could a person survive falling from the Empire State Building?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_003",
+          "problem": "Is the sun brighter than a light bulb?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_004",
+          "problem": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_005",
+          "problem": "Does hydrogen power work without oxygen?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_006",
+          "problem": "Can penguins fly?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_007",
+          "problem": "Is Antarctica larger than Europe?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_008",
+          "problem": "Can a person hold their breath for 30 minutes?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_009",
+          "problem": "Is the moon made of cheese?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_010",
+          "problem": "Do all birds lay eggs?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_011",
+          "problem": "Can a fish drown?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_012",
+          "problem": "Can humans see in complete darkness?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_013",
+          "problem": "Do plants need oxygen?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_014",
+          "problem": "Is lightning hotter than the sun?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_015",
+          "problem": "Can you boil water in a paper cup?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_016",
+          "problem": "Can sound travel in space?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_017",
+          "problem": "Is glass a solid?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_018",
+          "problem": "Do trees sleep?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_019",
+          "problem": "Can you cry underwater?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_020",
+          "problem": "Is a tomato a fruit?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_021",
+          "problem": "Can you light a diamond on fire?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_022",
+          "problem": "Do astronauts need to wear sunscreen?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_023",
+          "problem": "Is water wet?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_024",
+          "problem": "Can a human eat a poisonous mushroom and live?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_025",
+          "problem": "Do whales drink water?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_026",
+          "problem": "Is it possible to fold a piece of paper more than 7 times?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_027",
+          "problem": "Does the Great Wall of China have a Starbucks?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_028",
+          "problem": "Can a coin falling from the Empire State Building kill someone?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_029",
+          "problem": "Is it true that we only use 10% of our brain?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_030",
+          "problem": "Do bats drink blood?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_031",
+          "problem": "Can an ostrich fly?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_032",
+          "problem": "Is water a good conductor of electricity?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_033",
+          "problem": "Do spiders have wings?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_034",
+          "problem": "Can you see the Great Wall of China from space?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_035",
+          "problem": "Is gold a good investment?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_036",
+          "problem": "Do dolphins sleep?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_037",
+          "problem": "Can you tickle yourself?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_038",
+          "problem": "Is it safe to eat food that fell on the floor if picked up within 5 seconds?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_039",
+          "problem": "Do elephants have teeth?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_040",
+          "problem": "Can a person survive on just potatoes?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_041",
+          "problem": "Is it possible to swallow your tongue?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_042",
+          "problem": "Do giraffes have vocal cords?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_043",
+          "problem": "Is it true that bulls hate the color red?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_044",
+          "problem": "Can a house cat beat a dog in a fight?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_045",
+          "problem": "Is yawning contagious?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_046",
+          "problem": "Do magnets work in space?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_047",
+          "problem": "Can you sneeze with your eyes open?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_048",
+          "problem": "Is it dangerous to wake a sleepwalker?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_049",
+          "problem": "Do octopuses have three hearts?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_050",
+          "problem": "Can a person be allergic to water?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_051",
+          "problem": "Is the Pacific Ocean larger than all land combined?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_052",
+          "problem": "Do humans use more than 10% of their brain at once?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_053",
+          "problem": "Can snakes hear music?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_054",
+          "problem": "Is it possible to live without a brain?",
+          "answer": "ERROR",
+          "ground_truth": "no",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_055",
+          "problem": "Does hot water freeze faster than cold water?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        },
+        {
+          "pipeline_name": "Baseline",
+          "problem_id": "sq_056",
+          "problem": "Can you break glass with sound?",
+          "answer": "ERROR",
+          "ground_truth": "yes",
+          "correct": false,
+          "total_tokens": 0,
+          "latency_seconds": 0.0,
+          "reasoning_steps": [],
+          "reflections": [],
+          "confidence": 0.0,
+          "num_api_calls": 0,
+          "metadata": {
+            "error": "API call failed: 403 Client Error: Forbidden for url: https://integrate.api.nvidia.com/v1/chat/completions"
+          }
+        }
+      ]
+    }
+  }
+}
