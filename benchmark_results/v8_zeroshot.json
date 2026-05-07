@@ -628,5 +628,23 @@
     "question": "Do elephants never forget?",
     "answer": "no",
     "correct": "yes"
+  },
+  {
+    "id": "merged_112",
+    "question": "Is blood blue inside the body?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_113",
+    "question": "Can volcanoes erupt in winter?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_114",
+    "question": "Do babies have more bones than adults?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
