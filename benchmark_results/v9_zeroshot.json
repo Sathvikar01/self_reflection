@@ -622,5 +622,23 @@
     "question": "Is rhubarb a fruit?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_111",
+    "question": "Do elephants never forget?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_112",
+    "question": "Is blood blue inside the body?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_113",
+    "question": "Can volcanoes erupt in winter?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
