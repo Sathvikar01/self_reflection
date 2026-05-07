@@ -550,5 +550,23 @@
     "question": "Is Niagara Falls the largest waterfall in the world?",
     "answer": "no",
     "correct": "no"
+  },
+  {
+    "id": "merged_99",
+    "question": "Do we use only 10% of our brain?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_100",
+    "question": "Can ice be hot?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_101",
+    "question": "Is honey bee vomit?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
