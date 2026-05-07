@@ -1090,5 +1090,23 @@
     "question": "Does the average income of employees at Company A exceed that of employees at Company B if the average income at Company A is $60,000 with a 10% annual increase and the average income at Company B is $65,000 with a 5% annual decrease?",
     "answer": "no",
     "correct": "yes"
+  },
+  {
+    "id": "merged_200",
+    "question": "Is the average GDP per capita of countries bordering the Mediterranean Sea higher than that of countries bordering the Red Sea?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_0",
+    "question": "If some fungi help trees absorb water and trees provide shade which lowers the temperature of the soil, and fungi thrive in lower temperatures, would the presence of trees benefit the growth of these fungi?",
+    "answer": "yes",
+    "correct": "yes"
+  },
+  {
+    "id": "generated_1",
+    "question": "If trees grow faster in warmer temperatures and forests increase atmospheric oxygen through photosynthesis, and warmer temperatures accelerate decomposition of organic matter, would forests eventually increase atmospheric oxygen levels despite warmer temperatures?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
