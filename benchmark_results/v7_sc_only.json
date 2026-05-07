@@ -713,5 +713,38 @@
       "yes",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_71",
+    "question": "In a guessing game, you need to find a number between 1-100. Is binary search the optimal strategy to minimize guesses?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_72",
+    "question": "You have 12 balls, one weighs differently. Can you find the odd ball using a balance scale only 3 times?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_73",
+    "question": "In chess, if you can take a queen with your knight but it would expose your king to check, should you take the queen?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "unknown",
+      "no",
+      "unknown"
+    ]
   }
 ]
