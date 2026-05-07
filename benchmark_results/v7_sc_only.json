@@ -482,5 +482,38 @@
       "unknown",
       "unknown"
     ]
+  },
+  {
+    "id": "merged_44",
+    "question": "Is yawning contagious?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_45",
+    "question": "Do magnets work in space?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_46",
+    "question": "Can you sneeze with your eyes open?",
+    "answer": "no",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "unknown",
+      "no"
+    ]
   }
 ]
