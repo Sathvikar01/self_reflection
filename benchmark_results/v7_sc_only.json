@@ -1439,5 +1439,38 @@
       "no",
       "no"
     ]
+  },
+  {
+    "id": "merged_142",
+    "question": "Do alligators live in sewers?",
+    "answer": "no",
+    "correct": "no",
+    "votes": [
+      "no",
+      "no",
+      "no"
+    ]
+  },
+  {
+    "id": "merged_143",
+    "question": "Can a bullet fired vertically kill someone?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  {
+    "id": "merged_144",
+    "question": "Is vanilla derived from orchids?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
   }
 ]
