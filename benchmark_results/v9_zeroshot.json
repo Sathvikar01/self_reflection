@@ -118,5 +118,23 @@
     "question": "Is a tomato a fruit?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_20",
+    "question": "Can you light a diamond on fire?",
+    "answer": "no",
+    "correct": "yes"
+  },
+  {
+    "id": "merged_21",
+    "question": "Do astronauts need to wear sunscreen?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_22",
+    "question": "Is water wet?",
+    "answer": "yes",
+    "correct": "yes"
   }
 ]
