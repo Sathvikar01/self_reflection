@@ -1538,5 +1538,38 @@
       "yes",
       "yes"
     ]
+  },
+  {
+    "id": "merged_152",
+    "question": "Can paper be made waterproof?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "yes",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_153",
+    "question": "Is a jiffy a real unit of time?",
+    "answer": "yes",
+    "correct": "yes",
+    "votes": [
+      "no",
+      "yes",
+      "yes"
+    ]
+  },
+  {
+    "id": "merged_155",
+    "question": "Can hot water freeze faster than cold water?",
+    "answer": "unknown",
+    "correct": "yes",
+    "votes": [
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
   }
 ]
