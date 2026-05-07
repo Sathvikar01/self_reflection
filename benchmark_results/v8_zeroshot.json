@@ -154,5 +154,23 @@
     "question": "Is it possible to fold a piece of paper more than 7 times?",
     "answer": "yes",
     "correct": "yes"
+  },
+  {
+    "id": "merged_26",
+    "question": "Does the Great Wall of China have a Starbucks?",
+    "answer": "yes",
+    "correct": "no"
+  },
+  {
+    "id": "merged_27",
+    "question": "Can a coin falling from the Empire State Building kill someone?",
+    "answer": "no",
+    "correct": "no"
+  },
+  {
+    "id": "merged_28",
+    "question": "Is it true that we only use 10% of our brain?",
+    "answer": "no",
+    "correct": "no"
   }
 ]
