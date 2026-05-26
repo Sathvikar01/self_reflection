@@ -48,7 +48,7 @@ class MockNVIDIANIMClient:
         """Generate mock response."""
         self._call_count += 1
         
-        time.sleep(random.uniform(0.1, 0.3))
+        time.sleep(random.uniform(0.001, 0.005))
         
         last_message = messages[-1]["content"] if messages else ""
         

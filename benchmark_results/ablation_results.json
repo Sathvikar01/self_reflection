@@ -1,0 +1,487 @@
+{
+  "timestamp": "20260527_014225",
+  "dataset": "data/datasets/benchmark_dataset.json",
+  "mock": true,
+  "sc_samples": 5,
+  "statistics": {
+    "num_questions": 10,
+    "conditions": {
+      "kb_sc_step12": {
+        "label": "KB+SC+Step1/2",
+        "accuracy": 0.2,
+        "correct": 2,
+        "total": 10,
+        "mean_latency_ms": 2003.248405456543
+      },
+      "sc_step12": {
+        "label": "SC+Step1/2 (No KB)",
+        "accuracy": 0.1,
+        "correct": 1,
+        "total": 10,
+        "mean_latency_ms": 2078.1644344329834
+      },
+      "kb_step12": {
+        "label": "KB+Step1/2 (No SC)",
+        "accuracy": 0.5,
+        "correct": 5,
+        "total": 10,
+        "mean_latency_ms": 462.260365486145
+      },
+      "kb_sc": {
+        "label": "KB+SC (No Step1/2)",
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 10,
+        "mean_latency_ms": 1064.5431995391846
+      },
+      "zero_shot": {
+        "label": "Zero-Shot",
+        "accuracy": 0.3,
+        "correct": 3,
+        "total": 10,
+        "mean_latency_ms": 214.86029624938965
+      },
+      "cot": {
+        "label": "CoT",
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 10,
+        "mean_latency_ms": 218.9786195755005
+      }
+    },
+    "mcnemar_vs_full": {
+      "sc_step12": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "delta_pp": -10.0,
+        "contingency": {
+          "a": 0,
+          "b": 2,
+          "c": 1,
+          "d": 7
+        }
+      },
+      "kb_step12": {
+        "chi2": 0.8,
+        "p_value": 0.37109336952269756,
+        "significant_005": false,
+        "delta_pp": 30.0,
+        "contingency": {
+          "a": 1,
+          "b": 1,
+          "c": 4,
+          "d": 4
+        }
+      },
+      "kb_sc": {
+        "chi2": 0.5,
+        "p_value": 0.47950012218695337,
+        "significant_005": false,
+        "delta_pp": -20.0,
+        "contingency": {
+          "a": 0,
+          "b": 2,
+          "c": 0,
+          "d": 8
+        }
+      },
+      "zero_shot": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "delta_pp": 10.0,
+        "contingency": {
+          "a": 2,
+          "b": 0,
+          "c": 1,
+          "d": 7
+        }
+      },
+      "cot": {
+        "chi2": 0.5,
+        "p_value": 0.47950012218695337,
+        "significant_005": false,
+        "delta_pp": -20.0,
+        "contingency": {
+          "a": 0,
+          "b": 2,
+          "c": 0,
+          "d": 8
+        }
+      }
+    }
+  },
+  "per_question": [
+    {
+      "question_id": "merged_0",
+      "question": "Do hamsters provide food for any animals?",
+      "ground_truth": "yes",
+      "conditions": {
+        "kb_sc_step12": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 2173.5737323760986
+        },
+        "sc_step12": {
+          "extracted": "The answer depends on additional context not provided",
+          "correct": false,
+          "latency_ms": 2096.6498851776123
+        },
+        "kb_step12": {
+          "extracted": "First, I need to identify the key components of this problem",
+          "correct": false,
+          "latency_ms": 343.3084487915039
+        },
+        "kb_sc": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 949.0950107574463
+        },
+        "zero_shot": {
+          "extracted": "no",
+          "correct": false,
+          "latency_ms": 155.80058097839355
+        },
+        "cot": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 185.92023849487305
+        }
+      }
+    },
+    {
+      "question_id": "merged_1",
+      "question": "Could a person survive falling from the Empire State Building?",
+      "ground_truth": "no",
+      "conditions": {
+        "kb_sc_step12": {
+          "extracted": "First, we need to consider the main factors involved",
+          "correct": false,
+          "latency_ms": 2063.692569732666
+        },
+        "sc_step12": {
+          "extracted": "The answer depends on additional context not provided",
+          "correct": true,
+          "latency_ms": 1794.7046756744385
+        },
+        "kb_step12": {
+          "extracted": "no",
+          "correct": true,
+          "latency_ms": 459.95235443115234
+        },
+        "kb_sc": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 1170.0031757354736
+        },
+        "zero_shot": {
+          "extracted": "no",
+          "correct": true,
+          "latency_ms": 211.8358612060547
+        },
+        "cot": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 187.86168098449707
+        }
+      }
+    },
+    {
+      "question_id": "merged_2",
+      "question": "Is the sun brighter than a light bulb?",
+      "ground_truth": "yes",
+      "conditions": {
+        "kb_sc_step12": {
+          "extracted": "First, we need to consider the main factors involved",
+          "correct": false,
+          "latency_ms": 1807.4886798858643
+        },
+        "sc_step12": {
+          "extracted": "The answer depends on additional context not provided",
+          "correct": false,
+          "latency_ms": 2076.9474506378174
+        },
+        "kb_step12": {
+          "extracted": "no",
+          "correct": false,
+          "latency_ms": 469.15435791015625
+        },
+        "kb_sc": {
+          "extracted": "This step follows from the previous observation about the relationship",
+          "correct": false,
+          "latency_ms": 1100.2330780029297
+        },
+        "zero_shot": {
+          "extracted": "ning follows logically from the premises.",
+          "correct": false,
+          "latency_ms": 275.9699821472168
+        },
+        "cot": {
+          "extracted": "n scenario.",
+          "correct": false,
+          "latency_ms": 264.6005153656006
+        }
+      }
+    },
+    {
+      "question_id": "merged_3",
+      "question": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+      "ground_truth": "no",
+      "conditions": {
+        "kb_sc_step12": {
+          "extracted": "First, I need to identify the key components of this problem",
+          "correct": false,
+          "latency_ms": 1891.718864440918
+        },
+        "sc_step12": {
+          "extracted": "First, I need to identify the key components of this problem",
+          "correct": false,
+          "latency_ms": 1996.6871738433838
+        },
+        "kb_step12": {
+          "extracted": "The answer depends on additional context not provided",
+          "correct": true,
+          "latency_ms": 417.45567321777344
+        },
+        "kb_sc": {
+          "extracted": "First, I need to identify the key components of this problem",
+          "correct": false,
+          "latency_ms": 805.4120540618896
+        },
+        "zero_shot": {
+          "extracted": "First, we need to consider the main factors involved",
+          "correct": false,
+          "latency_ms": 239.60542678833008
+        },
+        "cot": {
+          "extracted": "Looking at the evidence, we can conclude that the relationship holds",
+          "correct": false,
+          "latency_ms": 176.78427696228027
+        }
+      }
+    },
+    {
+      "question_id": "merged_4",
+      "question": "Does hydrogen power work without oxygen?",
+      "ground_truth": "no",
+      "conditions": {
+        "kb_sc_step12": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 2043.7171459197998
+        },
+        "sc_step12": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 2306.8575859069824
+        },
+        "kb_step12": {
+          "extracted": "no",
+          "correct": true,
+          "latency_ms": 558.2764148712158
+        },
+        "kb_sc": {
+          "extracted": "n scenario.",
+          "correct": false,
+          "latency_ms": 838.4199142456055
+        },
+        "zero_shot": {
+          "extracted": "ning follows logically from the premises.",
+          "correct": false,
+          "latency_ms": 299.7899055480957
+        },
+        "cot": {
+          "extracted": "This step follows from the previous observation about the relationship",
+          "correct": false,
+          "latency_ms": 280.3163528442383
+        }
+      }
+    },
+    {
+      "question_id": "merged_5",
+      "question": "Can penguins fly?",
+      "ground_truth": "no",
+      "conditions": {
+        "kb_sc_step12": {
+          "extracted": "First, we need to consider the main factors involved",
+          "correct": false,
+          "latency_ms": 2202.594518661499
+        },
+        "sc_step12": {
+          "extracted": "Looking at the evidence, we can conclude that the relationship holds",
+          "correct": false,
+          "latency_ms": 1906.1124324798584
+        },
+        "kb_step12": {
+          "extracted": "The answer depends on additional context not provided",
+          "correct": true,
+          "latency_ms": 522.4490165710449
+        },
+        "kb_sc": {
+          "extracted": "This step follows from the previous observation about the relationship",
+          "correct": false,
+          "latency_ms": 1198.544979095459
+        },
+        "zero_shot": {
+          "extracted": "ning follows logically from the premises.",
+          "correct": false,
+          "latency_ms": 283.597469329834
+        },
+        "cot": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 183.32386016845703
+        }
+      }
+    },
+    {
+      "question_id": "merged_6",
+      "question": "Is Antarctica larger than Europe?",
+      "ground_truth": "yes",
+      "conditions": {
+        "kb_sc_step12": {
+          "extracted": "ning follows logically from the premises.",
+          "correct": false,
+          "latency_ms": 2158.24031829834
+        },
+        "sc_step12": {
+          "extracted": "The answer depends on additional context not provided",
+          "correct": false,
+          "latency_ms": 1824.5830535888672
+        },
+        "kb_step12": {
+          "extracted": "ning follows logically from the premises.",
+          "correct": false,
+          "latency_ms": 512.321949005127
+        },
+        "kb_sc": {
+          "extracted": "First, I need to identify the key components of this problem",
+          "correct": false,
+          "latency_ms": 1097.6002216339111
+        },
+        "zero_shot": {
+          "extracted": "ning follows logically from the premises.",
+          "correct": false,
+          "latency_ms": 144.22225952148438
+        },
+        "cot": {
+          "extracted": "This step follows from the previous observation about the relationship",
+          "correct": false,
+          "latency_ms": 214.77103233337402
+        }
+      }
+    },
+    {
+      "question_id": "merged_7",
+      "question": "Can a person hold their breath for 30 minutes?",
+      "ground_truth": "no",
+      "conditions": {
+        "kb_sc_step12": {
+          "extracted": "no",
+          "correct": true,
+          "latency_ms": 1743.0541515350342
+        },
+        "sc_step12": {
+          "extracted": "ning follows logically from the premises.",
+          "correct": false,
+          "latency_ms": 2488.6367321014404
+        },
+        "kb_step12": {
+          "extracted": "no",
+          "correct": true,
+          "latency_ms": 429.45289611816406
+        },
+        "kb_sc": {
+          "extracted": "n scenario.",
+          "correct": false,
+          "latency_ms": 946.4602470397949
+        },
+        "zero_shot": {
+          "extracted": "The answer depends on additional context not provided",
+          "correct": true,
+          "latency_ms": 178.1010627746582
+        },
+        "cot": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 213.13166618347168
+        }
+      }
+    },
+    {
+      "question_id": "merged_8",
+      "question": "Is the moon made of cheese?",
+      "ground_truth": "no",
+      "conditions": {
+        "kb_sc_step12": {
+          "extracted": "no",
+          "correct": true,
+          "latency_ms": 2061.5289211273193
+        },
+        "sc_step12": {
+          "extracted": "ning follows logically from the premises.",
+          "correct": false,
+          "latency_ms": 2146.864414215088
+        },
+        "kb_step12": {
+          "extracted": "n scenario.",
+          "correct": false,
+          "latency_ms": 336.6086483001709
+        },
+        "kb_sc": {
+          "extracted": "First, I need to identify the key components of this problem",
+          "correct": false,
+          "latency_ms": 1182.2502613067627
+        },
+        "zero_shot": {
+          "extracted": "no",
+          "correct": true,
+          "latency_ms": 250.77486038208008
+        },
+        "cot": {
+          "extracted": "This step follows from the previous observation about the relationship",
+          "correct": false,
+          "latency_ms": 223.19555282592773
+        }
+      }
+    },
+    {
+      "question_id": "merged_9",
+      "question": "Do all birds lay eggs?",
+      "ground_truth": "yes",
+      "conditions": {
+        "kb_sc_step12": {
+          "extracted": "ning follows logically from the premises.",
+          "correct": false,
+          "latency_ms": 1886.8751525878906
+        },
+        "sc_step12": {
+          "extracted": "The answer depends on additional context not provided",
+          "correct": false,
+          "latency_ms": 2143.6009407043457
+        },
+        "kb_step12": {
+          "extracted": "First, we need to consider the main factors involved",
+          "correct": false,
+          "latency_ms": 573.6238956451416
+        },
+        "kb_sc": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 1357.4130535125732
+        },
+        "zero_shot": {
+          "extracted": "The answer depends on additional context not provided",
+          "correct": false,
+          "latency_ms": 108.90555381774902
+        },
+        "cot": {
+          "extracted": "This step follows from the previous observation about the relationship",
+          "correct": false,
+          "latency_ms": 259.88101959228516
+        }
+      }
+    }
+  ]
+}

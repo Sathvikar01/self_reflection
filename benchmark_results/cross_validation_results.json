@@ -1,0 +1,325 @@
+{
+  "timestamp": "2026-05-27T01:43:55.047683",
+  "config": {
+    "dataset_path": "data/datasets/benchmark_dataset.json",
+    "n_folds": 3,
+    "num_questions": 15,
+    "stratified": true,
+    "sc_samples": 5,
+    "seed": 42,
+    "mock": true
+  },
+  "per_method": {
+    "zero_shot": {
+      "label": "Zero-Shot",
+      "mean_accuracy": 26.7,
+      "std_accuracy": 9.4,
+      "fold_accuracies": [
+        20.0,
+        40.0,
+        20.0
+      ]
+    },
+    "chain_of_thought": {
+      "label": "CoT",
+      "mean_accuracy": 0.0,
+      "std_accuracy": 0.0,
+      "fold_accuracies": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "self_consistency": {
+      "label": "SC",
+      "mean_accuracy": 0.0,
+      "std_accuracy": 0.0,
+      "fold_accuracies": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "rag": {
+      "label": "RAG",
+      "mean_accuracy": 0.0,
+      "std_accuracy": 0.0,
+      "fold_accuracies": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "kb_sc_step": {
+      "label": "KB+SC+Step1/2",
+      "mean_accuracy": 33.3,
+      "std_accuracy": 9.4,
+      "fold_accuracies": [
+        20.0,
+        40.0,
+        40.0
+      ]
+    }
+  },
+  "per_fold": [
+    {
+      "fold": 1,
+      "test_size": 5,
+      "zero_shot": {
+        "accuracy": 20.0,
+        "correct": 1,
+        "total": 5
+      },
+      "chain_of_thought": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5
+      },
+      "self_consistency": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5
+      },
+      "rag": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5
+      },
+      "kb_sc_step": {
+        "accuracy": 20.0,
+        "correct": 1,
+        "total": 5
+      }
+    },
+    {
+      "fold": 2,
+      "test_size": 5,
+      "zero_shot": {
+        "accuracy": 40.0,
+        "correct": 2,
+        "total": 5
+      },
+      "chain_of_thought": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5
+      },
+      "self_consistency": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5
+      },
+      "rag": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5
+      },
+      "kb_sc_step": {
+        "accuracy": 40.0,
+        "correct": 2,
+        "total": 5
+      }
+    },
+    {
+      "fold": 3,
+      "test_size": 5,
+      "zero_shot": {
+        "accuracy": 20.0,
+        "correct": 1,
+        "total": 5
+      },
+      "chain_of_thought": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5
+      },
+      "self_consistency": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5
+      },
+      "rag": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5
+      },
+      "kb_sc_step": {
+        "accuracy": 40.0,
+        "correct": 2,
+        "total": 5
+      }
+    }
+  ],
+  "statistical_tests": {
+    "Zero-Shot vs CoT": {
+      "methods": [
+        "zero_shot",
+        "chain_of_thought"
+      ],
+      "paired_t_test": {
+        "t_statistic": 4.0,
+        "p_value": 0.0572,
+        "significant_005": false
+      },
+      "wilcoxon_signed_rank": {
+        "statistic": null,
+        "p_value": null,
+        "significant_005": null,
+        "note": "Requires >= 5 folds"
+      }
+    },
+    "Zero-Shot vs SC": {
+      "methods": [
+        "zero_shot",
+        "self_consistency"
+      ],
+      "paired_t_test": {
+        "t_statistic": 4.0,
+        "p_value": 0.0572,
+        "significant_005": false
+      },
+      "wilcoxon_signed_rank": {
+        "statistic": null,
+        "p_value": null,
+        "significant_005": null,
+        "note": "Requires >= 5 folds"
+      }
+    },
+    "Zero-Shot vs RAG": {
+      "methods": [
+        "zero_shot",
+        "rag"
+      ],
+      "paired_t_test": {
+        "t_statistic": 4.0,
+        "p_value": 0.0572,
+        "significant_005": false
+      },
+      "wilcoxon_signed_rank": {
+        "statistic": null,
+        "p_value": null,
+        "significant_005": null,
+        "note": "Requires >= 5 folds"
+      }
+    },
+    "Zero-Shot vs KB+SC+Step1/2": {
+      "methods": [
+        "zero_shot",
+        "kb_sc_step"
+      ],
+      "paired_t_test": {
+        "t_statistic": -1.0,
+        "p_value": 0.4226,
+        "significant_005": false
+      },
+      "wilcoxon_signed_rank": {
+        "statistic": null,
+        "p_value": null,
+        "significant_005": null,
+        "note": "Requires >= 5 folds"
+      }
+    },
+    "CoT vs SC": {
+      "methods": [
+        "chain_of_thought",
+        "self_consistency"
+      ],
+      "paired_t_test": {
+        "t_statistic": 0.0,
+        "p_value": 1.0,
+        "significant_005": false
+      },
+      "wilcoxon_signed_rank": {
+        "statistic": null,
+        "p_value": null,
+        "significant_005": null,
+        "note": "Requires >= 5 folds"
+      }
+    },
+    "CoT vs RAG": {
+      "methods": [
+        "chain_of_thought",
+        "rag"
+      ],
+      "paired_t_test": {
+        "t_statistic": 0.0,
+        "p_value": 1.0,
+        "significant_005": false
+      },
+      "wilcoxon_signed_rank": {
+        "statistic": null,
+        "p_value": null,
+        "significant_005": null,
+        "note": "Requires >= 5 folds"
+      }
+    },
+    "CoT vs KB+SC+Step1/2": {
+      "methods": [
+        "chain_of_thought",
+        "kb_sc_step"
+      ],
+      "paired_t_test": {
+        "t_statistic": -5.0,
+        "p_value": 0.0377,
+        "significant_005": true
+      },
+      "wilcoxon_signed_rank": {
+        "statistic": null,
+        "p_value": null,
+        "significant_005": null,
+        "note": "Requires >= 5 folds"
+      }
+    },
+    "SC vs RAG": {
+      "methods": [
+        "self_consistency",
+        "rag"
+      ],
+      "paired_t_test": {
+        "t_statistic": 0.0,
+        "p_value": 1.0,
+        "significant_005": false
+      },
+      "wilcoxon_signed_rank": {
+        "statistic": null,
+        "p_value": null,
+        "significant_005": null,
+        "note": "Requires >= 5 folds"
+      }
+    },
+    "SC vs KB+SC+Step1/2": {
+      "methods": [
+        "self_consistency",
+        "kb_sc_step"
+      ],
+      "paired_t_test": {
+        "t_statistic": -5.0,
+        "p_value": 0.0377,
+        "significant_005": true
+      },
+      "wilcoxon_signed_rank": {
+        "statistic": null,
+        "p_value": null,
+        "significant_005": null,
+        "note": "Requires >= 5 folds"
+      }
+    },
+    "RAG vs KB+SC+Step1/2": {
+      "methods": [
+        "rag",
+        "kb_sc_step"
+      ],
+      "paired_t_test": {
+        "t_statistic": -5.0,
+        "p_value": 0.0377,
+        "significant_005": true
+      },
+      "wilcoxon_signed_rank": {
+        "statistic": null,
+        "p_value": null,
+        "significant_005": null,
+        "note": "Requires >= 5 folds"
+      }
+    }
+  }
+}
