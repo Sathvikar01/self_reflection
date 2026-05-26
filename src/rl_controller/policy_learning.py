@@ -8,10 +8,6 @@ from typing import List, Dict, Any, Tuple, Optional
 from collections import deque
 import random
 from loguru import logger
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).parent.parent))
 
 
 class PolicyNetwork(nn.Module):

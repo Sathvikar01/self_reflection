@@ -18,25 +18,29 @@ class NodeType(Enum):
 @dataclass
 class TreeNode:
     """Node in the reasoning tree."""
-    
+
     content: str
     node_type: NodeType = NodeType.STEP
     parent: Optional['TreeNode'] = None
     children: List['TreeNode'] = field(default_factory=list)
-    
+
     score: float = 0.0
     visit_count: int = 0
     cumulative_reward: float = 0.0
-    
+
     action_taken: Optional[str] = None
     depth: int = 0
     is_terminal: bool = False
-    
+    id: str = ""
+    created_at: float = 0.0
+
     metadata: Dict[str, Any] = field(default_factory=dict)
-    
-    _id: int = field(default_factory=lambda: id(object()))
-    
+
+    _id: int = field(default_factory=lambda: id(object()), repr=False)
+
     def __post_init__(self):
+        if not self.id:
+            self.id = str(self._id)
         if self.parent is not None:
             self.depth = self.parent.depth + 1
     
@@ -140,6 +144,28 @@ class TreeNode:
         self.cumulative_reward += reward
         discounted = reward * (discount ** self.depth)
         self.score = self.cumulative_reward / self.visit_count
+
+    def get_ucb1(self, exploration_constant: float = 1.414) -> float:
+        """Calculate UCB1 value for this node."""
+        import math
+        if self.visit_count == 0:
+            return float('inf')
+        if self.parent is None:
+            return self.score
+        exploitation = self.score
+        exploration = exploration_constant * math.sqrt(
+            math.log(self.parent.visit_count + 1) / self.visit_count
+        )
+        return exploitation + exploration
+
+    def get_path(self) -> List['TreeNode']:
+        """Get path from root to this node."""
+        path = [self]
+        node = self.parent
+        while node:
+            path.append(node)
+            node = node.parent
+        return list(reversed(path))
     
     def to_dict(self) -> Dict:
         """Convert node to dictionary for serialization."""

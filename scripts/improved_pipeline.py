@@ -18,6 +18,7 @@ import os
 import re
 import json
 import time
+import sys
 import hashlib
 import statistics
 from typing import List, Dict, Optional, Tuple, Any
@@ -28,6 +29,9 @@ import requests
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 load_dotenv(override=True)
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.utils.unified_extractor import UnifiedAnswerExtractor
 
 # ============================================================================
 # API Client
@@ -190,120 +194,18 @@ class NVIDIANIMClient:
 # ============================================================================
 
 class AnswerExtractor:
-    """Unified answer extraction with multiple strategies."""
-
-    XML_PATTERN = re.compile(r'<answer>(.*?)</answer>', re.DOTALL | re.IGNORECASE)
-    BOXED_PATTERN = re.compile(r'\\{1,2}boxed\{([^}]+)\}')
-    YES_NO = re.compile(r'\b(yes|no)\b', re.IGNORECASE)
-    YES_NO_QUALIFIED = re.compile(r'\b(yes|no)[,\s]*(?:but|however|although|it|under|in|if|because|with|the|a|it\s+depends)', re.IGNORECASE)
+    """Adapter that delegates to UnifiedAnswerExtractor for consistent extraction."""
 
     @classmethod
     def extract(cls, text: str) -> Tuple[str, float, str]:
         """Extract answer -> (answer, confidence, method)."""
-        if not text or not text.strip():
-            return "", 0.0, "empty"
-
-        text = text.strip()
-
-        # Priority 1: XML <answer> tags
-        m = cls.XML_PATTERN.search(text)
-        if m:
-            ans = m.group(1).strip()
-            clean = cls._clean_yes_no(ans)
-            if clean:
-                return clean, 1.0, "xml_tag"
-            return ans, 1.0, "xml_tag"
-
-        # Priority 2: Boxed LaTeX
-        m = cls.BOXED_PATTERN.search(text)
-        if m:
-            return m.group(1).strip(), 0.95, "boxed"
-
-        # Priority 3: Explicit markers
-        for pat in [
-            r'(?:final\s+)?answer\s*[:is]+\s*(.+?)(?:\n|$)',
-            r'the\s+answer\s+is\s*[:is]*\s*(.+?)(?:\n|$)',
-        ]:
-            m = re.search(pat, text, re.IGNORECASE | re.MULTILINE)
-            if m:
-                ans = m.group(1).strip().rstrip('.,;:')
-                clean = cls._clean_yes_no(ans)
-                if clean:
-                    return clean, 0.9, "explicit_marker_yn"
-                if ans:
-                    return ans, 0.9, "explicit_marker"
-
-        # Priority 4: Qualified yes/no ("yes, but...", "no, however...")
-        m = cls.YES_NO_QUALIFIED.search(text)
-        if m:
-            return m.group(1).lower(), 0.80, "qualified_yes_no"
-
-        # Priority 5: Plain Yes/No
-        m = cls.YES_NO.search(text)
-        if m:
-            return m.group(1).lower(), 0.85, "yes_no"
-
-        # Priority 6: Last sentence
-        sentences = re.split(r'[.!?\n]', text)
-        for s in reversed(sentences):
-            s = s.strip()
-            if s and len(s) > 1:
-                clean = cls._clean_yes_no(s)
-                if clean:
-                    return clean, 0.70, "last_sentence_yn"
-                bold = re.search(r'\*\*([^*]+)\*\*', s)
-                if bold:
-                    bold_text = bold.group(1).strip()
-                    clean = cls._clean_yes_no(bold_text)
-                    if clean:
-                        return clean, 0.75, "bold_yn"
-                    return bold_text, 0.75, "bold"
-                return s, 0.6, "last_sentence"
-
-        return text[:200], 0.3, "fallback"
-
-    @classmethod
-    def _clean_yes_no(cls, text: str) -> Optional[str]:
-        """Try to extract a clean yes/no from potentially verbose text."""
-        text_lower = text.lower().strip().rstrip('.,;:')
-        if text_lower in ('yes', 'no'):
-            return text_lower
-        m = cls.YES_NO.search(text_lower)
-        if m:
-            prefix = text_lower[:m.start()].strip()
-            if not prefix or prefix in ('the answer is', 'answer:', 'answer is'):
-                return m.group(1).lower()
-        return None
+        result = UnifiedAnswerExtractor.extract(text)
+        return result.answer, result.confidence, result.extraction_method
 
     @classmethod
     def check_answer(cls, predicted: str, ground_truth: str) -> bool:
         """Check if predicted matches ground truth."""
-        if not predicted or not ground_truth:
-            return False
-
-        pred_answer, _, _ = cls.extract(predicted) if cls.extract(predicted)[0] else (predicted, 0, "raw")
-        pred = pred_answer.lower().strip().rstrip('.,;:')
-        truth = ground_truth.lower().strip().rstrip('.,;:')
-
-        filler = {'the', 'a', 'an', 'is', 'are', 'was', 'were', 'approximately', 'about'}
-        pred_c = ' '.join(w for w in pred.split() if w not in filler)
-        truth_c = ' '.join(w for w in truth.split() if w not in filler)
-
-        if pred_c == truth_c:
-            return True
-
-        # Yes/No matching
-        pred_yn = cls.YES_NO.search(pred)
-        truth_yn = cls.YES_NO.search(truth)
-        if pred_yn and truth_yn:
-            return pred_yn.group(1).lower() == truth_yn.group(1).lower()
-
-        # Contains match (short ground truth only)
-        if len(truth_c) < 20:
-            if truth_c in pred_c or pred_c in truth_c:
-                return True
-
-        return False
+        return UnifiedAnswerExtractor.check_answer(predicted, ground_truth)
 
 
 # ============================================================================

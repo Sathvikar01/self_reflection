@@ -1,0 +1,413 @@
+{
+  "timestamp": "2026-05-27T00:50:08.725014",
+  "config": {
+    "dataset_path": "data/datasets/benchmark_dataset.json",
+    "model_name": "meta/llama-3.1-8b-instruct",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "num_questions": 5,
+    "sc_samples": 5,
+    "mock": true,
+    "output_dir": "benchmark_results",
+    "checkpoint_path": null,
+    "resume": false,
+    "seed": 42
+  },
+  "results": [
+    {
+      "question_id": "merged_0",
+      "question": "Do hamsters provide food for any animals?",
+      "ground_truth": "yes",
+      "method_results": {
+        "zero_shot": {
+          "method": "zero_shot",
+          "predicted_answer": "No, this cannot be true based on the facts provided.",
+          "extracted_answer": "no",
+          "is_correct": false,
+          "raw_response": "No, this cannot be true based on the facts provided.",
+          "latency_ms": 284.329891204834,
+          "input_tokens": 19,
+          "output_tokens": 121,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "chain_of_thought": {
+          "method": "chain_of_thought",
+          "predicted_answer": "First, I need to identify the key components of this problem.",
+          "extracted_answer": "First, I need to identify the key components of this problem",
+          "is_correct": false,
+          "raw_response": "First, I need to identify the key components of this problem.",
+          "latency_ms": 152.65417098999023,
+          "input_tokens": 70,
+          "output_tokens": 49,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "self_consistency": {
+          "method": "self_consistency",
+          "predicted_answer": "n scenario.",
+          "extracted_answer": "n scenario.",
+          "is_correct": false,
+          "raw_response": "The relevant facts here are that we're dealing with a comparison scenario.\n---\nThe relevant facts here are that we're dealing with a comparison scenario.\n---\nLooking at the evidence, we can conclude that the relationship holds.",
+          "latency_ms": 1029.0493965148926,
+          "input_tokens": 350,
+          "output_tokens": 289,
+          "num_samples": 5,
+          "sample_answers": [
+            "n scenario.",
+            "n scenario.",
+            "Looking at the evidence, we can conclude that the relationship holds",
+            "n scenario.",
+            "against the constraints."
+          ]
+        },
+        "rag": {
+          "method": "rag",
+          "predicted_answer": "This step follows from the previous observation about the relationship.",
+          "extracted_answer": "This step follows from the previous observation about the relationship",
+          "is_correct": false,
+          "raw_response": "This step follows from the previous observation about the relationship.",
+          "latency_ms": 149.7173309326172,
+          "input_tokens": 70,
+          "output_tokens": 64,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "kb_sc_step": {
+          "method": "kb_sc_step",
+          "predicted_answer": "no",
+          "extracted_answer": "no",
+          "is_correct": false,
+          "raw_response": "Step1: First, I need to identify the key components of this problem....\nStep2: No, this cannot be true based on the facts provided.\n---\nStep1: The relevant facts here are that we're dealing with a comparison scenario....\nStep2: Let me think step by step. First, we need to consider the main factors involved.\n---\nStep1: This step follows from the previous observation about the relationship....\nStep2: The logical next step is to verify this conclusion against the constraints.",
+          "latency_ms": 1581.859827041626,
+          "input_tokens": 413,
+          "output_tokens": 486,
+          "num_samples": 5,
+          "sample_answers": [
+            "no",
+            "First, we need to consider the main factors involved",
+            "against the constraints.",
+            "This step follows from the previous observation about the relationship",
+            "First, I need to identify the key components of this problem"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "merged_1",
+      "question": "Could a person survive falling from the Empire State Building?",
+      "ground_truth": "no",
+      "method_results": {
+        "zero_shot": {
+          "method": "zero_shot",
+          "predicted_answer": "The answer depends on additional context not provided.",
+          "extracted_answer": "The answer depends on additional context not provided",
+          "is_correct": true,
+          "raw_response": "The answer depends on additional context not provided.",
+          "latency_ms": 299.9098300933838,
+          "input_tokens": 22,
+          "output_tokens": 144,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "chain_of_thought": {
+          "method": "chain_of_thought",
+          "predicted_answer": "The logical next step is to verify this conclusion against the constraints.",
+          "extracted_answer": "against the constraints.",
+          "is_correct": false,
+          "raw_response": "The logical next step is to verify this conclusion against the constraints.",
+          "latency_ms": 159.92403030395508,
+          "input_tokens": 73,
+          "output_tokens": 50,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "self_consistency": {
+          "method": "self_consistency",
+          "predicted_answer": "First, I need to identify the key components of this problem",
+          "extracted_answer": "First, I need to identify the key components of this problem",
+          "is_correct": false,
+          "raw_response": "The logical next step is to verify this conclusion against the constraints.\n---\nThe relevant facts here are that we're dealing with a comparison scenario.\n---\nFirst, I need to identify the key components of this problem.",
+          "latency_ms": 990.6952381134033,
+          "input_tokens": 365,
+          "output_tokens": 278,
+          "num_samples": 5,
+          "sample_answers": [
+            "against the constraints.",
+            "n scenario.",
+            "First, I need to identify the key components of this problem",
+            "Looking at the evidence, we can conclude that the relationship holds",
+            "First, I need to identify the key components of this problem"
+          ]
+        },
+        "rag": {
+          "method": "rag",
+          "predicted_answer": "This step follows from the previous observation about the relationship.",
+          "extracted_answer": "This step follows from the previous observation about the relationship",
+          "is_correct": false,
+          "raw_response": "This step follows from the previous observation about the relationship.",
+          "latency_ms": 282.64832496643066,
+          "input_tokens": 73,
+          "output_tokens": 30,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "kb_sc_step": {
+          "method": "kb_sc_step",
+          "predicted_answer": "Looking at the evidence, we can conclude that the relationship holds",
+          "extracted_answer": "Looking at the evidence, we can conclude that the relationship holds",
+          "is_correct": false,
+          "raw_response": "Step1: The logical next step is to verify this conclusion against the constraints....\nStep2: Looking at the evidence, we can conclude that the relationship holds.\n---\nStep1: Looking at the evidence, we can conclude that the relationship holds....\nStep2: No, this cannot be true based on the facts provided.\n---\nStep1: First, I need to identify the key components of this problem....\nStep2: Yes, this is correct because the reasoning follows logically from the premises.",
+          "latency_ms": 1933.6767196655273,
+          "input_tokens": 445,
+          "output_tokens": 553,
+          "num_samples": 5,
+          "sample_answers": [
+            "Looking at the evidence, we can conclude that the relationship holds",
+            "no",
+            "ning follows logically from the premises.",
+            "The answer depends on additional context not provided",
+            "Looking at the evidence, we can conclude that the relationship holds"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "merged_2",
+      "question": "Is the sun brighter than a light bulb?",
+      "ground_truth": "yes",
+      "method_results": {
+        "zero_shot": {
+          "method": "zero_shot",
+          "predicted_answer": "Let me think step by step. First, we need to consider the main factors involved.",
+          "extracted_answer": "First, we need to consider the main factors involved",
+          "is_correct": false,
+          "raw_response": "Let me think step by step. First, we need to consider the main factors involved.",
+          "latency_ms": 305.2411079406738,
+          "input_tokens": 20,
+          "output_tokens": 57,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "chain_of_thought": {
+          "method": "chain_of_thought",
+          "predicted_answer": "The relevant facts here are that we're dealing with a comparison scenario.",
+          "extracted_answer": "n scenario.",
+          "is_correct": false,
+          "raw_response": "The relevant facts here are that we're dealing with a comparison scenario.",
+          "latency_ms": 307.4061870574951,
+          "input_tokens": 71,
+          "output_tokens": 71,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "self_consistency": {
+          "method": "self_consistency",
+          "predicted_answer": "This step follows from the previous observation about the relationship",
+          "extracted_answer": "This step follows from the previous observation about the relationship",
+          "is_correct": false,
+          "raw_response": "Looking at the evidence, we can conclude that the relationship holds.\n---\nFirst, I need to identify the key components of this problem.\n---\nThe logical next step is to verify this conclusion against the constraints.",
+          "latency_ms": 1112.7500534057617,
+          "input_tokens": 355,
+          "output_tokens": 254,
+          "num_samples": 5,
+          "sample_answers": [
+            "Looking at the evidence, we can conclude that the relationship holds",
+            "First, I need to identify the key components of this problem",
+            "against the constraints.",
+            "This step follows from the previous observation about the relationship",
+            "This step follows from the previous observation about the relationship"
+          ]
+        },
+        "rag": {
+          "method": "rag",
+          "predicted_answer": "First, I need to identify the key components of this problem.",
+          "extracted_answer": "First, I need to identify the key components of this problem",
+          "is_correct": false,
+          "raw_response": "First, I need to identify the key components of this problem.",
+          "latency_ms": 221.22883796691895,
+          "input_tokens": 71,
+          "output_tokens": 56,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "kb_sc_step": {
+          "method": "kb_sc_step",
+          "predicted_answer": "against the constraints.",
+          "extracted_answer": "against the constraints.",
+          "is_correct": false,
+          "raw_response": "Step1: Looking at the evidence, we can conclude that the relationship holds....\nStep2: No, this cannot be true based on the facts provided.\n---\nStep1: This step follows from the previous observation about the relationship....\nStep2: The logical next step is to verify this conclusion against the constraints.\n---\nStep1: The logical next step is to verify this conclusion against the constraints....\nStep2: The logical next step is to verify this conclusion against the constraints.",
+          "latency_ms": 1702.8555870056152,
+          "input_tokens": 426,
+          "output_tokens": 507,
+          "num_samples": 5,
+          "sample_answers": [
+            "no",
+            "against the constraints.",
+            "against the constraints.",
+            "against the constraints.",
+            "First, we need to consider the main factors involved"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "merged_3",
+      "question": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+      "ground_truth": "no",
+      "method_results": {
+        "zero_shot": {
+          "method": "zero_shot",
+          "predicted_answer": "No, this cannot be true based on the facts provided.",
+          "extracted_answer": "no",
+          "is_correct": true,
+          "raw_response": "No, this cannot be true based on the facts provided.",
+          "latency_ms": 202.81100273132324,
+          "input_tokens": 27,
+          "output_tokens": 129,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "chain_of_thought": {
+          "method": "chain_of_thought",
+          "predicted_answer": "This step follows from the previous observation about the relationship.",
+          "extracted_answer": "This step follows from the previous observation about the relationship",
+          "is_correct": false,
+          "raw_response": "This step follows from the previous observation about the relationship.",
+          "latency_ms": 213.6218547821045,
+          "input_tokens": 78,
+          "output_tokens": 75,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "self_consistency": {
+          "method": "self_consistency",
+          "predicted_answer": "n scenario.",
+          "extracted_answer": "n scenario.",
+          "is_correct": false,
+          "raw_response": "The relevant facts here are that we're dealing with a comparison scenario.\n---\nLooking at the evidence, we can conclude that the relationship holds.\n---\nThis step follows from the previous observation about the relationship.",
+          "latency_ms": 1039.238691329956,
+          "input_tokens": 390,
+          "output_tokens": 301,
+          "num_samples": 5,
+          "sample_answers": [
+            "n scenario.",
+            "Looking at the evidence, we can conclude that the relationship holds",
+            "This step follows from the previous observation about the relationship",
+            "n scenario.",
+            "First, I need to identify the key components of this problem"
+          ]
+        },
+        "rag": {
+          "method": "rag",
+          "predicted_answer": "First, I need to identify the key components of this problem.",
+          "extracted_answer": "First, I need to identify the key components of this problem",
+          "is_correct": false,
+          "raw_response": "First, I need to identify the key components of this problem.",
+          "latency_ms": 115.59653282165527,
+          "input_tokens": 78,
+          "output_tokens": 58,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "kb_sc_step": {
+          "method": "kb_sc_step",
+          "predicted_answer": "against the constraints.",
+          "extracted_answer": "against the constraints.",
+          "is_correct": false,
+          "raw_response": "Step1: This step follows from the previous observation about the relationship....\nStep2: The logical next step is to verify this conclusion against the constraints.\n---\nStep1: This step follows from the previous observation about the relationship....\nStep2: First, I need to identify the key components of this problem.\n---\nStep1: The logical next step is to verify this conclusion against the constraints....\nStep2: The relevant facts here are that we're dealing with a comparison scenario.",
+          "latency_ms": 2191.960096359253,
+          "input_tokens": 493,
+          "output_tokens": 556,
+          "num_samples": 5,
+          "sample_answers": [
+            "against the constraints.",
+            "First, I need to identify the key components of this problem",
+            "n scenario.",
+            "ning follows logically from the premises.",
+            "against the constraints."
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "merged_4",
+      "question": "Does hydrogen power work without oxygen?",
+      "ground_truth": "no",
+      "method_results": {
+        "zero_shot": {
+          "method": "zero_shot",
+          "predicted_answer": "No, this cannot be true based on the facts provided.",
+          "extracted_answer": "no",
+          "is_correct": true,
+          "raw_response": "No, this cannot be true based on the facts provided.",
+          "latency_ms": 205.1682472229004,
+          "input_tokens": 18,
+          "output_tokens": 115,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "chain_of_thought": {
+          "method": "chain_of_thought",
+          "predicted_answer": "The logical next step is to verify this conclusion against the constraints.",
+          "extracted_answer": "against the constraints.",
+          "is_correct": false,
+          "raw_response": "The logical next step is to verify this conclusion against the constraints.",
+          "latency_ms": 273.0400562286377,
+          "input_tokens": 69,
+          "output_tokens": 52,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "self_consistency": {
+          "method": "self_consistency",
+          "predicted_answer": "Looking at the evidence, we can conclude that the relationship holds",
+          "extracted_answer": "Looking at the evidence, we can conclude that the relationship holds",
+          "is_correct": false,
+          "raw_response": "Looking at the evidence, we can conclude that the relationship holds.\n---\nThis step follows from the previous observation about the relationship.\n---\nThe logical next step is to verify this conclusion against the constraints.",
+          "latency_ms": 988.9907836914062,
+          "input_tokens": 345,
+          "output_tokens": 237,
+          "num_samples": 5,
+          "sample_answers": [
+            "Looking at the evidence, we can conclude that the relationship holds",
+            "This step follows from the previous observation about the relationship",
+            "against the constraints.",
+            "First, I need to identify the key components of this problem",
+            "Looking at the evidence, we can conclude that the relationship holds"
+          ]
+        },
+        "rag": {
+          "method": "rag",
+          "predicted_answer": "The logical next step is to verify this conclusion against the constraints.",
+          "extracted_answer": "against the constraints.",
+          "is_correct": false,
+          "raw_response": "The logical next step is to verify this conclusion against the constraints.",
+          "latency_ms": 110.84270477294922,
+          "input_tokens": 69,
+          "output_tokens": 74,
+          "num_samples": 1,
+          "sample_answers": []
+        },
+        "kb_sc_step": {
+          "method": "kb_sc_step",
+          "predicted_answer": "against the constraints.",
+          "extracted_answer": "against the constraints.",
+          "is_correct": false,
+          "raw_response": "Step1: The logical next step is to verify this conclusion against the constraints....\nStep2: The logical next step is to verify this conclusion against the constraints.\n---\nStep1: First, I need to identify the key components of this problem....\nStep2: The answer depends on additional context not provided.\n---\nStep1: The relevant facts here are that we're dealing with a comparison scenario....\nStep2: No, this cannot be true based on the facts provided.",
+          "latency_ms": 2284.562587738037,
+          "input_tokens": 407,
+          "output_tokens": 550,
+          "num_samples": 5,
+          "sample_answers": [
+            "against the constraints.",
+            "The answer depends on additional context not provided",
+            "no",
+            "First, I need to identify the key components of this problem",
+            "This step follows from the previous observation about the relationship"
+          ]
+        }
+      }
+    }
+  ]
+}

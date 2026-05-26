@@ -1,8 +1,10 @@
 """Phase 1c: Generate ~170 more questions to reach 220 total benchmark size."""
-import json, time, requests, re, hashlib
+import json, time, requests, re, hashlib, os
+from dotenv import load_dotenv
+load_dotenv()
 
 MODEL = "meta/llama-3.1-405b-instruct"
-API_KEY = "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"
+API_KEY = os.getenv("NVIDIA_API_KEY")
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 
 with open("data/datasets/benchmark_final.json") as f:

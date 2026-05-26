@@ -27,11 +27,11 @@ from enum import Enum
 from dotenv import load_dotenv
 from loguru import logger
 
-import sys
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from generator.nim_client import NVIDIANIMClient, GenerationConfig
-from evaluation.accuracy import AnswerExtractor
+from ..generator.nim_client import NVIDIANIMClient, GenerationConfig
+from ..utils.unified_extractor import UnifiedAnswerExtractor
+from ..rl_controller.tree import TreeNode, NodeType
+from .base import BasePipeline, BaseResult, BasePipelineConfig
+from ..utils.complexity import QueryComplexityAnalyzer, ComplexityScore
 
 load_dotenv()
 
@@ -45,103 +45,42 @@ class ActionType(Enum):
 
 
 @dataclass
-class ComplexityScore:
-    """Complexity analysis of a query."""
-    overall_score: float
-    factors: Dict[str, float]
-    recommended_depth: int
-    recommended_tree_depth: int
-    reasoning: str
-
-
-@dataclass
-class TreeNode:
-    """Node in reasoning tree."""
-    id: str
-    content: str
-    parent: Optional['TreeNode'] = None
-    children: List['TreeNode'] = field(default_factory=list)
-    depth: int = 0
-    score: float = 0.0
-    visit_count: int = 0
-    node_type: str = "reasoning"
-    is_terminal: bool = False
-    created_at: float = 0.0
-    
-    def add_child(self, content: str, node_type: str = "reasoning") -> 'TreeNode':
-        """Add child node."""
-        child = TreeNode(
-            id=f"{self.id}_{len(self.children)}",
-            content=content,
-            parent=self,
-            depth=self.depth + 1,
-            node_type=node_type,
-            created_at=time.time()
-        )
-        self.children.append(child)
-        return child
-    
-    def get_path(self) -> List['TreeNode']:
-        """Get path from root to this node."""
-        path = [self]
-        node = self.parent
-        while node:
-            path.append(node)
-            node = node.parent
-        return list(reversed(path))
-    
-    def get_ucb1(self, exploration_constant: float = 1.414) -> float:
-        """Calculate UCB1 value."""
-        if self.visit_count == 0:
-            return float('inf')
-        
-        if self.parent is None:
-            return self.score
-        
-        exploitation = self.score
-        exploration = exploration_constant * math.sqrt(
-            math.log(self.parent.visit_count + 1) / self.visit_count
-        )
-        return exploitation + exploration
-
-
-@dataclass
-class AdaptiveTreeConfig:
+class AdaptiveTreeConfig(BasePipelineConfig):
     """Configuration for adaptive tree-based reflection."""
-    
+
     # Complexity thresholds
     low_complexity_threshold: float = 0.3
     high_complexity_threshold: float = 0.7
-    
+
     # Tree search parameters
     max_tree_depth: int = 6
     max_tree_width: int = 3
     exploration_constant: float = 1.414
-    
+
     # Adaptive behavior
     min_reflections: int = 1
     max_reflections: int = 5
     confidence_threshold_increase: float = 0.7
     confidence_threshold_stop: float = 0.9
     degradation_threshold: float = 0.1
-    
+
     # Backtracking
     backtrack_threshold: float = 0.35
     max_backtracks: int = 5
-    
+
     # Expansion
     expansion_budget: int = 20
     progressive_widening: bool = True
     pw_factor: float = 0.5
-    
+
     # Overfitting prevention
     enable_cross_validation: bool = True
     validation_samples: int = 3
     variance_threshold: float = 0.2
-    
+
     # Early stopping
     early_stopping_patience: int = 2
-    
+
     # Temperatures
     temperature_reason: float = 0.7
     temperature_reflect: float = 0.3
@@ -149,148 +88,36 @@ class AdaptiveTreeConfig:
 
 
 @dataclass
-class AdaptiveTreeResult:
+class AdaptiveTreeResult(BaseResult):
     """Result from adaptive tree-based reflection."""
-    problem_id: str
-    problem: str
-    final_answer: str
-    reasoning_chain: List[str]
-    reflections: List[str]
-    confidence: float
-    correct: Optional[bool] = None
-    ground_truth: Optional[str] = None
-    
+
     # Tree metrics
     complexity_score: float = 0.0
     recommended_depth: int = 0
     actual_depth: int = 0
-    
+
     # Tree expansion metrics
     total_expansions: int = 0
     total_backtracks: int = 0
     max_tree_depth_reached: int = 0
     nodes_created: int = 0
-    
+
     # Adaptive metrics
     rolled_back: bool = False
     rollback_step: int = 0
     overfitting_detected: bool = False
-    
+
     # Cross-validation
     cv_answers: List[str] = field(default_factory=list)
     cv_confidence_std: float = 0.0
-    
-    total_tokens: int = 0
-    latency_seconds: float = 0.0
-    metadata: Dict[str, Any] = field(default_factory=dict)
+
+    reflections: List[str] = field(default_factory=list)
+    confidence: float = 0.0
 
 
-class QueryComplexityAnalyzer:
-    """Analyzes query complexity to determine search parameters."""
-    
-    FACTUAL_INDICATORS = [
-        "what is", "what are", "who is", "who was", "where is",
-        "when did", "how many", "how much", "define", "name the"
-    ]
-    
-    REASONING_INDICATORS = [
-        "why", "because", "therefore", "thus", "so", "hence",
-        "if", "then", "would", "could", "should", "might",
-        "compare", "contrast", "difference between", "similar"
-    ]
-    
-    STRATEGIC_INDICATORS = [
-        "best way", "optimal", "strategy", "should i",
-        "which would", "choose", "decide", "evaluate",
-        "pros and cons", "trade-off", "alternative"
-    ]
-    
-    COMPLEXITY_MARKERS = [
-        "multiple", "several", "various", "both", "each",
-        "all of the", "none of the", "some but not all",
-        "except", "unless", "however", "although", "despite"
-    ]
-    
-    def analyze(self, query: str) -> ComplexityScore:
-        """Analyze query complexity."""
-        query_lower = query.lower()
-        
-        factors = {}
-        
-        # Factor 1: Question type
-        has_factual = any(ind in query_lower for ind in self.FACTUAL_INDICATORS)
-        has_reasoning = any(ind in query_lower for ind in self.REASONING_INDICATORS)
-        has_strategic = any(ind in query_lower for ind in self.STRATEGIC_INDICATORS)
-        
-        if has_strategic:
-            type_score = 0.8
-        elif has_reasoning:
-            type_score = 0.6
-        elif has_factual:
-            type_score = 0.3
-        else:
-            type_score = 0.5
-        factors["question_type"] = type_score
-        
-        # Factor 2: Complexity markers
-        marker_count = sum(1 for m in self.COMPLEXITY_MARKERS if m in query_lower)
-        factors["complexity_markers"] = min(marker_count * 0.15, 1.0)
-        
-        # Factor 3: Length
-        word_count = len(query.split())
-        factors["length"] = min(word_count / 30, 1.0)
-        
-        # Factor 4: Negation
-        negation_words = ["not", "never", "no ", "n't", "cannot", "can't"]
-        has_negation = any(neg in query_lower for neg in negation_words)
-        factors["negation"] = 0.2 if has_negation else 0.0
-        
-        # Factor 5: Multi-part
-        separators = [" and ", " or ", ";", ",", " also "]
-        part_count = sum(1 for sep in separators if sep in query_lower)
-        factors["multi_part"] = min(part_count * 0.2, 0.5)
-        
-        # Calculate overall
-        weights = {
-            "question_type": 0.35,
-            "complexity_markers": 0.25,
-            "length": 0.15,
-            "negation": 0.15,
-            "multi_part": 0.10
-        }
-        
-        overall_score = sum(factors[k] * weights[k] for k in weights)
-        
-        # Determine depths
-        if overall_score < 0.3:
-            recommended_depth = 1
-            recommended_tree_depth = 2
-            reasoning = "Low complexity: simple factual query"
-        elif overall_score < 0.5:
-            recommended_depth = 2
-            recommended_tree_depth = 3
-            reasoning = "Medium-low complexity: standard reasoning"
-        elif overall_score < 0.7:
-            recommended_depth = 3
-            recommended_tree_depth = 4
-            reasoning = "Medium-high complexity: multi-step reasoning"
-        else:
-            recommended_depth = 4
-            recommended_tree_depth = 5
-            reasoning = "High complexity: strategic or multi-faceted query"
-        
-        return ComplexityScore(
-            overall_score=overall_score,
-            factors=factors,
-            recommended_depth=recommended_depth,
-            recommended_tree_depth=recommended_tree_depth,
-            reasoning=reasoning
-        )
-
-
-class AdaptiveTreeReflectionPipeline:
+class AdaptiveTreeReflectionPipeline(BasePipeline[AdaptiveTreeResult, AdaptiveTreeConfig]):
     """Pipeline combining adaptive reflection with tree search."""
-    
+
     def __init__(
         self,
         api_key: Optional[str] = None,
@@ -298,21 +125,19 @@ class AdaptiveTreeReflectionPipeline:
         results_dir: str = "data/results",
     ):
         load_dotenv()
-        self.config = config or AdaptiveTreeConfig()
-        self.results_dir = Path(results_dir)
-        self.results_dir.mkdir(parents=True, exist_ok=True)
-        
+        config = config or AdaptiveTreeConfig()
+        super().__init__(config=config, results_dir=results_dir)
+
         api_key = api_key or os.getenv("NVIDIA_API_KEY")
         self.generator = NVIDIANIMClient(api_key=api_key)
         self.generator_model = "meta/llama-3.1-8b-instruct"
-        
+
         self.complexity_analyzer = QueryComplexityAnalyzer()
-        self._results: List[AdaptiveTreeResult] = []
-        
+
         # Tree metrics
         self._total_expansions = 0
         self._total_backtracks = 0
-        
+
         logger.info("Adaptive Tree Reflection Pipeline initialized")
     
     def solve(
@@ -335,14 +160,14 @@ class AdaptiveTreeReflectionPipeline:
             id="root",
             content=problem,
             depth=0,
-            node_type="root",
+            node_type=NodeType.ROOT,
             created_at=time.time()
         )
-        
+
         # Step 3: Build initial reasoning
         initial_reasoning = self._generate_initial_reasoning(problem)
         for step in initial_reasoning:
-            root.add_child(step, "reasoning")
+            root.add_child(step, NodeType.STEP)
         
         # Step 4: Tree search with UCB1
         current_node = root.children[-1] if root.children else root
@@ -422,15 +247,15 @@ class AdaptiveTreeReflectionPipeline:
         # Check correctness
         correct = None
         if ground_truth:
-            correct = AnswerExtractor.check_answer(final_answer, ground_truth)
-        
+            correct = self._check_answer(final_answer, ground_truth)
+
         latency = time.time() - start_time
-        
+
         result = AdaptiveTreeResult(
             problem_id=problem_id,
             problem=problem,
             final_answer=final_answer,
-            reasoning_chain=[n.content for n in best_path],
+            reasoning_path=[n.content for n in best_path],
             reflections=[],
             confidence=confidence,
             correct=correct,
@@ -536,7 +361,7 @@ Generate {self.config.max_tree_width} alternative next steps (one per line, numb
             if line and (line[0].isdigit() or line.startswith("Step")):
                 content = line.split(".", 1)[-1].strip() if "." in line else line
                 if content:
-                    child = node.add_child(content, "reasoning")
+                    child = node.add_child(content, NodeType.STEP)
                     child.score = random.uniform(0.5, 0.8)  # Initial estimate
                     new_nodes.append(child)
         
@@ -726,6 +551,10 @@ Answer (yes/no):"""
         
         return cv_answers, cv_confidences, overfitting
     
+    def _create_result(self, **kwargs) -> AdaptiveTreeResult:
+        """Create an AdaptiveTreeResult instance."""
+        return AdaptiveTreeResult(**kwargs)
+
     def _format_reasoning(self, steps: List[str]) -> str:
         """Format reasoning steps."""
         return "\n".join(f"Step {i+1}: {s}" for i, s in enumerate(steps))
@@ -740,6 +569,7 @@ Answer (yes/no):"""
     
     def close(self):
         """Close pipeline."""
+        super().close()
         self.generator.close()
     
     def save_results(self, filename: str = "adaptive_tree_results.json"):

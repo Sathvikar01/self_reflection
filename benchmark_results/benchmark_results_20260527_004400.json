@@ -1,0 +1,69 @@
+{
+  "timestamp": "20260527_004400",
+  "config": {
+    "dataset_path": "data/datasets/benchmark_dataset.json",
+    "model_name": "meta/llama-3.1-8b-instruct",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "num_questions": 5,
+    "sc_samples": 5,
+    "mock": true,
+    "output_dir": "benchmark_results",
+    "checkpoint_path": null,
+    "resume": false,
+    "seed": 42
+  },
+  "statistics": {
+    "num_questions": 5,
+    "methods": {
+      "zero_shot": {
+        "accuracy": 0.4,
+        "correct": 2,
+        "total": 5,
+        "ci_95_low": 0.1176182311592533,
+        "ci_95_high": 0.769280067791163,
+        "mean_latency_ms": 186.71975135803223,
+        "std_latency_ms": 53.06493099443524
+      },
+      "chain_of_thought": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5,
+        "ci_95_low": 0,
+        "ci_95_high": 0.43449149475208104,
+        "mean_latency_ms": 227.05626487731934,
+        "std_latency_ms": 42.34682926677408
+      },
+      "self_consistency": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5,
+        "ci_95_low": 0,
+        "ci_95_high": 0.43449149475208104,
+        "mean_latency_ms": 1040.9677505493164,
+        "std_latency_ms": 132.17983013375297
+      },
+      "rag": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5,
+        "ci_95_low": 0,
+        "ci_95_high": 0.43449149475208104,
+        "mean_latency_ms": 244.73810195922852,
+        "std_latency_ms": 34.65290379162943
+      },
+      "kb_sc_step": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5,
+        "ci_95_low": 0,
+        "ci_95_high": 0.43449149475208104,
+        "mean_latency_ms": 2129.904842376709,
+        "std_latency_ms": 145.4973665702491
+      }
+    },
+    "mcnemar_tests": {
+      "zero_shot_vs_chain_of_thought": {
+        "chi2": 0.5,
+        "p_value": 0.47950012218695337,
+        "significant_005": 

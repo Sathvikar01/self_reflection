@@ -12,9 +12,12 @@ import requests
 from collections import Counter
 from dotenv import load_dotenv
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.utils.unified_extractor import UnifiedAnswerExtractor
+
 load_dotenv(override=True)
 
-API_KEY = os.getenv("NVIDIA_API_KEY", "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")
+API_KEY = os.getenv("NVIDIA_API_KEY")
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 BASE_URL = "https://integrate.api.nvidia.com/v1"
 
@@ -44,25 +47,17 @@ def call_api(model, messages, temperature=0.5, max_tokens=200, cache_key=None):
 
 
 def extract_answer(text):
-    """Extract yes/no from response."""
-    text = text.lower().strip()
-    # Look for <answer> tags
-    import re
-    m = re.search(r'<answer>(yes|no)</answer>', text)
-    if m:
-        return m.group(1)
-    # Look for standalone yes/no
-    m = re.search(r'\b(yes|no)\b', text)
-    if m:
-        return m.group(1)
+    """Extract yes/no from response using unified extractor."""
+    extracted = UnifiedAnswerExtractor.extract(text)
+    answer = extracted.answer.lower().strip()
+    if answer in ('yes', 'no'):
+        return answer
     return "no"
 
 
 def check_answer(pred, truth):
-    """Check if answer is correct."""
-    p = pred.lower().strip()[:3]
-    t = truth.lower().strip()[:3]
-    return p == t
+    """Check if answer is correct using unified extractor."""
+    return UnifiedAnswerExtractor.check_answer(pred, truth)
 
 
 # Expanded KB

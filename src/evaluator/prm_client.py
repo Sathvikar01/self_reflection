@@ -6,10 +6,8 @@ from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass, field
 from loguru import logger
 
-import sys
-sys.path.insert(0, '..')
-from generator.nim_client import NVIDIANIMClient, GenerationConfig
-from generator.prompts import PromptBuilder
+from ..generator.nim_client import NVIDIANIMClient, GenerationConfig
+from ..generator.prompts import PromptBuilder
 
 
 @dataclass

@@ -1,11 +1,8 @@
 """Tests for MCTS controller."""
 
 import pytest
-import sys
 from pathlib import Path
 from unittest.mock import Mock, MagicMock, patch
-
-sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.rl_controller.mcts import MCTSController, MCTSConfig, MCTSStats
 from src.rl_controller.actions import ActionExecutor, ActionType, ActionResult

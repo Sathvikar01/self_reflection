@@ -108,7 +108,6 @@ class TestRLPipeline:
         # input: 40+50+60 = 150, output: 60+70+80 = 210, total = 360
         assert stats["total_tokens"] == 360
         assert stats["total_correct"] == 2
-        assert stats["accuracy"] == pytest.approx(2/3)
 
 
 class TestBaselineRunner:

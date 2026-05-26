@@ -8,10 +8,7 @@ from dataclasses import dataclass, field
 from loguru import logger
 from dotenv import load_dotenv
 
-import sys
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from generator.nim_client import NVIDIANIMClient, GenerationConfig
+from ..generator.nim_client import NVIDIANIMClient, GenerationConfig
 
 load_dotenv()
 

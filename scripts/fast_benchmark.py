@@ -7,8 +7,13 @@ import json
 import time
 import requests
 from collections import Counter
+from dotenv import load_dotenv
+load_dotenv()
 
-API_KEY = "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"
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.utils.unified_extractor import UnifiedAnswerExtractor
+
+API_KEY = os.getenv("NVIDIA_API_KEY")
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 BASE_URL = "https://integrate.api.nvidia.com/v1"
 
@@ -29,11 +34,12 @@ def call_api(model, messages, temperature=0.5, max_tokens=150):
         return ""
 
 def extract_answer(text):
-    import re
-    m = re.search(r'<answer>(yes|no)</answer>', text.lower())
-    if m: return m.group(1)
-    m = re.search(r'\b(yes|no)\b', text.lower())
-    return m.group(1) if m else "no"
+    """Extract yes/no from response using unified extractor."""
+    extracted = UnifiedAnswerExtractor.extract(text)
+    answer = extracted.answer.lower().strip()
+    if answer in ('yes', 'no'):
+        return answer
+    return "no"
 
 KB = """KB: Hot water can freeze faster (Mpemba). Lightning > sun (30K vs 5.8K). Diamonds burn (C, 700C). Fish need O2, can drown. Sound needs medium. 5-sec rule false. Plants need O2 at night. All birds lay eggs. Penguins/ostriches can't fly. Bullsd react to movement. Gold is investment hedge. You can't tickle yourself. Astronauts don't need sunscreen. Great Wall not visible from space. Coin can't kill. We use >10% brain. Yawning contagious. Dolphins sleep unihemispherically. Whales get water from food. Elephants have teeth. Vampire bats drink blood."""
 

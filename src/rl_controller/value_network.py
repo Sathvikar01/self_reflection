@@ -7,6 +7,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from loguru import logger
 
+from .state_embedder import MockEmbedder
+
 
 @dataclass
 class ValueNetworkConfig:
@@ -219,22 +221,6 @@ class ValueNetworkTrainer:
         self._training_steps = checkpoint.get("training_steps", 0)
         self._best_loss = checkpoint.get("best_loss", float('inf'))
         logger.info(f"Model loaded from {path}")
-
-
-class MockEmbedder:
-    """Mock embedder for testing without a real embedding model."""
-    
-    def __init__(self, dim: int = 768):
-        self.dim = dim
-    
-    def embed(self, text: str) -> torch.Tensor:
-        """Generate mock embedding from text hash."""
-        torch.manual_seed(hash(text) % (2**32))
-        return torch.randn(self.dim)
-    
-    def embed_batch(self, texts: List[str]) -> torch.Tensor:
-        """Generate mock embeddings for batch."""
-        return torch.stack([self.embed(t) for t in texts])
 
 
 class ValueEstimator:

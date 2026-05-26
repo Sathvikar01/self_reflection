@@ -20,22 +20,12 @@ from pathlib import Path
 from dotenv import load_dotenv
 from loguru import logger
 
-import sys
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from generator.nim_client import NVIDIANIMClient, GenerationConfig
-from evaluation.accuracy import AnswerExtractor
+from ..generator.nim_client import NVIDIANIMClient, GenerationConfig
+from ..utils.unified_extractor import UnifiedAnswerExtractor
+from ..utils.complexity import QueryComplexityAnalyzer, ComplexityScore
+from .base import BasePipeline, BaseResult, BasePipelineConfig
 
 load_dotenv()
-
-
-@dataclass
-class ComplexityScore:
-    """Complexity analysis of a query."""
-    overall_score: float  # 0.0 to 1.0
-    factors: Dict[str, float]
-    recommended_depth: int
-    reasoning: str
 
 
 @dataclass
@@ -50,29 +40,29 @@ class ReflectionCheckpoint:
 
 
 @dataclass
-class AdaptiveReflectionConfig:
+class AdaptiveReflectionConfig(BasePipelineConfig):
     """Configuration for adaptive self-reflection."""
     # Complexity thresholds
     low_complexity_threshold: float = 0.3
     high_complexity_threshold: float = 0.7
-    
+
     # Reflection bounds
     min_reflections: int = 1
     max_reflections: int = 5
-    
+
     # Adaptive behavior
     confidence_threshold_increase: float = 0.7  # Increase depth if confidence below
     confidence_threshold_stop: float = 0.9  # Stop if confidence above
     degradation_threshold: float = 0.1  # Rollback if confidence drops by this much
-    
+
     # Overfitting prevention
     enable_cross_validation: bool = True
     validation_samples: int = 3  # Number of samples for cross-validation
     variance_threshold: float = 0.2  # High variance = overfitting risk
-    
+
     # Early stopping
     early_stopping_patience: int = 2  # Stop if no improvement for N reflections
-    
+
     # Temperatures
     temperature_reason: float = 0.7
     temperature_reflect: float = 0.3
@@ -80,18 +70,14 @@ class AdaptiveReflectionConfig:
 
 
 @dataclass
-class AdaptiveReflectionResult:
+class AdaptiveReflectionResult(BaseResult):
     """Result from adaptive self-reflection."""
-    problem_id: str
-    problem: str
-    final_answer: str
-    reasoning_chain: List[str]
-    reflections: List[str]
-    corrections: List[str]
-    confidence: float
-    correct: Optional[bool] = None
-    ground_truth: Optional[str] = None
-    
+
+    reflections: List[str] = field(default_factory=list)
+    corrections: List[str] = field(default_factory=list)
+    confidence: float = 0.0
+    reasoning_chain: List[str] = field(default_factory=list)
+
     # Adaptive metrics
     complexity_score: float = 0.0
     recommended_depth: int = 0
@@ -99,119 +85,15 @@ class AdaptiveReflectionResult:
     rolled_back: bool = False
     rollback_step: int = 0
     overfitting_detected: bool = False
-    
+
     # Cross-validation metrics
     cv_answers: List[str] = field(default_factory=list)
     cv_confidence_std: float = 0.0
-    
-    total_tokens: int = 0
-    latency_seconds: float = 0.0
-    metadata: Dict[str, Any] = field(default_factory=dict)
 
 
-class QueryComplexityAnalyzer:
-    """Analyzes query complexity to determine reflection depth."""
-    
-    # Complexity indicators
-    FACTUAL_INDICATORS = [
-        "what is", "what are", "who is", "who was", "where is",
-        "when did", "how many", "how much", "define", "name the"
-    ]
-    
-    REASONING_INDICATORS = [
-        "why", "because", "therefore", "thus", "so", "hence",
-        "if", "then", "would", "could", "should", "might",
-        "compare", "contrast", "difference between", "similar"
-    ]
-    
-    STRATEGIC_INDICATORS = [
-        "best way", "optimal", "strategy", "should i",
-        "which would", "choose", "decide", "evaluate",
-        "pros and cons", "trade-off", "alternative"
-    ]
-    
-    COMPLEXITY_MARKERS = [
-        "multiple", "several", "various", "both", "each",
-        "all of the", "none of the", "some but not all",
-        "except", "unless", "however", "although", "despite"
-    ]
-    
-    def analyze(self, query: str) -> ComplexityScore:
-        """Analyze query complexity."""
-        query_lower = query.lower()
-        
-        factors = {}
-        
-        # Factor 1: Question type complexity
-        has_factual = any(ind in query_lower for ind in self.FACTUAL_INDICATORS)
-        has_reasoning = any(ind in query_lower for ind in self.REASONING_INDICATORS)
-        has_strategic = any(ind in query_lower for ind in self.STRATEGIC_INDICATORS)
-        
-        type_score = 0.0
-        if has_strategic:
-            type_score = 0.8
-        elif has_reasoning:
-            type_score = 0.6
-        elif has_factual:
-            type_score = 0.3
-        else:
-            type_score = 0.5
-        factors["question_type"] = type_score
-        
-        # Factor 2: Complexity markers
-        marker_count = sum(1 for m in self.COMPLEXITY_MARKERS if m in query_lower)
-        factors["complexity_markers"] = min(marker_count * 0.15, 1.0)
-        
-        # Factor 3: Query length (longer = more complex)
-        word_count = len(query.split())
-        factors["length"] = min(word_count / 30, 1.0)
-        
-        # Factor 4: Negation complexity
-        negation_words = ["not", "never", "no ", "n't", "cannot", "can't"]
-        has_negation = any(neg in query_lower for neg in negation_words)
-        factors["negation"] = 0.2 if has_negation else 0.0
-        
-        # Factor 5: Multi-part questions
-        separators = [" and ", " or ", ";", ",", " also "]
-        part_count = sum(1 for sep in separators if sep in query_lower)
-        factors["multi_part"] = min(part_count * 0.2, 0.5)
-        
-        # Calculate overall score
-        weights = {
-            "question_type": 0.35,
-            "complexity_markers": 0.25,
-            "length": 0.15,
-            "negation": 0.15,
-            "multi_part": 0.10
-        }
-        
-        overall_score = sum(factors[k] * weights[k] for k in weights)
-        
-        # Determine recommended depth
-        if overall_score < 0.3:
-            recommended_depth = 1
-            reasoning = "Low complexity: simple factual query"
-        elif overall_score < 0.5:
-            recommended_depth = 2
-            reasoning = "Medium-low complexity: standard reasoning"
-        elif overall_score < 0.7:
-            recommended_depth = 3
-            reasoning = "Medium-high complexity: multi-step reasoning"
-        else:
-            recommended_depth = 4
-            reasoning = "High complexity: strategic or multi-faceted query"
-        
-        return ComplexityScore(
-            overall_score=overall_score,
-            factors=factors,
-            recommended_depth=recommended_depth,
-            reasoning=reasoning
-        )
-
-
-class AdaptiveReflectionPipeline:
+class AdaptiveReflectionPipeline(BasePipeline[AdaptiveReflectionResult, AdaptiveReflectionConfig]):
     """Pipeline with adaptive self-reflection, rollback, and overfitting prevention."""
-    
+
     def __init__(
         self,
         api_key: Optional[str] = None,
@@ -219,17 +101,15 @@ class AdaptiveReflectionPipeline:
         results_dir: str = "data/results",
     ):
         load_dotenv()
-        self.config = config or AdaptiveReflectionConfig()
-        self.results_dir = Path(results_dir)
-        self.results_dir.mkdir(parents=True, exist_ok=True)
-        
+        config = config or AdaptiveReflectionConfig()
+        super().__init__(config=config, results_dir=results_dir)
+
         api_key = api_key or os.getenv("NVIDIA_API_KEY")
         self.generator = NVIDIANIMClient(api_key=api_key)
         self.generator_model = "meta/llama-3.1-8b-instruct"
-        
+
         self.complexity_analyzer = QueryComplexityAnalyzer()
-        self._results: List[AdaptiveReflectionResult] = []
-        
+
         logger.info("Adaptive Reflection Pipeline initialized")
     
     def solve(
@@ -384,8 +264,7 @@ class AdaptiveReflectionPipeline:
         # Step 8: Check correctness
         correct = None
         if ground_truth:
-            from utils.unified_extractor import UnifiedAnswerExtractor
-            correct = UnifiedAnswerExtractor.check_answer(final_answer, ground_truth)
+            correct = self._check_answer(final_answer, ground_truth)
         
         latency = time.time() - start_time
         total_tokens = self.generator.get_stats()["total_tokens"] - start_tokens
@@ -595,9 +474,7 @@ Confidence: [0.0-1.0]"""
         text = response.text
 
         # Import unified extractor
-        import sys
-        sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        from utils.unified_extractor import UnifiedAnswerExtractor
+        from ..utils.unified_extractor import UnifiedAnswerExtractor
         
         # Extract answer using unified logic
         extracted = UnifiedAnswerExtractor.extract(text)
@@ -633,9 +510,7 @@ Confidence: [0.0-1.0]"""
 
         reasoning_text = "\n".join(f"Step {i+1}: {s}" for i, s in enumerate(reasoning_chain))
         
-        import sys
-        sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        from utils.unified_extractor import UnifiedAnswerExtractor
+        from ..utils.unified_extractor import UnifiedAnswerExtractor
 
         for i in range(self.config.validation_samples):
             temp = self.config.temperature_conclude + (i * 0.1)
@@ -673,22 +548,27 @@ Wrap your answer in <answer> tags: <answer>your answer</answer>"""
 
         return cv_answers, cv_confidences
     
+    def _create_result(self, **kwargs) -> AdaptiveReflectionResult:
+        """Create an AdaptiveReflectionResult instance."""
+        return AdaptiveReflectionResult(**kwargs)
+
     def close(self):
         """Close the pipeline."""
+        super().close()
         self.generator.close()
-    
+
     def save_results(self, filename: str = "adaptive_reflection_results.json"):
         """Save results."""
         results_path = self.results_dir / filename
-        
+
         data = {
             "timestamp": time.time(),
             "config": asdict(self.config),
             "num_problems": len(self._results),
             "results": [asdict(r) for r in self._results],
         }
-        
+
         with open(results_path, "w") as f:
             json.dump(data, f, indent=2, default=str)
-        
+
         logger.info(f"Results saved to {results_path}")

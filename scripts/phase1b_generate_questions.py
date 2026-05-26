@@ -3,9 +3,12 @@ import json
 import time
 import requests
 import re
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 MODEL = "meta/llama-3.1-405b-instruct"
-API_KEY = "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"
+API_KEY = os.getenv("NVIDIA_API_KEY")
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 
 # Load existing to avoid duplicates

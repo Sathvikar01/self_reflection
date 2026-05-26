@@ -3,16 +3,17 @@ import os
 import sys
 import json
 import time
+from dotenv import load_dotenv
+load_dotenv()
 
 sys.path.insert(0, os.getcwd())
-os.environ['NVIDIA_API_KEY'] = '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'
 
 from anti_overfitting_pipeline import (
     NVIDIANIMClient, BaselinePipeline, AntiOverfittingSelfReflectionPipeline,
     mcnemar_test
 )
 
-API_KEY = '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'
+API_KEY = os.getenv("NVIDIA_API_KEY")
 
 # Load dataset
 with open("data/datasets/strategyqa_full.json", 'r', encoding='utf-8') as f:

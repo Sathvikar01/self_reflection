@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - 'phase2_fixed.py'
-      - 'phase2_aggregate_v2.py'
+      - 'scripts/phase2_fixed.py'
+      - 'scripts/phase2_aggregate_v2.py'
       - 'data/datasets/**'
   workflow_dispatch:
     inputs:
@@ -30,36 +30,40 @@ jobs:
         python-version: '3.11'
 
     - name: Install dependencies
-      run: |
-        pip install requests scipy
+      run: pip install -e ".[dev]"
+
+    - name: Run tests
+      run: pytest tests/ -v
+      env:
+        NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
 
     - name: Run Zero-Shot
-      run: python phase2_fixed.py zs
+      run: python scripts/phase2_fixed.py zs
       env:
         NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
 
     - name: Run CoT
-      run: python phase2_fixed.py cot
+      run: python scripts/phase2_fixed.py cot
       env:
         NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
 
     - name: Run RAG
-      run: python phase2_fixed.py rag
+      run: python scripts/phase2_fixed.py rag
       env:
         NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
 
     - name: Run SC-only
-      run: python phase2_fixed.py sc
+      run: python scripts/phase2_fixed.py sc
       env:
         NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
 
     - name: Run KB+SC
-      run: python phase2_fixed.py kbsc
+      run: python scripts/phase2_fixed.py kbsc
       env:
         NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
 
     - name: Aggregate results
-      run: python phase2_aggregate_v2.py
+      run: python scripts/phase2_aggregate_v2.py
 
     - name: Upload results
       uses: actions/upload-artifact@v4

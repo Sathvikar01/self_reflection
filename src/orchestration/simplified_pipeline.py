@@ -11,6 +11,7 @@ from .base import BasePipeline, BaseResult, BasePipelineConfig
 from ..generator.nim_client import NVIDIANIMClient, GenerationConfig
 from ..generator.prompts import PromptBuilder, ReasoningContext
 from ..evaluator.improved_prm import ImprovedPRM, VerificationResult, ComparativeLearner
+from ..utils.unified_extractor import UnifiedAnswerExtractor
 
 
 @dataclass
@@ -154,13 +155,14 @@ class SimplifiedRLPipeline(BasePipeline[SimplifiedResult, SimplifiedConfig]):
         return PromptBuilder.build_expand_prompt(context)
 
     def _extract_answer(self, problem: str, reasoning: List[str]) -> str:
-        """Extract final answer from reasoning."""
+        """Extract final answer from reasoning using unified extractor."""
         messages = PromptBuilder.build_conclude_prompt(
             ReasoningContext(problem=problem, previous_steps=reasoning)
         )
         config = GenerationConfig(temperature=0.3, max_tokens=100)
         response = self.generator.generate(messages, config)
-        return response.text.strip()
+        extracted = UnifiedAnswerExtractor.extract(response.text)
+        return extracted.answer if extracted.answer else response.text.strip()
 
     def get_summary(self) -> str:
         """Get summary of results."""

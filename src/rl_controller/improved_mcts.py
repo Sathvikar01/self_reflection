@@ -6,10 +6,6 @@ from typing import List, Dict, Optional, Tuple, Any
 from dataclasses import dataclass, field
 from loguru import logger
 
-import sys
-import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from .tree import StateTree, TreeNode, NodeType
 from .actions import ActionExecutor, ActionType, ActionResult, ActionConfig
 
@@ -128,8 +124,8 @@ class ImprovedMCTSController:
         best_node = best_path[-1]
         reasoning_steps = [n.content for n in best_path[1:] if n.content]
         
-        from generator.prompts import PromptBuilder, ReasoningContext
-        from generator.nim_client import GenerationConfig
+        from ..generator.prompts import PromptBuilder, ReasoningContext
+        from ..generator.nim_client import GenerationConfig
         
         context = ReasoningContext(problem=problem, previous_steps=reasoning_steps)
         messages = PromptBuilder.build_conclude_prompt(context)

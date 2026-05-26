@@ -8,8 +8,13 @@ import requests
 import re
 from collections import Counter
 from datetime import datetime
+from dotenv import load_dotenv
+load_dotenv()
 
-API_KEY = "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"
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.utils.unified_extractor import UnifiedAnswerExtractor
+
+API_KEY = os.getenv("NVIDIA_API_KEY")
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 BASE_URL = "https://integrate.api.nvidia.com/v1"
 
@@ -154,14 +159,11 @@ def call_api(model, messages, temperature=0.5, max_tokens=200):
 
 
 def extract_answer(text):
-    """Extract yes/no from response."""
-    text_lower = text.lower().strip()
-    m = re.search(r'<answer>\s*(yes|no)\s*</answer>', text_lower)
-    if m:
-        return m.group(1)
-    m = re.search(r'\b(yes|no)\b', text_lower)
-    if m:
-        return m.group(1)
+    """Extract yes/no from response using unified extractor."""
+    extracted = UnifiedAnswerExtractor.extract(text)
+    answer = extracted.answer.lower().strip()
+    if answer in ('yes', 'no'):
+        return answer
     return "no"
 
 

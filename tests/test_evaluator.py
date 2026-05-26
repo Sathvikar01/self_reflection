@@ -1,11 +1,8 @@
 """Tests for evaluator components."""
 
 import pytest
-import sys
 from pathlib import Path
 from unittest.mock import Mock, MagicMock, patch
-
-sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.evaluator.prm_client import PRMEvaluator, PRMConfig, EvaluationResult
 from src.evaluator.scoring import ScoreAggregator, ScoreNormalizer, AggregationMethod

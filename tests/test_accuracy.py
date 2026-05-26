@@ -159,7 +159,7 @@ class TestAnswerExtractorEdgeCases:
     def test_mixed_case(self):
         """Test mixed case handling."""
         assert AnswerExtractor.extract("YeS") == "yes"
-        assert AnswerExtractor.extract("NoO") == "no"
+        assert AnswerExtractor.extract("nO") == "no"
     
     @pytest.mark.unit
     def test_answer_in_middle_of_text(self):

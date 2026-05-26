@@ -139,10 +139,8 @@ class RobustRLPipeline(BasePipeline[RobustProblemResult, RobustPipelineConfig]):
 
         correct = None
         if ground_truth:
-            from evaluation.accuracy import AnswerEvaluator
-            evaluator = AnswerEvaluator()
-            eval_result = evaluator.evaluate(best_answer, ground_truth, problem_id)
-            correct = eval_result.correct
+            from ..utils.unified_extractor import UnifiedAnswerExtractor
+            correct = UnifiedAnswerExtractor.check_answer(best_answer, ground_truth)
 
         result = RobustProblemResult(
             problem_id=problem_id,
@@ -306,8 +304,9 @@ Final answer:"""
 
     def _extract_answer(self, text: str) -> str:
         """Extract clean answer from text."""
-        from evaluation.accuracy import AnswerExtractor
-        return AnswerExtractor.extract(text, text)
+        from ..utils.unified_extractor import UnifiedAnswerExtractor
+        extracted = UnifiedAnswerExtractor.extract(text, text)
+        return extracted.answer if extracted.answer else text
 
     def _evaluate_step(self, problem: str, previous: List[str], step: str) -> float:
         """Evaluate the quality of a reasoning step."""

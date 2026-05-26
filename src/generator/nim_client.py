@@ -5,37 +5,13 @@ import time
 import json
 import hashlib
 from typing import Optional, Dict, Any, List
-from dataclasses import dataclass, field
+from collections import OrderedDict
 import requests
 from tenacity import retry, stop_after_attempt, wait_exponential
 from loguru import logger
-import sys
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from exceptions import ConfigurationError, APIError
-
-
-@dataclass
-class GenerationConfig:
-    """Configuration for text generation."""
-    model: str = "meta/llama-3.1-8b-instruct"
-    temperature: float = 0.7
-    max_tokens: int = 512
-    top_p: float = 0.95
-    stop_sequences: List[str] = field(default_factory=lambda: ["\n\n\n", "Question:", "Problem:"])
-
-
-@dataclass
-class GenerationResponse:
-    """Response from generation API."""
-    text: str
-    input_tokens: int
-    output_tokens: int
-    latency_ms: float
-    model: str
-    finish_reason: str
-    cached: bool = False
+from ..exceptions import ConfigurationError, APIError
+from .types import GenerationConfig, GenerationResponse
 
 
 class NVIDIANIMClient:
@@ -59,7 +35,8 @@ class NVIDIANIMClient:
         self.max_retries = max_retries
         self.retry_delay = retry_delay
         self.cache_enabled = cache_enabled
-        self._cache: Dict[str, GenerationResponse] = {}
+        self._cache: OrderedDict[str, GenerationResponse] = OrderedDict()
+        self._cache_max_size = 1000
         
         self._session = requests.Session()
         self._session.headers.update({
@@ -124,6 +101,7 @@ class NVIDIANIMClient:
             cache_key = self._get_cache_key(messages, config)
             if cache_key in self._cache:
                 logger.debug("Cache hit for generation request")
+                self._cache.move_to_end(cache_key)
                 return self._cache[cache_key]
         
         payload = {
@@ -169,6 +147,9 @@ class NVIDIANIMClient:
         
         if self.cache_enabled and cache_key:
             self._cache[cache_key] = result
+            self._cache.move_to_end(cache_key)
+            if len(self._cache) > self._cache_max_size:
+                self._cache.popitem(last=False)
             result.cached = True
         
         logger.debug(f"Generated {output_tokens} tokens in {latency_ms:.0f}ms")

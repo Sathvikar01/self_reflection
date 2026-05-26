@@ -1,0 +1,340 @@
+{
+  "timestamp": "20260527_005008",
+  "config": {
+    "dataset_path": "data/datasets/benchmark_dataset.json",
+    "model_name": "meta/llama-3.1-8b-instruct",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "num_questions": 5,
+    "sc_samples": 5,
+    "mock": true,
+    "output_dir": "benchmark_results",
+    "checkpoint_path": null,
+    "resume": false,
+    "seed": 42
+  },
+  "statistics": {
+    "num_questions": 5,
+    "methods": {
+      "zero_shot": {
+        "accuracy": 0.6,
+        "correct": 3,
+        "total": 5,
+        "ci_95_low": 0.23071993220883708,
+        "ci_95_high": 0.8823817688407467,
+        "mean_latency_ms": 259.49201583862305,
+        "std_latency_ms": 45.84170213568898
+      },
+      "chain_of_thought": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5,
+        "ci_95_low": 0,
+        "ci_95_high": 0.43449149475208104,
+        "mean_latency_ms": 221.32925987243652,
+        "std_latency_ms": 61.04018020617349
+      },
+      "self_consistency": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5,
+        "ci_95_low": 0,
+        "ci_95_high": 0.43449149475208104,
+        "mean_latency_ms": 1032.144832611084,
+        "std_latency_ms": 45.027651499254915
+      },
+      "rag": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5,
+        "ci_95_low": 0,
+        "ci_95_high": 0.43449149475208104,
+        "mean_latency_ms": 176.00674629211426,
+        "std_latency_ms": 66.33904346038901
+      },
+      "kb_sc_step": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 5,
+        "ci_95_low": 0,
+        "ci_95_high": 0.43449149475208104,
+        "mean_latency_ms": 1938.9829635620117,
+        "std_latency_ms": 270.8298119431497
+      }
+    },
+    "mcnemar_tests": {
+      "zero_shot_vs_chain_of_thought": {
+        "chi2": 1.3333333333333333,
+        "p_value": 0.24821307898992362,
+        "significant_005": false,
+        "contingency": {
+          "a": 0,
+          "b": 3,
+          "c": 0,
+          "d": 2
+        }
+      },
+      "zero_shot_vs_self_consistency": {
+        "chi2": 1.3333333333333333,
+        "p_value": 0.24821307898992362,
+        "significant_005": false,
+        "contingency": {
+          "a": 0,
+          "b": 3,
+          "c": 0,
+          "d": 2
+        }
+      },
+      "zero_shot_vs_rag": {
+        "chi2": 1.3333333333333333,
+        "p_value": 0.24821307898992362,
+        "significant_005": false,
+        "contingency": {
+          "a": 0,
+          "b": 3,
+          "c": 0,
+          "d": 2
+        }
+      },
+      "zero_shot_vs_kb_sc_step": {
+        "chi2": 1.3333333333333333,
+        "p_value": 0.24821307898992362,
+        "significant_005": false,
+        "contingency": {
+          "a": 0,
+          "b": 3,
+          "c": 0,
+          "d": 2
+        }
+      },
+      "chain_of_thought_vs_self_consistency": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "d": 5
+        }
+      },
+      "chain_of_thought_vs_rag": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "d": 5
+        }
+      },
+      "chain_of_thought_vs_kb_sc_step": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "d": 5
+        }
+      },
+      "self_consistency_vs_rag": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "d": 5
+        }
+      },
+      "self_consistency_vs_kb_sc_step": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "d": 5
+        }
+      },
+      "rag_vs_kb_sc_step": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "d": 5
+        }
+      }
+    }
+  },
+  "per_question": [
+    {
+      "question_id": "merged_0",
+      "question": "Do hamsters provide food for any animals?",
+      "ground_truth": "yes",
+      "methods": {
+        "zero_shot": {
+          "extracted": "no",
+          "correct": false,
+          "latency_ms": 284.329891204834
+        },
+        "chain_of_thought": {
+          "extracted": "First, I need to identify the key components of this problem",
+          "correct": false,
+          "latency_ms": 152.65417098999023
+        },
+        "self_consistency": {
+          "extracted": "n scenario.",
+          "correct": false,
+          "latency_ms": 1029.0493965148926
+        },
+        "rag": {
+          "extracted": "This step follows from the previous observation about the relationship",
+          "correct": false,
+          "latency_ms": 149.7173309326172
+        },
+        "kb_sc_step": {
+          "extracted": "no",
+          "correct": false,
+          "latency_ms": 1581.859827041626
+        }
+      }
+    },
+    {
+      "question_id": "merged_1",
+      "question": "Could a person survive falling from the Empire State Building?",
+      "ground_truth": "no",
+      "methods": {
+        "zero_shot": {
+          "extracted": "The answer depends on additional context not provided",
+          "correct": true,
+          "latency_ms": 299.9098300933838
+        },
+        "chain_of_thought": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 159.92403030395508
+        },
+        "self_consistency": {
+          "extracted": "First, I need to identify the key components of this problem",
+          "correct": false,
+          "latency_ms": 990.6952381134033
+        },
+        "rag": {
+          "extracted": "This step follows from the previous observation about the relationship",
+          "correct": false,
+          "latency_ms": 282.64832496643066
+        },
+        "kb_sc_step": {
+          "extracted": "Looking at the evidence, we can conclude that the relationship holds",
+          "correct": false,
+          "latency_ms": 1933.6767196655273
+        }
+      }
+    },
+    {
+      "question_id": "merged_2",
+      "question": "Is the sun brighter than a light bulb?",
+      "ground_truth": "yes",
+      "methods": {
+        "zero_shot": {
+          "extracted": "First, we need to consider the main factors involved",
+          "correct": false,
+          "latency_ms": 305.2411079406738
+        },
+        "chain_of_thought": {
+          "extracted": "n scenario.",
+          "correct": false,
+          "latency_ms": 307.4061870574951
+        },
+        "self_consistency": {
+          "extracted": "This step follows from the previous observation about the relationship",
+          "correct": false,
+          "latency_ms": 1112.7500534057617
+        },
+        "rag": {
+          "extracted": "First, I need to identify the key components of this problem",
+          "correct": false,
+          "latency_ms": 221.22883796691895
+        },
+        "kb_sc_step": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 1702.8555870056152
+        }
+      }
+    },
+    {
+      "question_id": "merged_3",
+      "question": "Would a person born in 2000 be eligible to vote in the 2016 US election?",
+      "ground_truth": "no",
+      "methods": {
+        "zero_shot": {
+          "extracted": "no",
+          "correct": true,
+          "latency_ms": 202.81100273132324
+        },
+        "chain_of_thought": {
+          "extracted": "This step follows from the previous observation about the relationship",
+          "correct": false,
+          "latency_ms": 213.6218547821045
+        },
+        "self_consistency": {
+          "extracted": "n scenario.",
+          "correct": false,
+          "latency_ms": 1039.238691329956
+        },
+        "rag": {
+          "extracted": "First, I need to identify the key components of this problem",
+          "correct": false,
+          "latency_ms": 115.59653282165527
+        },
+        "kb_sc_step": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 2191.960096359253
+        }
+      }
+    },
+    {
+      "question_id": "merged_4",
+      "question": "Does hydrogen power work without oxygen?",
+      "ground_truth": "no",
+      "methods": {
+        "zero_shot": {
+          "extracted": "no",
+          "correct": true,
+          "latency_ms": 205.1682472229004
+        },
+        "chain_of_thought": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 273.0400562286377
+        },
+        "self_consistency": {
+          "extracted": "Looking at the evidence, we can conclude that the relationship holds",
+          "correct": false,
+          "latency_ms": 988.9907836914062
+        },
+        "rag": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 110.84270477294922
+        },
+        "kb_sc_step": {
+          "extracted": "against the constraints.",
+          "correct": false,
+          "latency_ms": 2284.562587738037
+        }
+      }
+    }
+  ]
+}

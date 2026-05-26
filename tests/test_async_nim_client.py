@@ -18,7 +18,7 @@ class TestAsyncNVIDIANIMClientInit:
         client = AsyncNVIDIANIMClient(api_key="test-key")
         assert client.api_key == "test-key"
         assert client.cache_enabled is True
-        assert client.timeout == 60
+        assert client.timeout == 600
         assert client.max_concurrent == 10
 
     def test_init_with_env_var(self, monkeypatch):
@@ -63,30 +63,30 @@ class TestAsyncNVIDIANIMClientGenerate:
             }
         }
 
-        with patch('aiohttp.ClientSession') as mock_session_class:
-            mock_session = AsyncMock()
-            mock_response = AsyncMock()
-            mock_response.status = 200
-            mock_response.json = AsyncMock(return_value=mock_response_data)
-            mock_response.headers = {}
+        client = AsyncNVIDIANIMClient(api_key="test-key")
+        
+        mock_response = AsyncMock()
+        mock_response.status = 200
+        mock_response.json = AsyncMock(return_value=mock_response_data)
+        mock_response.headers = {}
 
-            mock_session.post = MagicMock(return_value=mock_response)
-            mock_session.__aenter__ = AsyncMock(return_value=mock_response)
-            mock_session.__aexit__ = AsyncMock()
-            mock_session_class.return_value = mock_session
+        mock_session = AsyncMock()
+        mock_session.post = MagicMock(return_value=AsyncMock(__aenter__=AsyncMock(return_value=mock_response), __aexit__=AsyncMock()))
+        mock_session.closed = False
+        
+        client._session = mock_session
 
-            client = AsyncNVIDIANIMClient(api_key="test-key")
-            messages = [{"role": "user", "content": "Test"}]
-            config = GenerationConfig()
+        messages = [{"role": "user", "content": "Test"}]
+        config = GenerationConfig()
 
-            result = await client.generate(messages, config)
+        result = await client.generate(messages, config)
 
-            assert isinstance(result, GenerationResponse)
-            assert result.text == "Test response"
-            assert result.input_tokens == 100
-            assert result.output_tokens == 50
+        assert isinstance(result, GenerationResponse)
+        assert result.text == "Test response"
+        assert result.input_tokens == 100
+        assert result.output_tokens == 50
 
-            await client.close()
+        await client.close()
 
     @pytest.mark.asyncio
     async def test_generate_with_cache_hit(self):
@@ -133,34 +133,33 @@ class TestAsyncBatchGenerate:
             }
         }
 
-        with patch('aiohttp.ClientSession') as mock_session_class:
-            mock_session = AsyncMock()
-            mock_response = AsyncMock()
-            mock_response.status = 200
-            mock_response.json = AsyncMock(return_value=mock_response_data)
-            mock_response.headers = {}
+        client = AsyncNVIDIANIMClient(api_key="test-key")
+        
+        mock_response = AsyncMock()
+        mock_response.status = 200
+        mock_response.json = AsyncMock(return_value=mock_response_data)
+        mock_response.headers = {}
 
-            mock_session.post = MagicMock(return_value=mock_response)
-            mock_session.__aenter__ = AsyncMock(return_value=mock_response)
-            mock_session.__aexit__ = AsyncMock()
-            mock_session_class.return_value = mock_session
+        mock_session = AsyncMock()
+        mock_session.post = MagicMock(return_value=AsyncMock(__aenter__=AsyncMock(return_value=mock_response), __aexit__=AsyncMock()))
+        mock_session.closed = False
+        
+        client._session = mock_session
 
-            client = AsyncNVIDIANIMClient(api_key="test-key")
+        requests_list = [
+            ([{"role": "user", "content": "Test1"}], GenerationConfig()),
+            ([{"role": "user", "content": "Test2"}], GenerationConfig()),
+            ([{"role": "user", "content": "Test3"}], GenerationConfig()),
+        ]
 
-            requests = [
-                ([{"role": "user", "content": "Test1"}], GenerationConfig()),
-                ([{"role": "user", "content": "Test2"}], GenerationConfig()),
-                ([{"role": "user", "content": "Test3"}], GenerationConfig()),
-            ]
+        results = await client.generate_batch(requests_list, max_concurrent=2)
 
-            results = await client.generate_batch(requests, max_concurrent=2)
+        assert len(results) == 3
+        for result in results:
+            assert isinstance(result, GenerationResponse)
+            assert result.text == "Batch response"
 
-            assert len(results) == 3
-            for result in results:
-                assert isinstance(result, GenerationResponse)
-                assert result.text == "Batch response"
-
-            await client.close()
+        await client.close()
 
 
 class TestAsyncClientStats:

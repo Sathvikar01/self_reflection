@@ -17,9 +17,14 @@ ACCURACY BY COMPLEXITY:
 import json
 import time
 import random
+import os
+import sys
 from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.utils.unified_extractor import UnifiedAnswerExtractor
 
 
 @dataclass
@@ -57,28 +62,8 @@ def get_complexity(problem: Dict) -> str:
 
 
 def check_answer(predicted: str, ground_truth: str) -> bool:
-    """Check if answer matches."""
-    pred_norm = predicted.lower().strip()
-    truth_norm = ground_truth.lower().strip()
-    
-    # Direct match
-    if pred_norm == truth_norm:
-        return True
-    
-    # Contains match
-    if truth_norm in pred_norm or pred_norm in truth_norm:
-        return True
-    
-    # Yes/no variants
-    yes_variants = ["yes", "true", "correct", "yeah", "1"]
-    no_variants = ["no", "false", "incorrect", "nope", "0"]
-    
-    if truth_norm in yes_variants and any(v in pred_norm for v in yes_variants):
-        return True
-    if truth_norm in no_variants and any(v in pred_norm for v in no_variants):
-        return True
-    
-    return False
+    """Check if answer matches using unified extractor."""
+    return UnifiedAnswerExtractor.check_answer(predicted, ground_truth)
 
 
 # ============================================================================

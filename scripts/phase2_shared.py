@@ -1,10 +1,14 @@
 """
 Shared benchmark module for all 5 methods.
 """
-import json, time, requests, re, sys, hashlib
+import json, time, requests, re, sys, hashlib, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.utils.unified_extractor import UnifiedAnswerExtractor
+from dotenv import load_dotenv
+load_dotenv()
 
 MODEL = "meta/llama-3.1-405b-instruct"
-API_KEY = "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"
+API_KEY = os.getenv("NVIDIA_API_KEY")
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 DELAY = 3.0
 
@@ -77,16 +81,10 @@ def call_api(messages, max_tokens=150, temp=0.3, retries=8):
 
 
 def extract_yesno(text):
-    t = text.lower().strip()
-    if t.startswith('yes'): return 'yes'
-    if t.startswith('no'): return 'no'
-    last200 = t[-200:]
-    m_yes = re.search(r'\byes\b', last200)
-    m_no = re.search(r'\bno\b', last200)
-    if m_yes and m_no:
-        return last200[max(m_yes.start(), m_no.start()):][:2]
-    if m_yes: return 'yes'
-    if m_no: return 'no'
+    extracted = UnifiedAnswerExtractor.extract(text)
+    answer = extracted.answer.lower().strip()
+    if answer in ('yes', 'no'):
+        return answer
     return 'unknown'
 
 

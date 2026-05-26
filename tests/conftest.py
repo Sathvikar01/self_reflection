@@ -2,12 +2,7 @@
 import pytest
 from unittest.mock import Mock, MagicMock, patch
 from pathlib import Path
-import sys
 
-# Add src to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-# Import after path setup
 from src.generator.nim_client import NVIDIANIMClient, GenerationConfig, GenerationResponse
 
 

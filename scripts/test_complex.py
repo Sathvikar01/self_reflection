@@ -1,8 +1,13 @@
 """Test SR on complex_reasoning with proper max_tokens and fixed answer extraction."""
-import json, time, requests, re
+import json, time, requests, re, os, sys
+from dotenv import load_dotenv
+load_dotenv()
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.utils.unified_extractor import UnifiedAnswerExtractor
 
 MODEL = "meta/llama-3.1-405b-instruct"
-API_KEY = "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"
+API_KEY = os.getenv("NVIDIA_API_KEY")
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 
 with open('data/datasets/complex_reasoning.json') as f:
@@ -22,17 +27,11 @@ def call_model(messages, max_tokens=256):
     raise Exception(f"API error {resp.status_code}: {resp.text}")
 
 def extract_answer(text):
-    """Extract YES/NO from anywhere in text - check last 200 chars for answer."""
-    t = text.lower().strip()
-    if t.startswith('yes'):
-        return 'yes'
-    if t.startswith('no'):
-        return 'no'
-    last200 = t[-200:]
-    if re.search(r'\byes\b', last200):
-        return 'yes'
-    if re.search(r'\bno\b', last200):
-        return 'no'
+    """Extract YES/NO from response using unified extractor."""
+    extracted = UnifiedAnswerExtractor.extract(text)
+    answer = extracted.answer.lower().strip()
+    if answer in ('yes', 'no'):
+        return answer
     return 'unknown'
 
 results = []

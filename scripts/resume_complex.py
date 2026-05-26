@@ -1,8 +1,13 @@
 """Resume complex reasoning benchmark from question 13."""
-import json, time, requests, re
+import json, time, requests, re, os, sys
+from dotenv import load_dotenv
+load_dotenv()
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.utils.unified_extractor import UnifiedAnswerExtractor
 
 MODEL = "meta/llama-3.1-405b-instruct"
-API_KEY = "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"
+API_KEY = os.getenv("NVIDIA_API_KEY")
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 
 with open('data/datasets/complex_reasoning.json') as f:
@@ -40,16 +45,11 @@ def call_model(messages, max_tokens=256, retries=3):
     raise Exception("All retries failed")
 
 def extract_answer(text):
-    t = text.lower().strip()
-    if t.startswith('yes'):
-        return 'yes'
-    if t.startswith('no'):
-        return 'no'
-    last300 = t[-300:]
-    if re.search(r'\byes\b', last300):
-        return 'yes'
-    if re.search(r'\bno\b', last300):
-        return 'no'
+    """Extract yes/no from response using unified extractor."""
+    extracted = UnifiedAnswerExtractor.extract(text)
+    answer = extracted.answer.lower().strip()
+    if answer in ('yes', 'no'):
+        return answer
     return 'unknown'
 
 start_idx = len(results)

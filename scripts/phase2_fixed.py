@@ -4,9 +4,14 @@ Resumes from checkpoints automatically.
 Usage: python phase2_fixed.py [all|zs|cot|rag|sc|kbsc]
 """
 import json, time, requests, re, sys, os, subprocess
+from dotenv import load_dotenv
+load_dotenv()
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.utils.unified_extractor import UnifiedAnswerExtractor
 
 MODEL = "meta/llama-3.3-70b-instruct"
-API_KEY = "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"
+API_KEY = os.getenv("NVIDIA_API_KEY")
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 DELAY = 1.5
 
@@ -67,53 +72,13 @@ def call_api(messages, max_tokens=150, temp=0.3, retries=8):
     return None
 
 def extract_yesno(text):
-    """Improved extraction: search entire response for yes/no."""
+    """Extract yes/no from response using unified extractor."""
     if not text:
         return 'unknown'
-    t = text.lower().strip()
-    
-    # 1. Check first 100 chars for direct answer
-    first100 = t[:100]
-    if first100.startswith('yes'):
-        return 'yes'
-    if first100.startswith('no'):
-        return 'no'
-    
-    # 2. Look for "answer: yes" or "answer: no" patterns anywhere
-    m = re.search(r'answer[:\s]+(yes|no)\b', t)
-    if m:
-        return m.group(1)
-    
-    # 3. Look for "final answer" pattern
-    m = re.search(r'final answer[:\s]+(yes|no)\b', t)
-    if m:
-        return m.group(1)
-    
-    # 4. Look for "the answer is yes/no" pattern
-    m = re.search(r'the answer is[:\s]+(yes|no)\b', t)
-    if m:
-        return m.group(1)
-    
-    # 5. Check last 300 chars for standalone yes/no
-    last300 = t[-300:]
-    m_yes = re.search(r'\byes\b', last300)
-    m_no = re.search(r'\bno\b', last300)
-    if m_yes and not m_no:
-        return 'yes'
-    if m_no and not m_yes:
-        return 'no'
-    if m_yes and m_no:
-        # Take the last occurrence
-        return last300[max(m_yes.start(), m_no.start()):][:2]
-    
-    # 6. Check entire response for standalone yes/no (last resort)
-    m_yes = re.search(r'\byes\b', t)
-    m_no = re.search(r'\bno\b', t)
-    if m_yes and not m_no:
-        return 'yes'
-    if m_no and not m_yes:
-        return 'no'
-    
+    extracted = UnifiedAnswerExtractor.extract(text)
+    answer = extracted.answer.lower().strip()
+    if answer in ('yes', 'no'):
+        return answer
     return 'unknown'
 
 def norm_ans(a):

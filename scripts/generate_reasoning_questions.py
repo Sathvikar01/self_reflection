@@ -8,6 +8,8 @@ import sys
 import json
 import time
 import requests
+from dotenv import load_dotenv
+load_dotenv()
 
 # Fix encoding
 if sys.platform == 'win32':
@@ -15,7 +17,7 @@ if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
-API_KEY = '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'
+API_KEY = os.getenv("NVIDIA_API_KEY")
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
     "Content-Type": "application/json"

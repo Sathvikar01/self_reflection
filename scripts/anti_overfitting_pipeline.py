@@ -14,6 +14,7 @@ import re
 import json
 import time
 import hashlib
+import sys
 import statistics
 from typing import List, Dict, Optional, Tuple, Any
 from dataclasses import dataclass, field, asdict
@@ -27,7 +28,10 @@ import threading
 
 load_dotenv(override=True)
 
-API_KEY = os.getenv("NVIDIA_API_KEY", "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")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.utils.unified_extractor import UnifiedAnswerExtractor
+
+API_KEY = os.getenv("NVIDIA_API_KEY")
 
 
 @dataclass
@@ -157,104 +161,16 @@ class NVIDIANIMClient:
 
 
 class AnswerExtractor:
-    XML_PATTERN = re.compile(r'<answer>(.*?)</answer>', re.DOTALL | re.IGNORECASE)
-    BOXED_PATTERN = re.compile(r'\\{1,2}boxed\{([^}]+)\}')
-    YES_NO = re.compile(r'\b(yes|no)\b', re.IGNORECASE)
-    YES_NO_QUALIFIED = re.compile(r'\b(yes|no)[,\s]*(?:but|however|although|it|under|in|if|because|with|the|a|it\s+depends)', re.IGNORECASE)
+    """Adapter that delegates to UnifiedAnswerExtractor for consistent extraction."""
 
     @classmethod
     def extract(cls, text: str) -> Tuple[str, float, str]:
-        if not text or not text.strip():
-            return "", 0.0, "empty"
-        text = text.strip()
-
-        m = cls.XML_PATTERN.search(text)
-        if m:
-            ans = m.group(1).strip()
-            clean = cls._clean_yes_no(ans)
-            if clean:
-                return clean, 1.0, "xml_tag"
-            return ans, 1.0, "xml_tag"
-
-        m = cls.BOXED_PATTERN.search(text)
-        if m:
-            return m.group(1).strip(), 0.95, "boxed"
-
-        for pat in [
-            r'(?:final\s+)?answer\s*[:is]+\s*(.+?)(?:\n|$)',
-            r'the\s+answer\s+is\s*[:is]*\s*(.+?)(?:\n|$)',
-        ]:
-            m = re.search(pat, text, re.IGNORECASE | re.MULTILINE)
-            if m:
-                ans = m.group(1).strip().rstrip('.,;:')
-                clean = cls._clean_yes_no(ans)
-                if clean:
-                    return clean, 0.9, "explicit_marker_yn"
-                if ans:
-                    return ans, 0.9, "explicit_marker"
-
-        m = cls.YES_NO_QUALIFIED.search(text)
-        if m:
-            return m.group(1).lower(), 0.80, "qualified_yes_no"
-
-        m = cls.YES_NO.search(text)
-        if m:
-            return m.group(1).lower(), 0.85, "yes_no"
-
-        sentences = re.split(r'[.!?\n]', text)
-        for s in reversed(sentences):
-            s = s.strip()
-            if s and len(s) > 1:
-                clean = cls._clean_yes_no(s)
-                if clean:
-                    return clean, 0.70, "last_sentence_yn"
-                bold = re.search(r'\*\*([^*]+)\*\*', s)
-                if bold:
-                    bold_text = bold.group(1).strip()
-                    clean = cls._clean_yes_no(bold_text)
-                    if clean:
-                        return clean, 0.75, "bold_yn"
-                    return bold_text, 0.75, "bold"
-                return s, 0.6, "last_sentence"
-
-        return text[:200], 0.3, "fallback"
-
-    @classmethod
-    def _clean_yes_no(cls, text: str) -> Optional[str]:
-        text_lower = text.lower().strip().rstrip('.,;:')
-        if text_lower in ('yes', 'no'):
-            return text_lower
-        m = cls.YES_NO.search(text_lower)
-        if m:
-            prefix = text_lower[:m.start()].strip()
-            if not prefix or prefix in ('the answer is', 'answer:', 'answer is'):
-                return m.group(1).lower()
-        return None
+        result = UnifiedAnswerExtractor.extract(text)
+        return result.answer, result.confidence, result.extraction_method
 
     @classmethod
     def check_answer(cls, predicted: str, ground_truth: str) -> bool:
-        if not predicted or not ground_truth:
-            return False
-        pred = predicted.lower().strip().rstrip('.,;:')
-        truth = ground_truth.lower().strip().rstrip('.,;:')
-
-        filler = {'the', 'a', 'an', 'is', 'are', 'was', 'were', 'approximately', 'about'}
-        pred_c = ' '.join(w for w in pred.split() if w not in filler)
-        truth_c = ' '.join(w for w in truth.split() if w not in filler)
-
-        if pred_c == truth_c:
-            return True
-
-        pred_yn = cls.YES_NO.search(pred)
-        truth_yn = cls.YES_NO.search(truth)
-        if pred_yn and truth_yn:
-            return pred_yn.group(1).lower() == truth_yn.group(1).lower()
-
-        if len(truth_c) < 20:
-            if truth_c in pred_c or pred_c in truth_c:
-                return True
-
-        return False
+        return UnifiedAnswerExtractor.check_answer(predicted, ground_truth)
 
 
 @dataclass

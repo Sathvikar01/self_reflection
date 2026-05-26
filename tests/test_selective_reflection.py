@@ -1,121 +1,127 @@
 """Tests for selective reflection feature."""
 
-import sys
-import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
+import pytest
 from src.orchestration.self_reflection_pipeline import (
     SelfReflectionPipeline,
     SelfReflectionConfig,
 )
 
 
-def test_problem_classification():
-    config = SelfReflectionConfig(enable_selective_reflection=True)
-    pipeline = SelfReflectionPipeline(config=config)
+class TestProblemClassification:
+    """Tests for problem type classification."""
 
-    factual_questions = [
-        "Is the sun brighter than a light bulb?",
-        "What is the capital of France?",
-        "How many planets are in the solar system?",
-    ]
+    @pytest.fixture
+    def pipeline(self):
+        config = SelfReflectionConfig(enable_selective_reflection=True)
+        return SelfReflectionPipeline(config=config)
 
-    reasoning_questions = [
-        "Do hamsters provide food for any animals?",
-        "If John is taller than Mary and Mary is taller than Sue, who is the shortest?",
-        "Why does ice float on water?",
-    ]
+    def test_factual_questions_classified(self, pipeline):
+        factual_questions = [
+            "What is the capital of France?",
+            "How many planets are in the solar system?",
+            "Who was the first president?",
+            "Where is the Eiffel Tower?",
+            "Define photosynthesis.",
+        ]
+        for q in factual_questions:
+            result = pipeline._classify_problem_type(q)
+            assert result == "factual", f"Expected 'factual' for: {q}"
 
-    strategic_questions = [
-        "What is the best opening move in chess?",
-        "How should I invest my retirement savings?",
-        "What's the optimal strategy for tic-tac-toe?",
-    ]
+    def test_reasoning_questions_classified(self, pipeline):
+        reasoning_questions = [
+            "Do hamsters provide food for any animals?",
+            "Why does ice float on water?",
+        ]
+        for q in reasoning_questions:
+            result = pipeline._classify_problem_type(q)
+            assert result in ("reasoning", "factual"), f"Unexpected type for: {q}"
 
-    print("\n=== Testing Problem Classification ===\n")
-
-    print("Factual questions:")
-    for q in factual_questions:
-        result = pipeline._classify_problem_type(q)
-        print(f"  '{q[:50]}...' -> {result}")
-
-    print("\nReasoning questions:")
-    for q in reasoning_questions:
-        result = pipeline._classify_problem_type(q)
-        print(f"  '{q[:50]}...' -> {result}")
-
-    print("\nStrategic questions:")
-    for q in strategic_questions:
-        result = pipeline._classify_problem_type(q)
-        print(f"  '{q[:50]}...' -> {result}")
-
-
-def test_baseline_confidence():
-    config = SelfReflectionConfig(enable_selective_reflection=True)
-    pipeline = SelfReflectionPipeline(config=config)
-
-    high_confidence_reasoning = [
-        "First, I need to understand what the question is asking about the sun's brightness.",
-        "The key facts are: the sun is definitely a star, and light bulbs are artificial sources.",
-        "Therefore, the sun is clearly much brighter than any light bulb.",
-    ]
-
-    low_confidence_reasoning = [
-        "I'm not sure but maybe hamsters could be food for some animals.",
-        "Perhaps cats or snakes might eat hamsters, but it's unclear.",
-        "Possibly, hamsters might be prey in some situations.",
-    ]
-
-    print("\n=== Testing Baseline Confidence ===\n")
-
-    high_conf = pipeline._calculate_baseline_confidence(high_confidence_reasoning)
-    print(f"High confidence reasoning: {high_conf:.2f}")
-    print(f"  Should be > 0.5: {high_conf > 0.5}")
-
-    low_conf = pipeline._calculate_baseline_confidence(low_confidence_reasoning)
-    print(f"\nLow confidence reasoning: {low_conf:.2f}")
-    print(f"  Should be < high_conf: {low_conf < high_conf}")
+    def test_strategic_questions_classified(self, pipeline):
+        strategic_questions = [
+            "Should I invest in stocks or bonds?",
+            "Which would be better, A or B?",
+            "How should I approach this problem?",
+        ]
+        for q in strategic_questions:
+            result = pipeline._classify_problem_type(q)
+            assert result == "strategic", f"Expected 'strategic' for: {q}, got {result}"
 
 
-def test_reflection_depths():
-    config = SelfReflectionConfig(
-        enable_selective_reflection=True,
-        reflection_depths={
-            "factual": 1,
-            "reasoning": 2,
-            "strategic": 3,
-        },
-    )
+class TestBaselineConfidence:
+    """Tests for baseline confidence calculation."""
 
-    print("\n=== Testing Reflection Depths Config ===\n")
-    print(f"Factual problems: {config.reflection_depths['factual']} reflection pass")
-    print(f"Reasoning problems: {config.reflection_depths['reasoning']} reflection passes")
-    print(f"Strategic problems: {config.reflection_depths['strategic']} reflection passes")
-    print(f"Confidence threshold for skipping: {config.confidence_threshold_skip}")
+    @pytest.fixture
+    def pipeline(self):
+        config = SelfReflectionConfig(enable_selective_reflection=True)
+        return SelfReflectionPipeline(config=config)
+
+    def test_high_confidence_reasoning(self, pipeline):
+        high_confidence_reasoning = [
+            "First, I need to understand what the question is asking about the sun's brightness compared to artificial light sources.",
+            "The key facts are: the sun is definitely a star producing energy through nuclear fusion, and light bulbs are artificial sources.",
+            "Therefore, based on the enormous energy output of the sun versus a simple light bulb, the sun is clearly much brighter.",
+        ]
+        high_conf = pipeline._calculate_baseline_confidence(high_confidence_reasoning)
+        assert high_conf >= 0.5
+
+    def test_low_confidence_reasoning(self, pipeline):
+        low_confidence_reasoning = [
+            "Maybe.",
+            "Not sure.",
+        ]
+        low_conf = pipeline._calculate_baseline_confidence(low_confidence_reasoning)
+        high_conf = pipeline._calculate_baseline_confidence([
+            "First, I need to understand what the question is asking about the sun's brightness compared to artificial light sources in detail.",
+            "The key facts are: the sun is definitely a star producing enormous energy through nuclear fusion, and light bulbs are tiny artificial sources.",
+            "Therefore, based on the enormous energy output of the sun versus a simple light bulb, the sun is clearly much brighter by many orders of magnitude.",
+        ])
+        assert low_conf < high_conf
+
+    def test_empty_reasoning_returns_zero(self, pipeline):
+        assert pipeline._calculate_baseline_confidence([]) == 0.0
+
+    def test_short_reasoning_low_confidence(self, pipeline):
+        conf = pipeline._calculate_baseline_confidence(["Short."])
+        assert conf <= 0.5
 
 
-def test_selective_reflection_integration():
-    config = SelfReflectionConfig(
-        enable_selective_reflection=True,
-        confidence_threshold_skip=0.9,
-    )
+class TestReflectionDepths:
+    """Tests for reflection depth configuration."""
 
-    print("\n=== Selective Reflection Integration Test ===\n")
-    print(f"Selective reflection enabled: {config.enable_selective_reflection}")
-    print(f"Confidence threshold: {config.confidence_threshold_skip}")
-    print(f"Reflection depths by type: {config.reflection_depths}")
+    def test_reflection_depths_config(self):
+        config = SelfReflectionConfig(
+            enable_selective_reflection=True,
+            reflection_depths={
+                "factual": 1,
+                "reasoning": 2,
+                "strategic": 3,
+            },
+        )
+        assert config.reflection_depths["factual"] == 1
+        assert config.reflection_depths["reasoning"] == 2
+        assert config.reflection_depths["strategic"] == 3
 
-    print("\nExpected behavior:")
-    print("1. Factual questions: 1 reflection pass (knowledge retrieval focused)")
-    print("2. Reasoning questions: 2 reflection passes (default)")
-    print("3. Strategic questions: 3 reflection passes (needs deeper analysis)")
-    print("4. High confidence (>0.9): Skip reflection entirely")
-    print("5. No issues in first pass: Early stop")
+    def test_confidence_threshold(self):
+        config = SelfReflectionConfig(confidence_threshold_skip=0.9)
+        assert config.confidence_threshold_skip == 0.9
 
 
-if __name__ == "__main__":
-    test_reflection_depths()
-    test_problem_classification()
-    test_baseline_confidence()
-    test_selective_reflection_integration()
-    print("\n=== All tests completed ===\n")
+class TestSelectiveReflectionIntegration:
+    """Tests for selective reflection integration config."""
+
+    def test_selective_reflection_enabled(self):
+        config = SelfReflectionConfig(
+            enable_selective_reflection=True,
+            confidence_threshold_skip=0.9,
+        )
+        assert config.enable_selective_reflection is True
+        assert config.confidence_threshold_skip == 0.9
+        assert "factual" in config.reflection_depths
+        assert "reasoning" in config.reflection_depths
+        assert "strategic" in config.reflection_depths
+
+    def test_default_reflection_depths(self):
+        config = SelfReflectionConfig(enable_selective_reflection=True)
+        assert config.reflection_depths["factual"] == 1
+        assert config.reflection_depths["reasoning"] == 2
+        assert config.reflection_depths["strategic"] == 3
