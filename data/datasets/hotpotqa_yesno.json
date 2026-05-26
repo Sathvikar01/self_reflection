@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "question": "Were both the creators of Sherlock Holmes and the author of Frankenstein British?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 2,
+    "question": "Is the director of Inception from the same country as the director of Amelie?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "hard",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 3,
+    "question": "Did the inventor of the telephone and the inventor of the light bulb live in the same century?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 4,
+    "question": "Are both the Eiffel Tower and the Statue of Liberty made of iron?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 5,
+    "question": "Were both World War I and World War II started in Europe?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 6,
+    "question": "Did the Roman Empire and the Ottoman Empire ever coexist?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "hard",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 7,
+    "question": "Is the capital of Australia in the same state as its largest city?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 8,
+    "question": "Were both Picasso and Dali Spanish artists?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 9,
+    "question": "Did Shakespeare and Cervantes die in the same year?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "hard",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 10,
+    "question": "Is the Amazon River longer than the Nile?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 11,
+    "question": "Were both the iPhone and the iPad created by the same company?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 12,
+    "question": "Did the Renaissance begin in the same country where pizza originated?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 13,
+    "question": "Is the currency of Japan used in any other country?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 14,
+    "question": "Were both Gandhi and Buddha born in the same modern-day country?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 15,
+    "question": "Did the Cold War involve direct military conflict between the US and USSR?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 16,
+    "question": "Is the Great Barrier Reef in the same country as the Outback?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 17,
+    "question": "Were both the theory of relativity and quantum mechanics developed in the 20th century?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 18,
+    "question": "Is the official language of Brazil the same as that of Portugal?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 19,
+    "question": "Did the French Revolution and the American Revolution happen in the same century?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 20,
+    "question": "Is Mount Kilimanjaro in the same country as the Serengeti?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 21,
+    "question": "Were both the printing press and the telescope invented in Europe?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 22,
+    "question": "Is the Panama Canal in the same continent as the Amazon River?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 23,
+    "question": "Did the ancient Greeks and ancient Egyptians both build pyramids?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 24,
+    "question": "Is the official religion of Saudi Arabia the same as that of Indonesia?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 25,
+    "question": "Were both Darwin and Wallace British naturalists?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 26,
+    "question": "Is the Sahara Desert in the same continent as the Nile River?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 27,
+    "question": "Did the Vikings and the Samurai exist at the same time?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "hard",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 28,
+    "question": "Is the headquarters of the United Nations in the same city as the Statue of Liberty?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 29,
+    "question": "Were both the atomic bomb and the computer developed during World War II?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 30,
+    "question": "Is the official language of Mexico the same as that of Spain?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 31,
+    "question": "Did the Industrial Revolution begin in the same country as the Magna Carta?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 32,
+    "question": "Is the Danube River in the same continent as the Volga River?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 33,
+    "question": "Were both Mozart and Beethoven Austrian?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 34,
+    "question": "Is the currency of Switzerland the Euro?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 35,
+    "question": "Did the Black Death and the Great Fire of London happen in the same century?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "hard",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 36,
+    "question": "Is the capital of Canada in the same province as its largest city?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 37,
+    "question": "Were both the theory of evolution and germ theory proposed in the 19th century?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 38,
+    "question": "Is the Gobi Desert in the same country as the Yangtze River?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 39,
+    "question": "Did the Aztec Empire and the Inca Empire ever have direct contact?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "hard",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 40,
+    "question": "Is the official language of India English?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 41,
+    "question": "Were both the Wright brothers American?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 42,
+    "question": "Is the Mediterranean Sea connected to the Atlantic Ocean?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 43,
+    "question": "Did the Byzantine Empire fall before the Renaissance began?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "hard",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 44,
+    "question": "Is the Himalayan mountain range in the same continent as the Alps?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 45,
+    "question": "Were both Newton and Leibniz credited with inventing calculus?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 46,
+    "question": "Is the Tropic of Cancer in the same hemisphere as the Tropic of Capricorn?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 47,
+    "question": "Did the ancient Romans and ancient Greeks worship identical gods?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "medium",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 48,
+    "question": "Is the Pearl River in the same country as the Yellow River?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 49,
+    "question": "Were both the Suez Canal and the Panama Canal completed in the 19th century?",
+    "answer": "no",
+    "category": "multi_hop",
+    "difficulty": "hard",
+    "reasoning_type": "deductive"
+  },
+  {
+    "id": 50,
+    "question": "Is the official language of Argentina the same as that of Chile?",
+    "answer": "yes",
+    "category": "multi_hop",
+    "difficulty": "easy",
+    "reasoning_type": "deductive"
+  }
+]

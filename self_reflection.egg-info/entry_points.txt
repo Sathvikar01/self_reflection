@@ -1,0 +1,2 @@
+[console_scripts]
+rl-reasoning = main:main
