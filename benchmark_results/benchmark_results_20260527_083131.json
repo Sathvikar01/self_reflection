@@ -1,0 +1,341 @@
+{
+  "timestamp": "20260527_083131",
+  "config": {
+    "dataset_path": "data/datasets/benchmark_final_v2.json",
+    "model_name": "mimo-v2.5-pro",
+    "temperature": 0.7,
+    "max_tokens": 1024,
+    "num_questions": 5,
+    "sc_samples": 5,
+    "mock": false,
+    "output_dir": "benchmark_results",
+    "checkpoint_path": null,
+    "resume": false,
+    "seed": 42,
+    "provider": "mimo"
+  },
+  "statistics": {
+    "num_questions": 5,
+    "methods": {
+      "zero_shot": {
+        "accuracy": 0.6,
+        "correct": 3,
+        "total": 5,
+        "ci_95_low": 0.23071993220883708,
+        "ci_95_high": 0.8823817688407467,
+        "mean_latency_ms": 3527.7615070343018,
+        "std_latency_ms": 862.6834141109122
+      },
+      "chain_of_thought": {
+        "accuracy": 0.6,
+        "correct": 3,
+        "total": 5,
+        "ci_95_low": 0.23071993220883708,
+        "ci_95_high": 0.8823817688407467,
+        "mean_latency_ms": 34897.81713485718,
+        "std_latency_ms": 3801.5800486667663
+      },
+      "self_consistency": {
+        "accuracy": 0.4,
+        "correct": 2,
+        "total": 5,
+        "ci_95_low": 0.1176182311592533,
+        "ci_95_high": 0.769280067791163,
+        "mean_latency_ms": 27110.43782234192,
+        "std_latency_ms": 4934.95182116828
+      },
+      "rag": {
+        "accuracy": 0.4,
+        "correct": 2,
+        "total": 5,
+        "ci_95_low": 0.1176182311592533,
+        "ci_95_high": 0.769280067791163,
+        "mean_latency_ms": 2994.119358062744,
+        "std_latency_ms": 5987.737453652492
+      },
+      "kb_sc_step": {
+        "accuracy": 0.8,
+        "correct": 4,
+        "total": 5,
+        "ci_95_low": 0.3755282641185388,
+        "ci_95_high": 0.9637768390302125,
+        "mean_latency_ms": 30315.339851379395,
+        "std_latency_ms": 5875.76578098184
+      }
+    },
+    "mcnemar_tests": {
+      "zero_shot_vs_chain_of_thought": {
+        "chi2": 0.5,
+        "p_value": 0.47950012218695337,
+        "significant_005": false,
+        "contingency": {
+          "a": 2,
+          "b": 1,
+          "c": 1,
+          "d": 1
+        }
+      },
+      "zero_shot_vs_self_consistency": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 2,
+          "b": 1,
+          "c": 0,
+          "d": 2
+        }
+      },
+      "zero_shot_vs_rag": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 1,
+          "b": 2,
+          "c": 1,
+          "d": 1
+        }
+      },
+      "zero_shot_vs_kb_sc_step": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 3,
+          "b": 0,
+          "c": 1,
+          "d": 1
+        }
+      },
+      "chain_of_thought_vs_self_consistency": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 2,
+          "b": 1,
+          "c": 0,
+          "d": 2
+        }
+      },
+      "chain_of_thought_vs_rag": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 2,
+          "b": 1,
+          "c": 0,
+          "d": 2
+        }
+      },
+      "chain_of_thought_vs_kb_sc_step": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_005": false,
+        "contingency": {
+          "a": 3,
+          "b": 0,
+          "c": 1,
+          "d": 1
+        }
+      },
+      "self_consistency_vs_rag": {
+        "chi2": 0.5,
+        "p_value": 0.47950012218695337,
+        "significant_005": false,
+        "contingency": {
+          "a": 1,
+          "b": 1,
+          "c": 1,
+          "d": 2
+        }
+      },
+      "self_consistency_vs_kb_sc_step": {
+        "chi2": 0.5,
+        "p_value": 0.47950012218695337,
+        "significant_005": false,
+        "contingency": {
+          "a": 2,
+          "b": 0,
+          "c": 2,
+          "d": 1
+        }
+      },
+      "rag_vs_kb_sc_step": {
+        "chi2": 0.5,
+        "p_value": 0.47950012218695337,
+        "significant_005": false,
+        "contingency": {
+          "a": 2,
+          "b": 0,
+          "c": 2,
+          "d": 1
+        }
+      }
+    }
+  },
+  "per_question": [
+    {
+      "question_id": 1,
+      "question": "Can diamonds burn?",
+      "ground_truth": "yes",
+      "methods": {
+        "zero_shot": {
+          "extracted": "yes",
+          "correct": true,
+          "latency_ms": 4456.712245941162
+        },
+        "chain_of_thought": {
+          "extracted": "yes, diamonds can burn.",
+          "correct": true,
+          "latency_ms": 37837.25452423096
+        },
+        "self_consistency": {
+          "extracted": "Yes, diamonds can burn.",
+          "correct": true,
+          "latency_ms": 27034.666776657104
+        },
+        "rag": {
+          "extracted": "directly stated: diamonds can burn. However, we need to show reasoning step by step. So we should incorporate the given fact into a logical argument.",
+          "correct": false,
+          "latency_ms": 14969.594240188599
+        },
+        "kb_sc_step": {
+          "extracted": "hould be Yes.",
+          "correct": true,
+          "latency_ms": 23597.73826599121
+        }
+      }
+    },
+    {
+      "question_id": 2,
+      "question": "Is glass a solid?",
+      "ground_truth": "no",
+      "methods": {
+        "zero_shot": {
+          "extracted": "lid, so yes.",
+          "correct": false,
+          "latency_ms": 2353.6157608032227
+        },
+        "chain_of_thought": {
+          "extracted": "1. Introduction: State the question and the common misconception.",
+          "correct": false,
+          "latency_ms": 35544.18325424194
+        },
+        "self_consistency": {
+          "extracted": "yes.",
+          "correct": false,
+          "latency_ms": 27867.666959762573
+        },
+        "rag": {
+          "extracted": "1. Introduction: State the question and the common misconception.",
+          "correct": false,
+          "latency_ms": 1.0025501251220703
+        },
+        "kb_sc_step": {
+          "extracted": "yes",
+          "correct": false,
+          "latency_ms": 38661.280155181885
+        }
+      }
+    },
+    {
+      "question_id": 3,
+      "question": "Does hot water freeze faster than cold water?",
+      "ground_truth": "yes",
+      "methods": {
+        "zero_shot": {
+          "extracted": "ns are debated.",
+          "correct": false,
+          "latency_ms": 3684.9632263183594
+        },
+        "chain_of_thought": {
+          "extracted": "Yes, sometimes hot water can freeze faster than cold water, known as the Mpemba effect, but it depends on conditions. But since the question is simply \"Does hot water freeze faster than cold water?\" it might be looking for a \"yes\" or \"no\" with explanation. I should reason step by step.",
+          "correct": true,
+          "latency_ms": 35930.5579662323
+        },
+        "self_consistency": {
+          "extracted": "ng the question, we should state that it can happen under certain conditions, but it is not a general rule.",
+          "correct": false,
+          "latency_ms": 35848.94871711731
+        },
+        "rag": {
+          "extracted": "Yes, sometimes hot water can freeze faster than cold water, known as the Mpemba effect, but it depends on conditions. But since the question is simply \"Does hot water freeze faster than cold water?\" it might be looking for a \"yes\" or \"no\" with explanation. I should reason step by step.",
+          "correct": true,
+          "latency_ms": 0.0
+        },
+        "kb_sc_step": {
+          "extracted": "Yes.",
+          "correct": true,
+          "latency_ms": 28358.22057723999
+        }
+      }
+    },
+    {
+      "question_id": 4,
+      "question": "Is lightning hotter than the surface of the sun?",
+      "ground_truth": "yes",
+      "methods": {
+        "zero_shot": {
+          "extracted": "yes",
+          "correct": true,
+          "latency_ms": 4423.509836196899
+        },
+        "chain_of_thought": {
+          "extracted": "hould be yes.",
+          "correct": true,
+          "latency_ms": 27515.58017730713
+        },
+        "self_consistency": {
+          "extracted": "**Yes, lightning is hotter than the surface of the sun.**",
+          "correct": true,
+          "latency_ms": 21920.8025932312
+        },
+        "rag": {
+          "extracted": "hould be yes.",
+          "correct": true,
+          "latency_ms": 0.0
+        },
+        "kb_sc_step": {
+          "extracted": "yes",
+          "correct": true,
+          "latency_ms": 25285.605430603027
+        }
+      }
+    },
+    {
+      "question_id": 5,
+      "question": "Can you boil water in a paper cup?",
+      "ground_truth": "yes",
+      "methods": {
+        "zero_shot": {
+          "extracted": "yes",
+          "correct": true,
+          "latency_ms": 2720.0064659118652
+        },
+        "chain_of_thought": {
+          "extracted": "\"Can you boil water in a paper cup?\" This is a classic puzzle or demonstration. We need to reason step by step.",
+          "correct": false,
+          "latency_ms": 37661.50975227356
+        },
+        "self_consistency": {
+          "extracted": "\"Can you boil water in a paper cup?\" This is a classic question about the properties of paper and the boiling point of water. We need to reason step by step.",
+          "correct": false,
+          "latency_ms": 22880.104064941406
+        },
+        "rag": {
+          "extracted": "\"Can you boil water in a paper cup?\" This is a classic puzzle or demonstration. We need to reason step by step.",
+          "correct": false,
+          "latency_ms": 0.0
+        },
+        "kb_sc_step": {
+          "extracted": "yes",
+          "correct": true,
+          "latency_ms": 35673.85482788086
+        }
+      }
+    }
+  ]
+}

@@ -54,6 +54,7 @@ PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.generator.mock_client import MockNVIDIANIMClient
+from src.generator.mimo_client import MiMoClient
 from src.generator.nim_client import NVIDIANIMClient
 from src.generator.prompts import PromptBuilder, ReasoningContext
 from src.generator.types import GenerationConfig
@@ -114,8 +115,9 @@ class AblationRunner:
 
     def __init__(self, dataset_path: str, mock: bool = False,
                  num_questions: Optional[int] = None,
-                 sc_samples: int = 5, model: str = "meta/llama-3.1-8b-instruct",
-                 output_dir: str = "benchmark_results", seed: int = 42):
+                 sc_samples: int = 5, model: str = "mimo-v2.5-pro",
+                 output_dir: str = "benchmark_results", seed: int = 42,
+                 provider: str = "mimo"):
         self.dataset_path = dataset_path
         self.mock = mock
         self.num_questions = num_questions
@@ -127,6 +129,12 @@ class AblationRunner:
         if mock:
             self.client = MockNVIDIANIMClient(api_key="mock_key")
             logger.info("Using MockNVIDIANIMClient (no API credits)")
+        elif provider == "mimo":
+            api_key = os.getenv("MIMO_API_KEY")
+            if not api_key:
+                raise ValueError("MIMO_API_KEY not set. Use --mock for testing.")
+            self.client = MiMoClient(api_key=api_key, model=model)
+            logger.info(f"Using MiMo client (model={model})")
         else:
             api_key = os.getenv("NVIDIA_API_KEY")
             if not api_key:
@@ -140,7 +148,7 @@ class AblationRunner:
         self.gen_config = GenerationConfig(
             model=model,
             temperature=0.7,
-            max_tokens=512,
+            max_tokens=1024,
         )
 
         self.results: List[QuestionResult] = []
@@ -645,9 +653,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--mock", action="store_true", help="Use mock client")
     parser.add_argument("--num-questions", type=int, default=None)
     parser.add_argument("--sc-samples", type=int, default=5)
-    parser.add_argument("--model", type=str, default="meta/llama-3.1-8b-instruct")
+    parser.add_argument("--model", type=str, default="mimo-v2.5-pro")
     parser.add_argument("--output-dir", type=str, default="benchmark_results")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--provider", type=str, default="mimo", choices=["mimo", "nvidia"],
+                        help="API provider: 'mimo' (Xiaomi MiMo) or 'nvidia' (NVIDIA NIM)")
     return parser.parse_args()
 
 
@@ -665,6 +675,7 @@ def main():
         model=args.model,
         output_dir=args.output_dir,
         seed=args.seed,
+        provider=args.provider,
     )
 
     stats = runner.run()

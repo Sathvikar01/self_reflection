@@ -61,6 +61,7 @@ PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.generator.mock_client import MockNVIDIANIMClient
+from src.generator.mimo_client import MiMoClient
 from src.generator.nim_client import NVIDIANIMClient
 from src.generator.prompts import PromptBuilder, ReasoningContext
 from src.generator.types import GenerationConfig, GenerationResponse
@@ -100,9 +101,9 @@ class QuestionResult:
 class BenchmarkConfig:
     """Configuration for benchmark run."""
     dataset_path: str
-    model_name: str = "meta/llama-3.1-8b-instruct"
+    model_name: str = "mimo-v2.5-pro"
     temperature: float = 0.7
-    max_tokens: int = 512
+    max_tokens: int = 1024
     num_questions: Optional[int] = None
     sc_samples: int = 5
     mock: bool = False
@@ -110,6 +111,7 @@ class BenchmarkConfig:
     checkpoint_path: Optional[str] = None
     resume: bool = False
     seed: int = 42
+    provider: str = "mimo"  # "mimo" or "nvidia"
 
 
 # ============================================================================
@@ -136,12 +138,16 @@ class BenchmarkRunner:
         if config.mock:
             self.client = MockNVIDIANIMClient(api_key="mock_key")
             logger.info("Using MockNVIDIANIMClient (no API credits)")
+        elif config.provider == "mimo":
+            api_key = os.getenv("MIMO_API_KEY")
+            if not api_key:
+                raise ValueError("MIMO_API_KEY not set. Use --mock for testing without API.")
+            self.client = MiMoClient(api_key=api_key, model=config.model_name)
+            logger.info(f"Using MiMo client (model={config.model_name})")
         else:
             api_key = os.getenv("NVIDIA_API_KEY")
             if not api_key:
-                raise ValueError(
-                    "NVIDIA_API_KEY not set. Use --mock for testing without API."
-                )
+                raise ValueError("NVIDIA_API_KEY not set. Use --mock for testing without API.")
             self.client = NVIDIANIMClient(api_key=api_key)
 
         # Initialize components
@@ -907,8 +913,8 @@ Examples:
     parser.add_argument(
         "--model",
         type=str,
-        default="meta/llama-3.1-8b-instruct",
-        help="Model name for NIM API (default: meta/llama-3.1-8b-instruct)",
+        default="mimo-v2.5-pro",
+        help="Model name (default: mimo-v2.5-pro)",
     )
     parser.add_argument(
         "--temperature",
@@ -919,8 +925,8 @@ Examples:
     parser.add_argument(
         "--max-tokens",
         type=int,
-        default=512,
-        help="Max tokens for generation (default: 512)",
+        default=1024,
+        help="Max tokens for generation (default: 1024)",
     )
     parser.add_argument(
         "--num-questions",
@@ -962,6 +968,13 @@ Examples:
         default=42,
         help="Random seed (default: 42)",
     )
+    parser.add_argument(
+        "--provider",
+        type=str,
+        default="mimo",
+        choices=["mimo", "nvidia"],
+        help="API provider: 'mimo' (Xiaomi MiMo) or 'nvidia' (NVIDIA NIM)",
+    )
 
     args = parser.parse_args()
 
@@ -977,6 +990,7 @@ Examples:
         checkpoint_path=args.checkpoint,
         resume=args.resume,
         seed=args.seed,
+        provider=args.provider,
     )
 
 

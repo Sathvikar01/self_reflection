@@ -60,6 +60,7 @@ PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.generator.mock_client import MockNVIDIANIMClient
+from src.generator.mimo_client import MiMoClient
 from src.generator.nim_client import NVIDIANIMClient
 from src.generator.prompts import PromptBuilder
 from src.generator.types import GenerationConfig
@@ -85,15 +86,16 @@ class MethodFoldResult:
 class CVConfig:
     dataset_path: str
     n_folds: int = 5
-    model_name: str = "meta/llama-3.1-8b-instruct"
+    model_name: str = "mimo-v2.5-pro"
     temperature: float = 0.7
-    max_tokens: int = 512
+    max_tokens: int = 1024
     num_questions: Optional[int] = None
     sc_samples: int = 5
     mock: bool = False
     output_dir: str = "benchmark_results"
     seed: int = 42
     stratified: bool = True
+    provider: str = "mimo"  # "mimo" or "nvidia"
 
 
 # ---------------------------------------------------------------------------
@@ -128,6 +130,12 @@ class CrossValidationRunner:
         if config.mock:
             self.client = MockNVIDIANIMClient(api_key="mock_key")
             logger.info("Using MockNVIDIANIMClient (no API credits)")
+        elif config.provider == "mimo":
+            api_key = os.getenv("MIMO_API_KEY")
+            if not api_key:
+                raise ValueError("MIMO_API_KEY not set. Use --mock for testing without API.")
+            self.client = MiMoClient(api_key=api_key, model=config.model_name)
+            logger.info(f"Using MiMo client (model={config.model_name})")
         else:
             api_key = os.getenv("NVIDIA_API_KEY")
             if not api_key:
@@ -484,10 +492,10 @@ Examples:
     parser.add_argument("--dataset", type=str, default="data/datasets/benchmark_dataset.json",
                         help="Path to dataset JSON file")
     parser.add_argument("--folds", type=int, default=5, help="Number of folds (default: 5)")
-    parser.add_argument("--model", type=str, default="meta/llama-3.1-8b-instruct",
-                        help="Model name for NIM API")
+    parser.add_argument("--model", type=str, default="mimo-v2.5-pro",
+                        help="Model name for API")
     parser.add_argument("--temperature", type=float, default=0.7, help="Generation temperature")
-    parser.add_argument("--max-tokens", type=int, default=512, help="Max tokens per generation")
+    parser.add_argument("--max-tokens", type=int, default=1024, help="Max tokens per generation")
     parser.add_argument("--num-questions", type=int, default=None,
                         help="Limit number of questions (default: all)")
     parser.add_argument("--sc-samples", type=int, default=5,
@@ -498,6 +506,8 @@ Examples:
     parser.add_argument("--seed", type=int, default=42, help="Random seed (default: 42)")
     parser.add_argument("--no-stratified", action="store_true",
                         help="Use plain KFold instead of StratifiedKFold")
+    parser.add_argument("--provider", type=str, default="mimo", choices=["mimo", "nvidia"],
+                        help="API provider: 'mimo' (Xiaomi MiMo) or 'nvidia' (NVIDIA NIM)")
 
     args = parser.parse_args()
     return CVConfig(
@@ -512,6 +522,7 @@ Examples:
         output_dir=args.output_dir,
         seed=args.seed,
         stratified=not args.no_stratified,
+        provider=args.provider,
     )
 
 
