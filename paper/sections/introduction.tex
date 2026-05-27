@@ -1,0 +1,27 @@
+Large language models are routinely asked to answer questions requiring implicit factual knowledge---questions where the model must know specific, sometimes counterintuitive, facts and apply them correctly. While LLMs have absorbed vast amounts of knowledge during pretraining~\cite{touvron2023llama,dubey2024llama3}, they exhibit systematic knowledge gaps on facts that are counterintuitive, rare, or require specialized domain knowledge.
+
+Two major paradigms have emerged to address these gaps. \emph{Reasoning enhancement} methods like chain-of-thought (CoT) prompting~\cite{wei2022cot} and self-consistency (SC) voting~\cite{wang2022selfconsistency} attempt to improve accuracy by eliciting better reasoning from the model's existing knowledge. \emph{Knowledge augmentation} methods like retrieval-augmented generation (RAG)~\cite{lewis2020rag} inject external knowledge into the prompt context.
+
+Despite extensive study of each paradigm individually, there is limited empirical work comparing \emph{why} certain strategies succeed or fail when applied to knowledge-sensitive questions at scale. In this paper, we conduct a rigorous empirical evaluation to answer three questions:
+
+\begin{itemize}
+\item Does chain-of-thought prompting reliably improve accuracy on knowledge-sensitive questions, or can it cause the model to ``over-think'' and hedge?
+\item Does simply placing knowledge in the context (naive RAG) help, or does it confuse the model?
+\item Is a structured prompting format that forces explicit knowledge scanning necessary, or is simple fact injection sufficient?
+\end{itemize}
+
+Our key findings are:
+
+\begin{enumerate}
+\item \textbf{Naive RAG significantly degrades accuracy} (56.0\% vs 70.0\% zero-shot, $-14$pp, $p=0.0019$). Simply placing knowledge base facts in the system prompt causes the model to either ignore or misapply the injected knowledge.
+
+\item \textbf{Chain-of-thought causes regression} (60.0\% vs 70.0\%, $-10$pp, $p=0.0055$). CoT triggers systematic non-committal behavior, with the model returning uncertain answers on questions where a definitive answer was possible.
+
+\item \textbf{Self-consistency alone cannot fix knowledge gaps} (46.0\% vs 70.0\%, $-24$pp, $p=0.0060$). When all reasoning paths share the same knowledge deficit, majority voting converges on the same wrong answer.
+
+\item \textbf{Only structured knowledge prompting works} (KB+SC+Step1/2: 82.0\%, $+12$pp, $p=0.0019$). A Step 1/Step 2 prompt that forces the model to explicitly scan for relevant knowledge base facts before answering is the sole method that outperforms zero-shot.
+\end{enumerate}
+
+\subsection{Contributions}
+
+Our contributions are: (1) an empirical comparison of five knowledge injection strategies on a curated benchmark of 50 knowledge-sensitive questions; (2) the discovery that naive RAG hurts accuracy by 14 percentage points, contradicting the common assumption that more context is always better; and (3) the Step 1/Step 2 structured prompting method that achieves 82.0\% accuracy, significantly outperforming all other approaches.

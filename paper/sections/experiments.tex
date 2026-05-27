@@ -1,0 +1,58 @@
+\subsection{Model}
+We evaluate on MiMo-v2.5-Pro (mimo-v2.5-pro), accessed via the Singapore API endpoint. This model represents a capable instruction-tuned LLM suitable for studying knowledge accessibility and reasoning behavior on knowledge-sensitive questions.
+
+\subsection{Dataset}
+Our benchmark consists of 50 yes/no questions curated from StrategyQA~\cite{geva2021strategyqa} and supplementary counterintuitive fact questions. Questions are distributed across 11 categories:
+
+\begin{itemize}
+\item \textbf{Physics} (8 questions): Thermodynamics, optics, sound propagation
+\item \textbf{Chemistry} (7 questions): Elements, reactions, material properties
+\item \textbf{Biology} (6 questions): Human anatomy, animal behavior, botany
+\item \textbf{Mathematics} (5 questions): Counterintuitive mathematical facts
+\item \textbf{Geography} (4 questions): Country facts, natural phenomena
+\item \textbf{History} (4 questions): Historical events and figures
+\item \textbf{Common misconceptions} (8 questions): Widely believed false facts
+\item \textbf{Technology} (4 questions): Computing and electronics
+\item \textbf{Space} (2 questions): Astronomy and space facts
+\item \textbf{Food \& Nutrition} (2 questions): Diet and food science
+\end{itemize}
+
+All questions require knowledge of specific facts that are counterintuitive or commonly misunderstood. The ground truth labels were verified against authoritative scientific sources.
+
+\subsection{Evaluation Metrics}
+
+\subsubsection{Accuracy}
+We report the fraction of questions answered correctly across all 50 questions. Confidence intervals are computed using the Wilson score method at 95\% confidence.
+
+\subsubsection{Statistical Significance}
+We use McNemar's test~\cite{mcnemar1947note} for paired significance testing between methods. This test is appropriate for comparing two classifiers on the same dataset, as it accounts for the paired nature of the comparisons. We report the chi-squared statistic and $p$-value for each pairwise comparison.
+
+\subsubsection{Latency}
+We measure end-to-end latency per question in milliseconds, including API call time and any post-processing. For self-consistency methods, this includes the time for 7 parallel API calls.
+
+\subsection{Answer Extraction}
+All pipelines use a unified answer extractor (UnifiedAnswerExtractor) with a 6-priority extraction scheme to ensure fair comparison:
+
+\begin{enumerate}
+\item XML tags (\texttt{<answer>} or \texttt{<final\_answer>})
+\item Boxed LaTeX (\texttt{\textbackslash boxed\{...\}})
+\item Explicit markers (``The answer is:'', ``Therefore,'')
+\item Yes/No detection via regex
+\item Numeric extraction for math questions
+\item Last meaningful sentence as fallback
+\end{enumerate}
+
+This prevents any pipeline from receiving favorable extraction treatment. The extractor applies the same rules regardless of the prompting strategy used.
+
+\subsection{Implementation Details}
+
+\begin{itemize}
+\item Max tokens: 100 (zero-shot), 300 (CoT, SC, RAG), 400 (KB+SC)
+\item SC paths: 7 (temperature 0.5)
+\item API endpoint: Singapore region
+\item Inter-call delay: 2.5 seconds
+\item API retries: Up to 8 with exponential backoff
+\item Caching bypass: All benchmark runs use uncached generation
+\end{itemize}
+
+All experiments were conducted between May 20--27, 2026. The benchmark was run in multiple sessions with checkpointing to handle API interruptions. Results were consolidated across runs to ensure completeness.

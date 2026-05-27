@@ -1,0 +1,7 @@
+\begin{abstract}
+Large language models (LLMs) exhibit knowledge gaps on counterintuitive facts, motivating the use of retrieval-augmented generation (RAG) and related techniques. We conduct a systematic empirical evaluation of five knowledge injection strategies---zero-shot prompting, chain-of-thought (CoT), self-consistency (SC), naive RAG, and knowledge-base augmented SC with structured Step 1/Step 2 prompting (KB+SC+Step1/2)---on a 50-question benchmark using MiMo-v2.5-Pro. Our central finding is that naive RAG degrades accuracy by 14 percentage points (56.0\% vs 70.0\% zero-shot), demonstrating that unstructured knowledge injection is counterproductive. Chain-of-thought prompting similarly hurts performance (60.0\% vs 70.0\%), while self-consistency alone causes a severe 24-point regression (46.0\% vs 70.0\%). Only our structured KB+SC+Step1/2 method achieves significant improvement over zero-shot (82.0\%, $+12$pp, $p=0.0019$). We identify the root cause: the bottleneck for LLMs on knowledge-sensitive question answering is not reasoning ability but \emph{knowledge accessibility}, and structured prompting that forces explicit knowledge scanning before answering is essential for effective knowledge utilization.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Large Language Models, Retrieval-Augmented Generation, Knowledge Injection, Self-Consistency, Question Answering, Structured Prompting
+\end{IEEEkeywords}

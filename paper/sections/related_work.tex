@@ -1,0 +1,14 @@
+\subsection{Chain-of-Thought Reasoning}
+Wei et al.~\cite{wei2022cot} demonstrated that prompting LLMs to generate intermediate reasoning steps significantly improves performance on arithmetic, commonsense, and symbolic reasoning. However, recent work~\cite{ye2024revisting} has shown that CoT gains vary significantly by model scale and task type, and can even cause regressions on certain tasks. Our findings confirm this: on MiMo-v2.5-Pro, CoT reduces accuracy by 10 percentage points on knowledge-sensitive questions.
+
+\subsection{Self-Consistency}
+Wang et al.~\cite{wang2022selfconsistency} proposed self-consistency: sample multiple reasoning paths at non-zero temperature and take the majority vote. The key insight is that correct answers should be reachable via multiple different reasoning sequences, while errors tend to be more path-specific. This assumes, however, that the model possesses the underlying knowledge to reach the correct answer. When this assumption fails, as in our experiments, SC cannot recover from knowledge deficits.
+
+\subsection{Retrieval-Augmented Generation}
+Lewis et al.~\cite{lewis2020rag} introduced RAG, combining a retrieval index with a seq2seq generator for knowledge-intensive NLP tasks. Subsequent work has explored various retrieval strategies and knowledge integration methods~\cite{asai2023selfrag}. Our work examines what happens when retrieved knowledge is injected without structural guidance, showing that naive knowledge placement in the prompt can degrade performance.
+
+\subsection{Structured Prompting}
+Press et al.~\cite{press2022selfask} introduced Self-Ask, which forces the model to decompose questions and explicitly answer sub-questions before producing a final answer. Sun et al.~\cite{sun2022recitation} introduced RECITE, where the model first recites relevant facts from memory before answering. Khot et al.~\cite{khot2023decomposed} proposed decomposed prompting for modular task solving. Our Step 1/Step 2 prompting is related to these approaches but emphasizes the \emph{scanning} aspect: checking whether knowledge base facts are relevant before applying them.
+
+\subsection{Tree-of-Thoughts and Search-Based Reasoning}
+Yao et al.~\cite{yao2023tot} extended CoT by exploring multiple reasoning paths via tree search and selecting the best outcome. Lightman et al.~\cite{lightman2023verify} demonstrated that step-level verification (process reward models) improves reasoning accuracy. These approaches address reasoning depth but not underlying knowledge gaps. Our work shows that for knowledge-sensitive questions, the bottleneck is knowledge accessibility rather than reasoning depth.

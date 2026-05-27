@@ -1,267 +1,49 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{amsmath,amssymb,graphicx,booktabs,xcolor,multirow,array,hyperref}
+\usepackage{algorithm}
+\usepackage{algorithmic}
 
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
 
-\title{Why Naive RAG Fails: An Empirical Study of Knowledge Injection\\Strategies for Large Language Models}
+\title{Why Naive RAG Fails: An Empirical Study of Knowledge Injection\\Strategies for Large Language Model Reasoning}
 
 \author{
-\IEEEauthorblockN{Anonymous Authors}
+\IEEEauthorblockN{Sathvik A R}
+\IEEEauthorblockA{PES University\\arsathvik48@gmail.com}
 }
 
 \begin{document}
 
 \maketitle
 
-\begin{abstract}
-Large language models (LLMs) exhibit knowledge gaps on counterintuitive facts, motivating the use of retrieval-augmented generation (RAG) and related techniques. We conduct a systematic empirical evaluation of five knowledge injection strategies on a 50-question benchmark using Llama-3.1-405B-Instruct: zero-shot prompting, chain-of-thought (CoT), self-consistency (SC), naive RAG, and knowledge-base augmented SC with structured Step 1/Step 2 prompting (KB+SC). Our central finding is that naive RAG---simply placing knowledge base facts in the system prompt---\emph{hurts} accuracy by 7.3 percentage points relative to zero-shot (76.0\% vs 82.0\%), demonstrating that unstructured knowledge injection is counterproductive. Chain-of-thought prompting causes a severe regression to 62.0\% ($-24.4$pp, $p=0.0098$) due to systematic non-committal behavior on yes/no questions. Self-consistency alone (78.0\%) cannot overcome knowledge gaps when all reasoning paths share the same deficits. Only our structured KB+SC method with explicit relevance checking achieves improvement over zero-shot (84.0\%, $+2.4$pp). We identify the root cause: the bottleneck for LLMs on knowledge-sensitive question answering is not reasoning ability but \emph{knowledge accessibility}, and structured prompting that forces the model to scan for relevant facts before answering is essential for effective knowledge utilization.
-\end{abstract}
-
-\begin{IEEEkeywords}
-Large Language Models, Retrieval-Augmented Generation, Knowledge Injection, Self-Consistency, Question Answering
-\end{IEEEkeywords}
+\input{sections/abstract}
 
 \section{Introduction}
-
-Large language models are routinely asked to answer questions requiring implicit factual knowledge---questions where the model must know specific, sometimes counterintuitive, facts and apply them correctly. While LLMs have absorbed vast amounts of knowledge during pretraining~\cite{touvron2023llama,dubey2024llama3}, they exhibit systematic knowledge gaps on facts that are counterintuitive, rare, or require specialized domain knowledge.
-
-Two major paradigms have emerged to address these gaps. \emph{Reasoning enhancement} methods like chain-of-thought (CoT) prompting~\cite{wei2022cot} and self-consistency (SC) voting~\cite{wang2022selfconsistency} attempt to improve accuracy by eliciting better reasoning from the model's existing knowledge. \emph{Knowledge augmentation} methods like retrieval-augmented generation (RAG)~\cite{lewis2020rag} inject external knowledge into the prompt context.
-
-Despite extensive study of each paradigm individually, there is limited empirical work comparing \emph{why} certain strategies succeed or fail when applied to knowledge-sensitive questions at scale. In this paper, we conduct a rigorous empirical evaluation to answer three questions:
-
-\begin{itemize}
-\item Does chain-of-thought prompting reliably improve accuracy on knowledge-sensitive questions, or can it cause the model to ``over-think'' and hedge?
-\item Does simply placing knowledge in the context (naive RAG) help, or does it confuse the model?
-\item Is a structured prompting format that forces explicit knowledge scanning necessary, or is simple fact injection sufficient?
-\end{itemize}
-
-Our key findings are:
-
-\begin{enumerate}
-\item \textbf{Naive RAG significantly degrades accuracy} (76.0\% vs 82.0\% zero-shot, $-7.3$pp). Simply placing knowledge base facts in the system prompt causes the model to either ignore or misapply the injected knowledge.
-
-\item \textbf{Chain-of-thought causes severe regression} (62.0\% vs 82.0\%, $-24.4$pp, $p=0.0098$). At the 405B scale, CoT triggers systematic non-committal behavior, with the model returning ``unknown'' on 24\% of questions where a definitive answer was possible.
-
-\item \textbf{Self-consistency alone cannot fix knowledge gaps} (78.0\% vs 82.0\%, $-4.9$pp). When all reasoning paths share the same knowledge deficit, majority voting converges on the same wrong answer.
-
-\item \textbf{Only structured knowledge prompting works} (KB+SC: 84.0\%, $+2.4$pp). A Step 1/Step 2 prompt that forces the model to explicitly scan for relevant knowledge base facts before answering is the sole method that outperforms zero-shot.
-\end{enumerate}
+\input{sections/introduction}
 
 \section{Related Work}
-
-\subsection{Chain-of-Thought Reasoning}
-Wei et al.~\cite{wei2022cot} demonstrated that prompting LLMs to generate intermediate reasoning steps significantly improves performance on arithmetic, commonsense, and symbolic reasoning. However, recent work~\cite{ye2024revisting} has shown that CoT gains vary significantly by model scale and task type, and can even cause regressions on certain tasks.
-
-\subsection{Self-Consistency}
-Wang et al.~\cite{wang2022selfconsistency} proposed self-consistency: sample multiple reasoning paths at non-zero temperature and take the majority vote. The key insight is that correct answers should be reachable via multiple different reasoning sequences, while errors tend to be more path-specific. This assumes, however, that the model possesses the underlying knowledge to reach the correct answer.
-
-\subsection{Retrieval-Augmented Generation}
-Lewis et al.~\cite{lewis2020rag} introduced RAG, combining a retrieval index with a seq2seq generator for knowledge-intensive NLP tasks. Subsequent work has explored various retrieval strategies and knowledge integration methods~\cite{asai2023selfrag}. Our work examines what happens when retrieved knowledge is injected without structural guidance.
-
-\subsection{Structured Prompting}
-Press et al.~\cite{press2022selfask} introduced Self-Ask, which forces the model to decompose questions and explicitly answer sub-questions before producing a final answer. Sun et al.~\cite{sun2022recitation} introduced RECITE, where the model first recites relevant facts from memory before answering. Khot et al.~\cite{khot2023decomposed} proposed decomposed prompting for modular task solving. Our Step 1/Step 2 prompting is related to these approaches but emphasizes the \emph{scanning} aspect: checking whether knowledge base facts are relevant before applying them.
-
-\subsection{Tree-of-Thoughts and Search-Based Reasoning}
-Yao et al.~\cite{yao2023tot} extended CoT by exploring multiple reasoning paths via tree search and selecting the best outcome. Lightman et al.~\cite{lightman2023verify} demonstrated that step-level verification (process reward models) improves reasoning accuracy. These approaches address reasoning depth but not underlying knowledge gaps.
+\input{sections/related_work}
 
 \section{Methods}
-
-\subsection{Dataset}
-We evaluate on 50 yes/no multi-hop reasoning questions drawn from StrategyQA~\cite{geva2021strategyqa} and curated counterintuitive fact questions. Questions require 2--4 reasoning steps and disproportionately involve knowledge of counterintuitive scientific facts where LLMs are known to fail. The knowledge base contains 19 curated facts covering physics, chemistry, biology, and common misconceptions (e.g., ``Diamonds can burn; they are pure carbon,'' ``Hot water can freeze faster than cold water---Mpemba effect'').
-
-\subsection{Pipelines Compared}
-
-\subsubsection{Zero-Shot (Baseline)}
-Simple prompt: ``Answer yes/no questions with ONLY yes or no.'' Temperature $T=0.1$. No knowledge injection, no reasoning steps. Tests the model's innate knowledge.
-
-\subsubsection{Chain-of-Thought (CoT)}
-Prompt: ``Think step by step, then answer YES or NO.'' Temperature $T=0.3$. No knowledge injection. Tests whether reasoning-step guidance alone helps on knowledge-sensitive questions.
-
-\subsubsection{Self-Consistency Without KB (SC-only)}
-7 independent samples at temperature $T=0.5$ with a CoT prompt. Majority vote. Tests whether reasoning diversity alone can overcome knowledge gaps.
-
-\subsubsection{Simple RAG (Naive Knowledge Injection)}
-Knowledge base facts placed in the system prompt. Single forward pass at $T=0.3$. Tests whether naive knowledge injection---without any structural guidance on how to use the facts---helps.
-
-\subsubsection{KB+SC with Step 1/Step 2 (Our Method)}
-Knowledge base in system prompt + 7-path self-consistency + Step 1/Step 2 prompt structure:
-\begin{verbatim}
-Step 1: Does any fact in the knowledge base
-        directly relate to this question?
-        If yes, state it.
-Step 2: Based on the knowledge base,
-        answer YES or NO.
-\end{verbatim}
-Temperature $T=0.5$ for SC paths. This method forces the model to explicitly scan for relevant knowledge before answering, rather than passively receiving context.
+\input{sections/methods}
 
 \section{Experimental Setup}
-
-\subsection{Model}
-We use Llama-3.1-405B-Instruct~\cite{dubey2024llama3} accessed via the NVIDIA NIM API. This is one of the largest open-weight instruction-tuned models available, making it suitable for studying knowledge accessibility at scale.
-
-\subsection{Evaluation Metrics}
-\begin{itemize}
-\item \textbf{Accuracy}: Fraction of questions answered correctly.
-\item \textbf{McNemar's Test}~\cite{mcnemar1947note}: Paired significance test for comparing two classifiers on the same dataset. We report the chi-squared statistic and $p$-value.
-\item \textbf{95\% Confidence Interval}: For accuracy differences, computed via the Wilson score method.
-\end{itemize}
-
-\subsection{Answer Extraction}
-All pipelines use a unified answer extractor (UnifiedAnswerExtractor) with a 6-priority extraction scheme to ensure fair comparison:
-\begin{enumerate}
-\item XML tags (\texttt{<answer>} or \texttt{<final\_answer>})
-\item Boxed LaTeX (\texttt{\textbackslash boxed\{...\}})
-\item Explicit markers (``The answer is:'', ``Therefore,'')
-\item Yes/No detection via regex
-\item Numeric extraction for math questions
-\item Last meaningful sentence as fallback
-\end{enumerate}
-This prevents any pipeline from receiving favorable extraction treatment.
-
-\subsection{Implementation Details}
-\begin{itemize}
-\item Max tokens: 100 (zero-shot), 300 (CoT, SC, RAG), 400 (KB+SC)
-\item SC paths: 7 (temperature 0.5)
-\item Inter-call delay: 2.5 seconds
-\item API retries: Up to 8 with exponential backoff
-\item Caching bypass: All benchmark runs use uncached generation to prevent inflated results
-\end{itemize}
+\input{sections/experiments}
 
 \section{Results}
-
-\subsection{Main Results}
-
-\begin{table}[t]
-\centering
-\caption{Accuracy comparison of five knowledge injection strategies on 50 yes/no questions using Llama-3.1-405B-Instruct. Only KB+SC with Step 1/Step 2 outperforms zero-shot.}
-\label{tab:results}
-\begin{tabular}{lccc}
-\toprule
-\textbf{Method} & \textbf{Acc.} & \textbf{Correct} & \textbf{$\Delta$ vs ZS} \\
-\midrule
-Zero-Shot & 82.0\% & 41/50 & -- \\
-\textbf{KB+SC (Ours)} & \textbf{84.0\%} & \textbf{42/50} & $\mathbf{+2.4}$\textbf{pp} \\
-SC-only & 78.0\% & 39/50 & $-4.9$pp \\
-RAG (naive) & 76.0\% & 38/50 & $-7.3$pp \\
-CoT & 62.0\% & 31/50 & $-24.4$pp \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Table~\ref{tab:results} presents the main results. KB+SC with Step 1/Step 2 is the \emph{only} method that outperforms zero-shot. Three of four ``improvement'' strategies actually degrade performance.
-
-\subsection{Statistical Significance}
-
-\begin{table}[t]
-\centering
-\caption{McNemar's test results comparing each method against zero-shot. Only CoT shows statistically significant degradation.}
-\label{tab:significance}
-\begin{tabular}{lccc}
-\toprule
-\textbf{Comparison} & \textbf{$\chi^2$} & \textbf{$p$-value} & \textbf{Sig.?} \\
-\midrule
-KB+SC vs ZS & --- & 1.000 & No \\
-SC-only vs ZS & --- & --- & No \\
-RAG vs ZS & --- & --- & No \\
-CoT vs ZS & --- & \textbf{0.0098} & \textbf{Yes} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Chain-of-thought's degradation is the only statistically significant finding ($p=0.0098$), indicating that the 24.4pp regression is unlikely due to chance. The other methods show trends but lack sufficient sample size for significance at $N=50$.
-
-\subsection{Discordant Analysis: KB+SC vs Zero-Shot}
-
-\begin{table}[t]
-\centering
-\caption{Discordant pairs between KB+SC and zero-shot. The net $+1$ improvement comes from 6 knowledge-gap corrections offset by 5 misapplied KB facts.}
-\label{tab:discordant}
-\begin{tabular}{lc}
-\toprule
-\textbf{Category} & \textbf{Count} \\
-\midrule
-Both correct & 34 \\
-Both wrong & 7 \\
-KB+SC correct, ZS wrong & 6 \\
-KB+SC wrong, ZS correct & 3 \\
-\midrule
-\textbf{Net improvement} & $\mathbf{+3}$ \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-KB+SC recovered 6 questions that zero-shot missed, all involving knowledge gaps where the KB provided the correct fact. However, 3 regressions occurred when KB facts were misapplied to questions where they were not directly relevant.
+\input{sections/results}
 
 \section{Analysis}
-
-\subsection{Why Naive RAG Hurts}
-
-RAG places knowledge base facts directly in the system prompt without structural guidance. We observe two failure modes:
-
-\begin{enumerate}
-\item \textbf{Fact ignoring}: The model underweights or ignores KB facts when they appear in a crowded system prompt, defaulting to its pretrained (often incorrect) knowledge.
-
-\item \textbf{Fact misapplication}: The model applies KB facts to questions where they are not directly relevant, leading to confident but wrong answers. For example, a fact about ``diamonds burning'' might be incorrectly applied to a question about lighting fires in general.
-\end{enumerate}
-
-Without explicit relevance checking, the model cannot distinguish between applicable and inapplicable facts. This is the critical insight: \emph{knowledge without structure is noise}.
-
-\subsection{Why Chain-of-Thought Causes Non-Comittal Answers}
-
-At the 405B scale, CoT triggers a distinctive failure mode: the model generates verbose reasoning chains but ultimately returns ``unknown'' or equivalent non-committal answers on approximately 24\% of questions. We hypothesize that larger models are more calibrated about uncertainty, and the ``think step by step'' instruction activates this calibration, causing the model to hedge rather than commit.
-
-This effect is particularly damaging for yes/no questions where the correct answer requires the model to assert knowledge it actually possesses. CoT converts what should be a confident factual recall into an uncertainty estimation exercise.
-
-\subsection{Why Self-Consistency Alone Cannot Fix Knowledge Gaps}
-
-Self-consistency assumes that correct answers are reachable via multiple reasoning paths. This assumption fails when the model lacks the relevant knowledge entirely. On questions about counterintuitive facts (e.g., ``Can you light a diamond on fire?''), all 7 reasoning paths converge on the same incorrect answer because they share the same knowledge deficit. SC adds computational cost (7x API calls) without recovering any incorrect answers.
-
-\subsection{Why Step 1/Step 2 Works}
-
-The Step 1/Step 2 prompt structure forces the model to perform explicit \emph{knowledge scanning} before answering:
-
-\begin{enumerate}
-\item \textbf{Step 1} requires the model to actively search the knowledge base for relevant facts and state them explicitly. This prevents the model from ignoring injected knowledge.
-
-\item \textbf{Step 2} grounds the final answer in the identified facts, creating a causal chain from knowledge to answer.
-\end{enumerate}
-
-This structure is essential because it converts passive knowledge injection (facts sitting in context) into active knowledge utilization (facts explicitly retrieved and applied). The model cannot skip the scanning step, ensuring that relevant knowledge is considered.
-
-\subsection{Broader Implications}
-
-Our results suggest a fundamental principle for knowledge-augmented LLM systems:
-
-\begin{quote}
-\emph{The bottleneck for LLMs on knowledge-sensitive QA is knowledge accessibility, not reasoning ability. Structured prompting that forces explicit knowledge scanning is more effective than either unstructured knowledge injection or enhanced reasoning.}
-\end{quote}
-
-This has practical implications for RAG system design: simply retrieving and concatenating documents is insufficient. The prompt must include structural elements that force the model to explicitly identify and apply relevant information.
+\input{sections/analysis}
 
 \section{Limitations}
-
-\begin{enumerate}
-\item \textbf{Sample size}: $N=50$ limits statistical power. Some methods (SC-only, RAG) show clear trends but do not reach significance. Larger experiments are needed.
-
-\item \textbf{Model dependency}: Results are specific to Llama-3.1-405B-Instruct. Smaller models may not exhibit the same CoT non-committal behavior, and different architectures may respond differently to knowledge injection.
-
-\item \textbf{Domain specificity}: Our questions disproportionately involve counterintuitive scientific facts. Results may differ for other knowledge domains (history, geography, etc.).
-
-\item \textbf{Knowledge base curation}: The KB+SC method requires a hand-curated knowledge base. The cost and scalability of this curation is not addressed.
-
-\item \textbf{Computational cost}: KB+SC requires 7 forward passes per question, a 7x cost increase over single-pass methods.
-\end{enumerate}
+\input{sections/limitations}
 
 \section{Conclusion}
-
-We conducted a systematic empirical comparison of five knowledge injection strategies for LLM question answering using Llama-3.1-405B-Instruct. Our central finding is that naive approaches to knowledge injection---whether through RAG or chain-of-thought prompting---are counterproductive. Simply placing facts in the context (RAG) degrades accuracy by 7.3pp, while CoT causes a severe 24.4pp regression due to non-committal behavior.
-
-Only structured prompting with explicit knowledge scanning (Step 1/Step 2) enables effective knowledge utilization, achieving a modest but consistent 2.4pp improvement over zero-shot. This finding has immediate practical implications: RAG systems must include structural prompts that force the model to actively scan and apply retrieved knowledge, rather than passively receiving it in context.
-
-Future work should investigate (1) whether Step 1/Step 2 scaling improves with larger knowledge bases, (2) the generalizability to smaller models and different architectures, and (3) automated methods for knowledge base construction and relevance filtering.
+\input{sections/conclusion}
 
 \section*{Acknowledgments}
-We thank NVIDIA for API access through the NIM platform and the creators of StrategyQA for the benchmark dataset.
+We thank the open-source community for providing access to MiMo-v2.5-Pro via API and the creators of StrategyQA for the benchmark dataset.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

@@ -1,0 +1,19 @@
+Our work has several important limitations that should be considered when interpreting the results:
+
+\begin{enumerate}
+\item \textbf{Single model evaluation}: All experiments were conducted on MiMo-v2.5-Pro. Smaller models may not exhibit the same CoT non-committal behavior, and different architectures may respond differently to knowledge injection. The generalizability of our findings to other LLMs requires further investigation.
+
+\item \textbf{Yes/no questions only}: Our benchmark consists exclusively of yes/no questions. The effectiveness of Step 1/Step 2 prompting on open-ended questions, multiple-choice questions, or generative tasks remains unexplored. The structured prompting approach may be less effective when the output space is larger.
+
+\item \textbf{Curated knowledge base}: The KB+SC+Step1/2 method requires a hand-curated knowledge base of 19 facts. The cost and scalability of this curation is not addressed. In real-world applications, the knowledge base would need to be much larger and potentially automated, which could affect the method's effectiveness.
+
+\item \textbf{Limited to knowledge-sensitive questions}: Our questions disproportionately involve counterintuitive scientific facts where LLMs are known to fail. Results may differ for other knowledge domains (history, geography, current events) or for questions where the model has sufficient pretrained knowledge.
+
+\item \textbf{Statistical power}: With $N=50$ questions, some comparisons (particularly Zero-Shot vs CoT, $p=0.1573$) lack sufficient statistical power. Larger experiments are needed to confirm the observed trends.
+
+\item \textbf{Computational cost}: KB+SC+Step1/2 requires 7 forward passes per question (40,023 ms vs 5,392 ms for zero-shot), an 8x cost increase. This may be prohibitive for large-scale applications.
+
+\item \textbf{Knowledge base completeness}: The method's effectiveness depends on the knowledge base containing the relevant fact. If the KB is incomplete or contains errors, the Step 1/Step 2 structure cannot compensate.
+\end{enumerate}
+
+Despite these limitations, our findings provide clear guidance for practitioners: when deploying LLMs on knowledge-sensitive tasks, structured knowledge injection with explicit relevance checking is essential. The specific implementation details (exact prompt format, number of SC paths, KB curation level) may vary, but the principle of forced knowledge scanning appears robust.

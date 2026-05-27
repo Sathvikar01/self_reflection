@@ -1,0 +1,56 @@
+\subsection{Why Naive RAG Hurts}
+
+Our most striking finding is that naive RAG---simply placing knowledge base facts in the system prompt---degrades accuracy by 14 percentage points (56.0\% vs 70.0\% zero-shot). This contradicts the common assumption that more context is always better.
+
+We identify two failure modes:
+
+\begin{enumerate}
+\item \textbf{Fact ignoring}: The model underweights or ignores KB facts when they appear in a crowded system prompt, defaulting to its pretrained (often incorrect) knowledge. The model's attention mechanism distributes weight across all context tokens, diluting the relevance of injected facts.
+
+\item \textbf{Fact misapplication}: The model applies KB facts to questions where they are not directly relevant, leading to confident but wrong answers. For example, a fact about ``diamonds burning'' might be incorrectly applied to a question about lighting fires in general.
+\end{enumerate}
+
+Without explicit relevance checking, the model cannot distinguish between applicable and inapplicable facts. This is the critical insight: \emph{knowledge without structure is noise}. The RAG system provides the right information but fails to guide the model on when and how to use it.
+
+\subsection{Why Chain-of-Thought Causes Non-Comittal Answers}
+
+CoT causes a 10-point regression (60.0\% vs 70.0\%). At the MiMo-v2.5-Pro scale, CoT triggers a distinctive failure mode: the model generates verbose reasoning chains but ultimately returns uncertain or non-committal answers on approximately 20\% of questions.
+
+We hypothesize that larger models are more calibrated about uncertainty, and the ``think step by step'' instruction activates this calibration, causing the model to hedge rather than commit. This effect is particularly damaging for yes/no questions where the correct answer requires the model to assert knowledge it actually possesses.
+
+CoT converts what should be a confident factual recall into an uncertainty estimation exercise. The model reasons about what it might not know rather than applying what it does know.
+
+\subsection{Why Self-Consistency Alone Cannot Fix Knowledge Gaps}
+
+Self-consistency alone causes a catastrophic 24-point regression (46.0\% vs 70.0\%), the worst performance of any method. This result is counterintuitive: SC is designed to improve accuracy through diversity.
+
+The failure occurs because SC assumes that correct answers are reachable via multiple reasoning paths. This assumption fails when the model lacks the relevant knowledge entirely. On questions about counterintuitive facts, all 7 reasoning paths converge on the same incorrect answer because they share the same knowledge deficit.
+
+SC adds computational cost (7x API calls, 36,946 ms latency) without recovering any incorrect answers. In fact, it amplifies errors: the model's incorrect reasoning is validated by multiple agreeing paths, making the system more confidently wrong.
+
+\subsection{Why Step 1/Step 2 Works}
+
+The Step 1/Step 2 prompt structure forces the model to perform explicit \emph{knowledge scanning} before answering:
+
+\begin{enumerate}
+\item \textbf{Step 1} requires the model to actively search the knowledge base for relevant facts and state them explicitly. This prevents the model from ignoring injected knowledge. The explicit statement creates a commitment: the model must acknowledge which facts it found relevant.
+
+\item \textbf{Step 2} grounds the final answer in the identified facts, creating a causal chain from knowledge to answer. By separating fact identification from answer generation, the model cannot skip the scanning step.
+\end{enumerate}
+
+This structure is essential because it converts passive knowledge injection (facts sitting in context) into active knowledge utilization (facts explicitly retrieved and applied). The model cannot skip the scanning step, ensuring that relevant knowledge is considered.
+
+\subsection{The Knowledge Accessibility Bottleneck}
+
+Our results suggest a fundamental principle for knowledge-augmented LLM systems:
+
+\begin{quote}
+\emph{The bottleneck for LLMs on knowledge-sensitive QA is knowledge accessibility, not reasoning ability. Structured prompting that forces explicit knowledge scanning is more effective than either unstructured knowledge injection or enhanced reasoning.}
+\end{quote}
+
+This has practical implications for RAG system design:
+\begin{itemize}
+\item \textbf{Retrieval is not enough}: Simply retrieving and concatenating documents is insufficient. The prompt must include structural elements that force the model to identify and apply relevant information.
+\item \textbf{Reasoning is not the bottleneck}: CoT and SC assume the model knows the answer but needs help reasoning. For knowledge-sensitive questions, the model needs help \emph{accessing} knowledge it doesn't have.
+\item \textbf{Structure enables utilization}: The Step 1/Step 2 structure works because it converts a passive reading task into an active search task, leveraging the model's ability to follow instructions while ensuring knowledge engagement.
+\end{itemize}

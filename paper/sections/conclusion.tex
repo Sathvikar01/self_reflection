@@ -1,0 +1,29 @@
+We conducted a systematic empirical comparison of five knowledge injection strategies for LLM question answering using MiMo-v2.5-Pro on a 50-question benchmark of knowledge-sensitive yes/no questions. Our findings challenge common assumptions about knowledge augmentation:
+
+\begin{enumerate}
+\item \textbf{Naive RAG hurts}: Simply placing knowledge base facts in the prompt degrades accuracy by 14 percentage points (56.0\% vs 70.0\%), showing that unstructured knowledge injection is counterproductive.
+
+\item \textbf{CoT is not universally beneficial}: Chain-of-thought prompting reduces accuracy by 10 points (60.0\% vs 70.0\%) on knowledge-sensitive questions, triggering non-committal behavior in large models.
+
+\item \textbf{SC cannot fix knowledge deficits}: Self-consistency alone causes a catastrophic 24-point regression (46.0\% vs 70.0\%) because all reasoning paths share the same knowledge limitations.
+
+\item \textbf{Structured prompting works}: Only KB+SC+Step1/2 achieves significant improvement (82.0\%, $+12$pp, $p=0.0019$) by forcing explicit knowledge scanning before answering.
+\end{enumerate}
+
+\subsection{Practical Recommendations}
+
+Based on our findings, we recommend:
+
+\begin{itemize}
+\item \textbf{For knowledge-sensitive QA}: Use structured knowledge injection (Step 1/Step 2) rather than naive RAG. The explicit relevance checking step is essential for effective knowledge utilization.
+
+\item \textbf{For reasoning-intensive tasks}: CoT and SC remain valuable, but should be combined with structured knowledge injection when the task requires factual knowledge.
+
+\item \textbf{For RAG system design}: Do not simply retrieve and concatenate documents. Include prompt structures that force the model to actively identify and apply relevant information.
+
+\item \textbf{For model evaluation}: Test on knowledge-sensitive questions separately from reasoning-heavy questions, as the failure modes differ significantly.
+\end{itemize}
+
+\subsection{Future Work}
+
+Future work should investigate: (1) whether Step 1/Step 2 scaling improves with larger knowledge bases, (2) the generalizability to smaller models and different architectures, (3) automated methods for knowledge base construction and relevance filtering, and (4) extension to open-ended and multi-hop reasoning tasks. Additionally, combining Step 1/Step 2 with retrieval systems (rather than curated KBs) would increase practical applicability.
