@@ -1,6 +1,6 @@
 \subsection{Main Results}
 
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{Accuracy comparison of five knowledge injection strategies on 50 yes/no questions using MiMo-v2.5-Pro. Only KB+SC+Step1/2 significantly outperforms zero-shot.}
 \label{tab:results}
@@ -23,7 +23,7 @@ The latency results reveal an important trade-off: while SC-based methods requir
 
 \subsection{Statistical Significance}
 
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{McNemar's test results for pairwise comparisons. All differences except CoT vs ZS are statistically significant at $p < 0.01$.}
 \label{tab:significance}
@@ -45,7 +45,7 @@ Table~\ref{tab:significance} shows the McNemar's test results. KB+SC+Step1/2 ach
 
 \subsection{Per-Category Breakdown}
 
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{Per-category accuracy breakdown showing where each method succeeds and fails.}
 \label{tab:category}
@@ -67,7 +67,7 @@ Table~\ref{tab:category} shows per-category accuracy. KB+SC+Step1/2 shows the la
 
 \subsection{Discordant Analysis: KB+SC+Step1/2 vs Zero-Shot}
 
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{Discordant pairs between KB+SC+Step1/2 and zero-shot. The net $+6$ improvement comes from 12 knowledge-gap corrections offset by 6 misapplied KB facts.}
 \label{tab:discordant}
@@ -91,21 +91,21 @@ KB+SC+Step1/2 recovered 12 questions that zero-shot missed, all involving knowle
 
 Figure~\ref{fig:accuracy} shows the accuracy comparison across all methods with 95\% confidence intervals. Figure~\ref{fig:significance} visualizes the pairwise significance relationships, and Figure~\ref{fig:categories} shows per-category performance breakdown.
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.95\columnwidth]{figures/fig1_method_comparison.png}
 \caption{Accuracy comparison with 95\% Wilson confidence intervals. KB+SC+Step1/2 is the only method significantly above zero-shot.}
 \label{fig:accuracy}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.95\columnwidth]{figures/fig4_statistical_heatmap.png}
 \caption{Statistical significance heatmap showing $p$-values for all pairwise McNemar's tests.}
 \label{fig:significance}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.95\columnwidth]{figures/fig6_kb_impact.png}
 \caption{Per-category accuracy breakdown showing KB+SC+Step1/2 dominance in knowledge-heavy categories.}
